@@ -20,14 +20,14 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
 
-alert("loaddata");
+
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
-    $('#busy').hide();
+
 
     document.addEventListener("offline", onOffline, false);
- 
+    alert("loaddata");
 }
 
 function onOffline()
@@ -55,7 +55,7 @@ function checkonline(){
     states[Connection.NONE]     = '0';
 
     networkconnection = states[networkState];
-//alert(states[networkState]);
+alert(states[networkState]);
 
 }
 
