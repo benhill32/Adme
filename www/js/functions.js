@@ -158,7 +158,7 @@ function syncmaintables(obj){
         if(obj.DeletedateUTC == null){
 
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Categories(ID INTEGER NOT NULL primary key,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,CategoryName) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.CategoryName + '" )');
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Categories(ID,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,CategoryName) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.CategoryName + '" )');
                 //  console.log('INSERT OR IGNORE INTO MobileApp_Results(ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,DeletedateUTC ) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.DatetimeStart + '","' + obj.HomeName + '","' + obj.AwayName + '","' + obj.Field + '","' + obj.Latitude + '","' + obj.Longitude + '", ' + obj.DivisionID + ',"' + obj.DivisionName + '", ' + obj.HomeClubID + ', ' + obj.AwayClubID + ', ' + obj.HomeTeamID + ', ' + obj.AwayTeamID + ', ' + obj.HomeScore + ',' + obj.AwayScore + ' , "' + obj.UpdateDateUTC + '", "' + obj.TournamentName + '",' + obj.TournamentID + ', "' + obj.DatetimeStartSeconds + '",' + obj.DivisionOrderID + ',' + obj.ShowToAll + ',' + obj.Final + ',"' + obj.DeletedateUTC + '" )');
             });
             db.transaction(function (tx) {
@@ -180,7 +180,7 @@ function syncmaintables(obj){
 
             // console.log('Delete MobileApp_clubs where ID');
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Region(ID INTEGER NOT NULL primary key,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.RegionName + '" )');
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Region(ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.RegionName + '" )');
                 //    console.log("INSERT INTO MobileApp_clubs is created");
             });
 
@@ -200,7 +200,7 @@ function syncmaintables(obj){
     $.each(obj.Towns, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Towns(ID INTEGER NOT NULL primary key,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,TownName,RegionID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.TownName + '",' + obj.RegionID + ' )');
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Towns(ID,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,TownName,RegionID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.TownName + '",' + obj.RegionID + ' )');
                 //   console.log("INSERT INTO MobileApp_Schedule is created");
             });
             db.transaction(function (tx) {

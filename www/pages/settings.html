@@ -20,36 +20,85 @@
     <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
     <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
-    <script type="text/javascript" src="../js/daily.js"></script>
+    <script type="text/javascript" src="../js/settings.js"></script>
     <script type="text/javascript" src="../js/loaddata.js"></script>
 </head>
 <body>
 <div class="divmainmenu">
     <div class="floatleft3" ID="headermain" align="center">
-        <div style="border-right: 1px solid grey;">
-            Daily
+        <div style="border-right: 1px solid grey;" >
+            Settings
         </div>
 
     </div>
     <div class="floatleft3" id="headermain2nd" align="center">
-        <div id="headermain2nd1st" onclick="weblink('../index.html')"  >
-           Home
+        <div id="headermain2nd1st" onclick="weblink('../pages/daily.html')"  >
+            Daily
         </div>
         <div id="headermain2nd2nd" >
             Weekly
         </div>
     </div>
     <div class="floatleft3" align="center" id="headermain3rd">
-        <div id="headermain3rd1st" onclick="weblink('../pages/settings.html')" >
-            Settings
+        <div id="headermain3rd1st" onclick="weblink('../index.html')" >
+            Home
         </div>
         <div id="headermain3rd2nd" >
             <img src="../img/headerimg.png">
         </div>
     </div>
 </div>
-<div class="container-fluid">
 
+<div class="container-fluid">
+    <div class="modal" id="basicModalregion" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                        Select a Region
+                    </div>
+                </div>
+                <div class="modal-body" >
+                    <div id="regionid">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+    <div class="modal" id="basicModaltown" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                        Select a Region
+                    </div>
+                </div>
+                <div class="modal-body" >
+                    <div id="townid">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <Div class="mainmenusettings"  align="center" >
+        <strong>Choose Region</strong>
+        <p id="town"></p>
+
+    </Div>
+    <Div class="mainmenusettings"  align="center" >
+        <strong>Device ID:</strong>
+        <p id="deviceid"></p>
+    </Div>
+</div>
 </body>
 </html>
