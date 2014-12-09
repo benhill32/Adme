@@ -286,7 +286,7 @@ function syncmaintables(obj){
 
 
         db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set , Datesecs = "' + Math.round((timenow/1000)) + '"');
+            tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '"');
              closemodel();
 
         });
