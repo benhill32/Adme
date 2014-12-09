@@ -33,8 +33,8 @@ function getLsyncdatedata_success(tx, results) {
    // alert(menu.Datesecs);
     var t = new Date(1970,0,1);
     t.setSeconds(menu.Datesecs);
-    var utc = (t.getTimezoneOffset())*3600
-
+    var utc = ((t.getTimezoneOffset()*-1))*3600
+    alert(utc);
     var ts = new Date(1970,0,1);
 ts.setSeconds((menu.Datesecs) + utc);
 
