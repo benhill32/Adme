@@ -20,7 +20,7 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
 
-
+alert("loaddata");
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
