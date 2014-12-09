@@ -31,6 +31,7 @@ function getregions(tx) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
+        $('#regionid').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
@@ -60,6 +61,7 @@ function gettown_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
+    $('#townid').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
@@ -86,7 +88,7 @@ function townchosen(ID){
 
 function gettownname(tx) {
     var sql = "select TownName from MobileApp_Towns where ID = " + townID;
-    //alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], gettownname_success);
 }
 
@@ -101,7 +103,7 @@ function gettownname_success(tx, results) {
 }
 
 function getregionname(tx) {
-    var sql = "select RegionName from MobileApp_Region where ID = " + townID;
+    var sql = "select RegionName from MobileApp_Region where ID = " + regionID;
     //alert(sql);
     tx.executeSql(sql, [], getregionname_success);
 }
