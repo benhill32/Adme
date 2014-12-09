@@ -78,7 +78,7 @@ function townchosen(ID){
         console.log("Update MobileApp_Towns");
     });
 
-
+    db.transaction(gettownname, errorCBfunc, successCBfunc);
 
 }
 
