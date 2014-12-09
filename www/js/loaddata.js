@@ -109,7 +109,7 @@ alert("create 1");
 
 
 function createtables(){
-
+    alert("CREATE 2");
     $.when(db.transaction(createDB, errorCBfunc, successCBfunc)).done(function() {
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
