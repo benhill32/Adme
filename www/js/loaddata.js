@@ -27,7 +27,7 @@ function onDeviceReadyloaddata() {
 
 
     document.addEventListener("offline", onOffline, false);
-    alert("loaddata");
+  //  alert("loaddata");
 }
 
 function onOffline()
@@ -102,13 +102,14 @@ function populateDB1(tx,results) {
 }
 
 function errorCreatetable(err) {
-
+alert("create 1");
     createtables();
 
 }
 
 
 function createtables(){
+
     $.when(db.transaction(createDB, errorCBfunc, successCBfunc)).done(function() {
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
