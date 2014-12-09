@@ -88,7 +88,7 @@ function townchosen(ID){
 
 function gettownname(tx) {
     var sql = "select TownName from MobileApp_Towns where ID = " + townID;
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], gettownname_success);
 }
 
@@ -97,7 +97,7 @@ function gettownname_success(tx, results) {
     var len = results.rows.length;
         var menu = results.rows.item(0);
     townname = menu.TownName;
-
+alert(townname);
 
     db.transaction(getregionname, errorCBfunc, successCBfunc);
 }
