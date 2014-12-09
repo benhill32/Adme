@@ -20,7 +20,7 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
 
-alert("loaddata");
+//alert("loaddata");
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
@@ -67,7 +67,7 @@ function refreshdata(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,Datesecs from MobileApp_LastUpdatesec";
-    //  alert(sql);
+      alert(sql);
     tx.executeSql(sql, [], populateDB1,errorCreatetable);
 
 }
@@ -78,9 +78,9 @@ function populateDB1(tx,results) {
     //   alert(row);
     //  alert(row.Count);
     if(row.Count ==0){
-        if(document.getElementById("indexdiv")!=null) {
+
             $('#indexloadingdata').modal('show');
-        }
+        
 
 
         $.when(blankLastUpdatesec()).done(function() {

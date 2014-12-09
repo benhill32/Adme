@@ -15,7 +15,7 @@ function onDeviceReadyFunc() {
 
 
     deviceIDfunc = device.uuid;
-    alert(device.uuid);
+
     devicemodelfunc = device.model;
     deviceCordovafunc = device.cordova;
     devicePlatformfunc = device.platform;
@@ -24,7 +24,7 @@ function onDeviceReadyFunc() {
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
     document.addEventListener("backbutton", onBackKeyDown, false);
 
-    alert("functions2")
+
 
 }
 
@@ -115,7 +115,7 @@ function URLredirectFacebook(ID){
 
 function gettoken1(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], gettoken1_success);
 }
 
