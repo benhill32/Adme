@@ -12,9 +12,10 @@ var networkconnectionfun= 0;
 
 function onDeviceReadyFunc() {
 
-    alert("functions");
+
 
     deviceIDfunc = device.uuid;
+    alert(device.uuid);
     devicemodelfunc = device.model;
     deviceCordovafunc = device.cordova;
     devicePlatformfunc = device.platform;
