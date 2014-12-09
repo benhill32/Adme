@@ -55,7 +55,7 @@ function checkonline(){
     states[Connection.NONE]     = '0';
 
     networkconnection = states[networkState];
-alert(states[networkState]);
+        //alert(states[networkState]);
 
 }
 
@@ -76,7 +76,7 @@ function populateDB1(tx,results) {
     checkonline();
     var row = results.rows.item(0);
     //   alert(row);
-    //  alert(row.Count);
+ //    alert(row.Count);
     if(row.Count ==0){
 
             $('#indexloadingdata').modal('show');
