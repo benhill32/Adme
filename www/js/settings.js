@@ -10,6 +10,7 @@ function onDeviceReadysettings() {
     $("#deviceid").empty();
     $("#deviceid").append("<strong>Device ID:</strong> : " + device.uuid);
 
+    gettownregion();
 
 }
 
@@ -86,6 +87,8 @@ function townchosen(ID){
 
 }
 
+
+
 function gettownname(tx) {
     var sql = "select TownName from MobileApp_Towns where ID = " + townID;
    // alert(sql);
@@ -119,4 +122,26 @@ function getregionname_success(tx, results) {
     $("#townnameid").append("<strong>Choose Region :</strong>" + menu.RegionName + ' - ' + townname);
 
 
+}
+
+function gettownregion() {
+
+    db.transaction(gettownregiondata, errorCBfunc, successCBfunc);
+}
+
+function gettownregiondata(tx) {
+    var sql = "select ID,RegionID from MobileApp_Towns where Follow =1";
+    // alert(sql);
+    tx.executeSql(sql, [], gettownregiondata_success);
+}
+
+function gettownregiondata_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    townID = menu.ID;
+    regionID = menu.RegionID;
+
+
+    db.transaction(gettownname, errorCBfunc, successCBfunc);
 }
