@@ -1,6 +1,7 @@
 var db;
 var regionID = 0;
 var townID = 0;
+var regionname;
 document.addEventListener("deviceready", onDeviceReadysettings, false);
 
 function onDeviceReadysettings() {
@@ -34,7 +35,7 @@ function getregions(tx) {
         var imgg = "";
 
 
-        $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetown('+ menu.ID + ')"  >' +
+        $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetown('+ menu.ID + ',' +  menu.RegionName + ')"  >' +
         '<div class="bold size13"   >' + menu.RegionName  +
         '</div>' +
         '</Div>');
@@ -42,9 +43,10 @@ function getregions(tx) {
 
 }
 
-function choosetown(ID){
+function choosetown(ID,Name){
     $('#basicModaltown').modal('show');
     regionID =ID;
+    regionname = name;
     db.transaction(gettown, errorCBfunc, successCBfunc);
 }
 
@@ -62,8 +64,7 @@ function gettown_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-
-        $('#townid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="townchosen('+ menu.ID + ')"  >' +
+        $('#townid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="townchosen('+ menu.ID + ',' + menu.TownName + ')"  >' +
         '<div class="bold size13"   >' + menu.TownName  +
         '</div>' +
         '</Div>');
@@ -71,31 +72,15 @@ function gettown_success(tx, results) {
 
 }
 
-function townchosen(ID){
+function townchosen(ID,Name){
     townID = ID;
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_Towns set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_Towns");
     });
 
-    db.transaction(gettownname, errorCBfunc, successCBfunc);
-
-}
-
-function gettownname(tx) {
-    var sql = "select TownName from MobileApp_Towns where ID = " + townID;
-    //alert(sql);
-    tx.executeSql(sql, [], gettownname_success);
-}
-
-function gettownname_success(tx, results) {
-    // $('#busy').hide();
-    var len = results.rows.length;
-//alert(len);
-
-        var menu = results.rows.item(0);
-
     $("#townnameid").empty();
-    $("#townnameid").append("<strong>Choose Region :</strong>" + menu.TownName);
+    $("#townnameid").append("<strong>Choose Region :</strong>" + regionname + " - " + Name);
 
 }
+
