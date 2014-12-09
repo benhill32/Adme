@@ -100,7 +100,7 @@ function gettownname_success(tx, results) {
     var len = results.rows.length;
         var menu = results.rows.item(0);
     townname = menu.TownName;
-alert(townname);
+
 
     db.transaction(getregionname, errorCBfunc, successCBfunc);
 }
@@ -117,7 +117,7 @@ function getregionname_success(tx, results) {
 //alert(len);
 
     var menu = results.rows.item(0);
-    townname = menu.TownName;
+
     $("#townnameid").empty();
     $("#townnameid").append("<strong>Choose Region :</strong>" + menu.RegionName + ' - ' + townname);
 
