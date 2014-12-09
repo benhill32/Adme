@@ -23,6 +23,8 @@ function onDeviceReadyFunc() {
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
     document.addEventListener("backbutton", onBackKeyDown, false);
 
+    alert("functions2")
+
 }
 
 function onBackKeyDown() {
@@ -112,7 +114,7 @@ function URLredirectFacebook(ID){
 
 function gettoken1(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
-    //  alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], gettoken1_success);
 }
 
