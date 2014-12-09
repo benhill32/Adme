@@ -11,9 +11,39 @@ function onDeviceReadysettings() {
     $("#deviceid").append("<strong>Device ID:</strong> : " + device.uuid);
 
     gettownregion();
-
+    getLsyncdate();
 }
 
+function getLsyncdate(){
+
+    db.transaction(getLsyncdatedata, errorCBfunc, successCBfunc);
+
+
+}
+function getLsyncdatedata(tx) {
+    var sql = "select Datesecs,token from MobileApp_LastUpdatesec ";
+    //alert(sql);
+    tx.executeSql(sql, [], getLsyncdatedata_success);
+}
+
+function getLsyncdatedata_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    var t = new Date(1970,0,1);
+    t.setSeconds(menu.Datesecs);
+
+
+
+
+
+
+    $("#syncdate").empty();
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + t);
+
+
+}
 
 function showregions(){
 
