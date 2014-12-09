@@ -281,7 +281,7 @@ function syncmaintables(obj){
 
 
 
-    var datenow1 = new Date();
+    var     datenow1 = new Date();
     var timenow = datenow1.getTime();
 
 

@@ -22,7 +22,7 @@ function getLsyncdate(){
 }
 function getLsyncdatedata(tx) {
     var sql = "select Datesecs,token from MobileApp_LastUpdatesec ";
-    alert(sql);
+  //  alert(sql);
     tx.executeSql(sql, [], getLsyncdatedata_success);
 }
 
@@ -30,7 +30,7 @@ function getLsyncdatedata_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
-    alert(menu.Datesecs);
+   // alert(menu.Datesecs);
     var t = new Date(1970,0,1);
     t.setSeconds(menu.Datesecs);
 
@@ -40,7 +40,7 @@ function getLsyncdatedata_success(tx, results) {
 
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + t);
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + t.getTimezoneOffset());
 
 
 }
