@@ -42,7 +42,7 @@ function droptables(){
 }
 
 function createDB(tx) {
-
+alert("CREATE 2");
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL,token TEXT NOT NULL)');
     console.log("MobileApp_LastUpdatesec table is created");
 
