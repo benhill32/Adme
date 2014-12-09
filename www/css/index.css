@@ -86,7 +86,7 @@ body {
 }
 .divmainmenu
 {
-    padding-top: 5px;
+   // padding-top: 10px;
     width: 100%;
     position: fixed;
     top:0;
@@ -155,10 +155,20 @@ body {
 }
 #headermain{
     min-height: 54px;
-    padding:10px 0px;
+    padding-bottom: 11px;
+    padding-top: 21px;
     border-bottom: 6px solid #30b6e6;
 }
 
+#headermainindex{
+    min-height: 54px;
+    padding-bottom: 10px;
+padding-top: 22px;
+}
+#headermainindex:hover {
+    color:#5c85c4;
+
+}
 #headermain2nd{
     min-height: 54px;
   //  padding: 10px 0px;
@@ -171,6 +181,11 @@ body {
 #headermain2nd2nd{
     padding-top: 3px;
     border-right: 1px solid grey;
+    margin-left: 10px;
+}
+#headermain2nd2nd:hover{
+    color:#5c85c4;
+
 }
 #headermain2nd1st{
 
@@ -178,6 +193,10 @@ body {
     border-bottom: 1px solid grey;
     margin-left: 10px;
     padding-bottom: 4px;
+    margin-top: 5px;
+}
+#headermain2nd1st:hover{
+    color:#5c85c4;
 }
 #headermain3rd2nd{
     padding-top: 3px;
@@ -186,8 +205,12 @@ body {
 #headermain3rd1st{
 
     border-bottom: 1px solid grey;
-
+    margin-top: 5px;
     padding-bottom: 4px;
+}
+#headermain3rd1st:hover{
+
+    color:#5c85c4;
 }
 .floatleft3{
 
