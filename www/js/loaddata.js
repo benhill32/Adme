@@ -76,7 +76,7 @@ function populateDB1(tx,results) {
     checkonline();
     var row = results.rows.item(0);
     //   alert(row);
- //    alert(row.Count);
+     alert(row.Count);
     if(row.Count ==0){
 
             $('#indexloadingdata').modal('show');
@@ -92,7 +92,7 @@ function populateDB1(tx,results) {
 
         var sql = "select Datesecs,token from MobileApp_LastUpdatesec";
 
-        if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))){
+        if(networkconnection!=0){
 
             tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
@@ -102,14 +102,14 @@ function populateDB1(tx,results) {
 }
 
 function errorCreatetable(err) {
-alert("create 1");
+
     createtables();
 
 }
 
 
 function createtables(){
-    alert("CREATE 2");
+
     $.when(db.transaction(createDB, errorCBfunc, successCBfunc)).done(function() {
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
