@@ -8,7 +8,7 @@ function onDeviceReadysettings() {
     $("#deviceid").empty();
     $("#deviceid").append(device.uuid);
 
-    showregions();
+
 }
 
 
