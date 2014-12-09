@@ -81,8 +81,6 @@ function populateDB1(tx,results) {
 
             $('#indexloadingdata').modal('show');
 
-
-
         $.when(blankLastUpdatesec()).done(function() {
             $.when( pushnotifiy()).done(function() {
                 db.transaction(populateDB, errorCBfunc, successCBfunc);
