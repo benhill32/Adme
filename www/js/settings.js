@@ -1,8 +1,8 @@
 var db;
 var regionID = 0;
 var townID = 0;
-var townname;
-var regionname;
+var townname =0;
+var regionname = 0;
 document.addEventListener("deviceready", onDeviceReadysettings, false);
 
 function onDeviceReadysettings() {
