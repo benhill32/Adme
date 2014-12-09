@@ -6,7 +6,7 @@ document.addEventListener("deviceready", onDeviceReadysettings, false);
 function onDeviceReadysettings() {
 
     $("#deviceid").empty();
-    $("#deviceid").append(device.uuid);
+    $("#deviceid").append("<strong>Device ID:</strong> : " + device.uuid);
 
 
 }
@@ -43,9 +43,9 @@ function getregions(tx) {
 }
 
 function choosetown(ID){
-
+    $('#basicModaltown').modal('show');
     regionID =ID;
-
+    db.transaction(gettown, errorCBfunc, successCBfunc);
 }
 
 function gettown(tx) {
@@ -95,7 +95,7 @@ function gettownname_success(tx, results) {
 
         var menu = results.rows.item(0);
 
-    $("#deviceid").empty();
-    $("#deviceid").append(menu.TownName);
+    $("#townnameid").empty();
+    $("#townnameid").append("<strong>Choose Region :</strong>" + menu.TownName);
 
 }
