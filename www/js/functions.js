@@ -24,7 +24,7 @@ function onDeviceReadyFunc() {
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
     document.addEventListener("backbutton", onBackKeyDown, false);
 
-
+alert("function");
 
 }
 

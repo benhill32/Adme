@@ -20,14 +20,14 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
 
-//alert("loaddata");
+alert("loaddata");
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
     $('#busy').hide();
 
     document.addEventListener("offline", onOffline, false);
-    db.transaction(getresultids, errorCBfunc, successCBfunc);
+ 
 }
 
 function onOffline()
@@ -80,7 +80,7 @@ function populateDB1(tx,results) {
     if(row.Count ==0){
 
             $('#indexloadingdata').modal('show');
-        
+
 
 
         $.when(blankLastUpdatesec()).done(function() {
