@@ -47,7 +47,7 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL,token TEXT NOT NULL)');
     console.log("MobileApp_LastUpdatesec table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessNames (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessName TEXT NOT NULL,Icon TEXT NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessNames (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessName TEXT NOT NULL,Icon TEXT NOT NULL,Follow INTEGER NULL)');
     console.log("MobileApp_BusinessNames table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Categories (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,CategoryName TEXT NOT NULL)');
@@ -56,7 +56,7 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Region (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,RegionName TEXT NOT NULL )');
     console.log("MobileApp_Region table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Towns (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,TownName TEXT NULL,RegionID INTEGER NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Towns (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,TownName TEXT NULL,RegionID INTEGER NOT NULL,Follow INTEGER NULL)');
     console.log("MobileApp_Towns table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessLocations (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,RegionID INTEGER NOT NULL,TownID INTEGER NOT NULL,Lat TEXT NOT NULL,Long TEXT NOT NULL,Address TEXT NOT NULL,Phone TEXT NOT NULL)');
