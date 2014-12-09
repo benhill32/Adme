@@ -1,6 +1,7 @@
 var db;
 var regionID = 0;
 var townID = 0;
+var townname;
 var regionname;
 document.addEventListener("deviceready", onDeviceReadysettings, false);
 
@@ -35,7 +36,7 @@ function getregions(tx) {
         var imgg = "";
 
 
-        $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetown('+ menu.ID + ',' +  menu.RegionName + ')"  >' +
+        $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetown('+ menu.ID + ')"  >' +
         '<div class="bold size13"   >' + menu.RegionName  +
         '</div>' +
         '</Div>');
@@ -43,10 +44,9 @@ function getregions(tx) {
 
 }
 
-function choosetown(ID,Name){
+function choosetown(ID){
     $('#basicModaltown').modal('show');
     regionID =ID;
-    regionname = name;
     db.transaction(gettown, errorCBfunc, successCBfunc);
 }
 
@@ -64,7 +64,8 @@ function gettown_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#townid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="townchosen('+ menu.ID + ',' + menu.TownName + ')"  >' +
+
+        $('#townid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="townchosen('+ menu.ID + ')"  >' +
         '<div class="bold size13"   >' + menu.TownName  +
         '</div>' +
         '</Div>');
@@ -72,15 +73,48 @@ function gettown_success(tx, results) {
 
 }
 
-function townchosen(ID,Name){
+function townchosen(ID){
     townID = ID;
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_Towns set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_Towns");
     });
 
-    $("#townnameid").empty();
-    $("#townnameid").append("<strong>Choose Region :</strong>" + regionname + " - " + Name);
+    db.transaction(gettownname, errorCBfunc, successCBfunc);
 
 }
 
+function gettownname(tx) {
+    var sql = "select TownName from MobileApp_Towns where ID = " + townID;
+    //alert(sql);
+    tx.executeSql(sql, [], gettownname_success);
+}
+
+function gettownname_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+        var menu = results.rows.item(0);
+    townname = menu.TownName;
+
+
+    db.transaction(getregionname, errorCBfunc, successCBfunc);
+}
+
+function getregionname(tx) {
+    var sql = "select RegionName from MobileApp_Region where ID = " + townID;
+    //alert(sql);
+    tx.executeSql(sql, [], getregionname_success);
+}
+
+function getregionname_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+
+    var menu = results.rows.item(0);
+    townname = menu.TownName;
+    $("#townnameid").empty();
+    $("#townnameid").append("<strong>Choose Region :</strong>" + menu.RegionName + ' - ' + townname);
+
+
+}
