@@ -33,14 +33,16 @@ function getLsyncdatedata_success(tx, results) {
    // alert(menu.Datesecs);
     var t = new Date(1970,0,1);
     t.setSeconds(menu.Datesecs);
+    var utc = (t.getTimezoneOffset())/3600
 
+    var ts = new Date(1970,0,1);
+ts.setSeconds((menu.Datesecs) + utc);
 
-
-
+alert(ts);
 
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + t.getTimezoneOffset());
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + t);
 
 
 }
