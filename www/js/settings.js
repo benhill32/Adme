@@ -39,14 +39,29 @@ function getLsyncdatedata_success(tx, results) {
     var datesec = Number(menu.Datesecs) + Number(utc);
     ts.setSeconds(datesec);
 
-    var datetime = ts;
-    alert(datetime);
 
+
+    var datetime = ts;
+  
+
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
 
 
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + datetime.getDay() + "/" + datetime.getMonth() + "/" + datetime.getFullYear() );
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + datetime.getDate() + "/" + month[datetime.getMonth()] + "/" + datetime.getFullYear() + " " + datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds() );
 
 
 
