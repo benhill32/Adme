@@ -41,7 +41,8 @@ function getLsyncdatedata_success(tx, results) {
 alert(menu.Datesecs + " - " +  utc);
 ts.setSeconds(datesec);
 
-
+    var myDate = new Date(t);
+    alert(myDate.toLocaleString());
 
 
     $("#syncdate").empty();
