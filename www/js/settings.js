@@ -41,12 +41,12 @@ function getLsyncdatedata_success(tx, results) {
 
     var datetime = ts;
     alert(datetime);
-    var res = datetime.split("G");
-alert(res[0]);
+
+
 
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + res[0] );
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + datetime.getDay() + "/" + datetime.getMonth() + "/" + datetime.getFullYear() );
 
 
 
