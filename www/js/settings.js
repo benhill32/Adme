@@ -42,7 +42,7 @@ function getLsyncdatedata_success(tx, results) {
 
 
     var datetime = ts;
-  
+
 
     var month = new Array();
     month[0] = "January";
@@ -61,7 +61,7 @@ function getLsyncdatedata_success(tx, results) {
 
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + datetime.getDate() + "/" + month[datetime.getMonth()] + "/" + datetime.getFullYear() + " " + datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds() );
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + datetime.getDate() + "/" + month[datetime.getMonth()] + "/" + datetime.getFullYear() + " " + datetime.getHours() + ":" + ("0" + datetime.getMinutes()).slice(-2) + ":" + ("0" + datetime.getSeconds()).slice(-2) );
 
 
 
