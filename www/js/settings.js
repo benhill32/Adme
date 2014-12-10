@@ -40,8 +40,8 @@ function getLsyncdatedata_success(tx, results) {
     ts.setSeconds(datesec);
 
     var datetime = ts;
-    alert(ts);
-    var res = (ts).split("G");
+    alert(datetime);
+    var res = (datetime).split("G");
 
 
 
