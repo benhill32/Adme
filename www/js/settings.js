@@ -41,8 +41,8 @@ function getLsyncdatedata_success(tx, results) {
 
     var datetime = ts;
     alert(datetime);
-    var res = (datetime).split("G");
-
+    var res = datetime.split("G");
+alert(res[0]);
 
 
     $("#syncdate").empty();
