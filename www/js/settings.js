@@ -37,16 +37,18 @@ function getLsyncdatedata_success(tx, results) {
     //alert(utc);
     var ts = new Date(1970,0,1);
     var datesec = Number(menu.Datesecs) + Number(utc);
+    ts.setSeconds(datesec);
 
-alert(menu.Datesecs + " - " +  utc);
-ts.setSeconds(datesec);
-
-    var myDate = new Date(t);
-    alert(myDate.toLocaleString());
-
+    var split = (ts).split(" ");
+    var month = split[1];
+    var year = split[3];
+    var day = split[2];
+var time = split[4];
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + ts + " - " + t);
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + ts + " - " + day + "/" + month + "/" + year + " " + time );
+
+
 
 
 }
