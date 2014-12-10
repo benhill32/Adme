@@ -36,7 +36,7 @@ function getLsyncdatedata_success(tx, results) {
     var utc = ((t.getTimezoneOffset()*-1))*3600
     //alert(utc);
     var ts = new Date(1970,0,1);
-    var datesec = (menu.Datesecs) + utc;
+    var datesec = Number(menu.Datesecs) + Number(utc);
 
 
 ts.setSeconds(datesec);
@@ -45,7 +45,7 @@ alert(datesec);
 
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + t);
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + ts + " - " + t);
 
 
 }
