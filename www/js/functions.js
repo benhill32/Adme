@@ -129,7 +129,7 @@ function gettoken1_success(tx, results) {
 }
 
 function syncmaintables(obj){
-    $('#busy').hide();
+
     // var totalnew =0;
 
     $.each(obj.BusinessNames, function (idx, obj) {
@@ -255,7 +255,6 @@ function syncmaintables(obj){
             });
         }
     });
-//    window.plugins.toast.showShortCenter('Updating Tables!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
 
     $.each(obj.weeklydeal, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
@@ -281,7 +280,7 @@ function syncmaintables(obj){
 
 
 
-    var     datenow1 = new Date();
+    var datenow1 = new Date();
     var timenow = datenow1.getTime();
 
 

@@ -7,7 +7,7 @@ function onDeviceReadydaily() {
 }
 
 function getdata(tx) {
-    var sql = "select ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,StartDate ,EndDate ,ItemName,Details ,Price ,URL from MobilevwApp_weeklydeal ";
+    var sql = "select ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,StartDate ,EndDate ,ItemName,Details ,Price ,URL from MobilevwApp_dailydeal ";
     // alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }

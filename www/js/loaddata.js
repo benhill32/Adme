@@ -60,7 +60,7 @@ function checkonline(){
 }
 
 function refreshdata(){
-
+    $('#indexloadingdata').modal('show');
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 }
 
@@ -79,7 +79,7 @@ function populateDB1(tx,results) {
     // alert(row.Count);
     if(row.Count ==0){
 
-            $('#indexloadingdata').modal('show');
+
 
         $.when(blankLastUpdatesec()).done(function() {
             $.when( pushnotifiy()).done(function() {
@@ -131,7 +131,7 @@ function getchecksync(tx, results) {
 
     //if (dif >= "600") {
 
-         $('#indexloadingdata').modal('show');
+
 
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
