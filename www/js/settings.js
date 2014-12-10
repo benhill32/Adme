@@ -39,10 +39,14 @@ function getLsyncdatedata_success(tx, results) {
     var datesec = Number(menu.Datesecs) + Number(utc);
     ts.setSeconds(datesec);
 
+    var datetime = ts;
+
+    var res = (ts).split("G");
+
 
 
     $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + ts );
+    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + res[0] );
 
 
 
