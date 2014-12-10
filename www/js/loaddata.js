@@ -129,7 +129,7 @@ function getchecksync(tx, results) {
     var dif = (timenow/1000)-(datenowsecsync);
 
 
-    if (dif >= "600") {
+    //if (dif >= "600") {
 
          $('#indexloadingdata').modal('show');
 
@@ -151,7 +151,7 @@ function getchecksync(tx, results) {
 
             syncmaintables(obj);
         }
-    }
+    //}
 
 }
 
