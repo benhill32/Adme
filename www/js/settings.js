@@ -172,7 +172,7 @@ function getregionname_success(tx, results) {
     var menu = results.rows.item(0);
 
     $("#townnameid").empty();
-    $("#townnameid").append("<strong>Choose Region :</strong>" + menu.RegionName + ' - ' + townname);
+    $("#townnameid").append("<strong>Choose Region : </strong>" + menu.RegionName + ' - ' + townname);
 
 
 }
