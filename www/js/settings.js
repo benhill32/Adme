@@ -38,10 +38,10 @@ function getLsyncdatedata_success(tx, results) {
     var ts = new Date(1970,0,1);
     var datesec = Number(menu.Datesecs) + Number(utc);
 
-
+alert(menu.Datesecs + " - " +  utc);
 ts.setSeconds(datesec);
 
-alert(datesec);
+
 
 
     $("#syncdate").empty();
