@@ -34,11 +34,14 @@ function getLsyncdatedata_success(tx, results) {
     var t = new Date(1970,0,1);
     t.setSeconds(menu.Datesecs);
     var utc = ((t.getTimezoneOffset()*-1))*3600
-    alert(utc);
+    //alert(utc);
     var ts = new Date(1970,0,1);
-ts.setSeconds((menu.Datesecs) + utc);
+    var datesec = (menu.Datesecs) + utc;
 
-alert(ts);
+
+ts.setSeconds(datesec);
+
+alert(datesec);
 
 
     $("#syncdate").empty();
