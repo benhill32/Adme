@@ -8,7 +8,7 @@ document.addEventListener("deviceready", onDeviceReadysettings, false);
 function onDeviceReadysettings() {
 
     $("#deviceid").empty();
-    $("#deviceid").append("<strong>Device ID:</strong> : " + device.uuid);
+    $("#deviceid").append(device.uuid);
 
     gettownregion();
     getLsyncdate();
@@ -60,8 +60,8 @@ function getLsyncdatedata_success(tx, results) {
 
 
 
-    $("#syncdate").empty();
-    $("#syncdate").append("<strong>Last Sync Date:</strong> : " + datetime.getDate() + " " + month[datetime.getMonth()] + " " + datetime.getFullYear() + " " + datetime.getHours() + ":" +  ("0" + datetime.getMinutes()).slice(-2) + ":" + ("0" + datetime.getSeconds()).slice(-2) );
+    $("#lastsyncdate").empty();
+    $("#lastsyncdate").append(datetime.getDate() + " " + month[datetime.getMonth()] + " " + datetime.getFullYear() + " " + datetime.getHours() + ":" +  ("0" + datetime.getMinutes()).slice(-2) + ":" + ("0" + datetime.getSeconds()).slice(-2) );
 
 
 
@@ -172,7 +172,7 @@ function getregionname_success(tx, results) {
     var menu = results.rows.item(0);
 
     $("#townnameid").empty();
-    $("#townnameid").append("<strong>Choose Region : </strong>" + menu.RegionName + ' - ' + townname);
+    $("#townnameid").append(menu.RegionName + ' - ' + townname);
 
 
 }
