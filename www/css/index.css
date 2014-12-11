@@ -199,7 +199,13 @@ padding-top: 22px;
     color:white;
 }
 #headermain3rd2nd{
+    padding-left:3px
     padding-top: 3px;
+    width: 100%;
+    height: 100%;
+}
+#headermain3rd2nd img{
+width:90%;
 
 }
 #headermain3rd1st{
