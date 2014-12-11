@@ -135,7 +135,7 @@ function getchecksync(tx, results) {
 
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", 'http://adme.neocom.co.nz/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
+        xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
@@ -197,7 +197,7 @@ function tokenHandler (result) {
 
     // alert('tokenB: '+ result);
     //$('#busy').show();
-    var strur = 'http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
+    var strur = 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
     //  navigator.notification.alert(strur);
     xmlHttptt.open("GET",strur ,false);
     xmlHttptt.send();
@@ -262,7 +262,7 @@ function onNotification(e) {
 
 
                 //  $('#busy').show();
-                var strur = 'http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
+                var strur = 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
                 xmlHttpt.open("GET",strur ,false);
                 //   alert(strur);
                 xmlHttpt.send();

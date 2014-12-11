@@ -73,7 +73,7 @@ function blankLastUpdatesec(){
     xmlHttp = new XMLHttpRequest();
 
     // $('#busy').show();
-    xmlHttp.open("GET", 'http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
     xmlHttp.send();
      // alert('http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
@@ -290,8 +290,23 @@ function syncmaintables(obj){
 
         });
 
+}
 
 
+function passscoretoserver(testvar){
 
+    var http = new XMLHttpRequest();
+    var url = "http://admin.adme.kiwi/loaddatafromapp.aspx";
+    var params = "?" + testvar;
+
+    http.open("POST", url + params, true);
+    console.log(url + params);
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            // alert(http.responseText);
+        }
+    }
+    http.send();
 
 }
