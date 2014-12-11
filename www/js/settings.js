@@ -138,7 +138,7 @@ function townchosen(ID){
 
     db.transaction(gettownname, errorCBfunc, successCBfunc);
 
-    passscoretoserver("regionid=" + regionID + "&townid=" + townID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
+    passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
 
 }
 
