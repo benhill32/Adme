@@ -107,7 +107,7 @@ function choosecate(ID){
 }
 
 function getbusiness(tx) {
-    var sql = "select BusCat.ID,BusCat.CreatedateUTC,BusCat.UpdatedateUTC ,BusCat.DeletedateUTC,BusCat.CategoryID,BusCat.BusniessID,Bus.BusinessName as BusName,Cat.CategoryName from MobileApp_Categories as Cat JOIN MobileApp_BusinessCategories as BusCat ON Cat.ID = BusCat.CategoryID JOIN MobileApp_BusinessNames as Bus ON BusCat.BusniessID = Bus.ID where BusCat.CategoryID = " + catid;
+    var sql = "select ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,BusniessID,CategoryID from MobileApp_BusinessCategories where CategoryID = " + catid;
     alert(sql);
     tx.executeSql(sql, [], getbusiness_success);
 }
@@ -121,10 +121,10 @@ function getbusiness_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#Categoriesheader').append('<div>' + menu.BusName  + '</div>');
+
 
         $('#Categoriesbus').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
-        '<div class="bold size13"   >' + menu.BusName  +
+        '<div class="bold size13"   >' + menu.BusniessID  +
         '</div>' +
         '</Div>');
     }

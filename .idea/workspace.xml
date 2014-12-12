@@ -84,11 +84,11 @@
       <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3801242" vertical-offset="1547" max-vertical-offset="4607">
-              <caret line="109" column="210" selection-start-line="109" selection-start-column="210" selection-end-line="109" selection-end-column="210" />
+            <state vertical-scroll-proportion="0.80248445" vertical-offset="1496" max-vertical-offset="4607">
+              <caret line="126" column="56" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
               <folding>
-                <marker date="1418350847804" expanded="true" signature="2353:2386" placeholder="..." />
-                <marker date="1418350847804" expanded="true" signature="3583:3616" placeholder="..." />
+                <marker date="1418351192280" expanded="true" signature="2353:2386" placeholder="..." />
+                <marker date="1418351192280" expanded="true" signature="3276:3309" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -439,8 +439,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2673" max-vertical-offset="3485">
           <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
           <folding>
-            <marker date="1418350847804" expanded="true" signature="2353:2386" placeholder="..." />
-            <marker date="1418350847804" expanded="true" signature="3583:3616" placeholder="..." />
+            <marker date="1418351192280" expanded="true" signature="2353:2386" placeholder="..." />
+            <marker date="1418351192280" expanded="true" signature="3276:3309" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -675,11 +675,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3801242" vertical-offset="1547" max-vertical-offset="4607">
-          <caret line="109" column="210" selection-start-line="109" selection-start-column="210" selection-end-line="109" selection-end-column="210" />
+        <state vertical-scroll-proportion="0.80248445" vertical-offset="1496" max-vertical-offset="4607">
+          <caret line="126" column="56" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
           <folding>
-            <marker date="1418350847804" expanded="true" signature="2353:2386" placeholder="..." />
-            <marker date="1418350847804" expanded="true" signature="3583:3616" placeholder="..." />
+            <marker date="1418351192280" expanded="true" signature="2353:2386" placeholder="..." />
+            <marker date="1418351192280" expanded="true" signature="3276:3309" placeholder="..." />
           </folding>
         </state>
       </provider>
