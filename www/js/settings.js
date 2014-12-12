@@ -136,7 +136,7 @@ function getbusiness_success(tx, results) {
 function showregions(){
 
     db.transaction(getregions, errorCBfunc, successCBfunc);
-    $('#basicModabusiness').modal('show');
+    $('#basicModalregion').modal('show');
 
 }
 
