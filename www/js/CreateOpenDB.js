@@ -39,6 +39,10 @@ function droptables(){
         tx.executeSql('Drop TABLE Mobilescreenimage');
         console.log("Mobilescreenimage table is Dropped");
     });
+    db.transaction(function(tx) {
+        tx.executeSql('Drop TABLE MobileApp_BusinessCategories');
+        console.log("MobileApp_BusinessCategories table is Dropped");
+    })
 
 }
 
@@ -53,6 +57,9 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Categories (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,CategoryName TEXT NOT NULL)');
     console.log("MobileApp_Categories table is created");
 
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessCategories (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,CategoryID INTEGER NOT NULL,BusniessID INTEGER NOT NULL)');
+    console.log("MobileApp_BusinessCategories table is created");
+
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Region (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,RegionName TEXT NOT NULL )');
     console.log("MobileApp_Region table is created");
 
@@ -62,11 +69,11 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessLocations (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,RegionID INTEGER NOT NULL,TownID INTEGER NOT NULL,Lat TEXT NOT NULL,Long TEXT NOT NULL,Address TEXT NOT NULL,Phone TEXT NOT NULL)');
     console.log("MobileApp_BusinessLocations table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_dailydeal (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL,ItemName TEXT NOT NULL,Details TEXT NOT NULL,Price TEXT NOT NULL,URL TEXT NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_dailydeal (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL,ItemName TEXT NOT NULL,Details TEXT NOT NULL,Price TEXT NOT NULL,URL TEXT NOT NULL,Categories INTEGER NOT NULL)');
     console.log("MobilevwApp_dailydeal table is created");
 
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_weeklydeal (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL,ItemName TEXT NOT NULL,Details TEXT NOT NULL,Price TEXT NOT NULL,URL TEXT NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_weeklydeal (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL,ItemName TEXT NOT NULL,Details TEXT NOT NULL,Price TEXT NOT NULL,URL TEXT NOT NULL,Categories INTEGER NOT NULL)');
     console.log("MobilevwApp_weeklydeal table is created");
 
 }
