@@ -58,6 +58,25 @@
 </div>
 
 <div class="container-fluid">
+    <div class="modal" id="basicModacategories" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                        Select Categories
+                    </div>
+                </div>
+                <div class="modal-body" >
+                    <div id="Categoriesid">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="modal" id="basicModalregion" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -100,8 +119,13 @@
 
     <Div class="mainmenusettings"  align="left"  onclick="showregions()">
 
-        <strong>Choose Region</strong>
+        <strong>Select Region</strong>
         <p id="townnameid">&nbsp;</p>
+    </Div>
+    <Div class="mainmenusettings"  align="left"  onclick="showcategories()">
+
+        <strong>Select Categories</strong>
+        <p id="categoryID">&nbsp;</p>
     </Div>
     <Div class="mainmenusettings"  align="left"  >
 

@@ -68,6 +68,39 @@ function getLsyncdatedata_success(tx, results) {
 
 }
 
+function showcategories(){
+
+    db.transaction(getcategories, errorCBfunc, successCBfunc);
+    $('#basicModalregion').modal('show');
+
+}
+
+function getcategories(tx) {
+    var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC,CategoryName from MobileApp_Categories order by CategoryName ";
+    //alert(sql);
+    tx.executeSql(sql, [], getcategories_success);
+}
+
+function getcategories_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    $('#Categoriesid').empty();
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+
+        $('#Categoriesid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;">' +
+        '<div class="bold size13"   >' + menu.CategoryName  +
+        '</div>' +
+        '</Div>');
+    }
+
+}
+
+
+
 function showregions(){
 
     db.transaction(getregions, errorCBfunc, successCBfunc);
@@ -81,7 +114,7 @@ function getregions(tx) {
     tx.executeSql(sql, [], getregions_success);
 }
 
-    function getregions_success(tx, results) {
+function getregions_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
