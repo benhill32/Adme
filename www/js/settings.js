@@ -71,7 +71,7 @@ function getLsyncdatedata_success(tx, results) {
 function showcategories(){
 
     db.transaction(getcategories, errorCBfunc, successCBfunc);
-    $('#basicModalregion').modal('show');
+    $('#basicModacategories').modal('show');
 
 }
 

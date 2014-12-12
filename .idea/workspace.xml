@@ -84,10 +84,10 @@
       <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50186336" vertical-offset="1177" max-vertical-offset="4063">
-              <caret line="93" column="135" selection-start-line="93" selection-start-column="135" selection-end-line="93" selection-end-column="135" />
+            <state vertical-scroll-proportion="0.26956522" vertical-offset="1024" max-vertical-offset="4063">
+              <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
               <folding>
-                <marker date="1418348615715" expanded="true" signature="2336:2369" placeholder="..." />
+                <marker date="1418348827509" expanded="true" signature="2339:2372" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -96,8 +96,8 @@
       <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.846153" vertical-offset="726" max-vertical-offset="2499">
-              <caret line="70" column="41" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="41" />
+            <state vertical-scroll-proportion="-11.307693" vertical-offset="726" max-vertical-offset="2499">
+              <caret line="60" column="46" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -324,7 +324,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -438,7 +438,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2673" max-vertical-offset="3485">
           <caret line="174" column="28" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="28" />
           <folding>
-            <marker date="1418348615715" expanded="true" signature="2336:2369" placeholder="..." />
+            <marker date="1418348827509" expanded="true" signature="2339:2372" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -663,8 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.846153" vertical-offset="726" max-vertical-offset="2499">
-          <caret line="70" column="41" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="41" />
+        <state vertical-scroll-proportion="-11.307693" vertical-offset="726" max-vertical-offset="2499">
+          <caret line="60" column="46" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -673,10 +673,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50186336" vertical-offset="1177" max-vertical-offset="4063">
-          <caret line="93" column="135" selection-start-line="93" selection-start-column="135" selection-end-line="93" selection-end-column="135" />
+        <state vertical-scroll-proportion="0.26956522" vertical-offset="1024" max-vertical-offset="4063">
+          <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
           <folding>
-            <marker date="1418348615715" expanded="true" signature="2336:2369" placeholder="..." />
+            <marker date="1418348827509" expanded="true" signature="2339:2372" placeholder="..." />
           </folding>
         </state>
       </provider>
