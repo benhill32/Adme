@@ -107,7 +107,7 @@ function choosecate(ID){
 }
 
 function getbusiness(tx) {
-    var sql = "select BusCat.ID,BusCat.CreatedateUTC,BusCat.UpdatedateUTC ,BusCat.DeletedateUTC,BusCat.CategoryID,BusCat.BusniessID,Bus.BusinessName as BusName,Cat.CategoryName from MobileApp_Categories as Cat  INNER JOIN MobileApp_BusinessCategories as BusCat ON Cat.ID = BusCat.CategoryID INNER JOIN MobileApp_BusinessNames as Bus ON BusCat.BusniessID = Bus.ID where BusCat.CategoryID = " + catid;
+    var sql = "select BusCat.ID,BusCat.CreatedateUTC,BusCat.UpdatedateUTC ,BusCat.DeletedateUTC,BusCat.CategoryID,BusCat.BusniessID,Bus.BusinessName as BusName,Cat.CategoryName from MobileApp_Categories as Cat JOIN MobileApp_BusinessCategories as BusCat ON Cat.ID = BusCat.CategoryID JOIN MobileApp_BusinessNames as Bus ON BusCat.BusniessID = Bus.ID where BusCat.CategoryID = " + catid;
     alert(sql);
     tx.executeSql(sql, [], getbusiness_success);
 }
