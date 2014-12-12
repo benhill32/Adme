@@ -101,7 +101,7 @@ function getcategories_success(tx, results) {
 }
 
 function choosecate(ID){
-    $('#basicModaltown').modal('show');
+    $('#basicModabusiness').modal('show');
     catid =ID;
     db.transaction(getbusiness, errorCBfunc, successCBfunc);
 }
