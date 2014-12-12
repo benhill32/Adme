@@ -3,6 +3,7 @@ var regionID = 0;
 var townID = 0;
 var townname =0;
 var regionname = 0;
+var catid= 0;
 document.addEventListener("deviceready", onDeviceReadysettings, false);
 
 function onDeviceReadysettings() {
@@ -91,8 +92,39 @@ function getcategories_success(tx, results) {
         var imgg = "";
 
 
-        $('#Categoriesid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;">' +
+        $('#Categoriesid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosecate('+ menu.ID + ')" >' +
         '<div class="bold size13"   >' + menu.CategoryName  +
+        '</div>' +
+        '</Div>');
+    }
+
+}
+
+function choosecate(ID){
+    $('#basicModaltown').modal('show');
+    catid =ID;
+    db.transaction(getbusiness, errorCBfunc, successCBfunc);
+}
+
+function getbusiness(tx) {
+    var sql = "select BusCat.ID,BusCat.CreatedateUTC,BusCat.UpdatedateUTC ,BusCat.DeletedateUTC,BusCat.CategoryID,BusCat.BusniessID,Bus.BusinessName as BusName,Cat.CategoryName from MobileApp_Categories as Cat RIGHT OUTER JOIN MobileApp_BusinessCategories as BusCat ON Cat.ID = BusCat.CategoryID LEFT OUTER JOIN MobileApp_BusinessNames as Bus ON BusCat.BusniessID = Bus.ID where BusCat.CategoryID = " + catid;
+    alert(sql);
+    tx.executeSql(sql, [], getbusiness_success);
+}
+
+function getbusiness_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+
+    $('#Categoriesbus').empty();
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+        $('#Categoriesheader').append('<div>' + menu.BusName  + '</div>');
+
+        $('#Categoriesbus').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
+        '<div class="bold size13"   >' + menu.BusName  +
         '</div>' +
         '</Div>');
     }
@@ -104,7 +136,7 @@ function getcategories_success(tx, results) {
 function showregions(){
 
     db.transaction(getregions, errorCBfunc, successCBfunc);
-    $('#basicModalregion').modal('show');
+    $('#basicModabusiness').modal('show');
 
 }
 
