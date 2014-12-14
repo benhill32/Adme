@@ -180,7 +180,7 @@ function getregions_success(tx, results) {
 
 
         $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetown('+ menu.ID + ')"  >' +
-        '<div class="bold size13"   >' + menu.RegionName  +
+        '<div class="bold size13" class="divregionhover"   >' + menu.RegionName  +
         '</div>' +
         '</Div>');
     }

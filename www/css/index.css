@@ -445,15 +445,18 @@ width:90px;
     clear: both;
 
 }
+.divregionhover:hover{
 
+    background-color: #8585C2;
+}
 #sregion:hover{
 
-    background-color: #333399;
+    background-color: #8585C2;
 }
 
 #scategories:hover{
 
-    background-color: #333399;
+    background-color: #8585C2;
 }
 
 .mainmenuwifi{
