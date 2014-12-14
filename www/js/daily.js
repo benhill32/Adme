@@ -8,7 +8,7 @@ function onDeviceReadydaily() {
 
 function getdata(tx) {
     var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID ";
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
@@ -30,9 +30,13 @@ function getdata_success(tx, results) {
             imgg = menu.BusinessName;
         }
 
-        $('#dailydealsDiv').append('<Div align="center"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"    >' +
-        '<div align="center"  >' + imgg +
-        '</div>' +
+        $('#dailydealsDiv').append('<Div align="center"  class="modal-body" class="dailydealsdiv"    >' +
+
+
+
+        '<div align="center" class="floatleft3"  >time</div>' +
+        '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
+        '<div align="center"  class="floatleft3"  >Read more</div>' +
         '</Div>');
     }
 
