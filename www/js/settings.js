@@ -153,6 +153,8 @@ function getbusiness_success(tx, results) {
             backgroundcolour ="background-color: #fff;";
 
         }
+
+        alert("border-bottom: 1px solid #e5e5e5;" + backgroundcolour);
         $('#Categoriesbus').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;' + backgroundcolour + '"  onclick="choosebuscat('+ menu.BCID + ')"  >' +
         '<div align="center"  >' + imgg +
         '</div>' +
@@ -167,8 +169,7 @@ function choosebuscat(ID){
         tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_BusinessCategories");
     });
-
-
+    choosecate(catid);
 
 }
 
