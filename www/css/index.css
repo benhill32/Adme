@@ -446,7 +446,10 @@ width:90px;
 
 }
 
+.mainmenusettings:hover{
 
+    background-color: #333399;
+}
 
 
 .mainmenuwifi{
