@@ -16,6 +16,9 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 
+
+    $('#dailydealsDiv').empty();
+
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
@@ -27,7 +30,7 @@ function getdata_success(tx, results) {
             imgg = menu.BusinessName;
         }
 
-        $('#Categoriesbus').append('<Div align="center"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"    >' +
+        $('#dailydealsDiv').append('<Div align="center"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"    >' +
         '<div align="center"  >' + imgg +
         '</div>' +
         '</Div>');
