@@ -34,9 +34,6 @@ function getdata_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var res = (menu.EndDate).split("T");
-      //  alert(menu.EndDate);
-     //   alert(res[0]);
-      //  alert(res[1]);
         var split = res[0].split("-");
         var month2 = split[1];
         var year = split[0];
@@ -45,9 +42,8 @@ function getdata_success(tx, results) {
 
 
         var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h).getTime();
-
-
-        var countdown = document.getElementById("countdown" + menu.ID);
+        
+        var countdown = document.getElementById("countdown");
 
 
 
@@ -67,7 +63,7 @@ function getdata_success(tx, results) {
         '<div align="center" class="floatleft3 padding55"  >' +
         '' +
         'Time Remaining' +
-        '<div id="timediv"><span id="countdown"' + menu.ID + '"></span></div>' +
+        '<div id="timediv"><span id="countdown"></span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
         '<div align="center"  class="floatleft3 padding55"  >Read more</div>' +
