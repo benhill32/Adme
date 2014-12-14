@@ -107,7 +107,7 @@ function choosecate(ID){
 }
 
 function getbusiness(tx) {
-    var sql = "select ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,BusniessID,CategoryID from MobileApp_BusinessCategories where CategoryID = " + catid;
+    var sql = "select MBN.ID as ID, MBN.BusinessName as BusinessName, MBN.Icon as Icon from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
     alert(sql);
     tx.executeSql(sql, [], getbusiness_success);
 }
@@ -124,7 +124,7 @@ function getbusiness_success(tx, results) {
 
 
         $('#Categoriesbus').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
-        '<div class="bold size13"   >' + menu.BusniessID  +
+        '<div class="bold size13"   >' + menu.BusinessName  +
         '</div>' +
         '</Div>');
     }

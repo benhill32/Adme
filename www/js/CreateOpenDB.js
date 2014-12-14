@@ -57,7 +57,7 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Categories (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,CategoryName TEXT NOT NULL)');
     console.log("MobileApp_Categories table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessCategories (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,CategoryID INTEGER NOT NULL,BusniessID INTEGER NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessCategories (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,CategoryID INTEGER NOT NULL,BusniessID INTEGER NOT NULL,Follow INTEGER NULL)');
     console.log("MobileApp_BusinessCategories table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Region (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,RegionName TEXT NOT NULL )');
