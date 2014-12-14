@@ -139,7 +139,7 @@ function getbusiness_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
         if(menu.Icon != "null"){
-            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="left" width="200" >&nbsp;';
+            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" width="200" >&nbsp;';
             //imgg = menu.BusinessName;
         }else{
 
