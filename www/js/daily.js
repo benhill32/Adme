@@ -34,9 +34,9 @@ function getdata_success(tx, results) {
 
 
 
-        '<div align="center" class="floatleft3"  >time</div>' +
-        '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
-        '<div align="center"  class="floatleft3"  >Read more</div>' +
+        '<div align="center" class="floatleft3 padding200"  >time</div>' +
+        '<div align="center"  class="floatleft3 padding200"  >' + imgg + '</div>' +
+        '<div align="center"  class="floatleft3 padding200"  >Read more</div>' +
         '</Div>');
     }
 

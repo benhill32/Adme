@@ -118,7 +118,10 @@ body {
     padding-bottom: 3px;
 }
 
+.padding200{
 
+    padding:20px 0px;
+}
 
 #homescore,#awayscore{
 
