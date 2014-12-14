@@ -34,7 +34,7 @@ function getdata_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var res = (menu.EndDate).split("T");
-        alert(menu.EndDate);
+      //  alert(menu.EndDate);
      //   alert(res[0]);
       //  alert(res[1]);
         var split = res[0].split("-");
@@ -42,6 +42,8 @@ function getdata_success(tx, results) {
         var year = split[0];
         var day = split[2];
         var h = res[1];
+alert(month2);
+        alert(month[month2]);
 
         var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h).getTime();
     alert(day + "/" + month[month2] + "/" + year + " " + h);
