@@ -125,7 +125,7 @@ function getcatname_success(tx, results) {
 
 
 function getbusiness(tx) {
-    var sql = "select MBN.ID as ID, MBN.BusinessName as BusinessName, MBN.Icon as Icon from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
+    var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
    // alert(sql);
     tx.executeSql(sql, [], getbusiness_success);
 }
@@ -146,7 +146,7 @@ function getbusiness_success(tx, results) {
             imgg = menu.BusinessName;
         }
 
-        $('#Categoriesbus').append('<Div align="center" class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"  >' +
+        $('#Categoriesbus').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"  onclick="choosebuscat('+ menu.BCID + ')"  >' +
         '<div align="center"  >' + imgg +
         '</div>' +
         '</Div>');
@@ -154,7 +154,16 @@ function getbusiness_success(tx, results) {
 
 }
 
+function choosebuscat(ID){
+alert("Update MobileApp_BusinessCategories set Follow = 1 where ID = " + ID);
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
+        console.log("Update MobileApp_BusinessCategories");
+    });
 
+
+
+}
 
 function showregions(){
 
