@@ -169,12 +169,13 @@ padding-top: 22px;
     color:white;
 
 }
+#dailydealsDiv{
+    width:100%;
 
+}
 .dailydealsdiv{
     border: 2px solid #ffffff;
-
-
-
+    width:100%;
     border-radius: 10px;
 
 
