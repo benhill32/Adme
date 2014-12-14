@@ -145,17 +145,20 @@ function getbusiness_success(tx, results) {
 
             imgg = menu.BusinessName;
         }
+
         var backgroundcolour = "";
+        var onclickoption = "";
         if(menu.Follow == 1){
             backgroundcolour ="background-color: #71BF44;";
+            onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
 
         }else{
             backgroundcolour ="background-color: #fff;";
-
+            onclickoption = 'onclick="choosebuscatfalse('+ menu.BCID + ')"';
         }
 
-        alert("border-bottom: 1px solid #e5e5e5;" + backgroundcolour);
-        $('#Categoriesbus').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;' + backgroundcolour + '"  onclick="choosebuscat('+ menu.BCID + ')"  >' +
+        alert(onclickoption);
+        $('#Categoriesbus').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;' + backgroundcolour + '"  ' + onclickoption + '  >' +
         '<div align="center"  >' + imgg +
         '</div>' +
         '</Div>');
@@ -163,10 +166,21 @@ function getbusiness_success(tx, results) {
 
 }
 
-function choosebuscat(ID){
+function choosebuscattrue(ID){
 //alert("Update MobileApp_BusinessCategories set Follow = 1 where ID = " + ID);
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
+        console.log("Update MobileApp_BusinessCategories");
+    });
+    choosecate(catid);
+
+}
+
+
+function choosebuscatfalse(ID){
+//alert("Update MobileApp_BusinessCategories set Follow = 1 where ID = " + ID);
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_BusinessCategories set Follow = 0 where ID = ' + ID);
         console.log("Update MobileApp_BusinessCategories");
     });
     choosecate(catid);
