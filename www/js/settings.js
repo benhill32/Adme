@@ -109,8 +109,8 @@ function choosecate(ID){
 }
 
 function getcatname(tx) {
-    var sql = "select CategoryName from MobileApp_Categories where CategoryID = " + catid;
-    //alert(sql);
+    var sql = "select CategoryName from MobileApp_Categories where ID = " + catid;
+    alert(sql);
     tx.executeSql(sql, [], getcatname_success);
 }
 
@@ -149,7 +149,8 @@ function getbusiness_success(tx, results) {
 
 
         $('#Categoriesbus').append('<Div align="center" style="border-bottom: 1px solid #e5e5e5;"  >' +
-        imgg +
+        '<div align="center"  >' + imgg +
+        '</div>' +
         '</Div>');
     }
 
