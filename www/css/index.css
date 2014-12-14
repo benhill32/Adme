@@ -445,6 +445,17 @@ width:90px;
     clear: both;
 
 }
+#Categoriesid .modal-body:hover{
+
+    background-color: #8585C2;
+}
+
+#Categoriesbus .modal-body:hover{
+
+    background-color: #8585C2;
+}
+
+
 #regionid .modal-body:hover{
 
     background-color: #8585C2;

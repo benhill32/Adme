@@ -146,7 +146,7 @@ function getbusiness_success(tx, results) {
             imgg = menu.BusinessName;
         }
 
-        $('#Categoriesbus').append('<Div align="center" style="border-bottom: 1px solid #e5e5e5;"  >' +
+        $('#Categoriesbus').append('<Div align="center" class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"  >' +
         '<div align="center"  >' + imgg +
         '</div>' +
         '</Div>');
