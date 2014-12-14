@@ -177,7 +177,7 @@ padding-top: 22px;
 
 }
 .dailydealsdiv{
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     margin-bottom: 3px;
     width:100%;
     border-radius: 10px;
@@ -185,6 +185,10 @@ padding-top: 22px;
     vertical-align: middle;
     min-height: 105px;
 
+}
+#timediv{
+    border: 1px solid #ffffff;
+    border-radius: 10px;
 }
 #headermain2nd{
     min-height: 54px;
