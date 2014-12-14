@@ -238,7 +238,7 @@ function syncmaintables(obj){
     $.each(obj.BusinessCategories, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
         db.transaction(function (tx) {
-            tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessCategories(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,CategoryID,BusniessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.CategoryID + ',' + obj.BusniessID + ',)');
+            tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessCategories(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,CategoryID,BusniessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.CategoryID + ',' + obj.BusniessID + ')');
             //    console.log("INSERT INTO MobileApp_clubsimages is created");
         });
         db.transaction(function (tx) {
