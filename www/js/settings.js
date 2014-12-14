@@ -110,7 +110,7 @@ function choosecate(ID){
 
 function getcatname(tx) {
     var sql = "select CategoryName from MobileApp_Categories where ID = " + catid;
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], getcatname_success);
 }
 
@@ -139,14 +139,12 @@ function getbusiness_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
         if(menu.Icon != "null"){
-            imgg = '<img src="data:image/png;base64,' + menu.Icon + '"  align="left" width="200" >';
+           // imgg = '<img src="data:image/png;base64,' + menu.Icon + '"  align="left" width="200" >';
+            imgg = menu.BusinessName;
         }else{
 
             imgg = menu.BusinessName;
         }
-
-
-
 
         $('#Categoriesbus').append('<Div align="center" style="border-bottom: 1px solid #e5e5e5;"  >' +
         '<div align="center"  >' + imgg +
