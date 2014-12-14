@@ -189,6 +189,7 @@ padding-top: 22px;
 #timediv{
     border: 1px solid #ffffff;
     border-radius: 10px;
+    width: 35%;
 }
 #headermain2nd{
     min-height: 54px;

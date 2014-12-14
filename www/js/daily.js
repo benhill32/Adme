@@ -21,6 +21,18 @@ function getdata_success(tx, results) {
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
+        var res = (menu.EndDate).split("T");
+        var split = res[0].split("-");
+        var month = split[1];
+        var year = split[0];
+        var day = split[2];
+        var h = res[1].substring(0,2)
+
+        var target_date = new Date(day + "/" - month + "/" + year + " " + h).getTime();
+
+        var countdown = document.getElementById("countdown");
+        alert(target_date);
+
         var imgg = "";
         if(menu.Icon != "null"){
             imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" width="200" >&nbsp;';
@@ -37,7 +49,7 @@ function getdata_success(tx, results) {
         '<div align="center" class="floatleft3 padding55"  >' +
         '' +
         'Time Remaining' +
-        '<div id="timediv">&nbsp;&nbsp;&nbsp;</div>' +
+        '<div id="timediv"><span id="countdown"></span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
         '<div align="center"  class="floatleft3 padding55"  >Read more</div>' +
