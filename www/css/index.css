@@ -445,6 +445,16 @@ width:90px;
     clear: both;
 
 }
+#closeregion:hover{
+
+    background-color: #8585C2;
+}
+
+#closecat:hover{
+
+    background-color: #8585C2;
+}
+
 #closecatbus:hover{
 
     background-color: #8585C2;
