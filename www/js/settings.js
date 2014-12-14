@@ -104,7 +104,24 @@ function choosecate(ID){
     $('#basicModabusiness').modal('show');
     catid =ID;
     db.transaction(getbusiness, errorCBfunc, successCBfunc);
+    db.transaction(getcatname, errorCBfunc, successCBfunc);
 }
+
+function getcatname(tx) {
+    var sql = "select CategoryName from MobileApp_Categories where CategoryID = " + catid;
+    //alert(sql);
+    tx.executeSql(sql, [], getcatname_success);
+}
+
+
+function getcatname_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    $('#Categoriesheader').empty();
+        var menu = results.rows.item(0);
+         $('#Categoriesheader').append('<Div>' + menu.BusinessName  + '</Div>');
+}
+
 
 function getbusiness(tx) {
     var sql = "select MBN.ID as ID, MBN.BusinessName as BusinessName, MBN.Icon as Icon from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
