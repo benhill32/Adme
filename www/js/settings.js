@@ -103,8 +103,9 @@ function getcategories_success(tx, results) {
 function choosecate(ID){
     $('#basicModabusiness').modal('show');
     catid =ID;
-    db.transaction(getbusiness, errorCBfunc, successCBfunc);
     db.transaction(getcatname, errorCBfunc, successCBfunc);
+    db.transaction(getbusiness, errorCBfunc, successCBfunc);
+
 }
 
 function getcatname(tx) {
@@ -119,13 +120,13 @@ function getcatname_success(tx, results) {
     var len = results.rows.length;
     $('#Categoriesheader').empty();
         var menu = results.rows.item(0);
-         $('#Categoriesheader').append('<Div>' + menu.BusinessName  + '</Div>');
+         $('#Categoriesheader').append('<Div>' + menu.CategoryName  + '</Div>');
 }
 
 
 function getbusiness(tx) {
     var sql = "select MBN.ID as ID, MBN.BusinessName as BusinessName, MBN.Icon as Icon from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getbusiness_success);
 }
 
@@ -137,12 +138,18 @@ function getbusiness_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
+        if(menu.Icon != "null"){
+            imgg = '<img src="data:image/png;base64,' + menu.Icon + '"  align="left" width="200" >';
+        }else{
+
+            imgg = menu.BusinessName;
+        }
 
 
 
-        $('#Categoriesbus').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
-        '<div class="bold size13"   >' + menu.BusinessName  +
-        '</div>' +
+
+        $('#Categoriesbus').append('<Div align="center" style="border-bottom: 1px solid #e5e5e5;"  >' +
+        imgg +
         '</Div>');
     }
 
