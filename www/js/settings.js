@@ -139,8 +139,8 @@ function getbusiness_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
         if(menu.Icon != "null"){
-           // imgg = '<img src="data:image/png;base64,' + menu.Icon + '"  align="left" width="200" >';
-            imgg = menu.BusinessName;
+            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="left" width="200" >&nbsp;';
+            //imgg = menu.BusinessName;
         }else{
 
             imgg = menu.BusinessName;
@@ -157,7 +157,7 @@ function getbusiness_success(tx, results) {
             onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
         }
 
-       
+
         $('#Categoriesbus').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;' + backgroundcolour + '"  ' + onclickoption + '  >' +
         '<div align="center"  >' + imgg +
         '</div>' +
