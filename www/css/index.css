@@ -445,11 +445,11 @@ width:90px;
     clear: both;
 
 }
-#regionid:hover{
+#regionid .modal-body:hover{
 
     background-color: #8585C2;
 }
-#townid:hover{
+#townid .modal-body:hover{
     background-color: #8585C2;
 }
 #sregion:hover{
