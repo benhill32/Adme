@@ -446,11 +446,15 @@ width:90px;
 
 }
 
-.mainmenusettings:hover{
+#sregion:hover{
 
     background-color: #333399;
 }
 
+#scategories:hover{
+
+    background-color: #333399;
+}
 
 .mainmenuwifi{
     height: 70px;
