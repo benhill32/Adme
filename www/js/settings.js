@@ -150,11 +150,11 @@ function getbusiness_success(tx, results) {
         var onclickoption = "";
         if(menu.Follow == 1){
             backgroundcolour ="background-color: #71BF44;";
-            onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
+            onclickoption = 'onclick="choosebuscatfalse('+ menu.BCID + ')"';
 
         }else{
             backgroundcolour ="background-color: #fff;";
-            onclickoption = 'onclick="choosebuscatfalse('+ menu.BCID + ')"';
+            onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
         }
 
         alert(onclickoption);
