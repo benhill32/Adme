@@ -42,7 +42,7 @@ function getdata_success(tx, results) {
 
 
         var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h).getTime();
-        
+
         var countdown = document.getElementById("countdown");
 
 
@@ -69,6 +69,8 @@ function getdata_success(tx, results) {
         '<div align="center"  class="floatleft3 padding55"  >Read more</div>' +
         '</Div>');
 
+        var days2, hours2, minutes2, seconds2;
+
 
         setInterval(function () {
 
@@ -77,18 +79,18 @@ function getdata_success(tx, results) {
             var seconds_left = (target_date - current_date) / 1000;
 
             // do some time calculations
-            days = parseInt(seconds_left / 86400);
+            days2 = parseInt(seconds_left / 86400);
             seconds_left = seconds_left % 86400;
 
-            hours = parseInt(seconds_left / 3600);
+            hours2 = parseInt(seconds_left / 3600);
             seconds_left = seconds_left % 3600;
 
-            minutes = parseInt(seconds_left / 60);
-            seconds = parseInt(seconds_left % 60);
+            minutes2 = parseInt(seconds_left / 60);
+            seconds2 = parseInt(seconds_left % 60);
 
             // format countdown string + set tag value
-            countdown.innerHTML = hours + "h, "
-            + minutes + "m, " + seconds + "s";
+            countdown.innerHTML = hours2 + "h, "
+            + minutes2 + "m, " + seconds2 + "s";
 
         }, 1000);
 
