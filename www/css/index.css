@@ -445,11 +445,11 @@ width:90px;
     clear: both;
 
 }
-.divregionhover:hover{
+#regionid:hover{
 
     background-color: #8585C2;
 }
-.divtownhover:hover{
+#townid:hover{
     background-color: #8585C2;
 }
 #sregion:hover{
