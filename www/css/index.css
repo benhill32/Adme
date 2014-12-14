@@ -445,6 +445,10 @@ width:90px;
     clear: both;
 
 }
+#closecatbus :hover{
+
+    background-color: #8585C2;
+}
 #Categoriesid .modal-body:hover{
 
     background-color: #8585C2;
