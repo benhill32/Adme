@@ -30,7 +30,7 @@ function getdata_success(tx, results) {
             imgg = menu.BusinessName;
         }
 
-        $('#dailydealsDiv').append('<Div align="center"  class="modal-body" class="dailydealsdiv"    >' +
+        $('#dailydealsDiv').append('<Div align="center"  class="modal-body dailydealsdiv"    >' +
 
 
 
