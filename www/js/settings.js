@@ -180,7 +180,7 @@ function getregions_success(tx, results) {
 
 
         $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetown('+ menu.ID + ')"  >' +
-        '<div class="bold size13" class="divregionhover"   >' + menu.RegionName  +
+        '<div class="bold size13 divregionhover"    >' + menu.RegionName  +
         '</div>' +
         '</Div>');
     }
@@ -210,7 +210,7 @@ function gettown_success(tx, results) {
 
 
         $('#townid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="townchosen('+ menu.ID + ')"  >' +
-        '<div class="bold size13"   >' + menu.TownName  +
+        '<div class="bold size13 divtownhover"   >' + menu.TownName  +
         '</div>' +
         '</Div>');
     }
