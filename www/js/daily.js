@@ -15,23 +15,35 @@ function getdata(tx) {
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
 
     $('#dailydealsDiv').empty();
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var res = (menu.EndDate).split("T");
-        alert(res[0]);
-        alert(res[1]);
+     //   alert(res[0]);
+      //  alert(res[1]);
         var split = res[0].split("-");
-        var month = split[1];
+        var month2 = split[1];
         var year = split[0];
         var day = split[2];
         var h = res[1].substring(0,2)
 
-        var target_date = new Date(day + "/" - month + "/" + year + " " + h).getTime();
-
+        var target_date = new Date(day + "/" - month[month2] + "/" + year + " " + h).getTime();
+    alert(day + "/" - month[month2] + "/" + year + " " + h);
         var countdown = document.getElementById("countdown");
         alert(target_date);
 
