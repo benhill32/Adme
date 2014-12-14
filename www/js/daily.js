@@ -34,6 +34,7 @@ function getdata_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var res = (menu.EndDate).split("T");
+        alert(menu.EndDate);
      //   alert(res[0]);
       //  alert(res[1]);
         var split = res[0].split("-");
