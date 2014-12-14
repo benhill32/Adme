@@ -40,7 +40,7 @@ function getdata_success(tx, results) {
         var month2 = split[1];
         var year = split[0];
         var day = split[2];
-        var h = res[1].substring(0,2)
+        var h = res[1];
 
         var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h).getTime();
     alert(day + "/" + month[month2] + "/" + year + " " + h);
