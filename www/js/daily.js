@@ -16,18 +16,18 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     var month = new Array();
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
-    month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
+    month[1] = "January";
+    month[2] = "February";
+    month[3] = "March";
+    month[4] = "April";
+    month[5] = "May";
+    month[6] = "June";
+    month[7] = "July";
+    month[8] = "August";
+    month[9] = "September";
+    month[10] = "October";
+    month[11] = "November";
+    month[12] = "December";
 
     $('#dailydealsDiv').empty();
 
@@ -42,11 +42,10 @@ function getdata_success(tx, results) {
         var year = split[0];
         var day = split[2];
         var h = res[1];
-alert(month2);
-        alert(month[month2]);
+
 
         var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h).getTime();
-    alert(day + "/" + month[month2] + "/" + year + " " + h);
+
         var countdown = document.getElementById("countdown");
         alert(target_date);
 
