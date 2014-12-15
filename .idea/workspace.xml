@@ -54,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbconnection.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbconnection.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/dbconnection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34282324" vertical-offset="0" max-vertical-offset="843">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
               <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
               <folding />
             </state>
@@ -122,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.16" vertical-offset="2686" max-vertical-offset="20315">
-              <caret line="195" column="7" selection-start-line="195" selection-start-column="7" selection-end-line="195" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.7689487" vertical-offset="2686" max-vertical-offset="20315">
+              <caret line="195" column="4" selection-start-line="195" selection-start-column="4" selection-end-line="195" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -150,8 +150,8 @@
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/js/daily.js" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/js/dbconnection.js" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
       </list>
     </option>
   </component>
@@ -398,7 +398,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -846,14 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.16" vertical-offset="2686" max-vertical-offset="20315">
-          <caret line="195" column="7" selection-start-line="195" selection-start-column="7" selection-end-line="195" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.84" vertical-offset="769" max-vertical-offset="6171">
@@ -880,8 +872,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/dbconnection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34282324" vertical-offset="0" max-vertical-offset="843">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7689487" vertical-offset="2686" max-vertical-offset="20315">
+          <caret line="195" column="4" selection-start-line="195" selection-start-column="4" selection-end-line="195" selection-end-column="4" />
           <folding />
         </state>
       </provider>
