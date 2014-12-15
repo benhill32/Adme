@@ -114,7 +114,6 @@ function createtables(){
 
 }
 
-
 function loadben()
 {
     droptables();
