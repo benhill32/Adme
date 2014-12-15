@@ -65,17 +65,26 @@ function getdata_success(tx, results) {
         '<div align="center" class="floatleft3 padding55"  >' +
         '' +
         'Time Remaining' +
-        '<div id="timediv"><span id="countdown"></span></div>' +
+        '<div id="timediv"><span id="countdown">' +
+        '<script type="application/javascript">' +
+        'var myCountdown1 = new Countdown({' +
+        ' time: 86400 * 3, // 86400 seconds = 1 day' +
+        ' width:300, height:60,rangeHi:"hour",style:"flip"});' +
+        '</script>' +
+        '</span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
         '<div align="center"  class="floatleft3 padding55"  >Read more</div>' +
         '</Div>');
 
 
-        var newYear = new Date();
-        newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
-        $('#countdown').countdown({until: newYear});
-        //$('#countdown').countdown({until: target_date, format: 'HMS'});
+        var myCountdown1 = new Countdown({
+            time: 86400 * 3, // 86400 seconds = 1 day
+            width:300,
+            height:60,
+            rangeHi:"hour",
+            style:"flip"	// <- no comma on last item!
+        });
 
     }
 }
