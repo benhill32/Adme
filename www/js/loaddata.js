@@ -79,8 +79,6 @@ function populateDB1(tx,results) {
     // alert(row.Count);
     if(row.Count ==0){
 
-
-
         $.when(blankLastUpdatesec()).done(function() {
             $.when( pushnotifiy()).done(function() {
                 db.transaction(populateDB, errorCBfunc, successCBfunc);
@@ -184,7 +182,7 @@ function errorclosemodel(){
 function closemodel(){
 
     $('#indexloadingdata').modal('hide');
- //   window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
 
