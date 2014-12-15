@@ -31,7 +31,8 @@ function getdata_success(tx, results) {
     month[12] = "December";
 
     $('#dailydealsDiv').empty();
-
+    var intervalArr = new Array();
+    
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var res = (menu.EndDate).split("T");
@@ -70,9 +71,9 @@ function getdata_success(tx, results) {
 
 
        var countdown = document.getElementById(name);
-        var intervalArr = new Array();
 
-        intervalArr.push(countdown + "|" + target_date);
+
+        intervalArr.push(name + "|" + target_date);
 
 
     }
