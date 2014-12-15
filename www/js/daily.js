@@ -5,6 +5,7 @@ document.addEventListener("deviceready", onDeviceReadydaily, false);
 function onDeviceReadydaily() {
     db.transaction(getdata, errorCBfunc, successCBfunc);
 }
+db.transaction(getdata, errorCBfunc, successCBfunc);
 
 function getdata(tx) {
     var current_date = new Date();
@@ -53,24 +54,24 @@ function getdata_success(tx, results) {
 
         var imgg = "";
         if(menu.Icon != "null"){
-            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" >&nbsp;';
+            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" width="100%" >&nbsp;';
             //imgg = menu.BusinessName;
         }else{
 
             imgg = menu.BusinessName;
         }
 
-        $('#dailydealsDiv').append('<Div align="center"  class="modal-body dailydealsdiv"    >' +
-
-
-        '<div align="left" class="floatleft3 padding22"  >' +
+        $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
+        '<div align="center" class="floatleft3remix1 padding22 paddingtop20"  >' +
         '' +
-        'Time Remaining' +
+        'Closes' +
         '<div id="timediv" align="center"><span id="' + name + '">' +
         '</span></div>' +
         '</div>' +
-        '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
-        '<div align="right"  class="floatleft3 padding22"  >Read more</div>' +
+        '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
+        '<div align="center"  class="floatleft3remix1 padding22 paddingtop20"  >Read more</div>' +
+        '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
+        '</div>' +
         '</Div>');
 
         var days, hours, minutes, seconds;

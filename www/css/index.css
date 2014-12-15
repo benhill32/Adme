@@ -176,6 +176,11 @@ padding-top: 22px;
     width:100%;
 color: white;
 }
+.paddingtop20{
+
+    padding-top: 20px;
+}
+
 .dailydealsdiv{
     border: 1px solid #ffffff;
     margin-bottom: 3px;
@@ -184,6 +189,13 @@ color: white;
     clear: both;
     vertical-align: middle;
     min-height: 105px;
+
+}
+.dailydivbottom{
+    clear: both;
+    width:100%;
+    padding-top:5px;
+    font-size: 13px;
 
 }
 #timediv{
@@ -245,6 +257,26 @@ width:90px;
     float:left;
     width:33%;
    // padding:1px;
+
+}
+
+.floatleft3remix1{
+
+    float:left;
+    width:25%;
+// padding:1px;
+    font-size: 12px;
+    min-height: 80px;
+
+}
+
+.floatleft3remix2{
+
+    float:left;
+    width:50%;
+// padding:1px;
+    font-size: 12px;
+    min-height: 80px;
 
 }
 #backimg{

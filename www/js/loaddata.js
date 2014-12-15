@@ -113,10 +113,26 @@ function createtables(){
         db.transaction(populateDB, errorCBfunc, successCBfunc);
     });
 
-
-
 }
 
+
+function loadben()
+{
+    droptables();
+
+    db.transaction(createDB, errorCBfunc, successCBfunc);
+
+
+
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile?deviceID=e8300770a9c17df8&token=eb9bb2bb-ad3a-488b-8f2a-a1d1ce727926&sec=0', false);
+    xmlHttp.send();
+    var json = xmlHttp.responseText;
+    var obj = JSON.parse(json);
+
+    syncmaintables(obj);
+}
 
 function getchecksync(tx, results) {
 
@@ -136,7 +152,9 @@ function getchecksync(tx, results) {
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
-        xmlHttp.send();
+
+
+    xmlHttp.send();
 
         var json = xmlHttp.responseText;
 
@@ -166,7 +184,7 @@ function errorclosemodel(){
 function closemodel(){
 
     $('#indexloadingdata').modal('hide');
-    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+ //   window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
 
