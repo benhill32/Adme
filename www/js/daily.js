@@ -83,15 +83,15 @@ function getdata_success(tx, results) {
 
 
 function setintervaldaily(detailarray){
-    alert(detailarray);
+    //alert(detailarray);
 
 
-
+    setInterval(function () {
     var current_date = new Date().getTime();
 
     for (var i in detailarray) {
         var item = detailarray[i];
-        alert(item);
+       // alert(item);
         var res = (item).split("|");
 
         var seconds_left = (res[1] - current_date) / 1000;
@@ -112,7 +112,7 @@ function setintervaldaily(detailarray){
         + minutes + "m, " + seconds + "s";
 
     }
-
+    }, 1000);
 
 
 
