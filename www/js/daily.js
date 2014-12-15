@@ -15,7 +15,7 @@ function getdata(tx) {
     var mins = ("0" + current_date.getMinutes()).slice(-2);
 
     var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID WHERE  datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' ";
-     alert(sql);
+     //alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
@@ -53,7 +53,7 @@ function getdata_success(tx, results) {
 
         var imgg = "";
         if(menu.Icon != "null"){
-            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" width="200" >&nbsp;';
+            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" >&nbsp;';
             //imgg = menu.BusinessName;
         }else{
 
@@ -66,7 +66,7 @@ function getdata_success(tx, results) {
         '<div align="left" class="floatleft3 padding55"  >' +
         '' +
         'Time Remaining' +
-        '<div id="timediv"><span id="' + name + '">' +
+        '<div id="timediv" align="center"><span id="' + name + '">' +
         '</span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
@@ -91,7 +91,7 @@ function getdata_success(tx, results) {
 
 
 function setintervaldaily(detailarray){
-    alert(detailarray);
+   // alert(detailarray);
 
 
 
