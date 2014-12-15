@@ -63,14 +63,14 @@ function getdata_success(tx, results) {
         $('#dailydealsDiv').append('<Div align="center"  class="modal-body dailydealsdiv"    >' +
 
 
-        '<div align="left" class="floatleft3 padding55"  >' +
+        '<div align="left" class="floatleft3 padding22"  >' +
         '' +
         'Time Remaining' +
         '<div id="timediv" align="center"><span id="' + name + '">' +
         '</span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
-        '<div align="right"  class="floatleft3 padding55"  >Read more</div>' +
+        '<div align="right"  class="floatleft3 padding22"  >Read more</div>' +
         '</Div>');
 
         var days, hours, minutes, seconds;

@@ -118,9 +118,9 @@ body {
     padding-bottom: 3px;
 }
 
-.padding55{
+.padding22{
 
-    padding:5px 5px;
+    padding:2px 2px;
 }
 
 #homescore,#awayscore{
@@ -189,7 +189,7 @@ color: white;
 #timediv{
     border: 1px solid #ffffff;
     border-radius: 10px;
-    width: 35%;
+    width: 100%;
 }
 #headermain2nd{
     min-height: 54px;
