@@ -78,13 +78,7 @@ function getdata_success(tx, results) {
         '</Div>');
 
 
-        var myCountdown1 = new Countdown({
-            time: 86400 * 3, // 86400 seconds = 1 day
-            width:300,
-            height:60,
-            rangeHi:"hour",
-            style:"flip"	// <- no comma on last item!
-        });
+     
 
     }
 }
