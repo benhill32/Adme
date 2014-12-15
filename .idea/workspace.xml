@@ -104,8 +104,8 @@
       <file leaf-file-name="daily.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/daily.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14337349" vertical-offset="51" max-vertical-offset="2142">
-              <caret line="10" column="388" selection-start-line="10" selection-start-column="388" selection-end-line="10" selection-end-column="388" />
+            <state vertical-scroll-proportion="0.20481928" vertical-offset="0" max-vertical-offset="2142">
+              <caret line="10" column="337" selection-start-line="10" selection-start-column="337" selection-end-line="10" selection-end-column="337" />
               <folding />
             </state>
           </provider>
@@ -824,8 +824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/daily.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14337349" vertical-offset="51" max-vertical-offset="2142">
-          <caret line="10" column="388" selection-start-line="10" selection-start-column="388" selection-end-line="10" selection-end-column="388" />
+        <state vertical-scroll-proportion="0.20481928" vertical-offset="0" max-vertical-offset="2142">
+          <caret line="10" column="337" selection-start-line="10" selection-start-column="337" selection-end-line="10" selection-end-column="337" />
           <folding />
         </state>
       </provider>
