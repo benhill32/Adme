@@ -83,7 +83,7 @@ function getdata_success(tx, results) {
 
 
 function setintervaldaily(detailarray){
-   // alert(detailarray);
+    alert(detailarray);
 
 
 
