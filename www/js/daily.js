@@ -86,10 +86,10 @@ function setintervaldaily(detailarray){
    // alert(detailarray);
 
 
-    var arrayLength = detailarray.length;
+
     var current_date = new Date().getTime();
 
-    for (var i = 0; i < arrayLength; i++) {
+    for (var i in detailarray) {
         var item = detailarray[i];
         alert(item);
         var res = (item).split("|");
@@ -112,7 +112,7 @@ function setintervaldaily(detailarray){
 
     }
 
-   
+
 
 
 
