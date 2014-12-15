@@ -92,8 +92,8 @@
       <file leaf-file-name="daily.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/daily.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.36" vertical-offset="731" max-vertical-offset="2261">
-              <caret line="70" column="53" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="53" />
+            <state vertical-scroll-proportion="-8.84" vertical-offset="731" max-vertical-offset="2261">
+              <caret line="56" column="95" selection-start-line="56" selection-start-column="95" selection-end-line="56" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -149,8 +149,8 @@
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
-        <option value="$PROJECT_DIR$/www/js/daily.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/js/daily.js" />
         <option value="$PROJECT_DIR$/www/js/dbconnection.js" />
       </list>
     </option>
@@ -856,8 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/daily.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.36" vertical-offset="731" max-vertical-offset="2261">
-          <caret line="70" column="53" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="53" />
+        <state vertical-scroll-proportion="-8.84" vertical-offset="731" max-vertical-offset="2261">
+          <caret line="56" column="95" selection-start-line="56" selection-start-column="95" selection-end-line="56" selection-end-column="95" />
           <folding />
         </state>
       </provider>
