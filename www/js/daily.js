@@ -77,7 +77,7 @@ function getdata_success(tx, results) {
 
     }
 
-
+    window.clearInterval(interval);
     setintervaldaily(intervalArr);
 }
 
@@ -86,7 +86,7 @@ function setintervaldaily(detailarray){
     //alert(detailarray);
 
 
-    setInterval(function () {
+    var interval = setInterval(function () {
     var current_date = new Date().getTime();
 
     for (var i in detailarray) {
@@ -113,12 +113,6 @@ function setintervaldaily(detailarray){
 
     }
     }, 1000);
-
-
-
-
-
-
 
 
 
