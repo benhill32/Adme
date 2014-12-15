@@ -41,7 +41,7 @@ function getdata_success(tx, results) {
         var h = res[1];
 
 
-        var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h).getTime();
+        var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h);
 
         var countdown = document.getElementById("countdown");
 
@@ -69,30 +69,10 @@ function getdata_success(tx, results) {
         '<div align="center"  class="floatleft3 padding55"  >Read more</div>' +
         '</Div>');
 
-        var days2, hours2, minutes2, seconds2;
 
 
-        setInterval(function () {
+        $('#countdown').countdown({until: target_date, format: 'HMS'});
 
-            // find the amount of "seconds" between now and target
-            var current_date = new Date().getTime();
-            var seconds_left = (target_date - current_date) / 1000;
-
-            // do some time calculations
-            days2 = parseInt(seconds_left / 86400);
-            seconds_left = seconds_left % 86400;
-
-            hours2 = parseInt(seconds_left / 3600);
-            seconds_left = seconds_left % 3600;
-
-            minutes2 = parseInt(seconds_left / 60);
-            seconds2 = parseInt(seconds_left % 60);
-
-            // format countdown string + set tag value
-            countdown.innerHTML = hours2 + "h, "
-            + minutes2 + "m, " + seconds2 + "s";
-
-        }, 1000);
 
 
     }
