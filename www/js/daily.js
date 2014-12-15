@@ -1,6 +1,4 @@
 var db;
-var target_date = "";
-var countdown= "";
 
 document.addEventListener("deviceready", onDeviceReadydaily, false);
 
@@ -33,7 +31,6 @@ function getdata_success(tx, results) {
 
     $('#dailydealsDiv').empty();
     var intervalArr = new Array();
-
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var res = (menu.EndDate).split("T");
@@ -44,7 +41,7 @@ function getdata_success(tx, results) {
         var h = res[1];
         var name = "countdown" + menu.ID;
 
-        target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
+       var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
 
         var imgg = "";
         if(menu.Icon != "null"){
@@ -71,16 +68,17 @@ function getdata_success(tx, results) {
         var days, hours, minutes, seconds;
 
 
-        countdown = document.getElementById(name);
+       var countdown = document.getElementById(name);
 
-        function killIntervals(){
-            while(intervalArr.length > 0)
-                clearInterval(intervalArr.pop());
-        };
 
-        intervalArr.push(setInterval("setintervaldaily()",1000))
+        intervalArr.push(name + "|" + target_date);
+
+
 
     }
+
+    alert(intervalArr);
+
 }
 
 
