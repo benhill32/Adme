@@ -8,9 +8,13 @@ function onDeviceReadydaily() {
 
 function getdata(tx) {
     var current_date = new Date();
+    var year = current_date.getFullYear();
+    var month = current_date.getMonth()+1;
+    var day = current_date.getDate();
+    var hours = current_date.getHours()+1;
+    var mins = current_date.getMinutes();
 
-
-    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID WHERE  datetime(MAD.EndDate) >=  datetime('2014-12-16 08:00:00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' ";
+    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID WHERE  datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' ";
      alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
