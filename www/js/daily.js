@@ -41,9 +41,11 @@ function getdata_success(tx, results) {
         var h = res[1];
 
 
-        var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h);
+      //  var target_date = new Date(day + "/" + month[month2] + "/" + year + " " + h);
 
-        var countdown = document.getElementById("countdown");
+        var target_date = new Date(year,month2-1,day);
+
+
 
 
 
