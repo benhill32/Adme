@@ -63,7 +63,7 @@ function getdata_success(tx, results) {
         '<div align="center" class="floatleft3 padding55"  >' +
         '' +
         'Time Remaining' +
-        '<div id="timediv"><span id="name">' + name +
+        '<div id="timediv"><span id="' + name + '">' + name +
 
         '</span></div>' +
         '</div>' +
