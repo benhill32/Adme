@@ -41,7 +41,7 @@ function getdata_success(tx, results) {
         var h = res[1];
         var name = "countdown" + menu.ID;
 
-        var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();;
+      //  var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();;
 
 
 
@@ -71,12 +71,12 @@ function getdata_success(tx, results) {
         '<div align="center"  class="floatleft3 padding55"  >Read more</div>' +
         '</Div>');
 
-        var days, hours, minutes, seconds;
+    //    var days, hours, minutes, seconds;
 
 
-        var countdown = document.getElementById(name);
+      //  var countdown = document.getElementById(name);
 
-    alert(countdown.innerHTML);
+    //alert(countdown.innerHTML);
 
 
 
