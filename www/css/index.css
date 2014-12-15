@@ -193,7 +193,7 @@ color: white;
     border-radius: 10px;
     clear: both;
     vertical-align: middle;
-    max-height: 105px;
+    min-height: 105px;
 
 }
 .dailydivbottom{
