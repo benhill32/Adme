@@ -7,7 +7,8 @@ function onDeviceReadydaily() {
 }
 
 function getdata(tx) {
-    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID ";
+    var current_date = new Date();
+    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID WHERE " + current_date + " >= EndDate ";
     // alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
@@ -15,6 +16,7 @@ function getdata(tx) {
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
+
     var month = new Array();
     month[1] = "January";
     month[2] = "February";
@@ -83,7 +85,7 @@ function getdata_success(tx, results) {
 
 
 function setintervaldaily(detailarray){
-    //alert(detailarray);
+    alert(detailarray);
 
 
 
