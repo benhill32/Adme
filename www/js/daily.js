@@ -54,7 +54,7 @@ function getdata_success(tx, results) {
 
         var imgg = "";
         if(menu.Icon != "null"){
-            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" width="100%" >&nbsp;';
+            imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '"  align="center" width="100%"  >&nbsp;';
             //imgg = menu.BusinessName;
         }else{
 
@@ -62,14 +62,14 @@ function getdata_success(tx, results) {
         }
 
         $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-        '<div align="center" class="floatleft3remix1 padding22 paddingtop20"  >' +
+        '<div align="center" class="floatleft3remix1 padding22 paddingtop25"  >' +
         '' +
         'Closes' +
         '<div id="timediv" align="center"><span id="' + name + '">' +
         '</span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
-        '<div align="center"  class="floatleft3remix1 padding22 paddingtop20"  >Read more</div>' +
+        '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
         '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
         '</div>' +
         '</Div>');

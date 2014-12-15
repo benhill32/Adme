@@ -176,9 +176,14 @@ padding-top: 22px;
     width:100%;
 color: white;
 }
-.paddingtop20{
+.paddingtop25{
 
-    padding-top: 20px;
+    padding-top: 25px;
+}
+
+.paddingtop35{
+
+    padding-top: 35px;
 }
 
 .dailydealsdiv{
@@ -188,7 +193,7 @@ color: white;
     border-radius: 10px;
     clear: both;
     vertical-align: middle;
-    min-height: 105px;
+    max-height: 105px;
 
 }
 .dailydivbottom{
@@ -267,6 +272,7 @@ width:90px;
 // padding:1px;
     font-size: 12px;
     min-height: 80px;
+
 
 }
 
