@@ -77,17 +77,21 @@ function getdata_success(tx, results) {
 
     }
 
-    alert(intervalArr);
 
+    setintervaldaily(intervalArr);
 }
 
 
-function setintervaldaily(){
+function setintervaldaily(detailarray){
+    alert(detailarray);
+
+    setInterval(function () {
+    var arrayLength = detailarray.length;
+    var current_date = new Date().getTime();
+
+    for (var i = 0; i < arrayLength; i++) {
 
 
-
-        // find the amount of "seconds" between now and target
-        var current_date = new Date().getTime();
         var seconds_left = (target_date - current_date) / 1000;
 
         // do some time calculations
@@ -103,6 +107,14 @@ function setintervaldaily(){
         // format countdown string + set tag value
         countdown.innerHTML = hours + "h, "
         + minutes + "m, " + seconds + "s";
+
+    }
+
+    }, 1000);
+
+
+
+
 
 
 
