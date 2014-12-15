@@ -19,4 +19,4 @@ function onDeviceReadydbconn() {
 
 
 
-db = window.openDatabase("Neocom_Adme", "1.1", "Neocom_Adme", 200000);
+//db = window.openDatabase("Neocom_Adme", "1.1", "Neocom_Adme", 200000);

@@ -285,7 +285,7 @@ width:90px;
 // padding:1px;
     font-size: 12px;
     min-height: 105px;
-
+    overflow:hidden;
 }
 #backimg{
 
