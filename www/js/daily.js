@@ -72,15 +72,10 @@ function getdata_success(tx, results) {
         '</Div>');
 
 
-
-        $('#countdown').countdown({until: target_date, format: 'HMS'});
-
-
+        var newYear = new Date();
+        newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
+        $('#countdown').countdown({until: newYear});
+        //$('#countdown').countdown({until: target_date, format: 'HMS'});
 
     }
-
-
-
-
-
 }
