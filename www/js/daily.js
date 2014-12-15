@@ -57,7 +57,6 @@ function getdata_success(tx, results) {
         $('#dailydealsDiv').append('<Div align="center"  class="modal-body dailydealsdiv"    >' +
 
 
-
         '<div align="center" class="floatleft3 padding55"  >' +
         '' +
         'Time Remaining' +
@@ -72,13 +71,14 @@ function getdata_success(tx, results) {
 
 
         countdown = document.getElementById(name);
+        var intervalArr = new Array();
 
-        var intervalId = "int" + menu.ID;
-        var namenew = "#" + name;
-        intervalId = window.setInterval("setintervaldaily()",1000);
-        $(namenew).attr( "data-timer-id",intervalId );
+        function killIntervals(){
+            while(intervalArr.length > 0)
+                clearInterval(intervalArr.pop());
+        };
 
-
+        intervalArr.push(setInterval("setintervaldaily()",1000))
 
     }
 }
