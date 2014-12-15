@@ -41,7 +41,7 @@ function getdata_success(tx, results) {
         var h = res[1];
         var name = "countdown" + menu.ID;
 
-        var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();;
+        var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
 
 
 
@@ -63,8 +63,7 @@ function getdata_success(tx, results) {
         '<div align="center" class="floatleft3 padding55"  >' +
         '' +
         'Time Remaining' +
-        '<div id="timediv"><span id="' + name + '">' + name +
-
+        '<div id="timediv"><span id="' + name + '">' +
         '</span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
