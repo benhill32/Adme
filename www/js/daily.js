@@ -66,11 +66,7 @@ function getdata_success(tx, results) {
         '' +
         'Time Remaining' +
         '<div id="timediv"><span id="countdown">' +
-        '<script type="application/javascript">' +
-        'var myCountdown1 = new Countdown({' +
-        ' time: 86400 * 3, // 86400 seconds = 1 day' +
-        ' width:300, height:60,rangeHi:"hour",style:"flip"});' +
-        '</script>' +
+
         '</span></div>' +
         '</div>' +
         '<div align="center"  class="floatleft3"  >' + imgg + '</div>' +
@@ -78,7 +74,7 @@ function getdata_success(tx, results) {
         '</Div>');
 
 
-     
+
 
     }
 }
