@@ -176,14 +176,9 @@ padding-top: 22px;
     width:100%;
 color: white;
 }
-.paddingtop25{
+.paddingtop20{
 
-    padding-top: 25px;
-}
-
-.paddingtop35{
-
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 .dailydealsdiv{
@@ -193,7 +188,7 @@ color: white;
     border-radius: 10px;
     clear: both;
     vertical-align: middle;
-    height: 105px;
+    min-height: 105px;
 
 }
 .dailydivbottom{
@@ -264,15 +259,22 @@ width:90px;
    // padding:1px;
 
 }
+.paddingtop25{
 
+    padding-top: 25px;
+}
+
+.paddingtop35{
+
+    padding-top: 35px;
+}
 .floatleft3remix1{
 
     float:left;
     width:25%;
 // padding:1px;
     font-size: 12px;
-    min-height: 80px;
-
+    min-height: 105px;
 
 }
 
@@ -282,7 +284,7 @@ width:90px;
     width:50%;
 // padding:1px;
     font-size: 12px;
-    height: 80px;
+    min-height: 105px;
 
 }
 #backimg{
