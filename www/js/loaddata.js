@@ -79,12 +79,17 @@ function populateDB1(tx,results) {
     //   alert(row);
     // alert(row.Count);
     if(row.Count ==0){
-
-        $.when(blankLastUpdatesec()).done(function() {
-            $.when( pushnotifiy()).done(function() {
-                db.transaction(populateDB, errorCBfunc, successCBfunc);
+        if(networkconnection!=0) {
+            $.when(blankLastUpdatesec()).done(function () {
+                $.when(pushnotifiy()).done(function () {
+                    db.transaction(populateDB, errorCBfunc, successCBfunc);
+                });
             });
-        });
+        }else{
+            $('#indexloadingdata').modal('hide');
+            window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+        }
     }else{
 
         var sql = "select Datesecs,token from MobileApp_LastUpdatesec";
@@ -94,6 +99,8 @@ function populateDB1(tx,results) {
             tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
             $('#indexloadingdata').modal('hide');
+            window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
         }
     }
 }

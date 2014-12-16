@@ -24,9 +24,33 @@ function onDeviceReadyFunc() {
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
     document.addEventListener("backbutton", onBackKeyDown, false);
 
-
+    getnetworkdetailsfunc();
 
 }
+
+function getnetworkdetailsfunc(){
+
+    document.addEventListener("online", checkonlinefunc, false);
+}
+
+function checkonlinefunc(){
+
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = '0';
+    states[Connection.ETHERNET] = '2';
+    states[Connection.WIFI]     = '2';
+    states[Connection.CELL_2G]  = '1';
+    states[Connection.CELL_3G]  = '1';
+    states[Connection.CELL_4G]  = '1';
+    states[Connection.NONE]     = '0';
+
+    networkconnectionfun = states[networkState];
+    //alert(states[networkState]);
+
+}
+
 
 function onBackKeyDown() {
     var page = $(location).attr('pathname');
@@ -73,6 +97,7 @@ function getUrlVarsfunc() {
 }
 
 function blankLastUpdatesec(){
+
 
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
@@ -319,19 +344,26 @@ function syncmaintables(obj){
 
 
 function passscoretoserver(testvar){
+    checkonline();
 
-    var http = new XMLHttpRequest();
-    var url = "http://admin.adme.kiwi/loaddatafromapp.aspx";
-    var params = "?" + testvar;
 
-    http.open("POST", url + params, true);
-    console.log(url + params);
+    if(networkconnection!=0) {
+        var http = new XMLHttpRequest();
+        var url = "http://admin.adme.kiwi/loaddatafromapp.aspx";
+        var params = "?" + testvar;
 
-    http.onreadystatechange = function() {//Call a function when the state changes.
-        if(http.readyState == 4 && http.status == 200) {
-            // alert(http.responseText);
+        http.open("POST", url + params, true);
+        console.log(url + params);
+
+        http.onreadystatechange = function () {//Call a function when the state changes.
+            if (http.readyState == 4 && http.status == 200) {
+                // alert(http.responseText);
+            }
         }
+        http.send();
+    }else{
+        window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
     }
-    http.send();
 
 }
