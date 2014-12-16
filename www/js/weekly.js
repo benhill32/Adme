@@ -89,25 +89,38 @@ function getdata_success(tx, results) {
                 imgg = menu.BusinessName;
             }
 
-            $('#weeklydealsDiv').append('<Div align="center"  class="weeklydealsDiv"    >' +
-            '<div align="center" class="floatleft3remix1 padding22 paddingtop25"  >' +
-            '' +
-            'Closes' +
-            '<div id="timediv" align="center"><span id="' + name + '">' +
-            '</span></div>' +
-            '</div>' +
-            '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
-            '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
-            '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
-            '</div>' +
-            '</Div>');
 
+            if(menu.URL != ""){
+
+                $('#weeklydealsDiv').append('<Div align="center"  class="weeklydealsDiv"    >' +
+                '<div align="center" class="floatleft3remix1 padding22 paddingtop25" onclick="URLredirect(\'' + menu.URL + '\')"  >' +
+                '' +
+                'Closes' +
+                '<div id="timediv" align="center"><span id="' + name + '">' +
+                '</span></div>' +
+                '</div>' +
+                '<div align="center"  class="floatleft3remix2"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + imgg + '</div>' +
+                '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
+                '<div align="center" class="dailydivbottom"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + menu.Price + " " + menu.ItemName +
+                '</div>' +
+                '</Div>');
+            }else{
+                $('#weeklydealsDiv').append('<Div align="center"  class="weeklydealsDiv"    >' +
+                '<div align="center" class="floatleft3remix1 padding22 paddingtop25"  >' +
+                '' +
+                'Closes' +
+                '<div id="timediv" align="center"><span id="' + name + '">' +
+                '</span></div>' +
+                '</div>' +
+                '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
+                '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
+                '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
+                '</div>' +
+                '</Div>');
+
+            }
             var days, hours, minutes, seconds;
-
-
             var countdown = document.getElementById(name);
-
-
             intervalArr.push(name + "|" + target_date);
 
 

@@ -78,6 +78,7 @@ function getdata_success(tx, results) {
         if (menu.TownID == "0" || menu.TownID == townID) {
 
 
+
             var res = (menu.EndDate).split("T");
             var split = res[0].split("-");
             var month2 = split[1];
@@ -97,19 +98,35 @@ function getdata_success(tx, results) {
                 imgg = menu.BusinessName;
             }
 
+            if(menu.URL != ""){
+
             $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-            '<div align="center" class="floatleft3remix1 padding22 paddingtop25"  >' +
+            '<div align="center" class="floatleft3remix1 padding22 paddingtop25" onclick="URLredirect(\'' + menu.URL + '\')"  >' +
             '' +
             'Closes' +
             '<div id="timediv" align="center"><span id="' + name + '">' +
             '</span></div>' +
             '</div>' +
-            '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
+            '<div align="center"  class="floatleft3remix2"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + imgg + '</div>' +
             '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
-            '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
+            '<div align="center" class="dailydivbottom"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + menu.Price + " " + menu.ItemName +
             '</div>' +
             '</Div>');
+            }else{
+                $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
+                '<div align="center" class="floatleft3remix1 padding22 paddingtop25"  >' +
+                '' +
+                'Closes' +
+                '<div id="timediv" align="center"><span id="' + name + '">' +
+                '</span></div>' +
+                '</div>' +
+                '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
+                '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
+                '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
+                '</div>' +
+                '</Div>');
 
+            }
             var days, hours, minutes, seconds;
 
 
