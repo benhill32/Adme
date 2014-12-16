@@ -189,7 +189,7 @@ function errorclosemodel(){
 function closemodel(){
 
     $('#indexloadingdata').modal('hide');
-    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+    window.plugins.toast.showShortCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
 

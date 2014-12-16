@@ -87,7 +87,7 @@ function getdata_success(tx, results) {
             var name = "countdown" + menu.ID;
 
             var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
-
+            alert(target_date);
             var imgg = "";
             if (menu.Icon != "null") {
                 imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:100%;"  align="center"  >&nbsp;';
@@ -127,10 +127,6 @@ function getdata_success(tx, results) {
 
             }
             var days, hours, minutes, seconds;
-
-
-            var countdown = document.getElementById(name);
-
 
             intervalArr.push(name + "|" + target_date);
 
