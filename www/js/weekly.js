@@ -1,5 +1,6 @@
 var db;
 var townID = "";
+var IDweekly = "";
 document.addEventListener("deviceready", onDeviceReadyweekly, false);
 
 function onDeviceReadyweekly() {
@@ -113,7 +114,7 @@ function getdata_success(tx, results) {
                 '</span></div>' +
                 '</div>' +
                 '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
-                '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
+                '<div align="center"  class="floatleft3remix1 padding22 paddingtop35" data-toggle="modal" data-target="#basicmodalweekly" onclick="loadweeklydiv(' + menu.ID + ')"  >Read more</div>' +
                 '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
                 '</div>' +
                 '</Div>');
@@ -129,6 +130,10 @@ function getdata_success(tx, results) {
 
     setintervaldaily(intervalArr);
 }
+
+
+
+
 
 
 function setintervaldaily(detailarray){
@@ -164,5 +169,10 @@ function setintervaldaily(detailarray){
 
 
 
+
+}
+
+function loadweeklydiv(ID) {
+    IDweekly = ID;
 
 }
