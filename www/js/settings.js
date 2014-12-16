@@ -250,6 +250,11 @@ function gettown_success(tx, results) {
 
 function townchosen(ID){
     townID = ID;
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_Towns set Follow = 0');
+        console.log("Update MobileApp_Towns");
+    });
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_Towns set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_Towns");
