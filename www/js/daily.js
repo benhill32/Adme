@@ -86,14 +86,9 @@ function getdata_success(tx, results) {
             var h = res[1].split(":");
             var name = "countdown" + menu.ID;
 
-             alert(year2 + " "  + (month2-1) + " "  + day2 + " "  + h[0] + " "  + h[1] + " "  + h[2]);
-
-            var test =new Date(year2,month2-1,day2,h[0],h[1],h[2]);
-            alert(test);
 
 
-
-            var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
+            var target_date = new Date(year2,month2-1,day2,h[0],h[1],h[2]).getTime();
 
             var imgg = "";
             if (menu.Icon != "null") {
