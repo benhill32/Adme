@@ -65,7 +65,7 @@ function getdata_success(tx, results) {
     var intervalArr = new Array();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-
+        alert(menu.TownID);
 
         if (menu.TownID == "0" || menu.TownID == townID) {
 
