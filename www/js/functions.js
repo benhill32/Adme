@@ -482,7 +482,7 @@ function townchosenfunc(ID){
 
 function getbuscatsfunc(tx) {
     var sql = "select COUNT(ID) as Count from MobileApp_BusinessCategories where Follow = 1";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getbuscatsfunc_success);
 }
 
@@ -492,7 +492,7 @@ function getbuscatsfunc_success(tx, results) {
     var menu = results.rows.item(0);
     if(menu.Count == 0){
 
-        window.plugins.toast.showShortCenter('You need to select Categories you would like to view.\n Please go to the Setting page and Click on Select Categories', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showShortCenter('You need to select Categories you would like to view. Please go to the Setting page and Click on Select Categories', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }
 
