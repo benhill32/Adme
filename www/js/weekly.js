@@ -39,7 +39,7 @@ function getdata(tx) {
         "from MobilevwApp_weeklydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "JOIN MobileApp_BusinessCategories as MBC on MAD.Categories = MBC.CategoryID AND MAD.BusinessID = MBC.BusniessID " +
         "WHERE MBC.Follow =1 and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' ";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getdata_success,errorCBfuncweekly);
 }
 
@@ -65,7 +65,7 @@ function getdata_success(tx, results) {
     var intervalArr = new Array();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        alert(menu.TownID);
+
 
         if (menu.TownID == "0" || menu.TownID == townID) {
 
