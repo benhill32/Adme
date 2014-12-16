@@ -174,7 +174,10 @@ function choosebuscattrue(ID){
     });
     choosecate(catid);
 
+    sendcattoserver();
+
 }
+
 
 
 function choosebuscatfalse(ID){
@@ -184,8 +187,30 @@ function choosebuscatfalse(ID){
         console.log("Update MobileApp_BusinessCategories");
     });
     choosecate(catid);
-
+    sendcattoserver();
 }
+
+function sendcattoserver(){
+    db.transaction(sendcattoserver_data, errorCBfunc, successCBfunc);
+}
+
+function sendcattoserver_data(tx) {
+    var sql = "select ID from MobileApp_BusinessCategories WHERE Follow = 1 order by ID ";
+    //alert(sql);
+    tx.executeSql(sql, [], sendcattoserver_data_success);
+}
+
+function sendcattoserver_data_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var cat = "";
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        cat = cat + menu.ID + ",";
+    }
+    alert(cat);
+}
+
 
 function showregions(){
 

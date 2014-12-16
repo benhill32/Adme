@@ -106,6 +106,5 @@ function townchosen(ID){
         console.log("Update MobileApp_Towns");
     });
 
-    passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
-
+    passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
 }
