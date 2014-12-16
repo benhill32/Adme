@@ -494,9 +494,15 @@ function getbuscatsfunc_success(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     if(menu.Count == 0){
+        if(document.getElementById("divindex")==null) {
 
-        window.plugins.toast.showShortCenter('You need to select Categories you would like to view. Please go to the Setting page and Click on Select Categories', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+            window.plugins.toast.showLongCenter('You need to select Categories you would like to view. Please go to the Setting page and Click on Select Categories', function (a) {
+                console.log('toast success: ' + a)
+            }, function (b) {
+                alert('toast error: ' + b)
+            });
 
+        }
     }
 
 
