@@ -40,7 +40,7 @@ function getdata(tx) {
         "JOIN MobileApp_BusinessCategories as MBC on MAD.Categories = MBC.CategoryID AND MAD.BusinessID = MBC.BusniessID " +
         "WHERE MBC.Follow =1 and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' ";
     alert(sql);
-    tx.executeSql(sql, [], getdata_success);
+    tx.executeSql(sql, [], getdata_success,errorCBfuncweekly);
 }
 
 function getdata_success(tx, results) {

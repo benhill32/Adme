@@ -45,6 +45,11 @@ function goBack() {
     window.history.back()
 }
 
+function errorCBfuncweekly(err) {
+    console.log("Error processing SQL: "+err.code);
+    alert("Error processing SQL loaddata: "+err.code);
+}
+
 
 function errorCBfunc(err) {
     console.log("Error processing SQL: "+err.code);
