@@ -187,17 +187,9 @@ function closemodel(){
 }
 
 function randomfunctions(){
-    if (document.getElementById("settingsync") != null) {
-        db.transaction(getsyncdate, errorCBfunc, successCBfunc);
-    }
-
-    if (document.getElementById("divschedules") != null) {
-        db.transaction(getfliter, errorCBfunc, successCBfunc);
-    }
-    if (document.getElementById("divresults") != null) {
-        db.transaction(getfliter, errorCBfunc, successCBfunc);
-    }
+    db.transaction(checktowncount, errorCBfunc, successCBfunc);
 }
+
 
 function successHandler (result) {
     //   alert('result = ' + result);
