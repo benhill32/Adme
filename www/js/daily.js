@@ -83,7 +83,7 @@ function getdata_success(tx, results) {
             var month2 = split[1];
             var year2 = split[0];
             var day2 = split[2];
-            var h = res[2].split(":");
+            var h = res[1].split(":");
             var name = "countdown" + menu.ID;
 
              alert(h[0] + " "  + h[1] + " "  + h[2]);
