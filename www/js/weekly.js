@@ -6,12 +6,6 @@ function onDeviceReadyweekly() {
 
     db.transaction(gettownname, errorCBfunc, successCBfunc);
 
-
-
-
-
-
-
 }
 
 function gettownname(tx) {
@@ -25,15 +19,13 @@ function gettownname_success(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     townID = menu.ID;
-
-
     db.transaction(getdata, errorCBfunc, successCBfunc);
 }
 
 
 
 
-db.transaction(getdata, errorCBfunc, successCBfunc);
+
 
 function getdata(tx) {
     var current_date = new Date();
@@ -47,7 +39,7 @@ function getdata(tx) {
         "from MobilevwApp_weeklydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "JOIN MobileApp_BusinessCategories as MBC on MAD.Categories = MBC.CategoryID AND MAD.BusinessID = MBC.BusniessID " +
         "WHERE MBC.Follow =1 and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' ";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 

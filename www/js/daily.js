@@ -33,7 +33,7 @@ function gettownname_success(tx, results) {
 
 
 
-db.transaction(getdata, errorCBfunc, successCBfunc);
+
 
 function getdata(tx) {
     var current_date = new Date();
