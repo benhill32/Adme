@@ -83,13 +83,15 @@ function getdata_success(tx, results) {
             var month2 = split[1];
             var year2 = split[0];
             var day2 = split[2];
-            var h = res[1];
+            var h = res[2].split(":");
             var name = "countdown" + menu.ID;
-             var test2 =new Date(menu.EndDate);
-            alert(test2);
 
-            var test =new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h);
+             alert(h[0] + " "  + h[1] + " "  + h[2]);
+
+            var test =new Date(year2,month2,day2,h[0],h[1],h[2]);
             alert(test);
+
+
 
             var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
 
