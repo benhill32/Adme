@@ -191,6 +191,17 @@ color: white;
     min-height: 105px;
 
 }
+
+.weeklydealsDiv:hover{
+
+    border: 1px solid #71BF44;
+}
+
+.dailydealsdiv:hover{
+
+    border: 1px solid #71BF44;
+}
+
 .dailydivbottom{
     clear: both;
     width:100%;
