@@ -109,7 +109,7 @@ function getdata_success(tx, results) {
             '</span></div>' +
             '</div>' +
             '<div align="center"  class="floatleft3remix2"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + imgg + '</div>' +
-            '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  >Read more</div>' +
+            '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
             '<div align="center" class="dailydivbottom"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + menu.Price + " " + menu.ItemName +
             '</div>' +
             '</Div>');
