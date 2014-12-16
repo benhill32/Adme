@@ -85,7 +85,7 @@ function getdata_success(tx, results) {
             var day2 = split[2];
             var h = res[1];
             var name = "countdown" + menu.ID;
-
+    alert(day2 + "/" + month[month2] + "/" + year2 + " " + h);
             var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
 
             var imgg = "";
