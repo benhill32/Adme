@@ -85,9 +85,10 @@ function getdata_success(tx, results) {
             var day2 = split[2];
             var h = res[1];
             var name = "countdown" + menu.ID;
+             var test2 =new Date(menu.EndDate);
+            alert(test2);
 
-
-            var test =new Date(menu.EndDate);
+            var test =new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h);
             alert(test);
 
             var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
