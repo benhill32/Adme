@@ -175,4 +175,40 @@ function setintervaldaily(detailarray){
 function loadweeklydiv(ID) {
     IDweekly = ID;
 
+    db.transaction(loadweeklyinfo, errorCBfunc, successCBfunc);
+}
+
+
+function loadweeklyinfo(tx) {
+
+    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC,  MAD.RegionID as RegionID,MAD.TownID as TownID " +
+        "from MobilevwApp_weeklydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
+        "WHERE MAD.ID = " + IDdaily;
+    // alert(sql);
+    tx.executeSql(sql, [], loadweeklyinfo_success);
+
+
+}
+
+function loadweeklyinfo_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+
+    var menu = results.rows.item(0);
+    $('#imgplayer').empty();
+    $('#playerinfodiv').empty();
+
+    if(menu.Icon != "null"){
+        $('#imgicon').attr("src","data:image/png;base64," + menu.Icon);
+
+    }
+
+
+
+
+
+
+
+
 }
