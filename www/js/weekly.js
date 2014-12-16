@@ -4,7 +4,7 @@ var IDweekly = "";
 document.addEventListener("deviceready", onDeviceReadyweekly, false);
 
 function onDeviceReadyweekly() {
-
+    randomfunctions();
     db.transaction(gettownname, errorCBfunc, successCBfunc);
 
 }

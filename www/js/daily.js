@@ -4,16 +4,14 @@ document.addEventListener("deviceready", onDeviceReadydaily, false);
 var IDdaily = "";
 
 function onDeviceReadydaily() {
-
-    db.transaction(gettownname, errorCBfunc, successCBfunc);
-
-
-
-
-
+    randomfunctions();
+ db.transaction(gettownname, errorCBfunc, successCBfunc);
 
 
 }
+
+
+
 
 function gettownname(tx) {
     var sql = "select ID from MobileApp_Towns where Follow=1";

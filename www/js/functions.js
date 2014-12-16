@@ -367,3 +367,111 @@ function passscoretoserver(testvar){
     }
 
 }
+
+function randomfunctions(){
+    //  alert("random");
+    db.transaction(checktowncountfunc, errorCBfunc, successCBfunc);
+}
+
+
+
+function checktowncountfunc(tx){
+    // $('#busy').show();
+    var sql = "select Count(ID) as Count from MobileApp_Towns";
+    //alert(sql);
+    tx.executeSql(sql, [], checktowncountfunc_success);
+}
+
+function checktowncountfunc_success(tx, results) {
+    var menu = results.rows.item(0);
+    //alert(menu.Count);
+    if(menu.Count != 0) {
+        db.transaction(checktownfollowfunc, errorCBfunc, successCBfunc);
+    }
+}
+
+
+function checktownfollowfunc(tx){
+    // $('#busy').show();
+    var sql = "select Count(ID) as Count from MobileApp_Towns where Follow = 1 ";
+    //  alert(sql);
+    tx.executeSql(sql, [], checktownfollowfunc_success);
+}
+
+
+function checktownfollowfunc_success(tx, results) {
+    var menu = results.rows.item(0);
+    if(menu.Count == 0) {
+        db.transaction(getregionsfunc, errorCBfunc, successCBfunc);
+        $('#basicModalregion').modal('show');
+    }
+}
+
+function getregionsfunc(tx) {
+    var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName from MobileApp_Region order by RegionName ";
+    // alert(sql);
+    tx.executeSql(sql, [], getregionsfunc_success);
+}
+
+function getregionsfunc_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    $('#regionid').empty();
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+
+        $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetownfunc('+ menu.ID + ')"  >' +
+        '<div class="bold size13"    >' + menu.RegionName  +
+        '</div>' +
+        '</Div>');
+    }
+
+}
+
+function choosetownfunc(ID){
+    $('#basicModaltown').modal('show');
+    regionIDfunc =ID;
+    db.transaction(gettownfunc, errorCBfunc, successCBfunc);
+}
+
+function gettownfunc(tx) {
+    var sql = "select ID,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,TownName,RegionID from MobileApp_Towns where RegionID = " + regionIDfunc;
+    //alert(sql);
+    tx.executeSql(sql, [], gettownfunc_success);
+}
+
+function gettownfunc_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    $('#townid').empty();
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+
+        $('#townid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="townchosenfunc('+ menu.ID + ')"  >' +
+        '<div class="bold size13"   >' + menu.TownName  +
+        '</div>' +
+        '</Div>');
+    }
+
+}
+
+function townchosenfunc(ID){
+
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_Towns set Follow = 0');
+        console.log("Update MobileApp_Towns");
+    });
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_Towns set Follow = 1 where ID = ' + ID);
+        console.log("Update MobileApp_Towns");
+    });
+
+    passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
+}
