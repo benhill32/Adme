@@ -172,7 +172,7 @@ padding-top: 22px;
     color:white;
 
 }
-#dailydealsDiv{
+#dailydealsDiv,#weeklydealsDiv{
     width:100%;
 color: white;
 }
@@ -181,7 +181,7 @@ color: white;
     padding-top: 20px;
 }
 
-.dailydealsdiv{
+.dailydealsdiv,.weeklydealsDiv{
     border: 1px solid #ffffff;
     margin-bottom: 3px;
     width:100%;
@@ -201,7 +201,7 @@ color: white;
 #timediv{
     border: 1px solid #ffffff;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
 }
 #headermain2nd{
     min-height: 54px;
