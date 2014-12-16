@@ -1,5 +1,12 @@
 var db;
 
+
+
+function randomfunctions(){
+    db.transaction(checktowncount, errorCBfunc, successCBfunc);
+}
+
+
 function checktowncount(tx){
     // $('#busy').show();
     var sql = "select Count(ID) as Count from MobileApp_Towns";

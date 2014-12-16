@@ -186,9 +186,7 @@ function closemodel(){
     randomfunctions();
 }
 
-function randomfunctions(){
-    db.transaction(checktowncount, errorCBfunc, successCBfunc);
-}
+
 
 
 function successHandler (result) {
