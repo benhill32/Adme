@@ -133,8 +133,8 @@ function setintervaldaily(detailarray){
         var seconds_left = (res[1] - current_date) / 1000;
 
         // do some time calculations
-        //days = parseInt(seconds_left / 86400);
-        //seconds_left = seconds_left % 86400;
+        days = parseInt(seconds_left / 86400);
+        seconds_left = seconds_left % 86400;
 
         hours = parseInt(seconds_left / 3600);
         seconds_left = seconds_left % 3600;
@@ -144,7 +144,7 @@ function setintervaldaily(detailarray){
 
         var countdown = document.getElementById(res[0]);
         // format countdown string + set tag value
-        countdown.innerHTML = hours + "h, "
+        countdown.innerHTML = days + "d, " + hours + "h, "
         + minutes + "m";
 
     }
