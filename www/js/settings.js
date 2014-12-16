@@ -208,7 +208,7 @@ function sendcattoserver_data_success(tx, results) {
         var menu = results.rows.item(i);
         cat = cat + menu.ID + ",";
     }
-    alert(cat);
+    passscoretoserver("categories=" + cat.slice(0,-1) + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
 }
 
 
