@@ -96,21 +96,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weekly.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="weekly.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/weekly.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28125" vertical-offset="1173" max-vertical-offset="3723">
-              <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="3723">
+              <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daily.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="daily.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/daily.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1277" max-vertical-offset="3740">
-              <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="38" />
+            <state vertical-scroll-proportion="1.9650736" vertical-offset="1277" max-vertical-offset="3740">
+              <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/daily.js" />
         <option value="$PROJECT_DIR$/www/js/weekly.js" />
+        <option value="$PROJECT_DIR$/www/js/daily.js" />
       </list>
     </option>
   </component>
@@ -841,18 +841,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/daily.js">
+    <entry file="file://$PROJECT_DIR$/www/js/weekly.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1277" max-vertical-offset="3740">
-          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="3723">
+          <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/weekly.js">
+    <entry file="file://$PROJECT_DIR$/www/js/daily.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28125" vertical-offset="1173" max-vertical-offset="3723">
-          <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+        <state vertical-scroll-proportion="1.9650736" vertical-offset="1277" max-vertical-offset="3740">
+          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
           <folding />
         </state>
       </provider>
