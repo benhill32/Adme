@@ -76,7 +76,7 @@ function getdata_success(tx, results) {
 
         if (menu.TownID == "0" || menu.TownID == townID) {
 
-    alert(menu.EndDate);
+            alert(menu.EndDate);
 
             var res = (menu.EndDate).split("T");
             var split = res[0].split("-");
@@ -87,7 +87,7 @@ function getdata_success(tx, results) {
             var name = "countdown" + menu.ID;
 
             var target_date = new Date(day2 + "/" + month[month2] + "/" + year2 + " " + h).getTime();
-          
+
             var imgg = "";
             if (menu.Icon != "null") {
                 imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:100%;"  align="center"  >&nbsp;';
