@@ -143,9 +143,7 @@ function getdata_success(tx, results) {
 
 
 function setintervaldaily(detailarray){
-   // alert(detailarray);
-
-
+    alert(detailarray);
 
     var current_date = new Date().getTime();
 
