@@ -404,6 +404,9 @@ function checktownfollowfunc_success(tx, results) {
     if(menu.Count == 0) {
         db.transaction(getregionsfunc, errorCBfunc, successCBfunc);
         $('#basicModalregion').modal('show');
+    }else{
+
+        db.transaction(getbuscatsfunc, errorCBfunc, successCBfunc);
     }
 }
 
@@ -482,7 +485,7 @@ function townchosenfunc(ID){
 
 function getbuscatsfunc(tx) {
     var sql = "select COUNT(ID) as Count from MobileApp_BusinessCategories where Follow = 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getbuscatsfunc_success);
 }
 
