@@ -3,7 +3,7 @@ var db;
 
 
 function randomfunctions(){
-    alert("random");
+  //  alert("random");
     db.transaction(checktowncount, errorCBfunc, successCBfunc);
 }
 
@@ -32,7 +32,7 @@ function checktownfollow(tx){
 }
 
 
-function checktowncount_success(tx, results) {
+function checktownfollow_success(tx, results) {
     var menu = results.rows.item(0);
     if(menu.Count == 0) {
         db.transaction(getregions, errorCBfunc, successCBfunc);
