@@ -3,6 +3,7 @@ var db;
 
 
 function randomfunctions(){
+    alert("random");
     db.transaction(checktowncount, errorCBfunc, successCBfunc);
 }
 
@@ -10,11 +11,13 @@ function randomfunctions(){
 function checktowncount(tx){
     // $('#busy').show();
     var sql = "select Count(ID) as Count from MobileApp_Towns";
+    alert(sql);
     tx.executeSql(sql, [], checktowncount_success);
 }
 
 function checktowncount_success(tx, results) {
     var menu = results.rows.item(0);
+    alert(menu.Count);
     if(menu.Count != 0) {
         db.transaction(checktownfollow, errorCBfunc, successCBfunc);
     }
@@ -39,7 +42,7 @@ function checktowncount_success(tx, results) {
 
 function getregions(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName from MobileApp_Region order by RegionName ";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getregions_success);
 }
 
