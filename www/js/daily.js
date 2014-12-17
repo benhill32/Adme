@@ -276,7 +276,7 @@ function getBCloctionlisting_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     var menu = results.rows.item(0);
-alert(len);
+//alert(len);
     if(len == "0"){
         $("#divdaily4").hide();
 
