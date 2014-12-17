@@ -196,7 +196,7 @@ function loaddailyinfo_success(tx, results) {
     var len = results.rows.length;
 //alert(len);
     var menu = results.rows.item(0);
-    if(menu.BusinessLocationID =="0"){
+    if(menu.BusinessLocationID == "0"){
         businessID = menu.BusinessID;
         db.transaction(townregiondata, errorCBfunc, successCBfunc);
     }else{
@@ -239,7 +239,7 @@ function townregiondata_success(tx, results) {
     regionID2 = menu.RegionID;
 
 
-    db.transaction(gettownname, errorCBfunc, successCBfunc);
+    db.transaction(getBCloction, errorCBfunc, successCBfunc);
 }
 
 function getBCloction(tx) {
