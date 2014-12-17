@@ -66,7 +66,7 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Towns (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,TownName TEXT NULL,RegionID INTEGER NOT NULL,Follow INTEGER NULL)');
     console.log("MobileApp_Towns table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessLocations (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,RegionID INTEGER NOT NULL,TownID INTEGER NOT NULL,Lat TEXT NOT NULL,Long TEXT NOT NULL,Address TEXT NOT NULL,Phone TEXT NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessLocations (ID INTEGER NOT NULL primary key,BusinessID INTEGER NOT NULL,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,RegionID INTEGER NOT NULL,TownID INTEGER NOT NULL,Lat TEXT NOT NULL,Long TEXT NOT NULL,Address TEXT NOT NULL,Phone TEXT NOT NULL)');
     console.log("MobileApp_BusinessLocations table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_dailydeal (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL,ItemName TEXT NOT NULL,Details TEXT NOT NULL,Price TEXT NOT NULL,URL TEXT NOT NULL,Categories INTEGER NOT NULL , RegionID INTEGER NOT NULL, TownID INTEGER NOT NULL  )');

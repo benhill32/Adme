@@ -182,7 +182,7 @@ function loaddailydiv(ID) {
 
 function loaddailyinfo(tx) {
 
-    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC,  MAD.RegionID as RegionID,MAD.TownID as TownID " +
+    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate,MAD.BusinessLocationID as BusinessLocationID,MAD.BusinessID  as BusinessID ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC,  MAD.RegionID as RegionID,MAD.TownID as TownID " +
         "from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "WHERE MAD.ID = " + IDdaily;
     // alert(sql);
@@ -195,6 +195,14 @@ function loaddailyinfo_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
+
+    if(menu.BusinessLocationID =="0"){
+        businessID = menu.BusinessID;
+        db.transaction(townregiondata, errorCBfunc, successCBfunc);
+    }else{
+
+
+    }
 
     var menu = results.rows.item(0);
     $('#imgplayer').empty();
@@ -212,6 +220,46 @@ function loaddailyinfo_success(tx, results) {
     $('#divdaily2').append("<strong>Details:</strong><br>" + menu.Details);
     $('#divdaily3').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
     $('#divdaily4').append();
+
+
+
+}
+
+function townregiondata(tx) {
+    var sql = "select ID,RegionID from MobileApp_Towns where Follow =1";
+    tx.executeSql(sql, [], townregiondata_success);
+}
+
+
+function townregiondata_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    townID2 = menu.ID;
+    regionID2 = menu.RegionID;
+
+
+    db.transaction(gettownname, errorCBfunc, successCBfunc);
+}
+
+function getBCloction(tx) {
+    var sql = "select ID,Lat,Long from MobileApp_BusinessLocations where TownID= " + townID2 + " and RegionID = " + regionID2 + " and BusinessID = " + businessID;
+    tx.executeSql(sql, [], getBCloction_success);
+}
+
+function getBCloction_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    if(len == "0"){
+
+
+    }else{
+
+        
+    }
+
 
 
 

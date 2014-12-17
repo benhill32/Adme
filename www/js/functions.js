@@ -248,11 +248,11 @@ function syncmaintables(obj){
     $.each(obj.BusinessLocations, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessLocations(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,RegionID,TownID ,Lat ,Long ,Address ,Phone ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.RegionID + ',' + obj.TownID + ',"' + obj.Lat + '","' + obj.Long + '","' + obj.Address + '","' + obj.Phone + '")');
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessLocations(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,RegionID,TownID ,Lat ,Long ,Address ,Phone,BusinessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.RegionID + ',' + obj.TownID + ',"' + obj.Lat + '","' + obj.Long + '","' + obj.Address + '","' + obj.Phone + '",' + obj.BusinessID + ')');
                 //    console.log("INSERT INTO MobileApp_clubsimages is created");
             });
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobileApp_BusinessLocations SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", RegionID = ' + obj.RegionID + ', TownID =' + obj.TownID + ', Lat = "' + obj.Lat + '", Long = "' + obj.Long + '", Address = "' + obj.Address + '", Phone = "' + obj.Phone + '" where ID = ' + obj.ID;
+                var sql = 'UPDATE MobileApp_BusinessLocations SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", RegionID = ' + obj.RegionID + ', TownID =' + obj.TownID + ', Lat = "' + obj.Lat + '", Long = "' + obj.Long + '", Address = "' + obj.Address + '", Phone = "' + obj.Phone + '", BusinessID = ' + obj.BusinessID + ' where ID = ' + obj.ID;
                 tx.executeSql(sql);
                 // console.log(sql);
             });
