@@ -202,7 +202,7 @@ function loaddailyinfo_success(tx, results) {
     $('#divdaily2').empty();
     $('#divdaily3').empty();
     $('#divdaily4').empty();
-    $('#playerinfodiv').empty();
+
 
     if(menu.Icon != "null"){
         $('#imgicon').attr("src","data:image/png;base64," + menu.Icon);

@@ -197,20 +197,20 @@ function loadweeklyinfo_success(tx, results) {
 
     var menu = results.rows.item(0);
     $('#imgplayer').empty();
-    $('#divdaily1').empty();
-    $('#divdaily2').empty();
-    $('#divdaily3').empty();
-    $('#divdaily4').empty();
-    $('#playerinfodiv').empty();
+    $('#divweekly1').empty();
+    $('#divweekly2').empty();
+    $('#divweekly2').empty();
+    $('#divweekly3').empty();
+
 
     if(menu.Icon != "null"){
         $('#imgicon').attr("src","data:image/png;base64," + menu.Icon);
     }
 
-    $('#divdaily1').append("<strong>Item:</strong><br>" + menu.Price + " " + menu.ItemName);
-    $('#divdaily2').append("<strong>Details:</strong><br>" + menu.Details);
-    $('#divdaily3').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
-    $('#divdaily4').append();
+    $('#divweekly1').append("<strong>Item:</strong><br>" + menu.Price + " " + menu.ItemName);
+    $('#divweekly2').append("<strong>Details:</strong><br>" + menu.Details);
+    $('#divweekly3').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
+    $('#divweekly4').append();
 
 
 
