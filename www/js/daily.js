@@ -209,8 +209,8 @@ function loaddailyinfo_success(tx, results) {
     }
 
     $('#divdaily1').append("<strong>Item:</strong><br>" + menu.Price + " " + menu.ItemName);
-    $('#divdaily3').append("<strong>Details:</strong><br>" + menu.Details);
-    $('#divdaily2').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
+    $('#divdaily2').append("<strong>Details:</strong><br>" + menu.Details);
+    $('#divdaily3').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
     $('#divdaily4').append();
 
 
