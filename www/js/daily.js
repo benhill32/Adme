@@ -202,12 +202,11 @@ function loaddailyinfo_success(tx, results) {
 
     if(menu.Icon != "null"){
         $('#imgicon').attr("src","data:image/png;base64," + menu.Icon);
-
     }
 
+    $('#divdaily1').append(menu.Price + " " + menu.ItemName);
 
-
-
+    $('#divdaily2').append("Details.<br>" + " " + menu.Details);
 
 
 
