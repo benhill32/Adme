@@ -185,7 +185,7 @@ function loaddailyinfo(tx) {
     var sql = "select MAD.ID as ID,MAD.StartDate as StartDate,MAD.BusinessLocationID as BusinessLocationID,MAD.BusinessID  as BusinessID ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC,  MAD.RegionID as RegionID,MAD.TownID as TownID " +
         "from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "WHERE MAD.ID = " + IDdaily;
-    // alert(sql);
+     //alert(sql);
     tx.executeSql(sql, [], loaddailyinfo_success);
 
 
@@ -195,7 +195,7 @@ function loaddailyinfo_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
-
+    var menu = results.rows.item(0);
     if(menu.BusinessLocationID =="0"){
         businessID = menu.BusinessID;
         db.transaction(townregiondata, errorCBfunc, successCBfunc);
@@ -204,7 +204,7 @@ function loaddailyinfo_success(tx, results) {
 
     }
 
-    var menu = results.rows.item(0);
+
     $('#imgplayer').empty();
     $('#divdaily1').empty();
     $('#divdaily2').empty();
@@ -244,6 +244,7 @@ function townregiondata_success(tx, results) {
 
 function getBCloction(tx) {
     var sql = "select ID,Lat,Long from MobileApp_BusinessLocations where TownID= " + townID2 + " and RegionID = " + regionID2 + " and BusinessID = " + businessID;
+    alert(sql);
     tx.executeSql(sql, [], getBCloction_success);
 }
 
@@ -257,7 +258,7 @@ function getBCloction_success(tx, results) {
 
     }else{
 
-        
+
     }
 
 
