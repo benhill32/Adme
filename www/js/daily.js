@@ -219,7 +219,7 @@ function loaddailyinfo_success(tx, results) {
     $('#divdaily1').append("<strong>Item:</strong><br>" + menu.Price + " " + menu.ItemName);
     $('#divdaily2').append("<strong>Details:</strong><br>" + menu.Details);
     $('#divdaily3').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
-    $('#divdaily4').append();
+    $('#divdaily4').append("<strong>Directions</strong>");
 
 
 
@@ -258,7 +258,9 @@ function getBCloction_success(tx, results) {
 
     }else{
 
-
+        $("#divdaily4").click(function () {
+            window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
+        });
     }
 
 
