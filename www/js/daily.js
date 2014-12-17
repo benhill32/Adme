@@ -244,7 +244,7 @@ function townregiondata_success(tx, results) {
 
 function getBCloction(tx) {
     var sql = "select ID,Lat,Long from MobileApp_BusinessLocations where TownID= " + townID2 + " and RegionID = " + regionID2 + " and BusinessID = " + businessID;
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], getBCloction_success);
 }
 
@@ -252,7 +252,7 @@ function getBCloction_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     var menu = results.rows.item(0);
-
+alert(len);
     if(len == "0"){
         $("#divdaily4").hide();
 
