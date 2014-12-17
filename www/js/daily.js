@@ -254,7 +254,7 @@ function getBCloction_success(tx, results) {
     var menu = results.rows.item(0);
 
     if(len == "0"){
-
+        $("#divdaily4").hide();
 
     }else{
 
