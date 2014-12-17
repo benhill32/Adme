@@ -198,15 +198,18 @@ function loaddailyinfo_success(tx, results) {
 
     var menu = results.rows.item(0);
     $('#imgplayer').empty();
+    $('#divdaily1').empty();
+    $('#divdaily2').empty();
+    $('#divdaily3').empty();
     $('#playerinfodiv').empty();
 
     if(menu.Icon != "null"){
         $('#imgicon').attr("src","data:image/png;base64," + menu.Icon);
     }
 
-    $('#divdaily1').append(menu.Price + " " + menu.ItemName);
-
-    $('#divdaily2').append("Details.<br>" + " " + menu.Details);
+    $('#divdaily1').append("<strong>Item:</strong>" + menu.Price + " " + menu.ItemName);
+    $('#divdaily2').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Url</strong></div>');
+    $('#divdaily3').append("<strong>Details:</strong><br>" + " " + menu.Details);
 
 
 
