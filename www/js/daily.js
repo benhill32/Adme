@@ -196,6 +196,8 @@ function loaddailyinfo_success(tx, results) {
     var len = results.rows.length;
 //alert(len);
     var menu = results.rows.item(0);
+
+
     if(menu.BusinessLocationID == "0"){
         businessID = menu.BusinessID;
         db.transaction(townregiondata, errorCBfunc, successCBfunc);
@@ -204,7 +206,7 @@ function loaddailyinfo_success(tx, results) {
 
     }
 
-
+    $("#divdaily4").hide();
     $('#imgplayer').empty();
     $('#divdaily1').empty();
     $('#divdaily2').empty();
@@ -252,7 +254,7 @@ function getBCloction_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     var menu = results.rows.item(0);
-  
+
     if(len == "0"){
         $("#divdaily4").hide();
 
