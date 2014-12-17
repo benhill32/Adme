@@ -571,13 +571,15 @@ width:90px;
     height: 100%;
     position: absolute;
     width: 100%;
-//   top: 30%;
-    background-repeat:no-repeat;
-    background-position: center center;
-    background-image:url(../img/AdMe_Logo_small.png);
     margin-top: -120px;
 
 }
+
+#imgindex {
+    display:block;
+    margin:auto;
+}
+
 #divdaily1{
 
     font-size: 16px;
@@ -794,14 +796,11 @@ width:90px;
 
 }
 #splashscreen{
-    text-align: center;
+
  height: 100%;
     position: absolute;
     width: 100%;
- //   top: 30%;
-    background-repeat:no-repeat;
-    background-position: center center;
-    background-image:url(../img/AdMe_Logo_small.png);
+    top: 25%;
 }
 
 
