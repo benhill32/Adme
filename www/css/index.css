@@ -567,12 +567,19 @@ width:90px;
 }
 
 #divindex{
-    text-align: center;
-    height: 100%;
-  //  position: absolute;
-    width: 100%;
-  //  margin-top: -120px;
 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+#splashscreen{
+
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 25%;
 }
 
 #imgindex {
@@ -795,13 +802,7 @@ width:90px;
     clear: both;
 
 }
-#splashscreen{
 
- height: 100%;
-    position: absolute;
-    width: 100%;
-    top: 25%;
-}
 
 
 #modelhistory{
