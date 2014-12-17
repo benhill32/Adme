@@ -39,7 +39,7 @@ function getdata(tx) {
     var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC, MBC.Follow as Follow, MAD.RegionID as RegionID,MAD.TownID as TownID " +
         "from MobilevwApp_weeklydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "JOIN MobileApp_BusinessCategories as MBC on MAD.Categories = MBC.CategoryID AND MAD.BusinessID = MBC.BusniessID " +
-        "WHERE MBC.Follow =1 and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' ";
+        "WHERE MBC.Follow =1 and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' order by MAD.EndDate ";
    // alert(sql);
     tx.executeSql(sql, [], getdata_success,errorCBfuncweekly);
 }
