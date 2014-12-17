@@ -202,8 +202,8 @@ function loaddailyinfo_success(tx, results) {
         businessID = menu.BusinessID;
         db.transaction(townregiondata, errorCBfunc, successCBfunc);
     }else{
-
-
+        db.transaction(getBCloctionlisting, errorCBfunc, successCBfunc);
+        BusinessLocationID = menu.BusinessLocationID;
     }
 
     $("#divdaily4").hide();
@@ -264,8 +264,26 @@ function getBCloction_success(tx, results) {
             window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
         });
     }
+}
 
+function getBCloctionlisting(tx) {
+    var sql = "select ID,Lat,Long from MobileApp_BusinessLocations where BusinessLocationID= " + BusinessLocationID;
+    //alert(sql);
+    tx.executeSql(sql, [], getBCloctionlisting_success);
+}
 
+function getBCloctionlisting_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
 
+    if(len == "0"){
+        $("#divdaily4").hide();
 
+    }else{
+        $("#divdaily4").show();
+        $("#divdaily4").click(function () {
+            window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
+        });
+    }
 }
