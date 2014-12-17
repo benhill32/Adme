@@ -268,7 +268,7 @@ function getBCloction_success(tx, results) {
 
 function getBCloctionlisting(tx) {
     var sql = "select ID,Lat,Long from MobileApp_BusinessLocations where BusinessLocationID= " + BusinessLocationID;
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getBCloctionlisting_success);
 }
 
@@ -276,7 +276,7 @@ function getBCloctionlisting_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     var menu = results.rows.item(0);
-
+alert(len);
     if(len == "0"){
         $("#divdaily4").hide();
 
