@@ -252,12 +252,12 @@ function getBCloction_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     var menu = results.rows.item(0);
-alert(len);
+  
     if(len == "0"){
         $("#divdaily4").hide();
 
     }else{
-
+        $("#divdaily4").show();
         $("#divdaily4").click(function () {
             window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
         });
