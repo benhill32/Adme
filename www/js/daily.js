@@ -201,6 +201,7 @@ function loaddailyinfo_success(tx, results) {
     $('#divdaily1').empty();
     $('#divdaily2').empty();
     $('#divdaily3').empty();
+    $('#divdaily4').empty();
     $('#playerinfodiv').empty();
 
     if(menu.Icon != "null"){
@@ -208,9 +209,9 @@ function loaddailyinfo_success(tx, results) {
     }
 
     $('#divdaily1').append(menu.Price + " " + menu.ItemName);
-    $('#divdaily2').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Url</strong></div>');
-    $('#divdaily3').append("<strong>Details:</strong><br>" + " " + menu.Details);
-
+    $('#divdaily2').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
+    $('#divdaily3').append("<strong>Details:</strong>");
+    $('#divdaily4').append(menu.Details);
 
 
 
