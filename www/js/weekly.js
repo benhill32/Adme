@@ -203,13 +203,13 @@ function loadweeklyinfo_success(tx, results) {
         BusinessLocationID = menu.BusinessLocationID;
     }
 
-    $("#divdaily4").hide();
+    $("#divweekly4").hide();
 
 
     $('#imgplayer').empty();
     $('#divweekly1').empty();
     $('#divweekly2').empty();
-    $('#divweekly2').empty();
+    $('#divweekly4').empty();
     $('#divweekly3').empty();
 
 
