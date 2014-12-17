@@ -208,10 +208,10 @@ function loaddailyinfo_success(tx, results) {
         $('#imgicon').attr("src","data:image/png;base64," + menu.Icon);
     }
 
-    $('#divdaily1').append(menu.Price + " " + menu.ItemName);
+    $('#divdaily1').append("<strong>Item:</strong><br>" + menu.Price + " " + menu.ItemName);
     $('#divdaily2').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
-    $('#divdaily3').append("<strong>Details:</strong>");
-    $('#divdaily4').append(menu.Details);
+    $('#divdaily3').append("<strong>Details:</strong><br>" + menu.Details);
+    $('#divdaily4').append();
 
 
 
