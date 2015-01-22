@@ -33,14 +33,14 @@ function getdata(tx) {
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         "JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
         " where Price91 != '' and MBC.Follow =1  Group BY BusinessID,Icon,TownID";
-  // console.log(sql);
+   console.log(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-   // console.log(len);
+    console.log(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
