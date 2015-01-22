@@ -305,22 +305,89 @@ function syncmaintables(obj){
         }
     });
 
-    $.each(obj.weeklydeal, function (idx, obj) {
+ //   $.each(obj.weeklydeal, function (idx, obj) {
+ //       if (obj.DeletedateUTC == null) {
+//
+ //           db.transaction(function (tx) {
+ //               tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_weeklydeal(ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,StartDate ,EndDate ,ItemName,Details ,Price ,URL,Categories,RegionID,TownID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.StartDate + '","' + obj.EndDate + '","' + obj.ItemName + '","' + obj.Details + '","' + obj.Price + '","' + obj.URL + '", ' + obj.Categories + ',' + obj.RegionID + ',' + obj.TownID + ')');
+ //               //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
+ //           });
+//
+ //           db.transaction(function (tx) {
+ //               var sql = 'UPDATE MobilevwApp_weeklydeal SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',StartDate = "' + obj.StartDate + '",EndDate = "' + obj.EndDate + '",ItemName = "' + obj.ItemName + '",Details = "' + obj.Details + '",Price = "' + obj.Price + '",URL = "' + obj.URL + '", Categories = ' + obj.Categories + ', RegionID = ' + obj.RegionID + ', TownID = ' + obj.TownID + ' where ID = ' + obj.ID;
+//                tx.executeSql(sql);
+ //           });
+
+//        }else{
+//            db.transaction(function (tx) {
+ //               tx.executeSql('Delete from MobilevwApp_weeklydeal where ID =' + obj.ID);
+//                //    console.log('Delete MobileApp_vwApp_Teams where ID');
+//            });
+ //       }
+
+//    });
+
+
+    $.each(obj.gasprices, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
 
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_weeklydeal(ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,StartDate ,EndDate ,ItemName,Details ,Price ,URL,Categories,RegionID,TownID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.StartDate + '","' + obj.EndDate + '","' + obj.ItemName + '","' + obj.Details + '","' + obj.Price + '","' + obj.URL + '", ' + obj.Categories + ',' + obj.RegionID + ',' + obj.TownID + ')');
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_GasPrices (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,Price91 ,Price96 ,PriceDiesel,PriceLPG) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.Price91 + '","' + obj.Price96 + '","' + obj.PriceDiesel + '","' + obj.PriceLPG + '")');
                 //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_weeklydeal SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',StartDate = "' + obj.StartDate + '",EndDate = "' + obj.EndDate + '",ItemName = "' + obj.ItemName + '",Details = "' + obj.Details + '",Price = "' + obj.Price + '",URL = "' + obj.URL + '", Categories = ' + obj.Categories + ', RegionID = ' + obj.RegionID + ', TownID = ' + obj.TownID + ' where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_GasPrices SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',Price91 = "' + obj.Price91 + '",Price96 = "' + obj.Price96 + '",PriceDiesel = "' + obj.PriceDiesel + '",PriceLPG = "' + obj.PriceLPG + '" where ID = ' + obj.ID;
                 tx.executeSql(sql);
             });
 
         }else{
             db.transaction(function (tx) {
-                tx.executeSql('Delete from MobilevwApp_weeklydeal where ID =' + obj.ID);
+                tx.executeSql('Delete from MobilevwApp_GasPrices where ID =' + obj.ID);
+                //    console.log('Delete MobileApp_vwApp_Teams where ID');
+            });
+        }
+
+    });
+
+    $.each(obj.Catalogues, function (idx, obj) {
+        if (obj.DeletedateUTC == null) {
+
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_Catalogues (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,FileName ,Base64) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.FileName + '","' + obj.Base64 + '")');
+                //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
+            });
+
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobilevwApp_Catalogues SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",Base64 = "' + obj.Base64 + '" where ID = ' + obj.ID;
+                tx.executeSql(sql);
+            });
+
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobilevwApp_Catalogues where ID =' + obj.ID);
+                //    console.log('Delete MobileApp_vwApp_Teams where ID');
+            });
+        }
+
+    });
+
+    $.each(obj.Coupons, function (idx, obj) {
+        if (obj.DeletedateUTC == null) {
+
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_Coupons (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,FileName ,Base64) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.FileName + '","' + obj.Base64 + '")');
+                //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
+            });
+
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobilevwApp_Coupons SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",Base64 = "' + obj.Base64 + '" where ID = ' + obj.ID;
+                tx.executeSql(sql);
+            });
+
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobilevwApp_Coupons where ID =' + obj.ID);
                 //    console.log('Delete MobileApp_vwApp_Teams where ID');
             });
         }

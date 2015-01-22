@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>AdMe</title>
+    <script type="text/javascript" src="../js/dbconnection.js"></script>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
+    <script type="text/javascript" src="../js/Coupons.js.js"></script>
+    <script type="text/javascript" src="../js/loaddata.js"></script>
+</head>
+<body>
+<div class="divmainmenu">
+    <div class="floatleft3" ID="headermain" align="center">
+        <div style="border-right: 1px solid grey;">
+            COUPONS
+        </div>
+
+    </div>
+    <div class="floatleft3" id="headermain2nd" align="center">
+        <div id="headermain2nd1st" onclick="weblink('../pages/Catalogues.html')"  >
+            CATALOGUES
+        </div>
+        <div id="headermain2nd2nd" onclick="weblink('../pages/daily.html')"  >
+            DAILY
+        </div>
+    </div>
+    <div class="floatleft3" align="center" id="headermain3rd">
+        <div id="headermain3rd1st" onclick="weblink('../pages/gas.html')" >
+            FUEL
+        </div>
+        <div id="headermain3rd2nd" >
+            <img src="../img/headerimg.png" onclick="weblink('../pages/settings.html')">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
