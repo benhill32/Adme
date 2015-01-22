@@ -91,7 +91,7 @@ function createDB(tx) {
   //  console.log("MobilevwApp_weeklydeal table is created");
 
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_GasPrices (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,Price91 TEXT NOT NULL,Price96 TEXT NOT NULL,PriceDiesel TEXT NOT NULL,PriceLPG TEXT NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_GasPrices (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,Price91 TEXT NOT NULL,Price96 TEXT NOT NULL,PriceDiesel TEXT NOT NULL,PriceLPG TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL)');
     console.log("MobilevwApp_weeklydeal table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Catalogues (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,FileName TEXT NOT NULL,Base64 TEXT NOT NULL)');

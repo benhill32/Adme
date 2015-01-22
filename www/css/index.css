@@ -93,7 +93,7 @@ body {
 // padding:8px;
     border-bottom: 1px solid grey;
     text-align: left;
-    font-size:15px;
+    font-size:13px;
     background-color: #DEDEDD;
     color: #333399;
     vertical-align: middle;
@@ -176,11 +176,41 @@ padding-top: 22px;
     width:100%;
 color: white;
 }
+#gasdealsdiv{
+    width:100%;
+color: #333399;
+}
+
+.gas4s{
+    float: left;
+    width:20%;
+ border-right: 1px #333399 solid;
+    min-height: 105px;
+    padding-top: 40px;
+}
+.gas4sMain{
+    float: left;
+    width:20%;
+    border-right: 1px #333399 solid;
+    min-height: 105px;
+    padding-top: 25px;
+}
+
 .paddingtop20{
 
     padding-top: 20px;
 }
-
+.gasdealsdiv{
+  //  border: 1px solid #ffffff;
+    margin-bottom: 3px;
+    width:100%;
+    border-radius: 10px;
+    clear: both;
+    vertical-align: middle;
+    min-height: 105px;
+    background-color: #ffffff;
+ vertical-align: middle;
+}
 .dailydealsdiv,.weeklydealsDiv{
     border: 1px solid #ffffff;
     margin-bottom: 3px;
