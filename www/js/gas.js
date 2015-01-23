@@ -35,7 +35,7 @@ function getdata(tx) {
  //       "JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
  //       " where MBC.Follow =1  Group BY MGP.BusinessID,MBN.Icon,MGP.TownID";
 
-    var sql ="Select MGP.BusinessID,MGP.TownID,MIN(MGP.Price91) as Price91,MIN(MGP.Price96) as Price96 ,MIN(MGP.PriceDiesel) as PriceDiesel ,MIN(MGP.PriceLPG) as PriceLPG" +
+    var sql ="Select BusinessID,TownID,MIN(Price91) as Price91,MIN(Price96) as Price96 ,MIN(PriceDiesel) as PriceDiesel ,MIN(PriceLPG) as PriceLPG" +
         "from MobilevwApp_GasPrices";
    alert(sql);
     tx.executeSql(sql, [], getdata_success);
