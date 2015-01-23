@@ -3,10 +3,10 @@
  */
 var db;
 var townID = "";
-document.addEventListener("deviceready", onDeviceReadydaily, false);
+document.addEventListener("deviceready", onDeviceReadygas, false);
 var IDdaily = "";
 
-function onDeviceReadydaily() {
+function onDeviceReadygas() {
     randomfunctions();
     db.transaction(gettownname, errorCBfunc, successCBfunc);
 }
@@ -16,13 +16,14 @@ function onDeviceReadydaily() {
 
 function gettownname(tx) {
     var sql = "select ID from MobileApp_Towns where Follow=1";
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], gettownname_success);
 }
 
 function gettownname_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
+    alert(len);
     var menu = results.rows.item(0);
     townID = menu.ID;
     db.transaction(getdata, errorCBfunc, successCBfunc);
@@ -33,14 +34,14 @@ function getdata(tx) {
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         "JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
         " where Price91 != '' and MBC.Follow =1  Group BY BusinessID,Icon,TownID";
-   console.log(sql);
+   alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-    console.log(len);
+    alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
