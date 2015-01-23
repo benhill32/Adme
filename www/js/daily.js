@@ -31,9 +31,6 @@ function gettownname_success(tx, results) {
 
 
 
-
-
-
 function getdata(tx) {
     var current_date = new Date();
     var year = current_date.getFullYear();

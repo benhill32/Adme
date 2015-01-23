@@ -16,14 +16,14 @@ function onDeviceReadygas() {
 
 function gettownname(tx) {
     var sql = "select ID from MobileApp_Towns where Follow=1";
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], gettownname_success);
 }
 
 function gettownname_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-    alert(len);
+  //  alert(len);
     var menu = results.rows.item(0);
     townID = menu.ID;
     db.transaction(getdata, errorCBfunc, successCBfunc);
@@ -33,7 +33,7 @@ function getdata(tx) {
     var sql ="Select MGP.BusinessID,MGP.TownID,MIN(MGP.Price91) as Price91,MIN(MGP.Price96) as Price96 ,MIN(MGP.PriceDiesel) as PriceDiesel ,MIN(MGP.PriceLPG) as PriceLPG,MBN.Icon as Icon" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         "JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
-        " where Price91 != '' and MBC.Follow =1  Group BY BusinessID,Icon,TownID";
+        " where Price91 != '' and MBC.Follow =1  Group BY BusinessID,Icon";
    alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
