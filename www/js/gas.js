@@ -26,6 +26,7 @@ function gettownname_success(tx, results) {
   //  alert(len);
     var menu = results.rows.item(0);
     townID = menu.ID;
+    alert(townID);
     db.transaction(getdata, errorCBfunc, successCBfunc);
 }
 
@@ -35,11 +36,11 @@ function getdata(tx) {
  //       "JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
  //       " where MBC.Follow =1  Group BY MGP.BusinessID,MBN.Icon,MGP.TownID";
 
-    var sql ="Select MGP.BusinessID,MGP.TownID as TownID,MIN(MGP.Price91) as Price91,MIN(MGP.Price96) as Price96 ,MIN(MGP.PriceDiesel) as PriceDiesel ,MIN(MGP.PriceLPG) as PriceLPG,MBN.Icon as Icon" +
+    var sql ="Select MGP.BusinessID,MGP.TownID as TownID,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MBN.Icon as Icon" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
-        " where MBC.Follow =1"+
-        " GROUP BY BusinessID";
+        " where MBC.Follow =1";
+
 
    alert(sql);
     tx.executeSql(sql, [], getdata_success);
