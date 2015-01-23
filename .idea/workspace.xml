@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.38915664" vertical-offset="289" max-vertical-offset="1292">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+              <caret line="38" column="78" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="78" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -896,7 +896,7 @@
     <entry file="file://$PROJECT_DIR$/www/js/gas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38915664" vertical-offset="289" max-vertical-offset="1292">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <caret line="38" column="78" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="78" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
