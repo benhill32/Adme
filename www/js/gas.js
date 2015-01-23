@@ -37,8 +37,8 @@ function getdata(tx) {
 
     var sql ="Select MGP.BusinessID,MGP.TownID as TownID,MIN(MGP.Price91) as Price91,MIN(MGP.Price96) as Price96 ,MIN(MGP.PriceDiesel) as PriceDiesel ,MIN(MGP.PriceLPG) as PriceLPG,MBN.Icon as Icon" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
-        " JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID ";
-
+        " JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
+        " where MBC.Follow =1";
 
    alert(sql);
     tx.executeSql(sql, [], getdata_success);
@@ -58,7 +58,7 @@ function getdata_success(tx, results) {
                 imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:50px;"  align="center"  >&nbsp;';
                 //imgg = menu.BusinessName;
             } else {
-                imgg = menu.BusinessName;
+                imgg = "";
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
             $('#gasdealsdiv').append('<Div align="center"  class="gasdealsdiv"    >' +
