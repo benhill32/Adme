@@ -32,10 +32,9 @@ function gettownname_success(tx, results) {
 
 function getdata(tx) {
 
-    var sql ="Select MGP.BusinessID,MGP.TownID as TownID,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MBN.Icon as Icon" +
+    var sql ="Select MGP.BusinessID,MGP.TownID,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel,MGP.PriceLPG,MBN.Icon" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
-        " JOIN MobileApp_BusinessCategories as MBC on  MGP.BusinessID = MBC.BusniessID " +
-        " where TownID =" + townID;
+        " where MGP.TownID =" + townID;
 
 
    alert(sql);
