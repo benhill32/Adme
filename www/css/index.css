@@ -193,8 +193,8 @@ color: #333399;
 }
 .gas4sEnd{
     float: left;
+    width:20%;
 
-    border-right: 1px #333399 solid;
     min-height: 105px;
     padding-top: 40px;
 }
@@ -239,7 +239,7 @@ color: #333399;
 
 .gaslistid{
   border-bottom: 1px solid #333399;
-
+    border-right: 1px #333399 solid;
     width:100%;
     clear: both;
     vertical-align: middle;

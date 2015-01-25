@@ -27,8 +27,8 @@
       <file leaf-file-name="gas.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/gas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.461538" vertical-offset="1138" max-vertical-offset="2023">
-              <caret line="109" column="44" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="44" />
+            <state vertical-scroll-proportion="-9.192307" vertical-offset="1138" max-vertical-offset="2040">
+              <caret line="104" column="42" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="42" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gas.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gas.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7465839" vertical-offset="2102" max-vertical-offset="2907">
-              <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
+            <state vertical-scroll-proportion="-24.04" vertical-offset="2102" max-vertical-offset="2907">
+              <caret line="161" column="44" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="44" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.66" vertical-offset="2898" max-vertical-offset="22729">
-              <caret line="193" column="9" selection-start-line="193" selection-start-column="1" selection-end-line="193" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.37578815" vertical-offset="3799" max-vertical-offset="22729">
+              <caret line="241" column="36" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -169,9 +169,9 @@
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/pages/daily.html" />
         <option value="$PROJECT_DIR$/www/pages/settings.html" />
+        <option value="$PROJECT_DIR$/www/js/gas.js" />
         <option value="$PROJECT_DIR$/www/pages/gas.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/gas.js" />
       </list>
     </option>
   </component>
@@ -875,17 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/gas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.461538" vertical-offset="1138" max-vertical-offset="2023">
-          <caret line="109" column="44" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="44" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.28" vertical-offset="3642" max-vertical-offset="6035">
@@ -894,21 +883,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+    <entry file="file://$PROJECT_DIR$/www/pages/gas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.66" vertical-offset="2898" max-vertical-offset="22729">
-          <caret line="193" column="9" selection-start-line="193" selection-start-column="1" selection-end-line="193" selection-end-column="9" />
-          <folding />
+        <state vertical-scroll-proportion="-9.192307" vertical-offset="1138" max-vertical-offset="2040">
+          <caret line="104" column="42" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="42" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/gas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7465839" vertical-offset="2102" max-vertical-offset="2907">
-          <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
+        <state vertical-scroll-proportion="-24.04" vertical-offset="2102" max-vertical-offset="2907">
+          <caret line="161" column="44" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="44" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37578815" vertical-offset="3799" max-vertical-offset="22729">
+          <caret line="241" column="36" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
