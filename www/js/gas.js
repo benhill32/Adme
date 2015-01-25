@@ -51,23 +51,28 @@ function getdata_success(tx, results) {
     var len = results.rows.length;
   //  alert(len);
 
-if(len != 0) {
-    $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
-    '<div align="center"  class="gas4sMainheader"   >&nbsp;</div>' +
-    '<div align="center"  class="gas4sheader " >91</div>' +
-    '<div align="center" class="gas4sheader""  >96</div>' +
-    '<div align="center" class="gas4sheader""  >Diesel</div>' +
-    '<div align="center" class="gas4sheader""  >LPG</div>' +
-    '</Div>');
 
-}
-
+    var count = 1;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
 
 
         if(menu.Follow ==1) {
+
+            if(count == 1){
+                $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
+                '<div align="center"  class="gas4sMainheader"   >&nbsp;</div>' +
+                '<div align="center"  class="gas4sheader " >91</div>' +
+                '<div align="center" class="gas4sheader""  >96</div>' +
+                '<div align="center" class="gas4sheader""  >Diesel</div>' +
+                '<div align="center" class="gas4sheader""  >LPG</div>' +
+                '</Div>');
+
+            }
+
+
+
 
             var imgg = "";
             if (menu.Icon != "null") {
@@ -84,7 +89,7 @@ if(len != 0) {
             '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
             '</Div>');
-
+            count = 0;
         }
 
     }
@@ -100,6 +105,7 @@ function showgascompanies(BID){
     db.transaction(Getgascompanies, errorCBfunc, successCBfunc);
     $('#basicModalgas').modal('show');
     BusID = BID;
+    alert(BID);
 }
 
 function Getgascompanies(tx) {
