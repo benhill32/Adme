@@ -176,11 +176,14 @@ padding-top: 22px;
     width:100%;
 color: white;
 }
-#gasdealsdiv{
+#gasdealsdivbody{
     width:100%;
 color: #333399;
 }
-
+#gasdealsdivheader{
+    width:100%;
+    color: White;
+}
 .gas4s{
     float: left;
     width:20%;
@@ -199,16 +202,16 @@ color: #333399;
 .gas4sheader{
     float: left;
     width:20%;
-    border-right: 1px #333399 solid;
-    min-height: 105px;
-    padding-top: 40px;
+  //  border-right: 1px #333399 solid;
+    min-height: 40px;
+    padding-top: 20px;
 }
 .gas4sMainheader{
     float: left;
     width:20%;
-    border-right: 1px #333399 solid;
-    min-height: 105px;
-    padding-top: 25px;
+   // border-right: 1px #333399 solid;
+    min-height: 40px;
+   // padding-top: 25px;
 }
 
 .paddingtop20{
