@@ -68,8 +68,9 @@ function getdata_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
-        alert(menu.Follow);
 
+
+        if(menu.Follow ==1) {
 
             var imgg = "";
             if (menu.Icon != "null") {
@@ -86,7 +87,8 @@ function getdata_success(tx, results) {
             '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
             '</Div>');
-
+            
+        }
 
     }
 }
