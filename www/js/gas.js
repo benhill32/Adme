@@ -102,16 +102,18 @@ function getdata_success(tx, results) {
 
 function showgascompanies(BID){
 
+    BusID = BID;
     db.transaction(Getgascompanies, errorCBfunc, successCBfunc);
     $('#basicModalgas').modal('show');
-    BusID = BID;
+
     //alert(BID);
 }
 
 function Getgascompanies(tx) {
 
-    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG" +
+    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG,MBL.Lat,MBL.Long,MBL.Address" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
+        " JOIN MobileApp_BusinessLocations as MBL on MGP.BusinessLocationID = MBL.ID AND MGP.BusinessID = MBL.BusinessID " +
         " where MGP.BusinessID =" + BusID;
 
     alert(sql);
@@ -124,7 +126,7 @@ function Getgascompanies_success(tx, results) {
     alert(len);
     var menu2 = results.rows.item(0);
 
-
+    $('#divimgcom').empty();
     if (menu2.Icon != "null") {
         imgg = '&nbsp;<img src="data:image/png;base64,' + menu2.Icon + '" style="width:50px;"  align="center"  >&nbsp;';
         //imgg = menu.BusinessName;
@@ -141,7 +143,7 @@ function Getgascompanies_success(tx, results) {
 
 
         $('#gaslistid').append('<Div align="center"  class="gasdealsdiv" >' +
-        '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
+        '<div align="center"  class="gas4sMain"   >' + menu.Address + '</div>' +
         '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
