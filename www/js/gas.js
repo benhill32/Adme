@@ -140,6 +140,8 @@ function Getgascompanies_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
+        var idname = "gasmaplink" + menu.BusinessLocationID;
+    alert(idname);
         if(count == 1){
             $('#gaslistidheader').append('<Div align="center"  class="gasdealsdivheader2"    >' +
             '<div align="center"  class="gas4sMainheader">&nbsp;</div>' +
@@ -150,7 +152,7 @@ function Getgascompanies_success(tx, results) {
             '</Div>');
 
         }
-        $('#gaslistid').append('<Div align="center" id="gasmaplink' + menu.BusinessLocationID + '"  class="gaslistid" >' +
+        $('#gaslistid').append('<Div align="center" id=' + idname + '  class="gaslistid" >' +
         '<div align="center"  class="gas4sMain"   >' + menu.Address.replace(', New Zealand',' ') + '</div>' +
         '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
@@ -158,7 +160,7 @@ function Getgascompanies_success(tx, results) {
         '<div align="center" class="gas4sEnd""  >' + menu.PriceLPG + '</div>' +
         '</Div>');
 
-        $("#gasmaplink" + menu.BusinessLocationID).click(function () {
+        $("#" + idname).click(function () {
             window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
         });
         count = 0;
