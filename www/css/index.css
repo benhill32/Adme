@@ -191,6 +191,13 @@ color: #333399;
     min-height: 105px;
     padding-top: 40px;
 }
+.gas4sEnd{
+    float: left;
+
+    border-right: 1px #333399 solid;
+    min-height: 105px;
+    padding-top: 40px;
+}
 .gas4sMain{
     float: left;
     width:20%;
@@ -244,9 +251,8 @@ color: #333399;
 
 }
 .gasdealsdivheader2{
-    margin-bottom: 3px;
-    width:100%;
 
+    width:100%;
     clear: both;
     min-height: 45px;
     border-bottom: 1px solid #333399;
@@ -259,7 +265,7 @@ color: #333399;
     min-height: 45px;
 }
 .gaslistidheader{
-   
+
     width:100%;
     clear: both;
     min-height: 45px;

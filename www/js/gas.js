@@ -146,7 +146,7 @@ function Getgascompanies_success(tx, results) {
 
         if(count == 1){
             $('#gaslistidheader').append('<Div align="center"  class="gasdealsdivheader2"    >' +
-            '<div align="center"  class="gas4sMainheader"   >Address</div>' +
+            '<div align="center"  class="gas4sMainheader"   >Add</div>' +
             '<div align="center"  class="gas4sheader " >91</div>' +
             '<div align="center" class="gas4sheader""  >96</div>' +
             '<div align="center" class="gas4sheader""  >Diesel</div>' +
@@ -159,7 +159,7 @@ function Getgascompanies_success(tx, results) {
         '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
-        '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
+        '<div align="center" class="gas4sEnd""  >' + menu.PriceLPG + '</div>' +
         '</Div>');
 
         count = 0;
