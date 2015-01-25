@@ -82,7 +82,7 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
-            $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv" onclick="showgascompanies(menu.BusinessID)"    >' +
+            $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv" onclick="showgascompanies('+ menu.BusinessID + ')"    >' +
             '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
             '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
