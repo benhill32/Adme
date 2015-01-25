@@ -36,8 +36,8 @@ function getdata(tx) {
   //      " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
   //      " where TownID =" + townID;
 
-    var sql ="Select MGP.BusinessID,MIN(MGP.Price91) as Price91,MIN(MGP.Price96) as Price96 ,MIN(MGP.PriceDiesel) as PriceDiesel ,MIN(MGP.PriceLPG) as PriceLPG" +
-        " from MobilevwApp_GasPrices as MGP  " +
+    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MIN(MGP.Price91) as Price91,MIN(MGP.Price96) as Price96 ,MIN(MGP.PriceDiesel) as PriceDiesel ,MIN(MGP.PriceLPG) as PriceLPG" +
+        " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " where MGP.TownID =" + townID +
         " GROUP BY MGP.BusinessID";
 
