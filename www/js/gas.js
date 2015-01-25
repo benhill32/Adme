@@ -116,17 +116,19 @@ function Getgascompanies(tx) {
         " JOIN MobileApp_BusinessLocations as MBL on MGP.BusinessLocationID = MBL.ID AND MGP.BusinessID = MBL.BusinessID " +
         " where MGP.BusinessID =" + BusID;
 
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], Getgascompanies_success);
 }
 
 function Getgascompanies_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-    alert(len);
+   // alert(len);
     var menu2 = results.rows.item(0);
 
     $('#divimgcom').empty();
+    $('#gaslistid').empty();
+    $('#gaslistidheader').empty();
     if (menu2.Icon != "null") {
         imgg = '&nbsp;<img src="data:image/png;base64,' + menu2.Icon + '" style="width:50px;"  align="center"  >&nbsp;';
         //imgg = menu.BusinessName;
@@ -135,13 +137,23 @@ function Getgascompanies_success(tx, results) {
     }
     $('#divimgcom').append(imgg);
 
+    var count = 1;
 
-    $('#gaslistid').empty();
+
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
 
+        if(count == 1){
+            $('#gaslistidheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
+            '<div align="center"  class="gas4sMainheader"   >&nbsp;</div>' +
+            '<div align="center"  class="gas4sheader " >91</div>' +
+            '<div align="center" class="gas4sheader""  >96</div>' +
+            '<div align="center" class="gas4sheader""  >Diesel</div>' +
+            '<div align="center" class="gas4sheader""  >LPG</div>' +
+            '</Div>');
 
+        }
         $('#gaslistid').append('<Div align="center"  class="gasdealsdiv" >' +
         '<div align="center"  class="gas4sMain"   >' + menu.Address + '</div>' +
         '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
@@ -149,6 +161,8 @@ function Getgascompanies_success(tx, results) {
         '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
         '</Div>');
+
+        count = 0;
     }
 
 }
