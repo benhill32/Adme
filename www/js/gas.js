@@ -114,7 +114,8 @@ function Getgascompanies(tx) {
     var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG,MBL.Lat,MBL.Long,MBL.Address" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessLocations as MBL on MGP.BusinessLocationID = MBL.ID AND MGP.BusinessID = MBL.BusinessID " +
-        " where MGP.BusinessID =" + BusID;
+        " where MGP.BusinessID =" + BusID + " and MGP.TownID =" + townID +
+        " order by MGP.Price91";
 
     //alert(sql);
     tx.executeSql(sql, [], Getgascompanies_success);
@@ -146,7 +147,7 @@ function Getgascompanies_success(tx, results) {
 
         if(count == 1){
             $('#gaslistidheader').append('<Div align="center"  class="gasdealsdivheader2"    >' +
-            '<div align="center"  class="gas4sMainheader">Add</div>' +
+            '<div align="center"  class="gas4sMainheader">&nbsp;</div>' +
             '<div align="center"  class="gas4sheader " >91</div>' +
             '<div align="center" class="gas4sheader""  >96</div>' +
             '<div align="center" class="gas4sheader""  >Diesel</div>' +
@@ -154,13 +155,17 @@ function Getgascompanies_success(tx, results) {
             '</Div>');
 
         }
-        $('#gaslistid').append('<Div align="center"  class="gaslistid" >' +
+        $('#gaslistid').append('<Div align="center" id="gasmaplink"  class="gaslistid" >' +
         '<div align="center"  class="gas4sMain"   >' + menu.Address.replace(', New Zealand',' ') + '</div>' +
         '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
         '<div align="center" class="gas4sEnd""  >' + menu.PriceLPG + '</div>' +
         '</Div>');
+
+        $("#gasmaplink").click(function () {
+            window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
+        });
 
         count = 0;
     }
