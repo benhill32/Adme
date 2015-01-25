@@ -196,6 +196,21 @@ color: #333399;
     padding-top: 25px;
 }
 
+.gas4sheader{
+    float: left;
+    width:20%;
+    border-right: 1px #333399 solid;
+    min-height: 105px;
+    padding-top: 40px;
+}
+.gas4sMainheader{
+    float: left;
+    width:20%;
+    border-right: 1px #333399 solid;
+    min-height: 105px;
+    padding-top: 25px;
+}
+
 .paddingtop20{
 
     padding-top: 20px;

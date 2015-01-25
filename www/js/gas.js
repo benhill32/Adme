@@ -50,6 +50,18 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     alert(len);
+
+
+    $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdiv"    >' +
+    '<div align="center"  class="gas4sMainheader"   >&nbsp;</div>' +
+    '<div align="center"  class="gas4sheader " >91</div>' +
+    '<div align="center" class="gas4sheader""  >96</div>' +
+    '<div align="center" class="gas4sheader""  >Diesel</div>' +
+    '<div align="center" class="gas4sheader""  >LPG</div>' +
+    '</Div>');
+
+
+
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
@@ -63,7 +75,7 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
-            $('#gasdealsdiv').append('<Div align="center"  class="gasdealsdiv"    >' +
+            $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv"    >' +
             '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
             '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
