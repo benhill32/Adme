@@ -154,7 +154,7 @@ function Getgascompanies_success(tx, results) {
             '</Div>');
 
         }
-        $('#gaslistid').append('<Div align="center"  class="gasdealsdiv" >' +
+        $('#gaslistid').append('<Div align="center"  class="gaslistid" >' +
         '<div align="center"  class="gas4sMain"   >' + menu.Address + '</div>' +
         '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +

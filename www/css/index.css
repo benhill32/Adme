@@ -229,6 +229,24 @@ color: #333399;
     background-color: #ffffff;
  vertical-align: middle;
 }
+
+.gaslistid{
+//  border: 1px solid #ffffff;
+   
+    width:100%;
+    border-radius: 10px;
+    clear: both;
+    vertical-align: middle;
+    min-height: 105px;
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+
+#gaslistid{
+
+
+}
+
 .gasdealsdivheader{
     margin-bottom: 3px;
     width:100%;
@@ -236,6 +254,14 @@ color: #333399;
     clear: both;
     min-height: 45px;
 }
+.gaslistidheader{
+    margin-bottom: 3px;
+    width:100%;
+    clear: both;
+    min-height: 45px;
+    border-bottom: 1px solid #333399;
+}
+
 .dailydealsdiv,.weeklydealsDiv{
     border: 1px solid #ffffff;
     margin-bottom: 3px;
