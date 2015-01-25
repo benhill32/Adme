@@ -3,6 +3,7 @@
  */
 var db;
 var townID = "";
+var BusID = "";
 document.addEventListener("deviceready", onDeviceReadygas, false);
 var IDdaily = "";
 
@@ -50,7 +51,7 @@ function getdata_success(tx, results) {
     var len = results.rows.length;
   //  alert(len);
 
-
+if(len != 0) {
     $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
     '<div align="center"  class="gas4sMainheader"   >&nbsp;</div>' +
     '<div align="center"  class="gas4sheader " >91</div>' +
@@ -59,7 +60,7 @@ function getdata_success(tx, results) {
     '<div align="center" class="gas4sheader""  >LPG</div>' +
     '</Div>');
 
-
+}
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
@@ -76,7 +77,7 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
-            $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv"    >' +
+            $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv" onclick="showgascompanies(menu.BusinessID)"    >' +
             '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
             '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
@@ -87,5 +88,58 @@ function getdata_success(tx, results) {
         }
 
     }
+
+
+
 }
 
+
+
+function showgascompanies(BID){
+
+    db.transaction(Getgascompanies, errorCBfunc, successCBfunc);
+    $('#basicModalgas').modal('show');
+    BusID = BID;
+}
+
+function Getgascompanies(tx) {
+
+    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MBC.Follow ,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG" +
+        " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
+        " where MGP.BusinessID =" + BusID;
+
+    alert(sql);
+    tx.executeSql(sql, [], Getgascompanies_success);
+}
+
+function Getgascompanies_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu2 = results.rows.item(0);
+
+
+    if (menu2.Icon != "null") {
+        imgg = '&nbsp;<img src="data:image/png;base64,' + menu2.Icon + '" style="width:50px;"  align="center"  >&nbsp;';
+        //imgg = menu.BusinessName;
+    } else {
+        imgg = "";
+    }
+    $('#divimgcom').append(imgg);
+
+//alert(len);
+    $('#gaslistid').empty();
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+
+        $('#gaslistid').append('<Div align="center"  class="gasdealsdiv" >' +
+        '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
+        '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
+        '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
+        '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
+        '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
+        '</Div>');
+    }
+
+}
