@@ -52,7 +52,7 @@ function getdata_success(tx, results) {
     alert(len);
 
 
-    $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdiv"    >' +
+    $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
     '<div align="center"  class="gas4sMainheader"   >&nbsp;</div>' +
     '<div align="center"  class="gas4sheader " >91</div>' +
     '<div align="center" class="gas4sheader""  >96</div>' +
