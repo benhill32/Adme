@@ -110,7 +110,7 @@ function showgascompanies(BID){
 
 function Getgascompanies(tx) {
 
-    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MBC.Follow ,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG" +
+    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " where MGP.BusinessID =" + BusID;
 
