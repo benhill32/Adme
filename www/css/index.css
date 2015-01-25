@@ -240,6 +240,7 @@ color: #333399;
 .gaslistid{
   border-bottom: 1px solid #333399;
     border-right: 1px #333399 solid;
+    border-left: 1px #333399 solid;
     width:100%;
     clear: both;
     vertical-align: middle;
