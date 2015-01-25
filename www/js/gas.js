@@ -68,6 +68,7 @@ function getdata_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
+        alert(menu.Follow);
 
 
             var imgg = "";
