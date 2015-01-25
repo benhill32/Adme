@@ -191,12 +191,19 @@ color: #333399;
     min-height: 105px;
     padding-top: 40px;
 }
+.gas4s2{
+    float: left;
+    width:20%;
+    border-right: 1px #333399 solid;
+    min-height: 145px;
+    padding-top: 55px;
+}
 .gas4sEnd{
     float: left;
     width:20%;
 
-    min-height: 105px;
-    padding-top: 40px;
+    min-height: 145px;
+    padding-top: 55px;
 }
 .gas4sMain{
     float: left;
@@ -205,7 +212,13 @@ color: #333399;
     min-height: 105px;
     padding-top: 25px;
 }
-
+.gas4sMain2{
+    float: left;
+    width:20%;
+    border-right: 1px #333399 solid;
+    min-height: 145px;
+   // padding-top: 25px;
+}
 .gas4sheader{
     float: left;
     width:20%;
@@ -244,7 +257,7 @@ color: #333399;
     width:100%;
     clear: both;
     vertical-align: middle;
-    min-height: 105px;
+    min-height: 145px;
 }
 
 #gaslistid{
