@@ -109,7 +109,7 @@ function showgascompanies(BID){
 }
 
 function Getgascompanies(tx) {
-    var sql ="Select MGP.BusinessID,MGP.BusinessLocationID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG,MBL.Lat,MBL.Long,MBL.Address" +
+    var sql ="Select MGP.BusinessID,MGP.ID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG,MBL.Lat,MBL.Long,MBL.Address" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessLocations as MBL on MGP.BusinessLocationID = MBL.ID AND MGP.BusinessID = MBL.BusinessID " +
         " where MGP.BusinessID =" + BusID + " and MGP.TownID =" + townID +
@@ -140,8 +140,11 @@ function Getgascompanies_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        var idname = "gasmaplink" + menu.BusinessLocationID;
-    alert(idname);
+        var idname = "gasmaplink" + menu.ID;
+
+        alert("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long);
+
+
         if(count == 1){
             $('#gaslistidheader').append('<Div align="center"  class="gasdealsdivheader2"    >' +
             '<div align="center"  class="gas4sMainheader">&nbsp;</div>' +
