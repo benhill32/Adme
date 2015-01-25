@@ -105,7 +105,7 @@ function showgascompanies(BID){
     db.transaction(Getgascompanies, errorCBfunc, successCBfunc);
     $('#basicModalgas').modal('show');
     BusID = BID;
-    alert(BID);
+    //alert(BID);
 }
 
 function Getgascompanies(tx) {
@@ -121,6 +121,7 @@ function Getgascompanies(tx) {
 function Getgascompanies_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
+    alert(len);
     var menu2 = results.rows.item(0);
 
 
@@ -132,7 +133,7 @@ function Getgascompanies_success(tx, results) {
     }
     $('#divimgcom').append(imgg);
 
-//alert(len);
+
     $('#gaslistid').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
