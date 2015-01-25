@@ -40,8 +40,8 @@
       <file leaf-file-name="gas.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6621118" vertical-offset="2187" max-vertical-offset="3026">
-              <caret line="162" column="71" selection-start-line="162" selection-start-column="71" selection-end-line="162" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.42981365" vertical-offset="2289" max-vertical-offset="3111">
+              <caret line="157" column="124" selection-start-line="157" selection-start-column="124" selection-end-line="157" selection-end-column="124" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -904,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/gas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6621118" vertical-offset="2187" max-vertical-offset="3026">
-          <caret line="162" column="71" selection-start-line="162" selection-start-column="71" selection-end-line="162" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.42981365" vertical-offset="2289" max-vertical-offset="3111">
+          <caret line="157" column="124" selection-start-line="157" selection-start-column="124" selection-end-line="157" selection-end-column="124" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
