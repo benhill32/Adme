@@ -141,8 +141,9 @@ function Getgascompanies_success(tx, results) {
         var imgg = "";
 
         var idname = "gasmaplink" + menu.ID;
+        var link = "https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long;
 
-        alert("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long);
+        alert(idname + " - " + link);
 
 
         if(count == 1){
@@ -164,7 +165,7 @@ function Getgascompanies_success(tx, results) {
         '</Div>');
 
         $("#" + idname).click(function () {
-            window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
+            window.open(link, "_system")
         });
         count = 0;
     }
