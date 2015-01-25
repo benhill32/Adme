@@ -35,24 +35,20 @@ function gettownname_success(tx, results) {
 
 
 function getdata(tx) {
-
-
-
     var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MAX(MBC.Follow) as Follow ,MIN(MGP.Price91) as Price91,MIN(MGP.Price96) as Price96 ,MIN(MGP.PriceDiesel) as PriceDiesel ,MIN(MGP.PriceLPG) as PriceLPG" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
         " where MGP.TownID =" + townID +
         " GROUP BY MGP.BusinessID";
 
-
-   alert(sql);
+   //alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-    alert(len);
+  //  alert(len);
 
 
     $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
@@ -87,7 +83,7 @@ function getdata_success(tx, results) {
             '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
             '</Div>');
-            
+
         }
 
     }
