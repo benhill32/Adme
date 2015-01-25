@@ -106,18 +106,14 @@ function showgascompanies(BID){
     db.transaction(Getgascompanies, errorCBfunc, successCBfunc);
     $('#basicModalgas').modal('show');
 
-    //alert(BID);
 }
 
 function Getgascompanies(tx) {
-
-    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG,MBL.Lat,MBL.Long,MBL.Address" +
+    var sql ="Select MGP.BusinessID,MGP.BusinessLocationID,MBN.Icon as Icon,MGP.Price91,MGP.Price96 ,MGP.PriceDiesel ,MGP.PriceLPG,MBL.Lat,MBL.Long,MBL.Address" +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessLocations as MBL on MGP.BusinessLocationID = MBL.ID AND MGP.BusinessID = MBL.BusinessID " +
         " where MGP.BusinessID =" + BusID + " and MGP.TownID =" + townID +
         " order by MGP.Price91";
-
-    //alert(sql);
     tx.executeSql(sql, [], Getgascompanies_success);
 }
 
@@ -140,7 +136,6 @@ function Getgascompanies_success(tx, results) {
 
     var count = 1;
 
-
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
@@ -155,7 +150,7 @@ function Getgascompanies_success(tx, results) {
             '</Div>');
 
         }
-        $('#gaslistid').append('<Div align="center" id="gasmaplink"  class="gaslistid" >' +
+        $('#gaslistid').append('<Div align="center" id="gasmaplink' + menu.BusinessLocationID + '"  class="gaslistid" >' +
         '<div align="center"  class="gas4sMain"   >' + menu.Address.replace(', New Zealand',' ') + '</div>' +
         '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
         '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
@@ -163,11 +158,9 @@ function Getgascompanies_success(tx, results) {
         '<div align="center" class="gas4sEnd""  >' + menu.PriceLPG + '</div>' +
         '</Div>');
 
-        $("#gasmaplink").click(function () {
+        $("#gasmaplink" + menu.BusinessLocationID).click(function () {
             window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Lat + ",+" + menu.Long, "_system")
         });
-
         count = 0;
     }
-
 }
