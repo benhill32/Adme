@@ -182,6 +182,13 @@ color: white;
     width:100%;
 color: #333399;
 }
+
+#coupondealsdiv{
+    width:100%;
+    color: #333399;
+}
+
+
 #gasdealsdivheader{
     width:100%;
     color: White;
@@ -255,6 +262,20 @@ color: #333399;
  vertical-align: middle;
     font-size: 3.5vw;
 }
+
+.coupondealsdiv{
+//  border: 1px solid #ffffff;
+    margin-bottom: 3px;
+
+    border-radius: 10px;
+
+    vertical-align: middle;
+    min-height: 105px;
+    background-color: #ffffff;
+    vertical-align: middle;
+
+}
+
 
 .gaslistid{
   border-bottom: 1px solid #333399;
