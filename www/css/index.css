@@ -95,6 +95,7 @@ body {
     border-bottom: 1px solid grey;
     text-align: left;
     font-size:13px;
+    font-size: 3.5vw;
     background-color: #DEDEDD;
     color: #333399;
     vertical-align: middle;
@@ -249,6 +250,7 @@ color: #333399;
     min-height: 105px;
     background-color: #ffffff;
  vertical-align: middle;
+    font-size: 3.5vw;
 }
 
 .gaslistid{

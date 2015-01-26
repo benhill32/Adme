@@ -12,9 +12,6 @@ function onDeviceReadygas() {
     db.transaction(gettownname, errorCBfunc, successCBfunc);
 }
 
-//db.transaction(gettownname, errorCBfunc, successCBfunc);
-
-
 function gettownname(tx) {
     var sql = "select ID from MobileApp_Towns where Follow=1";
     // alert(sql);
@@ -68,10 +65,7 @@ function getdata_success(tx, results) {
                 '<div align="center" class="gas4sheader""  >Diesel</div>' +
                 '<div align="center" class="gas4sheader""  >LPG</div>' +
                 '</Div>');
-
             }
-
-
 
 
             var imgg = "";
