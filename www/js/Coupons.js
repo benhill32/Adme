@@ -30,10 +30,10 @@ function gettownname_success(tx, results) {
 
 
 function getdata(tx) {
-    var sql ="Select MGP.ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID ,MGP.BusinessLocationID,MGP.FileName" +
+    var sql ="Select MGP.ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID ,MGP.BusinessLocationID,MGP.FileName,MBN.Icon as Icon" +
         " from MobilevwApp_Coupons as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
-     //   " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
-     //   " where MGP.TownID =" + townID +  " and MBC.Follow =1 and MGP.DeletedateUTC = 'null' "+
+        " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
+        " where MGP.TownID =" + townID +  " and MBC.Follow =1 and MGP.DeletedateUTC = 'null' "+
         " Order by MBN.BusinessName";
 
     alert(sql);
