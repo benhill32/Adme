@@ -354,12 +354,12 @@ function syncmaintables(obj){
         if (obj.DeletedateUTC == null) {
 
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_Catalogues (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,FileName ,Base64) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.FileName + '","' + obj.Base64 + '")');
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_Catalogues (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,FileName,Categories ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.FileName + '",13)');
                 //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_Catalogues SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",Base64 = "' + obj.Base64 + '" where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_Catalogues SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '" where ID = ' + obj.ID;
                 tx.executeSql(sql);
             });
 
@@ -376,12 +376,12 @@ function syncmaintables(obj){
         if (obj.DeletedateUTC == null) {
 
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_Coupons (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,FileName ,Base64) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.FileName + '","' + obj.Base64 + '")');
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_Coupons (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,FileName,Categories ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.FileName + '",12)');
                 //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_Coupons SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",Base64 = "' + obj.Base64 + '" where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_Coupons SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '" where ID = ' + obj.ID;
                 tx.executeSql(sql);
             });
 

@@ -150,7 +150,7 @@ function Getgascompanies_success(tx, results) {
 
 
         $('#gaslistid').append('<Div align="center" class="gaslistid" onclick="googlemaps(' + menu.Lat + ',' + menu.Long + ')" >' +
-        '<div align="center"  class="gas4sMain2"   >' + address[0] + '</div>' +
+        '<div align="center"  class="gas4sMain2"  >' + address[0] + '</div>' +
         '<div align="center"  class="gas4s2 " >' + menu.Price91 + '</div>' +
         '<div align="center" class="gas4s2""  >' + menu.Price96 + '</div>' +
         //'<div align="center"  class="gas4s " >' + menu.Lat + '</div>' +
