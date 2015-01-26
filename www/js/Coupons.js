@@ -53,7 +53,7 @@ function getdata_success(tx, results) {
 
             var imgg = "";
             if (menu.Icon != "null") {
-                imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:100px;"  align="center"  >&nbsp;';
+                imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:90px;"  align="center"  >&nbsp;';
                 //imgg = menu.BusinessName;
             } else {
                 imgg = "";
