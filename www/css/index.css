@@ -778,7 +778,13 @@ width:90px;
 
     }
 }
+@media (max-width: 640px) {
 
+    #gas4sMain{
+        font-size: 11px;
+
+    }
+}
 
 
 
