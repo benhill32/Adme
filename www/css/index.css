@@ -266,7 +266,7 @@ color: #333399;
 .coupondealsdiv{
 //  border: 1px solid #ffffff;
     margin-bottom: 3px;
-
+    min-width: 105px;
     border-radius: 10px;
     float: left;
     vertical-align: middle;
