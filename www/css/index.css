@@ -221,6 +221,7 @@ color: #333399;
     min-height: 145px;
    // padding-top: 25px;
     font-size: 11px;
+    font-size: 3.0vw;
 }
 .gas4sheader{
     float: left;
