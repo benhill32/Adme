@@ -59,8 +59,7 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
-            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" >' +
-            ' + imgg + ' +
+            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" >' + imgg +
 
             '</Div>');
             count = 0;
