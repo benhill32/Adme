@@ -86,18 +86,13 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_dailydeal (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL,ItemName TEXT NOT NULL,Details TEXT NOT NULL,Price TEXT NOT NULL,URL TEXT NOT NULL,Categories INTEGER NOT NULL , RegionID INTEGER NOT NULL, TownID INTEGER NOT NULL  )');
     console.log("MobilevwApp_dailydeal table is created");
 
-
-   // tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_weeklydeal (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL,ItemName TEXT NOT NULL,Details TEXT NOT NULL,Price TEXT NOT NULL,URL TEXT NOT NULL,Categories INTEGER NOT NULL, RegionID INTEGER NOT NULL, TownID INTEGER NOT NULL )');
-  //  console.log("MobilevwApp_weeklydeal table is created");
-
-
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_GasPrices (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,Price91 TEXT NOT NULL,Price96 TEXT NOT NULL,PriceDiesel TEXT NOT NULL,PriceLPG TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL)');
     console.log("MobilevwApp_weeklydeal table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Catalogues (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,FileName TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL)');
     console.log("MobilevwApp_Catalogues table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Coupons (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinesslocationID INTEGER NOT NULL,FileName TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Coupons (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,FileName TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL)');
     console.log("MobilevwApp_Coupons table is created");
 
 
