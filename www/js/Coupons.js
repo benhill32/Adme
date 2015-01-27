@@ -59,10 +59,11 @@ function getdata_success(tx, results) {
             } else {
                 imgg = "";
             }
-//data-toggle="modal" data-target="#basicmodaldaily"
-        //' + menu.BusinessLocationID + ',' + menu.FileName + '
 
-        var strrr = menu.BusinessLocationID + "|" + menu.FileName;
+        var fileexten = menu.FileName.remove(menu.FileName.length-4,4);
+
+
+        var strrr = menu.BusinessLocationID + "|" + menu.FileName.remove(menu.FileName.length,-4) + "|" + fileexten;
 
         alert(strrr);
 
