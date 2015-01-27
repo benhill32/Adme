@@ -60,7 +60,7 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 
-        var fileexten = menu.FileName.remove(menu.FileName.length-4,4);
+        var fileexten = menu.FileName.remove(menu.FileName.length-4,2);
 
 
         var strrr = menu.BusinessLocationID + "|" + menu.FileName.remove(menu.FileName.length,-4) + "|" + fileexten;
