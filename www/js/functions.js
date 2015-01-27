@@ -74,16 +74,16 @@ function errorCBfuncweekly(err) {
     alert("Error processing SQL loaddata: "+err.code);
 }
 
-
-function errorCBfuncsql(err) {
-   // console.log("Error processing SQL: "+err.code);
-    alert("Error processing SQL loaddata: "+ err.message );
-}
-
 function errorCBfunc(err) {
     console.log("Error processing SQL: "+err.code);
  //   alert("Error processing SQL loaddata: "+err.code);
 }
+
+function errorCBfuncsql(transaction, error) {
+    alert('Oops. Error was ' + error.message + ' (Code ' + error.code + ')');
+
+}
+
 
 function successCBfunc() {
     //  alert("success!");
@@ -298,8 +298,8 @@ function syncmaintables(obj){
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_dailydeal UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',StartDate = "' + obj.StartDate + '",EndDate = "' + obj.EndDate + '",ItemName = "' + obj.ItemName + '",Details = "' + obj.Details + '",Price = "' + obj.Price + '",URL = "' + obj.URL + '",Categories = ' + obj.Categories + ', RegionID = ' + obj.RegionID + ', TownID = ' + obj.TownID + ' where ID = ' + obj.ID;
-                tx.executeSql(sql,[],[],errorCBfuncsql);
+                var sql = 'UPDATE MobilevwApp_dailydeal  SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',StartDate = "' + obj.StartDate + '",EndDate = "' + obj.EndDate + '",ItemName = "' + obj.ItemName + '",Details = "' + obj.Details + '",Price = "' + obj.Price + '",URL = "' + obj.URL + '",Categories = ' + obj.Categories + ', RegionID = ' + obj.RegionID + ', TownID = ' + obj.TownID + ' where ID = ' + obj.ID;
+                tx.executeSql(sql);
             });
 
         }else{
@@ -319,7 +319,7 @@ function syncmaintables(obj){
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_GasPrices SET UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinesslocationID = ' + obj.BusinesslocationID + ',Price91 = "' + obj.Price91 + '",Price96 = "' + obj.Price96 + '",PriceDiesel = "' + obj.PriceDiesel + '",PriceLPG = "' + obj.PriceLPG + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_GasPrices  SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinesslocationID = ' + obj.BusinesslocationID + ',Price91 = "' + obj.Price91 + '",Price96 = "' + obj.Price96 + '",PriceDiesel = "' + obj.PriceDiesel + '",PriceLPG = "' + obj.PriceLPG + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
                 tx.executeSql(sql,[],[],errorCBfuncsql);
             });
 
@@ -342,7 +342,7 @@ function syncmaintables(obj){
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_Coupons SET  UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_Coupons SET CreatedateUTC = "' + obj.CreatedateUTC + '",  UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
                 tx.executeSql(sql,[],[],errorCBfuncsql);
             });
 
@@ -365,7 +365,7 @@ function syncmaintables(obj){
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_Catalogues SET UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_Catalogues SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',FileName = "' + obj.FileName + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
                 tx.executeSql(sql,[],[],errorCBfuncsql);
             });
 
