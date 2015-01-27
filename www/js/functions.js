@@ -343,7 +343,7 @@ function syncmaintables(obj){
 
             db.transaction(function (tx) {
                 var sql = 'UPDATE MobilevwApp_Coupons SET CreatedateUTC = "' + obj.CreatedateUTC + '",  UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinesslocationID + ',FileName = "' + obj.FileName + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
-                tx.executeSql(sql,[],[],errorCBfuncsql);
+                tx.executeSql(sql);
             });
 
         }else{
@@ -366,7 +366,7 @@ function syncmaintables(obj){
 
             db.transaction(function (tx) {
                 var sql = 'UPDATE MobilevwApp_Catalogues SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinesslocationID + ',FileName = "' + obj.FileName + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
-                tx.executeSql(sql,[],[],errorCBfuncsql);
+                tx.executeSql(sql);
             });
 
         }else{
