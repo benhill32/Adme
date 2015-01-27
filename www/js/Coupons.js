@@ -59,17 +59,18 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
-            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" onclick="fileload(' + menu.BusinessLocationID + ',' + menu.FileName + ')" >' + imgg +
+        //' + menu.BusinessLocationID + ',' + menu.FileName + '
+            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" onclick="fileloadcoupon()" >' + imgg +
 
             '</Div>');
             count = 0;
         }
 }
 
-function fileload(BusinessLocationID,FileName){
+function fileloadcoupon(){
     alert("dsd");
-    alert("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
-    URLredirect("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
+   // alert("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
+  //  URLredirect("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
 
 
 
