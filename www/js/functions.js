@@ -77,7 +77,7 @@ function errorCBfuncweekly(err) {
 
 function errorCBfuncsql(err) {
    // console.log("Error processing SQL: "+err.code);
-    alert("Error processing SQL loaddata: "+err.code);
+    alert("Error processing SQL loaddata: "+err);
 }
 
 function errorCBfunc(err) {
