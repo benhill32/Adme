@@ -60,10 +60,10 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 
-        var fileexten = menu.FileName.remove(menu.FileName.length-4);
+        var fileexten =(menu.FileName).split('.');
 
 
-        var strrr = menu.BusinessLocationID + "|" + menu.FileName.slice(0, -4) + "|" + fileexten;
+        var strrr = menu.BusinessLocationID + "|" + fileexten[0] + "|" + fileexten[1];
 
         alert(strrr);
 
