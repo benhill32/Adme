@@ -95,10 +95,10 @@ function createDB(tx) {
     console.log("MobilevwApp_weeklydeal table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Catalogues (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,FileName TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL)');
-    console.log("MobilevwApp_weeklydeal table is created");
+    console.log("MobilevwApp_Catalogues table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Coupons (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,FileName TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL)');
-    console.log("MobilevwApp_weeklydeal table is created");
+    console.log("MobilevwApp_Coupons table is created");
 
 
 

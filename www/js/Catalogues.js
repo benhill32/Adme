@@ -76,7 +76,7 @@ function getdata_success(tx, results) {
 
 function fileloadcatalogues(IDstring){
        var fileexten =IDstring.split('|||');
-    alert(IDstring);
+  //  alert(IDstring);
     // alert("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
     URLredirect("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
 
