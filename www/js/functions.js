@@ -299,7 +299,7 @@ function syncmaintables(obj){
 
             db.transaction(function (tx) {
                 var sql = 'UPDATE MobilevwApp_dailydeal UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',StartDate = "' + obj.StartDate + '",EndDate = "' + obj.EndDate + '",ItemName = "' + obj.ItemName + '",Details = "' + obj.Details + '",Price = "' + obj.Price + '",URL = "' + obj.URL + '",Categories = ' + obj.Categories + ', RegionID = ' + obj.RegionID + ', TownID = ' + obj.TownID + ' where ID = ' + obj.ID;
-                tx.executeSql(sql);
+                tx.executeSql(sql,[],[],errorCBfuncsql);
             });
 
         }else{

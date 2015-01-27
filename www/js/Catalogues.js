@@ -30,8 +30,8 @@ function gettownname_success(tx, results) {
 
 
 function getdata(tx) {
-    var sql ="Select MGP.ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon" +
-        " from MobilevwApp_Catalogues as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID ";
+    var sql ="Select MGP.ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName" +
+        " from MobilevwApp_Catalogues as MGP";
        // " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID "+
       //  " where MGP.TownID =" + townID +  " and MBC.Follow =1";
 
