@@ -320,7 +320,6 @@ function syncmaintables(obj){
 
             db.transaction(function (tx) {
                 var sql = 'UPDATE MobilevwApp_GasPrices SET UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinesslocationID = ' + obj.BusinesslocationID + ',Price91 = "' + obj.Price91 + '",Price96 = "' + obj.Price96 + '",PriceDiesel = "' + obj.PriceDiesel + '",PriceLPG = "' + obj.PriceLPG + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
-                alert(sql);
                 tx.executeSql(sql,[],[],errorCBfuncsql);
             });
 
