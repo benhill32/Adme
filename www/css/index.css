@@ -274,6 +274,7 @@ color: #333399;
     min-height: 105px;
     background-color: #ffffff;
   //  padding:5px;
+    vertical-align: middle;
 }
 .coupondealsdiv img{
     position: absolute;
