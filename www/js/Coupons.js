@@ -51,7 +51,7 @@ function getdata_success(tx, results) {
         var menu = results.rows.item(i);
 
 alert(menu.BusinessLocationID + '-' + menu.FileName);
-        
+
             var imgg = "";
             if (menu.Icon != "null") {
                 imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:90px;"  align="center"  >&nbsp;';
@@ -61,17 +61,17 @@ alert(menu.BusinessLocationID + '-' + menu.FileName);
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
         //' + menu.BusinessLocationID + ',' + menu.FileName + '
-            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" onclick="fileloadcoupon()" >' + imgg +
+            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" onclick="fileloadcoupon(' + menu.BusinessLocationID + ',' + menu.FileName + ')" >' + imgg +
 
             '</Div>');
             count = 0;
         }
 }
 
-function fileloadcoupon(){
+function fileloadcoupon(BusinessLocationID,FileName){
     alert(BusinessLocationID);
-   // alert("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
-  //  URLredirect("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
+   alert("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
+    URLredirect("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
 
 
 
