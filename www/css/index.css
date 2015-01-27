@@ -273,12 +273,12 @@ color: #333399;
     float: left;
     min-height: 105px;
     background-color: #ffffff;
-    padding:5px;
+  //  padding:5px;
 }
 .coupondealsdiv img{
-
- //   min-height: 105px;
-
+    position: absolute;
+    //min-height: 105px;
+    margin: auto;
 }
 
 .gaslistid{
