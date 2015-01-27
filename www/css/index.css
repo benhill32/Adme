@@ -272,7 +272,7 @@ color: #333399;
     border-radius: 10px;
     float: left;
     vertical-align: middle;
-    min-height: 105px;
+    max-height: 105px;
     background-color: #ffffff;
     vertical-align: middle;
     padding:5px;
