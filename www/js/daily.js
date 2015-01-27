@@ -4,7 +4,8 @@ document.addEventListener("deviceready", onDeviceReadydaily, false);
 var IDdaily = "";
 
 function onDeviceReadydaily() {
-    randomfunctions();
+    refreshdata();
+
  db.transaction(gettownname, errorCBfunc, successCBfunc);
 
 
