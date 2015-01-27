@@ -272,14 +272,14 @@ color: #333399;
     border-radius: 10px;
     float: left;
     vertical-align: middle;
-    max-height: 105px;
+    min-height: 105px;
     background-color: #ffffff;
     vertical-align: middle;
     padding:5px;
 }
 .coupondealsdiv img{
 
-    max-height: 105px;
+    min-height: 105px;
 
 }
 

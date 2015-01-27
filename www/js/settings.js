@@ -64,13 +64,15 @@ function getLsyncdatedata_success(tx, results) {
     $("#lastsyncdate").empty();
     $("#lastsyncdate").append(datetime.getDate() + " " + month[datetime.getMonth()] + " " + datetime.getFullYear() + " " + datetime.getHours() + ":" +  ("0" + datetime.getMinutes()).slice(-2) + ":" + ("0" + datetime.getSeconds()).slice(-2) );
 
-
-
-
 }
 
 function showcategories(){
 
+    db.transaction(getcategories, errorCBfunc, successCBfunc);
+    $('#basicModacategories').modal('show');
+
+}
+function backtocat(){
     db.transaction(getcategories, errorCBfunc, successCBfunc);
     $('#basicModacategories').modal('show');
 
