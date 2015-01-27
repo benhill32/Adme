@@ -67,7 +67,11 @@ function getdata_success(tx, results) {
 }
 
 function fileload(BusinessLocationID,FileName){
+    alert("dsd");
+    alert("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
+    URLredirect("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
 
-    window.open("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName, "_system");
+
+
 
 }
