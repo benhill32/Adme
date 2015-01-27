@@ -59,14 +59,15 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
-            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" >' + imgg +
+            $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" onclick="fileload(' + menu.BusinessLocationID + ',' + menu.FileName + ')" >' + imgg +
 
             '</Div>');
             count = 0;
         }
+}
 
+function fileload(BusinessLocationID,FileName){
 
-
-
+    window.open("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName, "_system");
 
 }
