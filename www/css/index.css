@@ -95,7 +95,7 @@ body {
     border-bottom: 1px solid grey;
     text-align: left;
     font-size:13px;
-    font-size: 3.5vw;
+    font-size: 2.0vw;
     background-color: #DEDEDD;
     color: #333399;
     vertical-align: middle;
@@ -242,7 +242,7 @@ color: #333399;
     min-height: 145px;
    // padding-top: 25px;
     font-size: 11px;
-    font-size: 3.0vw;
+    font-size: 2.0vw;
 }
 .gas4sheader{
     float: left;
@@ -274,7 +274,7 @@ color: #333399;
     min-height: 105px;
     background-color: #ffffff;
  vertical-align: middle;
-    font-size: 3.5vw;
+    font-size: 2.0vw;
 }
 
 .coupondealsdiv{
