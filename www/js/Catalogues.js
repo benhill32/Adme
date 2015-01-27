@@ -36,14 +36,14 @@ function getdata(tx) {
         " where MGP.TownID =" + townID +  " and MBC.Follow =1";
 
 
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-    // alert(len);
+     alert(len);
 
 
     var count = 1;
@@ -75,10 +75,10 @@ function getdata_success(tx, results) {
 }
 
 function fileloadcatalogues(IDstring){
-    //   var fileexten =IDstring.split('|||');
+       var fileexten =IDstring.split('|||');
     alert(IDstring);
     // alert("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
-    URLredirect("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
+    URLredirect("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
 
 
 
