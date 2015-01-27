@@ -60,12 +60,12 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 
-        var fileexten =(menu.FileName).split('.');
 
 
-        var strrr = menu.BusinessLocationID + "|" + fileexten[0] + "|" + fileexten[1];
 
-        alert(strrr);
+        var strrr = menu.BusinessLocationID + "|||" + menu.FileName;
+
+       // alert(strrr);
 
             $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" onclick="fileloadcoupon(\'' + strrr + '\')" >' + imgg +
 
@@ -75,8 +75,9 @@ function getdata_success(tx, results) {
 }
 
 function fileloadcoupon(IDstring){
+    var fileexten =IDstring.split('|||');
     alert(IDstring);
- //  alert("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
+   alert("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
  //   URLredirect("http://admin.adme.kiwi/CouponFiles/" + BusinessLocationID + "/" + FileName);
 
 
