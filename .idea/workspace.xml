@@ -57,8 +57,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62347186" vertical-offset="4233" max-vertical-offset="23681">
-              <caret line="279" column="6" selection-start-line="279" selection-start-column="6" selection-end-line="279" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.33251834" vertical-offset="4233" max-vertical-offset="23749">
+              <caret line="265" column="1" selection-start-line="265" selection-start-column="1" selection-end-line="265" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -862,8 +862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62347186" vertical-offset="4233" max-vertical-offset="23681">
-          <caret line="279" column="6" selection-start-line="279" selection-start-column="6" selection-end-line="279" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.33251834" vertical-offset="4233" max-vertical-offset="23749">
+          <caret line="265" column="1" selection-start-line="265" selection-start-column="1" selection-end-line="265" selection-end-column="1" />
           <folding />
         </state>
       </provider>
