@@ -187,7 +187,26 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="basicModalyesno" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Are you sure you want to delete all the data for this app and start again.
 
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center">
+                    <div class="modelfloat50 left"  align="center">
+
+                        No
+                    </div>
+                    <div class="modelfloat50"  align="center" onclick="cleardata()">
+
+                        Yes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <Div class="mainmenusettings" id="sregion"  align="left"  onclick="showregions()">
 
@@ -199,7 +218,7 @@
         <strong>Select Categories</strong>
         <p id="categoryID">&nbsp;</p>
     </Div>
-    <Div class="mainmenusettings" align="left"  id="settingdeleteall" onclick="cleardata()" >
+    <Div class="mainmenusettings" align="left"  id="settingdeleteall"  data-toggle="modal" data-target="#basicModalyesno"  >
         <strong>Delete all data & Sync</strong>
         <p>Sometimes things just don't go right, you may need to delete all the data for this app and start again.</p>
 

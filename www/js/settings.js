@@ -389,11 +389,9 @@ function cleardata(){
 
     onOfflinesetting();
 
-
     if(networkconnectionset!=0) {
         $('#indexloadingdata').modal('show');
         db.transaction(droptables, errorCBfunc, successCBfunc);
-
         refreshdata();
     }
 
