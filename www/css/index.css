@@ -200,6 +200,9 @@ color: #333399;
     width:100%;
     vertical-align: middle;
     position: relative;
+    min-width: 80%;
+
+    min-height: 30px;
 }
 
 #cataloguesdealsdiv{
