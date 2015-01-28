@@ -58,6 +58,32 @@
 </div>
 
 <div class="container-fluid">
+    <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div style="height:50px; float:left;">
+                        <img src="../img/Loading.gif"  align="left"  height="30px" style="padding-right:10px;" >
+
+                    </div>
+
+                    <div style="float:left;">
+                        Loading data for the first time,<br>
+                        this may take a while if you aren't<br>
+                        on a high speed network.
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
     <div class="modal" id="basicModacategories" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -173,6 +199,14 @@
         <strong>Select Categories</strong>
         <p id="categoryID">&nbsp;</p>
     </Div>
+    <Div class="mainmenusettings" align="left"  id="settingdeleteall" onclick="cleardata()" >
+        <strong>Delete all data & Sync</strong>
+        <p>Sometimes things just don't go right, you may need to delete all the data for this app and start again.</p>
+
+    </Div>
+
+
+
     <Div class="mainmenusettings"  align="left"  >
 
         <strong>Last Sync Date</strong>

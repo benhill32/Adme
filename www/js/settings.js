@@ -6,14 +6,33 @@ var regionname = 0;
 var catid= 0;
 var catbusID =0;
 document.addEventListener("deviceready", onDeviceReadysettings, false);
+var networkconnectionset = 0;
 
 function onDeviceReadysettings() {
 
     $("#deviceid").empty();
     $("#deviceid").append(device.uuid);
-
+    onOfflinesetting();
     gettownregion();
     getLsyncdate();
+}
+
+function onOfflinesetting(){
+
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = '0';
+    states[Connection.ETHERNET] = '2';
+    states[Connection.WIFI]     = '2';
+    states[Connection.CELL_2G]  = '1';
+    states[Connection.CELL_3G]  = '1';
+    states[Connection.CELL_4G]  = '1';
+    states[Connection.NONE]     = '0';
+
+    networkconnectionset = states[networkState];
+//alert(states[networkState]);
+
 }
 
 function getLsyncdate(){
@@ -363,4 +382,20 @@ function gettownregiondata_success(tx, results) {
 
 
     db.transaction(gettownname, errorCBfunc, successCBfunc);
+}
+
+
+function cleardata(){
+
+    onOfflinesetting();
+
+
+    if(networkconnectionset!=0) {
+        $('#indexloadingdata').modal('show');
+        db.transaction(droptables, errorCBfunc, successCBfunc);
+
+        refreshdata();
+    }
+
+
 }
