@@ -397,3 +397,8 @@ function cleardata(){
 
 
 }
+
+function showyesno(){
+
+    $('#basicModalyesno').modal('show');
+}
