@@ -4,6 +4,7 @@ var townID = 0;
 var townname =0;
 var regionname = 0;
 var catid= 0;
+var catbusID =0;
 document.addEventListener("deviceready", onDeviceReadysettings, false);
 
 function onDeviceReadysettings() {
@@ -174,9 +175,12 @@ function choosebuscattrue(ID){
         tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_BusinessCategories");
     });
+    catbusID = ID;
+   // sendcattoserver();
+    Passcattoserver(ID,1);
     choosecate(catid);
 
-    sendcattoserver();
+
 
 }
 
@@ -184,12 +188,21 @@ function choosebuscattrue(ID){
 
 function choosebuscatfalse(ID){
 //alert("Update MobileApp_BusinessCategories set Follow = 1 where ID = " + ID);
+
+    catbusID = ID;
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_BusinessCategories set Follow = 0 where ID = ' + ID);
         console.log("Update MobileApp_BusinessCategories");
     });
+   // sendcattoserver();
+    Passcattoserver(ID,0);
     choosecate(catid);
-    sendcattoserver();
+
+}
+
+function Passcattoserver(ID,Outcome){
+
+    passscoretoserver("categories=" + ID + "&outcome=" + Outcome + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
 }
 
 function sendcattoserver(){
@@ -198,6 +211,7 @@ function sendcattoserver(){
 
 function sendcattoserver_data(tx) {
     var sql = "select ID from MobileApp_BusinessCategories WHERE Follow = 1 order by ID ";
+
     //alert(sql);
     tx.executeSql(sql, [], sendcattoserver_data_success);
 }
