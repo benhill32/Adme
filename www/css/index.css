@@ -198,7 +198,8 @@ color: #333399;
 
 #divcatbus{
     width:100%;
-
+    vertical-align: middle;
+    position: relative;
 }
 
 #cataloguesdealsdiv{
