@@ -113,8 +113,10 @@ function blankLastUpdatesec(){
      // alert('http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
 
+    alert(json);
+
     db.transaction(function(tx) {
-        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,token) VALUES ("0","' + json + '")');
+        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,token) VALUES ("0","' + json + '","","","",0,0)');
         console.log("INSERT INTO MobileApp_LastUpdatesec");
         //   alert('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON) VALUES ("0", "0",0,0,"' + json + '",0,0)');
     });
