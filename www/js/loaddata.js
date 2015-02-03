@@ -68,7 +68,7 @@ function refreshdata(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,Datesecs from MobileApp_LastUpdatesec";
-    //  alert(sql);
+      alert(sql);
     tx.executeSql(sql, [], populateDB1,errorCreatetable);
 
 }
@@ -77,7 +77,7 @@ function populateDB1(tx,results) {
     checkonline();
     var row = results.rows.item(0);
     //   alert(row);
-    // alert(row.Count);
+     alert(row.Count);
     if(row.Count ==0){
         if(networkconnection!=0) {
             $.when(blankLastUpdatesec()).done(function () {
