@@ -529,7 +529,7 @@ function townchosenfunc(ID){
 
     passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
 
-    db.transaction(getbuscatsfunc, errorCBfunc, successCBfunc);
+   // db.transaction(getbuscatsfunc, errorCBfunc, successCBfunc);
 
 }
 

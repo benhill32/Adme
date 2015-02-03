@@ -93,7 +93,7 @@ function populateDB1(tx,results) {
         }
     }else{
 
-        var sql = "select Datesecs,token from MobileApp_LastUpdatesec";
+        var sql = "select Datesecs,token,Region from MobileApp_LastUpdatesec";
 
         if(networkconnection!=0){
 
@@ -150,15 +150,14 @@ function getchecksync(tx, results) {
 
     var dif = (timenow/1000)-(datenowsecsync);
 
-
-    //if (dif >= "600") {
+    var region = row.Region;
 
 
 
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
-
+        xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region, false);
+        
 
     xmlHttp.send();
 
@@ -175,7 +174,7 @@ function getchecksync(tx, results) {
 
             syncmaintables(obj);
         }
-    //}
+
 
 }
 
