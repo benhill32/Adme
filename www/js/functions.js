@@ -116,7 +116,7 @@ function blankLastUpdatesec(){
     alert(json);
 
     db.transaction(function(tx) {
-        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,token) VALUES ("0","' + json + '","","","",0,0)');
+        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,token,Name,DOB,email,Region,Town) VALUES ("0","' + json + '","","","",0,0)');
         console.log("INSERT INTO MobileApp_LastUpdatesec");
         //   alert('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON) VALUES ("0", "0",0,0,"' + json + '",0,0)');
     });
