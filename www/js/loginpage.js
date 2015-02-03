@@ -12,7 +12,7 @@ function onDeviceReadylogin() {
     $('#nextbutton').hide();
     refreshdata();
     deviceIDlogin = device.uuid;
-    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
+   // db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
 
 
 }
@@ -29,7 +29,7 @@ function gettokenlogin_success(tx, results) {
     var menu = results.rows.item(0);
 
     apptokenlogin = menu.token;
-alert("token " + menu.token);
+
 }
 
 
