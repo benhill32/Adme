@@ -12,9 +12,14 @@ function onDeviceReadylogin() {
     $('#nextbutton').hide();
     refreshdata();
     deviceIDlogin = device.uuid;
-   //
+    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
 
 
+}
+
+function errorCBfuncben(err) {
+    console.log("Error processing SQL: "+err.code);
+    alert("Error processing SQL loaddata: "+err.code);
 }
 
 function gettokenlogin(tx) {
@@ -26,6 +31,7 @@ function gettokenlogin(tx) {
 function gettokenlogin_success(tx, results) {
 
     var len = results.rows.length;
+    alert(len);
     var menu = results.rows.item(0);
 
     apptokenlogin = menu.token;
@@ -131,7 +137,7 @@ function setuptownlogin(ID) {
 
 
 function nextbuttonclick(){
-    db.transaction(gettoken1, errorCBfunc, successCBfunc);
+
 
 
     var Name = $('#txtname').val();

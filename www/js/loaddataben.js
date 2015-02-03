@@ -26,10 +26,7 @@ var json = '{"gasprices":[{"ID":1,"CreatedateUTC":"2015-01-21T00:48:05.0788919",
 
     syncmaintableseben(obj);
 
-function errorCBfuncben(err) {
-    console.log("Error processing SQL: "+err.code);
-    alert("Error processing SQL loaddata: "+err.code);
-}
+
 
 function errorCBfunc(err) {
     console.log("Error processing SQL: "+err.code);
