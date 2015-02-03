@@ -23,7 +23,7 @@ function gettokenlogin_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
-
+alert("dssdad");
     apptokenlogin = menu.token;
 alert("token " + menu.token);
 }
