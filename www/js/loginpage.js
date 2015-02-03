@@ -141,7 +141,7 @@ function adddetails(){
 }
 
 function nextbuttonclick(){
-
+    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
     var Name = $('#txtname').val();
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
