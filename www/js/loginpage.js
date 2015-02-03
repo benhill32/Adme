@@ -1,4 +1,5 @@
 document.addEventListener("deviceready", onDeviceReadylogin, false);
+var db;
 var regionIDlogin = 0;
 var townIDLogin = 0;
 var deviceIDlogin =0;
@@ -7,10 +8,12 @@ var apptokenlogin = 0;
 
 function onDeviceReadylogin() {
 
-    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
+
     $('#nextbutton').hide();
     refreshdata();
     deviceIDlogin = device.uuid;
+
+    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
 }
 
 function gettokenlogin(tx) {
@@ -23,7 +26,7 @@ function gettokenlogin_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
-alert("dssdad");
+
     apptokenlogin = menu.token;
 alert("token " + menu.token);
 }
