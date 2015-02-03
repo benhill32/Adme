@@ -113,7 +113,7 @@ function blankLastUpdatesec(){
      // alert('http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
 
-
+alert("token fucntionpage -" + json)
 
     db.transaction(function(tx) {
         tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,token,Name,DOB,email,Region,Town) VALUES ("0","' + json + '","","","",0,0)');
@@ -162,7 +162,7 @@ function gettoken1_success(tx, results) {
     var menu = results.rows.item(0);
 
     apptoken = menu.token;
-
+alert("")
 }
 
 function syncmaintables(obj){

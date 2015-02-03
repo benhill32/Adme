@@ -12,6 +12,7 @@ function onDeviceReadylogin() {
     $('#nextbutton').hide();
     refreshdata();
     deviceIDlogin = device.uuid;
+    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
 
 
 }
@@ -19,7 +20,7 @@ function onDeviceReadylogin() {
 function gettokenlogin(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
      alert(sql);
-    tx.executeSql(sql, [], gettokenlogin_success);
+    tx.executeSql(sql, [], gettokenlogin_success,errorCBfuncben);
 }
 
 function gettokenlogin_success(tx, results) {
@@ -131,15 +132,14 @@ function setuptownlogin(ID) {
 
 
 function nextbuttonclick(){
-    //db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
 
     var Name = $('#txtname').val();
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
 
-    passscoretoserver("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptoken);
+    passscoretoserver("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
 
-    passscoretoserver("name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptoken);
+    passscoretoserver("name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
 
 
     window.location.href='../pages/categorieslist.html';
