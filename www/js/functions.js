@@ -161,7 +161,7 @@ function gettoken1_success(tx, results) {
     var menu = results.rows.item(0);
 
     apptoken = menu.token;
-alert("")
+
 }
 
 function syncmaintables(obj){
@@ -405,7 +405,7 @@ alert(apptoken);
 
         http.open("POST", url + params, true);
         console.log(url + params);
-alert(url + params);
+        alert(url + params);
         http.onreadystatechange = function () {//Call a function when the state changes.
             if (http.readyState == 4 && http.status == 200) {
                 // alert(http.responseText);

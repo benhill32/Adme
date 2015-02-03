@@ -12,7 +12,7 @@ function onDeviceReadylogin() {
     $('#nextbutton').hide();
     refreshdata();
     deviceIDlogin = device.uuid;
-   // db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
+   //
 
 
 }
@@ -114,7 +114,6 @@ function gettownlogin2_success(tx, results) {
 
         }
     }
-
 }
 
 function setuptownlogin(ID) {
@@ -132,6 +131,8 @@ function setuptownlogin(ID) {
 
 
 function nextbuttonclick(){
+    db.transaction(gettoken1, errorCBfunc, successCBfunc);
+
 
     var Name = $('#txtname').val();
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
