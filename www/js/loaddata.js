@@ -157,7 +157,7 @@ function getchecksync(tx, results) {
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region, false);
-alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region)
+//alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region)
 
     xmlHttp.send();
 
@@ -190,6 +190,8 @@ function closemodel(){
 
     $('#indexloadingdata').modal('hide');
     window.plugins.toast.showShortCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+
    // randomfunctions();
 }
 

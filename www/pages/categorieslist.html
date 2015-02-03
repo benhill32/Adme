@@ -3,45 +3,30 @@
 <head lang="en">
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <title>Hello World</title>
-
-
-
-
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>AdMe</title>
+    <script type="text/javascript" src="../js/dbconnection.js"></script>
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
-
-    <script type="text/javascript"  charset="utf-8">
-
-        document.addEventListener("deviceready", onDeviceReadysplash, false);
-
-        function onDeviceReadysplash() {
-
-            window.setTimeout(function(){
-                window.location.href='../pages/loginpage.html';
-            }, 1000);
-        }
-
-
-
-    </script>
-
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/CreateOpenDB.js"></script>-->
+    <script type="text/javascript" src="../js/categorieslist.js"></script>
+    <script type="text/javascript" src="../js/loaddata.js"></script>
 </head>
 <body>
-<div  id="splashscreen">
+<div class="footer">
 
-    <img src="../img/AdMe_Logo_small.png"  id="imgindex" />
+    <img src="../img/Next_button.png" id="nextbutton" align="right" onclick="nextbuttonclick()"   >
 </div>
 </body>
 </html>

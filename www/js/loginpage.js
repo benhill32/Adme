@@ -1,7 +1,8 @@
-document.addEventListener("deviceready", onDeviceReadylist, false);
+document.addEventListener("deviceready", onDeviceReadylogin, false);
 var regionIDlogin = 0;
 var townIDLogin = 0;
-function onDeviceReadylist() {
+function onDeviceReadylogin() {
+    $('#nextbutton').hide();
     refreshdata();
 
 }
@@ -46,6 +47,7 @@ function getregionslogin_success(tx, results) {
 function loadtownslogin(ID) {
     regionIDlogin = ID;
 
+    $('#nextbutton').show();
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
         closemodelRegion();
@@ -116,6 +118,12 @@ function adddetails(){
 
 
     randomfunctions();
+
+}
+
+function nextbuttonclick(){
+
+    window.location.href='../pages/categorieslist.html';
 
 }
 
