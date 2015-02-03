@@ -15,7 +15,7 @@ function onDeviceReadylogin() {
 
 function gettokenlogin(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], gettokenlogin_success);
 }
 
@@ -25,7 +25,7 @@ function gettokenlogin_success(tx, results) {
     var menu = results.rows.item(0);
 
     apptokenlogin = menu.token;
-
+alert("token " + menu.token);
 }
 
 
