@@ -24,14 +24,14 @@ function errorCBfuncben(err) {
 
 function gettokenlogin(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
-     alert(sql);
+  //   alert(sql);
     tx.executeSql(sql, [], gettokenlogin_success,errorCBfuncben);
 }
 
 function gettokenlogin_success(tx, results) {
 
     var len = results.rows.length;
-    alert(len);
+
     var menu = results.rows.item(0);
 
     apptokenlogin = menu.token;

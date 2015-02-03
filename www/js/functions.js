@@ -576,7 +576,7 @@ function getregionsdata(tx, results) {
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=1', false);
-     alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=1');
+   //  alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=1');
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
