@@ -556,5 +556,79 @@ function getbuscatsfunc_success(tx, results) {
         }
     }
 
+}
+
+function gettokenregion(tx) {
+    var sql =     "select Datesecs,datemenus,token from MobileApp_LastUpdatesec";
+//alert(sql);
+    tx.executeSql(sql, [], getregionsdata,errorCBfunc);
+}
+
+function getregionsdata(tx, results) {
+
+    var row = results.rows.item(0);
+    var datenowsecsync2 = row.Datesecs;
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1', false);
+    // alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
+    xmlHttp.send();
+
+    var json = xmlHttp.responseText;
+
+    var obj = JSON.parse(json);
+    syncmaintablesregions(obj);
+
+}
+
+function syncmaintablesregions(obj){
+
+    $.each(obj.Towns, function (idx, obj) {
+        if (obj.DeletedateUTC == null) {
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Towns(ID,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,TownName,RegionID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.TownName + '",' + obj.RegionID + ' )');
+                //   console.log("INSERT INTO MobileApp_Schedule is created");
+            });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileApp_Towns SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", TownName ="' + obj.TownName + '",RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
+                tx.executeSql(sql);
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_Towns where ID =' + obj.ID);
+                //   console.log('Delete MobileApp_Schedule where ID');
+            });
+        }
+    });
+
+    $.each(obj.BusinessLocations, function (idx, obj) {
+        if (obj.DeletedateUTC == null) {
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessLocations(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,RegionID,TownID ,Lat ,Long ,Address ,Phone,BusinessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.RegionID + ',' + obj.TownID + ',"' + obj.Lat + '","' + obj.Long + '","' + obj.Address + '","' + obj.Phone + '",' + obj.BusinessID + ')');
+                //    console.log("INSERT INTO MobileApp_clubsimages is created");
+            });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileApp_BusinessLocations SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", RegionID = ' + obj.RegionID + ', TownID =' + obj.TownID + ', Lat = "' + obj.Lat + '", Long = "' + obj.Long + '", Address = "' + obj.Address + '", Phone = "' + obj.Phone + '", BusinessID = ' + obj.BusinessID + ' where ID = ' + obj.ID;
+                tx.executeSql(sql);
+                // console.log(sql);
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_BusinessLocations where ID =' + obj.ID);
+                //   console.log('Delete MobileApp_Schedule where ID');
+            });
+        }
+    });
+
+
+
+    $.each(obj.Isadmin, function (idx, obj) {
+
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "0"');
+            closemodelRegion();
+
+        });
+    });
 
 }

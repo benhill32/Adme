@@ -82,7 +82,8 @@ function populateDB1(tx,results) {
         if(networkconnection!=0) {
             $.when(blankLastUpdatesec()).done(function () {
                 $.when(pushnotifiy()).done(function () {
-                    db.transaction(populateDB, errorCBfunc, successCBfunc);
+                   // db.transaction(populateDB, errorCBfunc, successCBfunc);
+                    db.transaction(gettokenregion, errorCBfunc, successCBfunc);
                 });
             });
         }else{
@@ -193,7 +194,19 @@ function closemodel(){
     randomfunctions();
 }
 
+function closemodelRegion(){
 
+
+    $('#indexloadingdata').modal('hide');
+    //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+    $('#basicDetails').modal('hide');
+
+
+   // randomfunctions();
+
+
+}
 
 
 function successHandler (result) {
