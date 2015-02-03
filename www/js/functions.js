@@ -559,7 +559,7 @@ function getbuscatsfunc_success(tx, results) {
 }
 
 function gettokenregion(tx) {
-    var sql =     "select Datesecs,datemenus,token from MobileApp_LastUpdatesec";
+    var sql =     "select Datesecs,token from MobileApp_LastUpdatesec";
 //alert(sql);
     tx.executeSql(sql, [], getregionsdata,errorCBfunc);
 }
@@ -570,7 +570,7 @@ function getregionsdata(tx, results) {
     var datenowsecsync2 = row.Datesecs;
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1', false);
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=1', false);
     // alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
     xmlHttp.send();
 
