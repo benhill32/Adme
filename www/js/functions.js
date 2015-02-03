@@ -583,6 +583,29 @@ function getregionsdata(tx, results) {
 
 function syncmaintablesregions(obj){
 
+    $.each(obj.Region, function (idx, obj) {
+        if(obj.DeletedateUTC == null){
+
+            // console.log('Delete MobileApp_clubs where ID');
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Region(ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.RegionName + '" )');
+                //    console.log("INSERT INTO MobileApp_clubs is created");
+            });
+
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileApp_Region SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", RegionName ="' + obj.RegionName + '" where ID = ' + obj.ID;
+                // console.log(sql);
+            });
+
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_Region where ID =' + obj.ID);
+            });
+
+        }
+    });
+
+
     $.each(obj.Towns, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
             db.transaction(function (tx) {
@@ -601,24 +624,7 @@ function syncmaintablesregions(obj){
         }
     });
 
-    $.each(obj.BusinessLocations, function (idx, obj) {
-        if (obj.DeletedateUTC == null) {
-            db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessLocations(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,RegionID,TownID ,Lat ,Long ,Address ,Phone,BusinessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.RegionID + ',' + obj.TownID + ',"' + obj.Lat + '","' + obj.Long + '","' + obj.Address + '","' + obj.Phone + '",' + obj.BusinessID + ')');
-                //    console.log("INSERT INTO MobileApp_clubsimages is created");
-            });
-            db.transaction(function (tx) {
-                var sql = 'UPDATE MobileApp_BusinessLocations SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", RegionID = ' + obj.RegionID + ', TownID =' + obj.TownID + ', Lat = "' + obj.Lat + '", Long = "' + obj.Long + '", Address = "' + obj.Address + '", Phone = "' + obj.Phone + '", BusinessID = ' + obj.BusinessID + ' where ID = ' + obj.ID;
-                tx.executeSql(sql);
-                // console.log(sql);
-            });
-        }else{
-            db.transaction(function (tx) {
-                tx.executeSql('Delete from MobileApp_BusinessLocations where ID =' + obj.ID);
-                //   console.log('Delete MobileApp_Schedule where ID');
-            });
-        }
-    });
+
 
 
 
