@@ -1,6 +1,6 @@
 document.addEventListener("deviceready", onDeviceReadylist, false);
 var regionIDlogin = 0;
-
+var townIDLogin = 0;
 function onDeviceReadylist() {
     refreshdata();
 
@@ -23,17 +23,37 @@ function getregionslogin_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#divregionnames').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="loadtownslogin(' + menu.ID + ')">' +
-        '<div class="bold size13">' + menu.RegionName  +
-        '</div>' +
-        '</Div>');
+        if(regionIDlogin == menu.ID) {
+
+            $('#divregionnames').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5"  onclick="loadtownslogin(' + menu.ID + ')">' +
+            '<div class="bold size13">' + menu.RegionName +
+            '</div>' +
+            '</Div>');
+        }else{
+            $('#divregionnames').append('<Div class="modal-body" align="left"  onclick="loadtownslogin(' + menu.ID + ')">' +
+            '<div class="bold size13">' + menu.RegionName +
+            '</div>' +
+            '</Div>');
+
+        }
     }
+
+
 }
 
 
 
 function loadtownslogin(ID) {
     regionIDlogin = ID;
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
+        closemodelRegion();
+
+    });
+    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+
+
     db.transaction(gettownlogin2, errorCBfunc, successCBfunc);
 
 }
@@ -54,15 +74,34 @@ function gettownlogin2_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
+        if(townIDLogin == menu.ID) {
+            $('#divtownnames').append('<Div class="modal-body" style="border-bottom: 1px solid #e5e5e5" align="left" onclick="setuptownlogin(' + menu.ID + ')"   >' +
+            '<div class="bold size13"   >' + menu.TownName +
+            '</div>' +
+            '</Div>');
+        }else{
+            $('#divtownnames').append('<Div class="modal-body" align="left" onclick="setuptownlogin(' + menu.ID + ')"   >' +
+            '<div class="bold size13"   >' + menu.TownName +
+            '</div>' +
+            '</Div>');
 
-        $('#divtownnames').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
-        '<div class="bold size13"   >' + menu.TownName  +
-        '</div>' +
-        '</Div>');
+        }
     }
 
 }
 
+function setuptownlogin(ID) {
+    townIDLogin = ID;
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set Town =' + ID);
+        closemodelRegion();
+
+    });
+
+    db.transaction(gettownlogin2, errorCBfunc, successCBfunc);
+
+}
 
 
 
