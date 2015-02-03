@@ -560,7 +560,7 @@ function getbuscatsfunc_success(tx, results) {
 
 function gettokenregion(tx) {
     var sql =  "select Datesecs,token from MobileApp_LastUpdatesec";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getregionsdata,errorCBfunc);
 }
 
