@@ -12,7 +12,7 @@ function onDeviceReadylogin() {
     $('#nextbutton').hide();
     refreshdata();
     deviceIDlogin = device.uuid;
-    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
+
 
 
 }
