@@ -1,9 +1,30 @@
 document.addEventListener("deviceready", onDeviceReadylogin, false);
 var regionIDlogin = 0;
 var townIDLogin = 0;
+var deviceIDlogin =0;
+var apptokenlogin = 0;
+
+
 function onDeviceReadylogin() {
+
+    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
     $('#nextbutton').hide();
     refreshdata();
+    deviceIDlogin = device.uuid;
+}
+
+function gettokenlogin(tx) {
+    var sql = "select token from MobileApp_LastUpdatesec";
+    // alert(sql);
+    tx.executeSql(sql, [], gettokenlogin_success);
+}
+
+function gettokenlogin_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    apptokenlogin = menu.token;
 
 }
 
@@ -109,9 +130,7 @@ function setuptownlogin(ID) {
 
 
 function adddetails(){
-    var Name = $('#txtname').val();
-    var DOB = $('#txtDescription').val();
-    var email = $('#txtEmail').val();
+
 
 
     passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
@@ -122,6 +141,15 @@ function adddetails(){
 }
 
 function nextbuttonclick(){
+
+    var Name = $('#txtname').val();
+    var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
+    var email = $('#txtEmail').val();
+
+    passscoretoserver("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
+
+    passscoretoserver("name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
+
 
     window.location.href='../pages/categorieslist.html';
 
