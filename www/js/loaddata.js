@@ -195,13 +195,13 @@ function closemodel(){
 
 function closemodelRegion(){
 
-alert("dsadas");
+
     $('#indexloadingdata').modal('hide');
     //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
-    $('#basicDetails').modal('show');
+   // $('#basicDetails').modal('show');
 
-
+    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
    // randomfunctions();
 
 

@@ -1,24 +1,23 @@
 document.addEventListener("deviceready", onDeviceReadylist, false);
-var regionIDlist= 0;
-var townIDlist= 0;
+
 
 function onDeviceReadylist() {
-    //refreshdata();
-    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+    refreshdata();
+
 }
 
 
 
 function getregionslogin(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName from MobileApp_Region order by RegionName ";
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getregionslogin_success);
 }
 
 function getregionslogin_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+alert(len);
     $('#divregionnames').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
