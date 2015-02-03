@@ -33,14 +33,15 @@ function getregionslogin_success(tx, results) {
 
 
 function loadtownslogin(ID) {
-    db.transaction(gettownlogin2, errorCBfunc, successCBfunc);
     regionIDlogin = ID;
+    db.transaction(gettownlogin2, errorCBfunc, successCBfunc);
+
 }
 
 function gettownlogin2(tx) {
 
     var sql = "select ID,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,TownName,RegionID from MobileApp_Towns where RegionID = " + regionIDlogin;
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], gettownlogin2_success);
 }
 
