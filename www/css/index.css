@@ -85,6 +85,11 @@ body {
     padding-left: 10px;
     height: 30px;
 }
+
+#basicDetails .modal-content{
+
+    background-color: lightgrey;
+}
 .divmainmenu
 {
     padding-top: 15px;
@@ -102,6 +107,48 @@ body {
     min-height: 60px;
 }
 
+#txtname,#txtEmail{
+    //width:50%;
+    height: 26px;
+}
+#logindiv{
+
+   margin-top: -120px;
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+}
+#logindiv h4{
+
+    color: white;
+}
+#logindivregion{
+
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+}
+#divregionnames,#divtownnames{
+    
+    float: left ;
+    width: 50%;
+    background-color: inherit;
+
+}
+#divregionlist{
+
+    background-color: #66cc33;
+}
+#logindivregion h4{
+
+    color: white;
+}
+#logindiv label{
+    width: 80px;
+    font-weight:normal;
+    vertical-align: top;
+    color: white;
+}
 
 .imgheader{
 
@@ -1244,20 +1291,20 @@ overflow-y: scroll !important;
 {
     height: 20%;
     text-align: center;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid #333399;
     font-size:18px;
     padding:15px;
     clear: both;
-    color: blue;
+    color: #333399;
 }
 .divmainplayer{
     height: 20%;
     text-align: center;
-//  border-bottom: 1px solid blue;
+//  border-bottom: 1px solid #333399;
     font-size:18px;
 //  padding:15px;
     clear: both;
-    color: blue;
+    color: #333399;
 
 }
 .divmainheader a{
@@ -1407,7 +1454,7 @@ overflow-y: scroll !important;
     bottom:0;
     text-align: center;
     line-height: normal;
-    background-color:#FFFFFF;
+    background-color:#333399;
     width: 100%;
 //  border: 1px solid #496077;
 // border-top:1px solid #496077;

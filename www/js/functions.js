@@ -397,7 +397,6 @@ function syncmaintables(obj){
 function passscoretoserver(testvar){
     checkonline();
 
-
     if(networkconnection!=0) {
         var http = new XMLHttpRequest();
         var url = "http://admin.adme.kiwi/loaddatafromapp.aspx";
@@ -416,7 +415,6 @@ function passscoretoserver(testvar){
         window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }
-
 }
 
 function randomfunctions(){
@@ -526,6 +524,12 @@ function townchosenfunc(ID){
         tx.executeSql('Update MobileApp_Towns set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_Towns");
     });
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set  Region= ' + regionID + ', Town = ' + ID);
+        console.log("Update MobileApp_LastUpdatesec");
+    });
+
 
     passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
 
