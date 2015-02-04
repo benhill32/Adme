@@ -26,9 +26,10 @@ function getcategorieslist_success(tx, results) {
         var imgg = "";
 
 
-        $('#catlistdiv2').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #66cc33;" onclick="choosecatelist('+ menu.ID + ')" >' +
-        '<div class="bold size13"   >' + menu.CategoryName  +
+        $('#catlistdiv2').append('<Div class="modal-body" align="left" style="clear:both;"  onclick="choosecatelist('+ menu.ID + ')" >' +
+        '<div class="bold size13" style="float:left;border-bottom: 1px solid #66cc33;"  >' + menu.CategoryName  +
         '</div>' +
+        '<div  style="float:right;font-size: 0px; line-height: 0%; width: 0px;border-top: 20px solid red;border-bottom: none;border-right: 20px solid green;"  ></div>' +
         '</Div>');
     }
 
