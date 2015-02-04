@@ -28,9 +28,9 @@ function getcategorieslist_success(tx, results) {
 
         $('#catlistdiv2').append('<Div class="modal-body" align="left" style="clear:both;"  onclick="choosecatelist('+ menu.ID + ')" >' +
         '<div class="bold size13" style="float:left;border-bottom: 1px solid #66cc33;width:90%;"  >' + menu.CategoryName  +
+        '<img src="../img/triend.png" style="float:right"; >' +
         '</div>' +
-        '<div  style="float:left;font-size: 0px; line-height: 0%;margin-left: -3px; width: 0px;border-top: 20px solid #333399;border-bottom: none;border-right: 20px solid #66cc33;"  ></div>' +
-        '</Div>');
+          '</Div>');
     }
 
 }
