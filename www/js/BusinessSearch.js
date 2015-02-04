@@ -4,7 +4,7 @@ document.addEventListener("deviceready", onDeviceReadyseacrh, false);
 var catid = getUrlVarsfunc()["CatID"];
 
 var search = getUrlVarsfunc()["search"];
-
+var catbusID = 0;
 
 function onDeviceReadyseacrh() {
 
@@ -35,13 +35,13 @@ function getbusinesslist(tx) {
     if(search == null) {
 
         var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
-        alert(sql);
+    //    alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
     }else{
 
         $('#txtsearch').val(search);
         var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%'";
-        alert(sql);
+       // alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
 
     }
@@ -61,11 +61,11 @@ function getbusinesslist_success(tx, results) {
     var selectid = "";
         if(menu.Follow == 1){
             selectid= "<input type='checkbox' checked id='chk'" + menu.BCID + "' >";
-         //   onclickoption = 'onclick="choosebuscatfalse('+ menu.BCID + ')"';
+            onclickoption = 'onclick="choosebuscatfalse('+ menu.BCID + ')"';
 
         }else{
             selectid= "<input type='checkbox' id='chk'" + menu.BCID + "' >";
-          //  onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
+            onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
         }
 
 
@@ -93,4 +93,35 @@ function reloadpage(){
 function make_blank()
 {
     $('#txtsearch').val('');
+}
+
+function choosebuscattrue(ID){
+//alert("Update MobileApp_BusinessCategories set Follow = 1 where ID = " + ID);
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
+        console.log("Update MobileApp_BusinessCategories");
+    });
+    catbusID = ID;
+    // sendcattoserver();
+    Passcattoserver(ID,1);
+    db.transaction(getbusinesslist, errorCBfunc, successCBfunc);
+
+
+
+}
+
+
+
+function choosebuscatfalse(ID){
+//alert("Update MobileApp_BusinessCategories set Follow = 1 where ID = " + ID);
+
+    catbusID = ID;
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_BusinessCategories set Follow = 0 where ID = ' + ID);
+        console.log("Update MobileApp_BusinessCategories");
+    });
+    // sendcattoserver();
+    Passcattoserver(ID,0);
+    db.transaction(getbusinesslist, errorCBfunc, successCBfunc);
+
 }
