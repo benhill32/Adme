@@ -144,12 +144,7 @@ function nextbuttonclick(){
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
 
-
-
     passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
-
-
-
 
 }
 
