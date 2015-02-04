@@ -38,6 +38,8 @@ function getbusinesslist(tx) {
         alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
     }else{
+
+        $('#txtsearch').val(search);
         var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%'";
         alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
@@ -86,4 +88,9 @@ function reloadpage(){
     var search1 = $('#txtsearch').val();
 
     window.location.href='../pages/BusinessSearch.html?CatID=' + catid + "&search=" + search1;
+}
+
+function make_blank()
+{
+    $('#txtsearch').val('');
 }
