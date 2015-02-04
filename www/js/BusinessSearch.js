@@ -82,5 +82,8 @@ function goback() {
 
 function reloadpage(){
 
-    window.location.href='../pages/BusinessSearch.html?CatID=' + catid + "&search=" + search;
+
+    var search1 = $('#txtsearch').val();
+
+    window.location.href='../pages/BusinessSearch.html?CatID=' + catid + "&search=" + search1;
 }
