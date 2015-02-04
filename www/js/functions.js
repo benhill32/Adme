@@ -404,8 +404,8 @@ function passscoretoserver(testvar){
         var params = "?" + testvar;
 
         http.open("POST", url + params, true);
-        console.log(url + params);
-        alert(url + params);
+       // console.log(url + params);
+        //alert(url + params);
         http.onreadystatechange = function () {//Call a function when the state changes.
             if (http.readyState == 4 && http.status == 200) {
                  //alert(http.responseText);
