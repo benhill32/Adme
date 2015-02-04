@@ -20,13 +20,13 @@ function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
-    $('#catlistdiv').empty();
+    $('#catlistdiv2').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
 
 
-        $('#catlistdiv').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosecatelist('+ menu.ID + ')" >' +
+        $('#catlistdiv2').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosecatelist('+ menu.ID + ')" >' +
         '<div class="bold size13"   >' + menu.CategoryName  +
         '</div>' +
         '</Div>');

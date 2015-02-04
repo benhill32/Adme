@@ -118,6 +118,17 @@ body {
     margin-left: auto;
     width:90%;
 }
+#catlistdiv{
+
+    margin-top: -110px;
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+}
+#catlistdiv2{
+    width:60%;
+
+}
 #logindiv h4{
 
     color: white;
