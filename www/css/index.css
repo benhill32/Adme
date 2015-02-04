@@ -168,6 +168,9 @@ color: #ffffff;
 #divregionlist{
 
     background-color: #66cc33;
+    width: 90%;
+    height: 40%;
+    position: absolute;
 }
 #logindivregion h4{
 
