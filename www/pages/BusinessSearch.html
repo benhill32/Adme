@@ -20,10 +20,22 @@
     <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
     <script type="text/javascript" src="../js/CreateOpenDB.js"></script>-->
-    <script type="text/javascript" src="../js/categorieslist.js"></script>
+    <script type="text/javascript" src="../js/BusinessSearch.js"></script>
     <script type="text/javascript" src="../js/loaddata.js"></script>
 </head>
 <body>
+<div class="divmainmenu">
+    <div class="floatleft3" ID="headermain" align="center">
+        <div style="border-right: 1px solid grey;" id="catNameid">
+
+        </div>
+
+    </div>
+    <div class="floatbusiness"  ID="headermainbus">
+    <textarea id="txtsearch">Business Search</textarea>
+    </div>
+</div>
+
 <div class="container-fluid" >
     <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
@@ -53,19 +65,18 @@
     </div>
 
 
-      <div id="catlistdiv"  >
-    <h4>Select Catagories</h4>
-        <div id="catlistdiv2">
+    <div id="businesscatid"  >
+        <h4>Select</h4>
+        <div id="businesscatid2">
 
 
         </div>
 
     </div>
 </div>
-
 <div class="footer">
 
-    <img src="../img/Next_button.png" id="nextbutton" align="right">
+    <img src="../img/Save_button.png" id="nextbutton" align="right">
 </div>
 </body>
 </html>

@@ -37,8 +37,6 @@ function getcategorieslist_success(tx, results) {
 
 function choosecatelist(ID){
 
-    catid =ID;
-  //  db.transaction(getcatname, errorCBfunc, successCBfunc);
-  //  db.transaction(getbusiness, errorCBfunc, successCBfunc);
 
+    window.location.href='../pages/BusinessSearch.html?CatID=' + ID;
 }

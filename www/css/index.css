@@ -125,6 +125,21 @@ body {
     margin-left: auto;
     width:90%;
 }
+#businesscatid{
+
+   // margin-top: -110px;
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+}
+#businesscatid h4{
+
+    color: white;
+}
+#businesscatid2{
+    width:60%;
+    color: #ffffff;
+}
 #catlistdiv2{
     width:60%;
 color: #ffffff;
@@ -230,6 +245,18 @@ color: #ffffff;
     padding-bottom: 17px;
     /* padding-top: 9px; */
     border-bottom: 6px solid #71BF44;
+    margin-top: 22px;
+}
+#headermainbus{
+// min-height: 54px;
+// padding-bottom: 17px;
+//  padding-top: 24px;
+// border-bottom: 6px solid #71BF44;
+
+    min-height: 54px;
+    padding-bottom: 17px;
+    /* padding-top: 9px; */
+  //  border-bottom: 6px solid #71BF44;
     margin-top: 22px;
 }
 
@@ -553,6 +580,10 @@ width:90px;
 #headermain3rd1st:hover{
 
     color:white;
+}
+.floatbusiness{
+    float:left;
+
 }
 .floatleft3{
 
