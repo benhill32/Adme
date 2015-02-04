@@ -35,13 +35,13 @@ function getbusinesslist(tx) {
     if(search == null) {
 
         var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
-    //    alert(sql);
+        alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
     }else{
 
         $('#txtsearch').val(search);
         var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%'";
-       // alert(sql);
+        alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
 
     }
@@ -103,7 +103,8 @@ function choosebuscattrue(ID){
     });
     catbusID = ID;
     // sendcattoserver();
-    Passcattoserver(ID,1);
+
+    passscoretoserver("categories=" + ID + "&outcome=1&deviceid=" + deviceIDfunc + "&token=" + apptoken);
     db.transaction(getbusinesslist, errorCBfunc, successCBfunc);
 
 
@@ -121,7 +122,8 @@ function choosebuscatfalse(ID){
         console.log("Update MobileApp_BusinessCategories");
     });
     // sendcattoserver();
-    Passcattoserver(ID,0);
+    passscoretoserver("categories=" + ID + "&outcome=0&deviceid=" + deviceIDfunc + "&token=" + apptoken);
     db.transaction(getbusinesslist, errorCBfunc, successCBfunc);
 
 }
+

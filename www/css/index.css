@@ -260,6 +260,7 @@ color: #ffffff;
 #txtsearch{
     width:80%;
     height: 26px;
+    vertical-align: top;
 }
 .colourblueish{
 color:#333399;
@@ -301,7 +302,7 @@ color:#333399;
 
     height: 100%;
     width: 60%;
-    padding-top: 8px;
+    padding-top: 10px;
    // padding-left: 10px;
     position: absolute;
     right: 0;
