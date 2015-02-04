@@ -1,7 +1,7 @@
 var db;
 document.addEventListener("deviceready", onDeviceReadyseacrh, false);
 
-var catid = getUrlVars()["id"];
+var catid = getUrlVars()["CatID"];
 
 
 function onDeviceReadyseacrh() {
@@ -12,7 +12,7 @@ function onDeviceReadyseacrh() {
 
 function getcatnamelist(tx) {
     var sql = "select CategoryName from MobileApp_Categories where ID = " + catid;
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getcatnamelist_success);
 }
 
@@ -62,4 +62,9 @@ function getbusinesslist_success(tx, results) {
         '</Div>');
     }
 
+}
+
+function goback() {
+
+    window.location.href='../pages/categorieslist.html';
 }
