@@ -404,18 +404,55 @@ function passscoretoserver(testvar){
         var params = "?" + testvar;
 
         http.open("POST", url + params, true);
-       // console.log(url + params);
+        // console.log(url + params);
         //alert(url + params);
         http.onreadystatechange = function () {//Call a function when the state changes.
             if (http.readyState == 4 && http.status == 200) {
-                 //alert(http.responseText);
+                //alert(http.responseText);
             }
         }
         http.send();
+
+
+
     }else{
         window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }
+
+
+
+
+}
+
+function passscoretoserverlogin(testvar){
+    checkonline();
+
+    if(networkconnection!=0) {
+        var http = new XMLHttpRequest();
+        var url = "http://admin.adme.kiwi/loaddatafromapp.aspx";
+        var params = "?" + testvar;
+
+        http.open("POST", url + params, true);
+        // console.log(url + params);
+        //alert(url + params);
+        http.onreadystatechange = function () {//Call a function when the state changes.
+            if (http.readyState == 4 && http.status == 200) {
+                //alert(http.responseText);
+            }
+        }
+        http.send();
+
+        window.location.href='../pages/categorieslist.html';
+
+    }else{
+        window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+    }
+
+
+
+
 }
 
 function randomfunctions(){
