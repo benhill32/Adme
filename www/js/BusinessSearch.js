@@ -56,8 +56,8 @@ function getbusinesslist_success(tx, results) {
         }
 
 
-        $('#businesscatid2').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"  ' + onclickoption + '  >' +
-        '<div align="center"  >' + selectid + " " +  menu.BusinessName +
+        $('#businesscatid2').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body" ' + onclickoption + '  >' +
+        '<div align="left"  >' + selectid + " " +  menu.BusinessName +
         '</div>' +
         '</Div>');
     }
