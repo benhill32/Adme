@@ -395,6 +395,8 @@ function syncmaintables(obj){
 }
 
 
+
+
 function passscoretoserver(testvar){
     checkonline();
 

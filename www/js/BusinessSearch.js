@@ -1,7 +1,7 @@
 var db;
 document.addEventListener("deviceready", onDeviceReadyseacrh, false);
 
-var catid = getUrlVars()["CatID"];
+var catid = getUrlVarsfunc()["CatID"];
 
 
 function onDeviceReadyseacrh() {
