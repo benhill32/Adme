@@ -27,8 +27,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.6" vertical-offset="4199" max-vertical-offset="27625">
-              <caret line="267" column="18" selection-start-line="267" selection-start-column="18" selection-end-line="267" selection-end-column="18" />
+            <state vertical-scroll-proportion="-10.88" vertical-offset="22848" max-vertical-offset="27693">
+              <caret line="1360" column="7" selection-start-line="1360" selection-start-column="1" selection-end-line="1360" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginpage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginpage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/pages/loginpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.730769" vertical-offset="1206" max-vertical-offset="2023">
-              <caret line="281" column="35" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.5422277" vertical-offset="1206" max-vertical-offset="2023">
+              <caret line="283" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -86,8 +86,8 @@
       <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1907" max-vertical-offset="2737">
-              <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1550" max-vertical-offset="2737">
+              <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -155,10 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusinessSearch.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BusinessSearch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/BusinessSearch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1060241" vertical-offset="0" max-vertical-offset="1547">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
               <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
@@ -199,11 +199,11 @@
         <option value="$PROJECT_DIR$/www/pages/categorieslist.html" />
         <option value="$PROJECT_DIR$/www/js/categorieslist.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
-        <option value="$PROJECT_DIR$/www/js/loginpage.js" />
-        <option value="$PROJECT_DIR$/www/pages/loginpage.html" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/pages/BusinessSearch.html" />
         <option value="$PROJECT_DIR$/www/js/BusinessSearch.js" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/js/loginpage.js" />
+        <option value="$PROJECT_DIR$/www/pages/loginpage.html" />
       </list>
     </option>
   </component>
@@ -432,7 +432,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -868,21 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/loginpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.730769" vertical-offset="1206" max-vertical-offset="2023">
-          <caret line="281" column="35" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#select#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#select#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.423077" vertical-offset="237" max-vertical-offset="2074">
@@ -895,14 +880,6 @@
             <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.6" vertical-offset="4199" max-vertical-offset="27625">
-          <caret line="267" column="18" selection-start-line="267" selection-start-column="18" selection-end-line="267" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,10 +898,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
+    <entry file="file://$PROJECT_DIR$/www/js/categorieslist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1907" max-vertical-offset="2737">
-          <caret line="146" column="19" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <caret line="40" column="2" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="68" />
+          <folding>
+            <marker date="1423014754336" expanded="true" signature="828:882" placeholder="..." />
+            <marker date="1423014754336" expanded="true" signature="956:967" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/BusinessSearch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.88" vertical-offset="22848" max-vertical-offset="27693">
+          <caret line="1360" column="7" selection-start-line="1360" selection-start-column="1" selection-end-line="1360" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -949,22 +945,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/categorieslist.js">
+    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="40" column="2" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="68" />
-          <folding>
-            <marker date="1423014754336" expanded="true" signature="828:882" placeholder="..." />
-            <marker date="1423014754336" expanded="true" signature="956:967" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1550" max-vertical-offset="2737">
+          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/BusinessSearch.js">
+    <entry file="file://$PROJECT_DIR$/www/pages/loginpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1060241" vertical-offset="0" max-vertical-offset="1547">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.5422277" vertical-offset="1206" max-vertical-offset="2023">
+          <caret line="283" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#select#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#select#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

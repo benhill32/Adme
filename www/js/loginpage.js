@@ -109,12 +109,12 @@ function gettownlogin2_success(tx, results) {
 
         if(townIDLogin == menu.ID) {
             $('#divtownnames').append('<Div class="modal-body" style="border-bottom: 1px solid #e5e5e5" align="left" onclick="setuptownlogin(' + menu.ID + ')"   >' +
-            '<div class="bold size13"   >' + menu.TownName +
+            '<div class="bold size13 colourblueish"   >' + menu.TownName +
             '</div>' +
             '</Div>');
         }else{
             $('#divtownnames').append('<Div class="modal-body" align="left" onclick="setuptownlogin(' + menu.ID + ')"   >' +
-            '<div class="bold size13"   >' + menu.TownName +
+            '<div class="bold size13 colourblueish"   >' + menu.TownName +
             '</div>' +
             '</Div>');
 
