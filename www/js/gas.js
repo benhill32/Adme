@@ -37,7 +37,7 @@ function getdata(tx) {
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
         " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' " +
-        " GROUP BY MGP.BusinessID";
+        " GROUP BY MGP.BusinessID ORDER BY Follow";
 
    //alert(sql);
     tx.executeSql(sql, [], getdata_success);
@@ -55,7 +55,7 @@ function getdata_success(tx, results) {
 
 
 
-        if(menu.Follow ==1) {
+      //  if(menu.Follow ==1) {
 
             if(count == 1){
                 $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
@@ -84,7 +84,7 @@ function getdata_success(tx, results) {
             '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
             '</Div>');
             count = 0;
-        }
+       //}
 
     }
 
