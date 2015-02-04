@@ -3,7 +3,10 @@ document.addEventListener("deviceready", onDeviceReadylistcat, false);
 var catid =0;
 function onDeviceReadylistcat() {
 
-    refreshdata();
+
+
+
+
 
 }
 
@@ -20,19 +23,24 @@ function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
-    $('#catlistdiv2').empty();
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
-        var imgg = "";
+    if(len==0){
+
+        refreshdata();
+
+    }else {
+        $('#catlistdiv2').empty();
+        for (var i = 0; i < len; i++) {
+            var menu = results.rows.item(i);
+            var imgg = "";
 
 
-        $('#catlistdiv2').append('<Div class="modal-body" align="left" style="clear:both;"  onclick="choosecatelist('+ menu.ID + ')" >' +
-        '<div class="bold size13" style="float:left;border-bottom: 1px solid #66cc33;width:90%;"  >' + menu.CategoryName  +
-        '<img src="../img/triend.png" style="float:right"; >' +
-        '</div>' +
-          '</Div>');
+            $('#catlistdiv2').append('<Div class="modal-body" align="left" style="clear:both;"  onclick="choosecatelist(' + menu.ID + ')" >' +
+            '<div class="bold size13" style="float:left;border-bottom: 1px solid #66cc33;width:90%;"  >' + menu.CategoryName +
+            '<img src="../img/triend.png" style="float:right"; >' +
+            '</div>' +
+            '</Div>');
+        }
     }
-
 }
 
 function choosecatelist(ID){
