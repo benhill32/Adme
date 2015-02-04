@@ -146,7 +146,7 @@ function nextbuttonclick(){
 
     passscoretoserver("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
 
-  
+
 
     window.location.href='../pages/categorieslist.html';
 
