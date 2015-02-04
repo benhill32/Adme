@@ -4,7 +4,7 @@ var catid =0;
 function onDeviceReadylistcat() {
 
 
-
+    db.transaction(getcategorieslist, errorCBfunc, successCBfunc);
 
 
 

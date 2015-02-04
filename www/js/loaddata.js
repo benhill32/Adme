@@ -193,7 +193,7 @@ function closemodel(){
 
     if(document.getElementById("catlistdiv")!=null) {
 
-        db.transaction(getcategorieslist, errorCBfunc, successCBfunc);
+
     }
 
    // randomfunctions();
