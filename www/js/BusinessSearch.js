@@ -3,6 +3,8 @@ document.addEventListener("deviceready", onDeviceReadyseacrh, false);
 
 var catid = getUrlVarsfunc()["CatID"];
 
+var search = getUrlVarsfunc()["search"];
+
 
 function onDeviceReadyseacrh() {
 
@@ -29,9 +31,18 @@ function getcatnamelist_success(tx, results) {
 
 
 function getbusinesslist(tx) {
-    var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
-     alert(sql);
-    tx.executeSql(sql, [], getbusinesslist_success);
+
+    if(search == null) {
+
+        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
+        alert(sql);
+        tx.executeSql(sql, [], getbusinesslist_success);
+    }else{
+        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%'";
+        alert(sql);
+        tx.executeSql(sql, [], getbusinesslist_success);
+
+    }
 }
 
 function getbusinesslist_success(tx, results) {
@@ -67,4 +78,9 @@ function getbusinesslist_success(tx, results) {
 function goback() {
 
     window.location.href='../pages/categorieslist.html';
+}
+
+function reloadpage(){
+
+    window.location.href='../pages/BusinessSearch.html?CatID=' + catid + "&search=" + search;
 }
