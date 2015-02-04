@@ -668,10 +668,6 @@ function syncmaintablesregions(obj){
         }
     });
 
-
-
-
-
     $.each(obj.Isadmin, function (idx, obj) {
 
         db.transaction(function(tx) {
