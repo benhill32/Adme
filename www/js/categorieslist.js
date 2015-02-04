@@ -48,3 +48,8 @@ function choosecatelist(ID){
 
     window.location.href='../pages/BusinessSearch.html?CatID=' + ID;
 }
+
+function goforward() {
+
+    window.location.href='../pages/daily.html';
+}
