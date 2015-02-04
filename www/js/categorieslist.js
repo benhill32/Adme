@@ -26,7 +26,7 @@ function getcategorieslist_success(tx, results) {
         var imgg = "";
 
 
-        $('#catlistdiv2').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosecatelist('+ menu.ID + ')" >' +
+        $('#catlistdiv2').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #66cc33;" onclick="choosecatelist('+ menu.ID + ')" >' +
         '<div class="bold size13"   >' + menu.CategoryName  +
         '</div>' +
         '</Div>');
