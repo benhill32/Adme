@@ -8,8 +8,8 @@ var apptokenlogin = 0;
 
 function onDeviceReadylogin() {
 
+    $("#nextbutton").prop("disabled", true);
 
-    $('#nextbutton').hide();
     refreshdata();
     deviceIDlogin = device.uuid;
 
@@ -77,8 +77,8 @@ function getregionslogin_success(tx, results) {
 
 function loadtownslogin(ID) {
     regionIDlogin = ID;
+    $("#nextbutton").removeAttr('disabled');
 
-    $('#nextbutton').show();
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
         closemodelRegion();
@@ -138,7 +138,7 @@ function setuptownlogin(ID) {
 
 function nextbuttonclick(){
 
-    $('#nextbutton').hide();
+    $("#nextbutton").prop("disabled", true);
 
     var Name = $('#txtname').val();
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();

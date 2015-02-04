@@ -12,7 +12,7 @@ function onDeviceReadyseacrh() {
 
 function getcatnamelist(tx) {
     var sql = "select CategoryName from MobileApp_Categories where ID = " + catid;
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], getcatnamelist_success);
 }
 
@@ -30,7 +30,7 @@ function getcatnamelist_success(tx, results) {
 
 function getbusinesslist(tx) {
     var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getbusinesslist_success);
 }
 
@@ -38,7 +38,7 @@ function getbusinesslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 
-    $('#Categoriesbus').empty();
+    $('#businesscatid2').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
@@ -56,7 +56,7 @@ function getbusinesslist_success(tx, results) {
         }
 
 
-        $('#Categoriesbus').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"  ' + onclickoption + '  >' +
+        $('#businesscatid2').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body"  style="border-bottom: 1px solid #e5e5e5;"  ' + onclickoption + '  >' +
         '<div align="center"  >' + selectid + " " +  menu.BusinessName +
         '</div>' +
         '</Div>');
