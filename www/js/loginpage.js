@@ -148,7 +148,7 @@ function nextbuttonclick(){
 
 
 
-    //window.location.href='../pages/categorieslist.html';
+    window.location.href='../pages/categorieslist.html';
 
 }
 
