@@ -442,8 +442,10 @@ function passscoretoserverlogin(testvar){
             }
         }
         http.send();
+        window.setTimeout(function(){
+            window.location.href='../pages/categorieslist.html';
 
-        window.location.href='../pages/categorieslist.html';
+        }, 2000);
 
     }else{
         window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
