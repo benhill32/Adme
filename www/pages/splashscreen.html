@@ -16,7 +16,7 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+    <script type="text/javascript" src="../js/dbconnection.js"></script>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
@@ -25,15 +25,49 @@
     <script type="text/javascript"  charset="utf-8">
 
         document.addEventListener("deviceready", onDeviceReadysplash, false);
-
+    var time = 1000;
         function onDeviceReadysplash() {
-            window.setTimeout(function(){
-                window.location.href='../pages/loginpage.html';
-            }, 1000);
 
+
+            db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
         }
 
 
+
+        function errorCBfuncben(err) {
+            window.setTimeout(function(){
+                window.location.href='../pages/loginpage.html';
+            }, time);
+        }
+
+
+
+
+        function gettokenlogincheck(tx) {
+            var sql = "select LoginDone from MobileApp_LastUpdatesec";
+            //   alert(sql);
+            tx.executeSql(sql, [], gettokenlogincheck_success,errorCBfuncben);
+        }
+
+        function gettokenlogincheck_success(tx, results) {
+
+            var len = results.rows.length;
+
+            var menu = results.rows.item(0);
+
+            if(menu.LoginDone == 1){
+                window.setTimeout(function(){
+                    window.location.href='../pages/daily.html';
+                }, time);
+
+            }else{
+                window.setTimeout(function(){
+                    window.location.href='../pages/loginpage.html';
+                }, time);
+
+            }
+
+        }
 
     </script>
 

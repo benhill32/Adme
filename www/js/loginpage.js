@@ -9,7 +9,7 @@ var apptokenlogin = 0;
 function onDeviceReadylogin() {
 
     $("#nextbutton").prop("disabled", true);
-    checkdataload();
+    refreshdata();
 
     deviceIDlogin = device.uuid;
 
