@@ -9,17 +9,42 @@ var apptokenlogin = 0;
 function onDeviceReadylogin() {
 
     $("#nextbutton").prop("disabled", true);
+    checkdataload();
 
-    refreshdata();
     deviceIDlogin = device.uuid;
 
+}
 
+
+function checkdataload(){
+
+
+    db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
+
+}
+
+
+function gettokenlogincheck(tx) {
+    var sql = "select LoginDone from MobileApp_LastUpdatesec";
+    //   alert(sql);
+    tx.executeSql(sql, [], gettokenlogincheck_success,errorCBfuncben);
+}
+
+function gettokenlogincheck_success(tx, results) {
+
+    var len = results.rows.length;
+
+    var menu = results.rows.item(0);
+
+    if(menu.LoginDone == 1){
+
+        window.location.href='../pages/daily.html';
+    }
 
 }
 
 function errorCBfuncben(err) {
-    console.log("Error processing SQL: "+err.code);
-    alert("Error processing SQL loaddata: "+err.code);
+    refreshdata();
 }
 
 function gettokenlogin(tx) {
@@ -153,6 +178,10 @@ function nextbuttonclick(){
     var Name = $('#txtname').val();
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1');
+    });
 
     passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
 

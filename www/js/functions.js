@@ -673,7 +673,7 @@ function syncmaintablesregions(obj){
     $.each(obj.Isadmin, function (idx, obj) {
 
         db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "0"');
+            tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "0",LoginDone=0');
             closemodelRegion();
 
         });
