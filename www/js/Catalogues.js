@@ -67,8 +67,8 @@ function getdata_success(tx, results) {
 
         // alert(strrr);
 
-        $('#cataloguesdealsdiv').append('<Div align="center"  class="cataloguesdealsdiv" onclick="fileloadcatalogues(\'' + strrr + '\')" >' + imgg +
-        '<br>Read More' +
+        $('#cataloguesdealsdiv').append('<Div align="center"  class="cataloguesdealsdiv" onclick="fileloadcatalogues(\'' + strrr + '\')" ><div style="width:100%;">' + imgg + '</div>' +
+        '<div  style="width:100%;position: absolute;bottom: 0;" >Read More</div>' +
         '</Div>');
         count = 0;
     }
