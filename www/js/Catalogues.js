@@ -68,7 +68,7 @@ function getdata_success(tx, results) {
         // alert(strrr);
 
         $('#cataloguesdealsdiv').append('<Div align="center"  class="cataloguesdealsdiv" onclick="fileloadcatalogues(\'' + strrr + '\')" >' + imgg +
-
+        '<br>Read More' +
         '</Div>');
         count = 0;
     }

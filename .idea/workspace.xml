@@ -115,8 +115,8 @@
       <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1513">
-              <caret line="35" column="90" selection-start-line="35" selection-start-column="90" selection-end-line="35" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="683" max-vertical-offset="1513">
+              <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="29" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -127,8 +127,8 @@
       <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4060241" vertical-offset="224" max-vertical-offset="1513">
-              <caret line="35" column="49" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.6313253" vertical-offset="632" max-vertical-offset="1513">
+              <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -945,8 +945,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1513">
-          <caret line="35" column="90" selection-start-line="35" selection-start-column="90" selection-end-line="35" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="683" max-vertical-offset="1513">
+          <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="29" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
@@ -955,8 +955,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4060241" vertical-offset="224" max-vertical-offset="1513">
-          <caret line="35" column="49" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.6313253" vertical-offset="632" max-vertical-offset="1513">
+          <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
