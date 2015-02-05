@@ -45,7 +45,7 @@ function getdata_success(tx, results) {
     var len = results.rows.length;
     // alert(len);
 
-
+    $('#coupondealsdiv').empty();
     var count = 1;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
@@ -60,12 +60,7 @@ function getdata_success(tx, results) {
                 imgg = "";
             }
 
-
-
-
         var strrr = menu.BusinessLocationID + "|||" + menu.FileName;
-
-       // alert(strrr);
 
             $('#coupondealsdiv').append('<Div align="center"  class="coupondealsdiv" onclick="fileloadcoupon(\'' + strrr + '\')" ><div style="width:100%;">' + imgg + '</div>' +
             '<div  style="width:100%;position: absolute;bottom: 0;" >Read More</div>' +
