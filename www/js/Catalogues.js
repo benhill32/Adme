@@ -76,7 +76,12 @@ function fileloadcatalogues(IDstring){
     var urlnow = 'http://admin.adme.kiwi/CatalogFiles/' + fileexten[0] + '/' + fileexten[1];
 
     if( device.platform == 'android' || device.platform == 'Android'){
-        url = "http://docs.google.com/viewer?url= "+ urlnow;
+        if(fileexten[1].substr(-4).toLowerCase() == ".pdf"){
+
+            url = "http://docs.google.com/viewer?url= "+ urlnow;
+        }else{
+            url = urlnow;
+        }
     }else{
 
         url = urlnow;

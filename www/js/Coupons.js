@@ -71,13 +71,19 @@ function getdata_success(tx, results) {
 
 function fileloadcoupon(IDstring){
     var fileexten =IDstring.split('|||');
-   // alert(IDstring);
-  // alert("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
-   // URLredirect("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
+
 var urlnow = 'http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileexten[1];
 
     if( device.platform == 'android' || device.platform == 'Android'){
-        url = "http://docs.google.com/viewer?url= "+ urlnow;
+        if(fileexten[1].substr(-4).toLowerCase() == ".pdf"){
+
+            url = "http://docs.google.com/viewer?url= "+ urlnow;
+        }else{
+            url = urlnow;
+        }
+
+
+
     }else{
 
         url = urlnow;
