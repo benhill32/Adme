@@ -97,6 +97,9 @@ function getdata_success(tx, results) {
 function showgascompanies(BID){
 
     BusID = BID;
+
+    passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + BID + "&GasID=" + BID);
+
     db.transaction(Getgascompanies, errorCBfunc, successCBfunc);
     $('#basicModalgas').modal('show');
 

@@ -30,7 +30,7 @@ function gettownname_success(tx, results) {
 
 
 function getdata(tx) {
-    var sql ="Select MGP.ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon" +
+    var sql ="Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon" +
         " from MobilevwApp_Catalogues as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID "+
         " where MGP.TownID =" + townID +  " ORDER BY MBC.Follow DESC,MBN.BusinessName";
@@ -60,7 +60,8 @@ function getdata_success(tx, results) {
             imgg = "";
         }
 
-        var strrr = menu.BusinessLocationID + "|||" + menu.FileName;
+
+        var strrr = menu.BusinessLocationID + "|||" + menu.FileName + "|||" + menu.BusinessID + "|||" + menu.ID;
 
         $('#cataloguesdealsdiv').append('<Div align="center"  class="cataloguesdealsdiv" onclick="fileloadcatalogues(\'' + strrr + '\')" ><div style="width:100%;">' + imgg + '</div>' +
         '<div  style="width:100%;position: absolute;bottom: 0;" >Read More</div>' +
@@ -71,6 +72,10 @@ function getdata_success(tx, results) {
 
 function fileloadcatalogues(IDstring){
        var fileexten =IDstring.split('|||');
+
+
+    passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + fileexten[2] + "&BusinessLocationID=" + fileexten[0] + "&FileName=" + fileexten[1] + "&CataloguesID=" + fileexten[3]);
+
 
 
     var urlnow = 'http://admin.adme.kiwi/CatalogFiles/' + fileexten[0] + '/' + fileexten[1];
