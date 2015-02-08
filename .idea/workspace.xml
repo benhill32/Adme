@@ -91,11 +91,11 @@
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1428">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="128" />
+              <caret line="78" column="122" selection-start-line="78" selection-start-column="122" selection-end-line="78" selection-end-column="124" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <marker date="1423428955869" expanded="true" signature="2100:2111" placeholder="..." />
-                <marker date="1423428955869" expanded="true" signature="2161:2201" placeholder="..." />
+                <marker date="1423429439065" expanded="true" signature="2100:2111" placeholder="..." />
+                <marker date="1423429439065" expanded="true" signature="2161:2201" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -119,12 +119,12 @@
       <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73373497" vertical-offset="598" max-vertical-offset="1428">
-              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.8566265" vertical-offset="598" max-vertical-offset="1428">
+              <caret line="79" column="125" selection-start-line="79" selection-start-column="125" selection-end-line="79" selection-end-column="125" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <marker date="1423428955857" expanded="true" signature="2092:2103" placeholder="..." />
-                <marker date="1423428955857" expanded="true" signature="2149:2189" placeholder="..." />
+                <marker date="1423429439050" expanded="true" signature="2092:2103" placeholder="..." />
+                <marker date="1423429439050" expanded="true" signature="2149:2189" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -933,23 +933,23 @@
     <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1428">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="128" />
+          <caret line="78" column="122" selection-start-line="78" selection-start-column="122" selection-end-line="78" selection-end-column="124" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423428955869" expanded="true" signature="2100:2111" placeholder="..." />
-            <marker date="1423428955869" expanded="true" signature="2161:2201" placeholder="..." />
+            <marker date="1423429439065" expanded="true" signature="2100:2111" placeholder="..." />
+            <marker date="1423429439065" expanded="true" signature="2161:2201" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73373497" vertical-offset="598" max-vertical-offset="1428">
-          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.8566265" vertical-offset="598" max-vertical-offset="1428">
+          <caret line="79" column="125" selection-start-line="79" selection-start-column="125" selection-end-line="79" selection-end-column="125" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423428955857" expanded="true" signature="2092:2103" placeholder="..." />
-            <marker date="1423428955857" expanded="true" signature="2149:2189" placeholder="..." />
+            <marker date="1423429439050" expanded="true" signature="2092:2103" placeholder="..." />
+            <marker date="1423429439050" expanded="true" signature="2149:2189" placeholder="..." />
           </folding>
         </state>
       </provider>

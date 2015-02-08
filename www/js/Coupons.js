@@ -76,6 +76,6 @@ function fileloadcoupon(IDstring){
    // URLredirect("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
 
 
-    window.open(encodeURI("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]), '_blank', 'location=yes');
+    window.open(encodeURI('http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileexten[1]), '_blank', 'location=no');
 
 }
