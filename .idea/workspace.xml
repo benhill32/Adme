@@ -97,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7746988" vertical-offset="598" max-vertical-offset="1428">
-              <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1428">
+              <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="101" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
                 <marker date="1423424904983" expanded="true" signature="2100:2111" placeholder="..." />
@@ -114,7 +114,7 @@
       <file leaf-file-name="Coupons.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/Coupons.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="884">
+            <state vertical-scroll-proportion="-22.26923" vertical-offset="67" max-vertical-offset="884">
               <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -126,15 +126,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-              <caret line="35" column="85" selection-start-line="35" selection-start-column="85" selection-end-line="35" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.6313253" vertical-offset="598" max-vertical-offset="1428">
+              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <marker date="1423424374386" expanded="true" signature="2092:2103" placeholder="..." />
-                <marker date="1423424374386" expanded="true" signature="2149:2189" placeholder="..." />
+                <marker date="1423425432783" expanded="true" signature="2092:2103" placeholder="..." />
+                <marker date="1423425432783" expanded="true" signature="2149:2189" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -190,8 +190,8 @@
         <option value="$PROJECT_DIR$/www/pages/Coupons.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/pages/Catalogues.html" />
-        <option value="$PROJECT_DIR$/www/js/Catalogues.js" />
         <option value="$PROJECT_DIR$/www/js/Coupons.js" />
+        <option value="$PROJECT_DIR$/www/js/Catalogues.js" />
       </list>
     </option>
   </component>
@@ -420,7 +420,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -854,19 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/Coupons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="884">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="3400">
@@ -882,18 +869,6 @@
           <folding>
             <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="35" column="85" selection-start-line="35" selection-start-column="85" selection-end-line="35" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423424374386" expanded="true" signature="2092:2103" placeholder="..." />
-            <marker date="1423424374386" expanded="true" signature="2149:2189" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -937,12 +912,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7746988" vertical-offset="598" max-vertical-offset="1428">
-          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1428">
+          <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="101" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
             <marker date="1423424904983" expanded="true" signature="2100:2111" placeholder="..." />
             <marker date="1423424904983" expanded="true" signature="2161:2201" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/Coupons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.26923" vertical-offset="67" max-vertical-offset="884">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6313253" vertical-offset="598" max-vertical-offset="1428">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <marker date="1423425432783" expanded="true" signature="2092:2103" placeholder="..." />
+            <marker date="1423425432783" expanded="true" signature="2149:2189" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -73,9 +73,9 @@ function fileloadcatalogues(IDstring){
        var fileexten =IDstring.split('|||');
   //  alert(IDstring);
     // alert("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
-    URLredirect("http://admin.adme.kiwi/CatalogFiles/" + fileexten[0] + "/" + fileexten[1]);
+   // URLredirect("http://admin.adme.kiwi/CatalogFiles/" + fileexten[0] + "/" + fileexten[1]);
 
-
+    window.open("http://admin.adme.kiwi/CatalogFiles/" + fileexten[0] + "/" + fileexten[1], '_blank');
 
 
 }
