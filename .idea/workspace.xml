@@ -81,21 +81,21 @@
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1717">
-              <caret line="89" column="107" selection-start-line="89" selection-start-column="107" selection-end-line="89" selection-end-column="107" />
+              <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <marker date="1423434182494" expanded="true" signature="2100:2111" placeholder="..." />
-                <marker date="1423434182494" expanded="true" signature="2161:2201" placeholder="..." />
+                <marker date="1423435531235" expanded="true" signature="2100:2111" placeholder="..." />
+                <marker date="1423435531235" expanded="true" signature="2161:2201" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37485173" vertical-offset="126" max-vertical-offset="1343">
-              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1343">
+              <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -116,15 +116,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1700">
-              <caret line="90" column="107" selection-start-line="90" selection-start-column="107" selection-end-line="90" selection-end-column="107" />
+            <state vertical-scroll-proportion="0.83614457" vertical-offset="802" max-vertical-offset="1700">
+              <caret line="90" column="58" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <marker date="1423434182478" expanded="true" signature="2092:2103" placeholder="..." />
-                <marker date="1423434182478" expanded="true" signature="2149:2189" placeholder="..." />
+                <marker date="1423435531221" expanded="true" signature="2092:2103" placeholder="..." />
+                <marker date="1423435531221" expanded="true" signature="2149:2189" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -192,9 +192,9 @@
         <option value="$PROJECT_DIR$/www/pages/Catalogues.html" />
         <option value="$PROJECT_DIR$/www/pages/categorieslist.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/www/js/Coupons.js" />
         <option value="$PROJECT_DIR$/www/js/Catalogues.js" />
-        <option value="$PROJECT_DIR$/www/config.xml" />
       </list>
     </option>
   </component>
@@ -250,6 +250,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -856,14 +896,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1343">
+          <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1717">
-          <caret line="89" column="107" selection-start-line="89" selection-start-column="107" selection-end-line="89" selection-end-column="107" />
+          <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423434182494" expanded="true" signature="2100:2111" placeholder="..." />
-            <marker date="1423434182494" expanded="true" signature="2161:2201" placeholder="..." />
+            <marker date="1423435531235" expanded="true" signature="2100:2111" placeholder="..." />
+            <marker date="1423435531235" expanded="true" signature="2161:2201" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -883,21 +931,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1700">
-          <caret line="90" column="107" selection-start-line="90" selection-start-column="107" selection-end-line="90" selection-end-column="107" />
+        <state vertical-scroll-proportion="0.83614457" vertical-offset="802" max-vertical-offset="1700">
+          <caret line="90" column="58" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423434182478" expanded="true" signature="2092:2103" placeholder="..." />
-            <marker date="1423434182478" expanded="true" signature="2149:2189" placeholder="..." />
+            <marker date="1423435531221" expanded="true" signature="2092:2103" placeholder="..." />
+            <marker date="1423435531221" expanded="true" signature="2149:2189" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37485173" vertical-offset="126" max-vertical-offset="1343">
-          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>

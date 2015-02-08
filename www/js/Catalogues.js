@@ -83,12 +83,12 @@ function fileloadcatalogues(IDstring){
             url = urlnow;
         }
 
-        window.open(encodeURI(url), '_blank', 'location=yes','closebuttoncaption=back');
+        window.open(encodeURI(url), '_blank', 'location=no','closebuttoncaption=back');
 
     }else{
 
         url = urlnow;
-        window.open(encodeURI(url), '_blank', 'location=yes','toolbarposition=top','closebuttoncaption=back');
+        window.open(encodeURI(url), '_blank', 'location=no','toolbarposition=top','closebuttoncaption=back');
     }
 
 
