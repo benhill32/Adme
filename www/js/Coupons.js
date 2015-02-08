@@ -82,12 +82,12 @@ var urlnow = 'http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileex
             url = urlnow;
         }
 
-        window.open(encodeURI(url), '_blank', 'location=yes','closebuttoncaption=Close');
+        window.open(encodeURI(url), '_blank', 'location=yes','closebuttoncaption=back');
 
     }else{
 
         url = urlnow;
-        window.open(encodeURI(url), '_blank', 'location=yes','toolbarposition=top','closebuttoncaption=Close');
+        window.open(encodeURI(url), '_blank', 'location=yes','toolbarposition=top','closebuttoncaption=back');
     }
 
 

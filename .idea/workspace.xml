@@ -77,25 +77,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79518074" vertical-offset="853" max-vertical-offset="1717">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1717">
+              <caret line="89" column="107" selection-start-line="89" selection-start-column="107" selection-end-line="89" selection-end-column="107" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <marker date="1423433897007" expanded="true" signature="2100:2111" placeholder="..." />
-                <marker date="1423433897007" expanded="true" signature="2161:2201" placeholder="..." />
+                <marker date="1423434182494" expanded="true" signature="2100:2111" placeholder="..." />
+                <marker date="1423434182494" expanded="true" signature="2161:2201" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1326">
-              <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.37485173" vertical-offset="126" max-vertical-offset="1343">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -120,11 +120,11 @@
         <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1700">
-              <caret line="92" column="0" selection-start-line="85" selection-start-column="6" selection-end-line="92" selection-end-column="0" />
+              <caret line="90" column="107" selection-start-line="90" selection-start-column="107" selection-end-line="90" selection-end-column="107" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
-                <marker date="1423433896995" expanded="true" signature="2092:2103" placeholder="..." />
-                <marker date="1423433896995" expanded="true" signature="2149:2189" placeholder="..." />
+                <marker date="1423434182478" expanded="true" signature="2092:2103" placeholder="..." />
+                <marker date="1423434182478" expanded="true" signature="2149:2189" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -174,7 +174,6 @@
         <option value="$PROJECT_DIR$/www/pages/gas.html" />
         <option value="$PROJECT_DIR$/www/pages/settings.html" />
         <option value="$PROJECT_DIR$/www/js/settings.js" />
-        <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/www/pages/Listcatagoies.html" />
         <option value="$PROJECT_DIR$/www/pages/Listcatagories.html" />
         <option value="$PROJECT_DIR$/www/js/Listcatagories.js" />
@@ -193,8 +192,9 @@
         <option value="$PROJECT_DIR$/www/pages/Catalogues.html" />
         <option value="$PROJECT_DIR$/www/pages/categorieslist.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/Catalogues.js" />
         <option value="$PROJECT_DIR$/www/js/Coupons.js" />
+        <option value="$PROJECT_DIR$/www/js/Catalogues.js" />
+        <option value="$PROJECT_DIR$/www/config.xml" />
       </list>
     </option>
   </component>
@@ -789,19 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/Coupons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.26923" vertical-offset="67" max-vertical-offset="884">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/Catalogues.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1173">
@@ -843,14 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1326">
-          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6153846" vertical-offset="1393" max-vertical-offset="2210">
@@ -877,27 +856,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
+    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1700">
-          <caret line="92" column="0" selection-start-line="85" selection-start-column="6" selection-end-line="92" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1717">
+          <caret line="89" column="107" selection-start-line="89" selection-start-column="107" selection-end-line="89" selection-end-column="107" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423433896995" expanded="true" signature="2092:2103" placeholder="..." />
-            <marker date="1423433896995" expanded="true" signature="2149:2189" placeholder="..." />
+            <marker date="1423434182494" expanded="true" signature="2100:2111" placeholder="..." />
+            <marker date="1423434182494" expanded="true" signature="2161:2201" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
+    <entry file="file://$PROJECT_DIR$/www/pages/Coupons.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79518074" vertical-offset="853" max-vertical-offset="1717">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state vertical-scroll-proportion="-22.26923" vertical-offset="67" max-vertical-offset="884">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1700">
+          <caret line="90" column="107" selection-start-line="90" selection-start-column="107" selection-end-line="90" selection-end-column="107" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423433897007" expanded="true" signature="2100:2111" placeholder="..." />
-            <marker date="1423433897007" expanded="true" signature="2161:2201" placeholder="..." />
+            <marker date="1423434182478" expanded="true" signature="2092:2103" placeholder="..." />
+            <marker date="1423434182478" expanded="true" signature="2149:2189" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37485173" vertical-offset="126" max-vertical-offset="1343">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
