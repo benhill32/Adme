@@ -82,15 +82,16 @@ var urlnow = 'http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileex
             url = urlnow;
         }
 
-
+        window.open(encodeURI(url), '_blank', 'location=yes','closebuttoncaption=yes');
 
     }else{
 
         url = urlnow;
+        window.open(encodeURI(url), '_blank', 'location=yes');
     }
 
 
 
-    window.open(encodeURI(url), '_blank', 'location=yes');
+
 
 }
