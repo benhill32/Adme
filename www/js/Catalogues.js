@@ -71,11 +71,18 @@ function getdata_success(tx, results) {
 
 function fileloadcatalogues(IDstring){
        var fileexten =IDstring.split('|||');
-  //  alert(IDstring);
-    // alert("http://admin.adme.kiwi/CouponFiles/" + fileexten[0] + "/" + fileexten[1]);
-   // URLredirect("http://admin.adme.kiwi/CatalogFiles/" + fileexten[0] + "/" + fileexten[1]);
 
-  //  window.open("http://admin.adme.kiwi/CatalogFiles/" + fileexten[0] + "/" + fileexten[1], '_blank');
 
-    window.open(encodeURI('http://admin.adme.kiwi/CatalogFiles/' + fileexten[0] + '/' + fileexten[1]), '_blank', 'location=no');
+    var urlnow = 'http://admin.adme.kiwi/CatalogFiles/' + fileexten[0] + '/' + fileexten[1];
+
+    if( device.platform == 'android' || device.platform == 'Android'){
+        url = "http://docs.google.com/viewer?url= "+ urlnow;
+    }else{
+
+        url = urlnow;
+    }
+
+    window.open(encodeURI(url), '_blank', 'location=yes');
+
+
 }
