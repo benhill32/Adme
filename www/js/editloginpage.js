@@ -128,7 +128,7 @@ function getregionsloginedit_success(tx, results) {
 
 function loadtownslogin2(ID) {
     regionIDlogin = ID;
-    $("#nextbutton").removeAttr('disabled');
+
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
@@ -212,6 +212,10 @@ function nextbuttonclick(){
     }else  if(editnew == 0){
 
         passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdatesec set Town=' + Town + ', Region=' + regionIDlogin);
+        });
+
     }
 
 
