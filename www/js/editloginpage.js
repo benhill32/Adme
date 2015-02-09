@@ -197,7 +197,7 @@ function setuptownlogin1(ID) {
 function nextbuttonclick(){
 
     $("#nextbutton").prop("disabled", true);
-
+    editnew = getUrlVarsfunc()["ID"];
     var Name = $('#txtname').val();
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
