@@ -21,7 +21,7 @@ function onDeviceReadylogin() {
         $('#logindiv').hide();
         $('#logindivregion').show()
         db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
-
+        loadtownslogin(regionIDlogin);
     }
 
 
@@ -54,7 +54,7 @@ function checkdataload(){
 function gettokenlogincheck(tx) {
     var sql = "select Name, DOB,email from MobileApp_LastUpdatesec";
        alert(sql);
-    tx.executeSql(sql, [], gettokenlogincheck_success,errorCBfuncben);
+    tx.executeSql(sql, [], gettokenlogincheck_success,errorCBfunc);
 }
 
 function gettokenlogincheck_success(tx, results) {
@@ -120,7 +120,7 @@ function getregionsloginedit_success(tx, results) {
 
         }
     }
-    loadtownslogin(regionIDlogin);
+
 
 }
 
