@@ -213,7 +213,7 @@ function nextbuttonclick(){
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set Town=' + townIDLogin + ',Region=' + regionIDlogin);
         });
-        alert('Update MobileApp_LastUpdatesec set Town=' + townIDLogin + ',Region=' + regionIDlogin);
+       // alert('Update MobileApp_LastUpdatesec set Town=' + townIDLogin + ',Region=' + regionIDlogin);
         passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
 
 
