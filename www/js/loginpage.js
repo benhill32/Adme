@@ -17,6 +17,9 @@ function onDeviceReadylogin() {
 }
 
 
+
+
+
 function checkdataload(){
 
 
@@ -184,7 +187,7 @@ function nextbuttonclick(){
         tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1');
     });
 
-    passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,0);
+    passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
 
 }
 

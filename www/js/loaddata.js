@@ -201,7 +201,6 @@ function closemodel(){
 
 function closemodelRegion(){
 
-
     $('#indexloadingdata').modal('hide');
     //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
@@ -210,7 +209,6 @@ function closemodelRegion(){
     db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
    // randomfunctions();
-
 
 }
 

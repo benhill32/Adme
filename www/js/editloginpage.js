@@ -12,6 +12,7 @@ function onDeviceReadylogin() {
 
     deviceIDlogin = device.uuid;
     db.transaction(getregiontown, errorCBfunc, successCBfunc);
+    db.transaction(gettokenlogin1, errorCBfunc, successCBfunc);
     if(editnew == 1){
         $('#logindiv').show();
         $('#logindivregion').hide()
@@ -72,13 +73,13 @@ function gettokenlogincheck_success(tx, results) {
 
 
 
-function gettokenlogin(tx) {
+function gettokenlogin1(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
   //   alert(sql);
-    tx.executeSql(sql, [], gettokenlogin_success,errorCBfunc());
+    tx.executeSql(sql, [], gettokenlogin1_success,errorCBfunc());
 }
 
-function gettokenlogin_success(tx, results) {
+function gettokenlogin1_success(tx, results) {
 
     var len = results.rows.length;
 
@@ -112,7 +113,7 @@ function getregionsloginedit_success(tx, results) {
             '</div>' +
             '</Div>');
         }else{
-            $('#divregionnames').append('<Div class="modal-body" align="left"  onclick="loadtownslogin(' + menu.ID + ')">' +
+            $('#divregionnames').append('<Div class="modal-body" align="left"  onclick="loadtownslogin2(' + menu.ID + ')">' +
             '<div class="bold size13">' + menu.RegionName +
             '</div>' +
             '</Div>');
@@ -125,13 +126,12 @@ function getregionsloginedit_success(tx, results) {
 
 
 
-function loadtownslogin(ID) {
+function loadtownslogin2(ID) {
     regionIDlogin = ID;
     $("#nextbutton").removeAttr('disabled');
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
-        closemodelRegion();
 
     });
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
@@ -163,7 +163,7 @@ function gettownlogin2_success(tx, results) {
             '</div>' +
             '</Div>');
         }else{
-            $('#divtownnames').append('<Div class="modal-body" align="left" onclick="setuptownlogin(' + menu.ID + ')"   >' +
+            $('#divtownnames').append('<Div class="modal-body" align="left" onclick="setuptownlogin1(' + menu.ID + ')"   >' +
             '<div class="bold size13 colourblueish"   >' + menu.TownName +
             '</div>' +
             '</Div>');
@@ -172,13 +172,11 @@ function gettownlogin2_success(tx, results) {
     }
 }
 
-function setuptownlogin(ID) {
+function setuptownlogin1(ID) {
     townIDLogin = ID;
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Town =' + ID);
-        closemodelRegion();
-
     });
 
     db.transaction(function(tx) {
