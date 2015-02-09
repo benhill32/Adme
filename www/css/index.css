@@ -134,6 +134,21 @@ body {
     margin-left: auto;
     width:90%;
 }
+#logindiv1{
+
+    margin-top: -110px;
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+}
+#logindivregion1{
+
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+    margin-top: -110px;
+}
+
 #catlistdiv{
 
     margin-top: -110px;
@@ -168,6 +183,10 @@ color: #ffffff;
 
     color: white;
 }
+#logindiv1 h4{
+
+    color: white;
+}
 #logindivregion{
 
     margin-right: auto;
@@ -195,13 +214,23 @@ color: #ffffff;
 
     color: white;
 }
+#logindivregion1 h4 {
+
+    color: white;
+}
+
 #logindiv label{
     width: 80px;
     font-weight:normal;
     vertical-align: top;
     color: white;
 }
-
+#logindiv1 label{
+    width: 80px;
+    font-weight:normal;
+    vertical-align: top;
+    color: white;
+}
 .imgheader{
 
     height: 20px;
