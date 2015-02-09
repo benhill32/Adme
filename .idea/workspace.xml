@@ -27,8 +27,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.12" vertical-offset="3060" max-vertical-offset="10064">
-              <caret line="181" column="36" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
+            <state vertical-scroll-proportion="-2.48" vertical-offset="4528" max-vertical-offset="10064">
+              <caret line="429" column="31" selection-start-line="429" selection-start-column="9" selection-end-line="429" selection-end-column="31" />
               <folding>
                 <element signature="e#3640#3730#0" expanded="false" />
                 <element signature="e#8381#9409#0" expanded="false" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.84" vertical-offset="952" max-vertical-offset="1785">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.24" vertical-offset="952" max-vertical-offset="1785">
+              <caret line="76" column="14" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="21" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
                 <marker date="1423439360450" expanded="true" signature="2157:2168" placeholder="..." />
@@ -61,8 +61,8 @@
       <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55791503" vertical-offset="2873" max-vertical-offset="3502">
-              <caret line="186" column="121" selection-start-line="186" selection-start-column="121" selection-end-line="186" selection-end-column="121" />
+            <state vertical-scroll-proportion="0.6572008" vertical-offset="2889" max-vertical-offset="3502">
+              <caret line="189" column="7" selection-start-line="187" selection-start-column="3" selection-end-line="189" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -110,8 +110,8 @@
       <file leaf-file-name="editloginpage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.52" vertical-offset="3077" max-vertical-offset="3604">
-              <caret line="208" column="139" selection-start-line="208" selection-start-column="139" selection-end-line="208" selection-end-column="139" />
+            <state vertical-scroll-proportion="-8.16" vertical-offset="3060" max-vertical-offset="3553">
+              <caret line="205" column="54" selection-start-line="205" selection-start-column="54" selection-end-line="205" selection-end-column="54" />
               <folding>
                 <element signature="n#!!block;n#getregiontown#0" expanded="false" />
                 <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
@@ -185,8 +185,8 @@
         <option value="$PROJECT_DIR$/www/pages/editloginpage.html" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
-        <option value="$PROJECT_DIR$/www/js/editloginpage.js" />
         <option value="$PROJECT_DIR$/www/js/loginpage.js" />
+        <option value="$PROJECT_DIR$/www/js/editloginpage.js" />
       </list>
     </option>
   </component>
@@ -884,13 +884,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
+    <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.52" vertical-offset="3077" max-vertical-offset="3604">
-          <caret line="208" column="139" selection-start-line="208" selection-start-column="139" selection-end-line="208" selection-end-column="139" />
+        <state vertical-scroll-proportion="-12.24" vertical-offset="952" max-vertical-offset="1785">
+          <caret line="76" column="14" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="21" />
           <folding>
-            <element signature="n#!!block;n#getregiontown#0" expanded="false" />
-            <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
+            <element signature="e#0#40#0" expanded="false" />
+            <marker date="1423439360450" expanded="true" signature="2157:2168" placeholder="..." />
+            <marker date="1423439360450" expanded="true" signature="2214:2254" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -903,22 +904,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.84" vertical-offset="952" max-vertical-offset="1785">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423439360450" expanded="true" signature="2157:2168" placeholder="..." />
-            <marker date="1423439360450" expanded="true" signature="2214:2254" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.12" vertical-offset="3060" max-vertical-offset="10064">
-          <caret line="181" column="36" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
+        <state vertical-scroll-proportion="-2.48" vertical-offset="4528" max-vertical-offset="10064">
+          <caret line="429" column="31" selection-start-line="429" selection-start-column="9" selection-end-line="429" selection-end-column="31" />
           <folding>
             <element signature="e#3640#3730#0" expanded="false" />
             <element signature="e#8381#9409#0" expanded="false" />
@@ -933,10 +922,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.16" vertical-offset="3060" max-vertical-offset="3553">
+          <caret line="205" column="54" selection-start-line="205" selection-start-column="54" selection-end-line="205" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!block;n#getregiontown#0" expanded="false" />
+            <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55791503" vertical-offset="2873" max-vertical-offset="3502">
-          <caret line="186" column="121" selection-start-line="186" selection-start-column="121" selection-end-line="186" selection-end-column="121" />
+        <state vertical-scroll-proportion="0.6572008" vertical-offset="2889" max-vertical-offset="3502">
+          <caret line="189" column="7" selection-start-line="187" selection-start-column="3" selection-end-line="189" selection-end-column="7" />
           <folding />
         </state>
       </provider>

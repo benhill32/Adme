@@ -184,12 +184,12 @@ function nextbuttonclick(){
     var email = $('#txtEmail').val();
 
 
-    alert('Update MobileApp_LastUpdatesec set LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
+
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
     });
 
-    passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);
+    passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,0);
 
 }
 
