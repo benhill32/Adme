@@ -382,6 +382,7 @@ color: #333399;
     border-right: 1px #333399 solid;
     min-height: 105px;
     padding-top: 05px;
+    position: relative;
 }
 .gas4sMain2{
     float: left;
