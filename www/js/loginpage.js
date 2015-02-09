@@ -184,7 +184,7 @@ function nextbuttonclick(){
     var email = $('#txtEmail').val();
 
     db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1');
+        tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1,Name=' + Name + ', DOB=' + DOB + ',email=' +email);
     });
 
     passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin);

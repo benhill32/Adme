@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.84" vertical-offset="85" max-vertical-offset="3468">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41379312" vertical-offset="2975" max-vertical-offset="3468">
+              <caret line="187" column="7" selection-start-line="185" selection-start-column="3" selection-end-line="187" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.32" vertical-offset="3253" max-vertical-offset="6409">
+            <state vertical-scroll-proportion="53.96" vertical-offset="4885" max-vertical-offset="6409">
               <caret line="208" column="62" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="62" />
               <folding />
             </state>
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editloginpage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editloginpage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3326572" vertical-offset="567" max-vertical-offset="3570">
-              <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+            <state vertical-scroll-proportion="-9.52" vertical-offset="3077" max-vertical-offset="3604">
+              <caret line="208" column="9" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
               <folding>
                 <element signature="n#!!block;n#getregiontown#0" expanded="false" />
                 <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
@@ -133,7 +133,7 @@
       <file leaf-file-name="editloginpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/editloginpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="1598">
+            <state vertical-scroll-proportion="25.038462" vertical-offset="1093" max-vertical-offset="1598">
               <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -876,22 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.32" vertical-offset="3253" max-vertical-offset="6409">
-          <caret line="208" column="62" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.84" vertical-offset="85" max-vertical-offset="3468">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/BusinessSearch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3326572" vertical-offset="533" max-vertical-offset="2295">
@@ -910,7 +894,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/editloginpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="1598">
+        <state vertical-scroll-proportion="25.038462" vertical-offset="1093" max-vertical-offset="1598">
           <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -919,6 +903,14 @@
             <element signature="n#select#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#select#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="53.96" vertical-offset="4885" max-vertical-offset="6409">
+          <caret line="208" column="62" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -932,12 +924,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326572" vertical-offset="567" max-vertical-offset="3570">
-          <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+        <state vertical-scroll-proportion="-9.52" vertical-offset="3077" max-vertical-offset="3604">
+          <caret line="208" column="9" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
           <folding>
             <element signature="n#!!block;n#getregiontown#0" expanded="false" />
             <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41379312" vertical-offset="2975" max-vertical-offset="3468">
+          <caret line="187" column="7" selection-start-line="185" selection-start-column="3" selection-end-line="187" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
