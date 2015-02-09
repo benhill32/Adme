@@ -13,11 +13,12 @@ function onDeviceReadylogin() {
     deviceIDlogin = device.uuid;
     db.transaction(getregiontown, errorCBfunc, successCBfunc);
     if(editnew == 1){
-
+        $('#logindiv').show();
+        $('#logindivregion').hide()
         checkdataload();
     }else if (editnew == 0){
-
-
+        $('#logindiv').hide();
+        $('#logindivregion').show()
         db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
         loadtownslogin(townIDLogin);
     }
