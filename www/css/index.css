@@ -140,6 +140,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     width:90%;
+    display:none;
 }
 #logindivregion1{
 
@@ -147,6 +148,7 @@ body {
     margin-left: auto;
     width:90%;
     margin-top: -110px;
+    display:none;
 }
 
 #catlistdiv{
