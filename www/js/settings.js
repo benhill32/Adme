@@ -88,8 +88,9 @@ function getLsyncdatedata_success(tx, results) {
 
 function showcategories(){
 
-    db.transaction(getcategories, errorCBfunc, successCBfunc);
-    $('#basicModacategories').modal('show');
+  //  db.transaction(getcategories, errorCBfunc, successCBfunc);
+   // $('#basicModacategories').modal('show');
+    window.location.href='../pages/categorieslist.html';
 
 }
 function backtocat(){
