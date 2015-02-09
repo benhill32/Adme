@@ -28,8 +28,8 @@ function onDeviceReadylogin() {
 
 function getregiontown(tx) {
     var sql = "select Region,Town from MobileApp_LastUpdatesec";
-    //   alert(sql);
-    tx.executeSql(sql, [], getregiontown_success,errorCBfuncben);
+       alert(sql);
+    tx.executeSql(sql, [], getregiontown_success);
 }
 
 function getregiontown_success(tx, results) {
