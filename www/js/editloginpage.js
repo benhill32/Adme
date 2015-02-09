@@ -21,7 +21,7 @@ function onDeviceReadylogin() {
         $('#logindiv').hide();
         $('#logindivregion').show()
         db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
-        loadtownslogin(regionIDlogin);
+        loadtownslogin2(regionIDlogin);
     }
 
 
