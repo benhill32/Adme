@@ -14,12 +14,12 @@ function onDeviceReadylogin() {
     db.transaction(getregiontown, errorCBfunc, successCBfunc);
     db.transaction(gettokenlogin1, errorCBfunc, successCBfunc);
     if(editnew == 1){
-        $('#logindiv').css('display','block');
-        $('#logindivregion').css('display','none');
+        $('#logindiv').show();
+        $('#logindivregion').hide()
         checkdataload();
     }else if (editnew == 0){
-        $('#logindiv').css('display','none');
-        $('#logindivregion').css('display','block');
+        $('#logindiv').hide();
+        $('#logindivregion').show()
         db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
         loadtownslogin2(regionIDlogin);
     }
