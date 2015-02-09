@@ -77,7 +77,7 @@ function getdata_success(tx, results) {
             }
 //data-toggle="modal" data-target="#basicmodaldaily"
             $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv" onclick="showgascompanies('+ menu.BusinessID + ')"    >' +
-            '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
+            '<div align="center"  class="gas4sMain"   >' + imgg + '<br> <label>Read More</label></div>' +
             '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
             '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
