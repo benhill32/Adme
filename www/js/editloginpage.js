@@ -76,7 +76,7 @@ function gettokenlogincheck_success(tx, results) {
 function gettokenlogin1(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
   //   alert(sql);
-    tx.executeSql(sql, [], gettokenlogin1_success,errorCBfunc());
+    tx.executeSql(sql, [], gettokenlogin1_success,errorCBfunc);
 }
 
 function gettokenlogin1_success(tx, results) {
@@ -205,7 +205,7 @@ function nextbuttonclick(){
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
     });
-    if($('#logindiv').hide() == true){
+    if($('#logindiv').hide()){
 
         passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
 
