@@ -496,9 +496,89 @@ function checktownfollowfunc_success(tx, results) {
         db.transaction(getregionsfunc, errorCBfunc, successCBfunc);
         $('#basicModalregion').modal('show');
     }else{
+        if(document.getElementById("gasdealsdivbody")!=null) {
 
-        db.transaction(getbuscatsfunc, errorCBfunc, successCBfunc);
+            db.transaction(getbuscatsfuncGas, errorCBfunc, successCBfunc);
+
+        }else if(document.getElementById("cataloguesdealsdiv")!=null) {
+
+            db.transaction(getbuscatsfuncCatalogues, errorCBfunc, successCBfunc);
+
+        }else if(document.getElementById("coupondealsdiv")!=null) {
+
+            db.transaction(getbuscatsfuncCoupon, errorCBfunc, successCBfunc);
+        }
     }
+}
+function getbuscatsfuncGas(tx) {
+    var sql = "select COUNT(ID) as Count from MobileApp_BusinessCategories where Follow = 1 and CategoryID =11";
+    // alert(sql);
+    tx.executeSql(sql, [], getbuscatsfuncGas_success);
+}
+
+function getbuscatsfuncGas_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    if(menu.Count == 0){
+        if(document.getElementById("divindex")==null) {
+
+            window.plugins.toast.showLongCenter('You need to select Fuel Companies you would like to view. Note: Selected Fuel Companies will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
+                console.log('toast success: ' + a)
+            }, function (b) {
+                alert('toast error: ' + b)
+            });
+
+        }
+    }
+
+}
+function getbuscatsfuncCatalogues(tx) {
+    var sql = "select COUNT(ID) as Count from MobileApp_BusinessCategories where Follow = 1 and CategoryID =13";
+    // alert(sql);
+    tx.executeSql(sql, [], getbuscatsfuncCatalogues_success);
+}
+
+function getbuscatsfuncCatalogues_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    if(menu.Count == 0){
+        if(document.getElementById("divindex")==null) {
+
+            window.plugins.toast.showLongCenter('You need to select Business Catalogues you would like to view. Note: Selected Business Catalogues will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
+                console.log('toast success: ' + a)
+            }, function (b) {
+                alert('toast error: ' + b)
+            });
+
+        }
+    }
+
+}
+
+function getbuscatsfuncCoupon(tx) {
+    var sql = "select COUNT(ID) as Count from MobileApp_BusinessCategories where Follow = 1 and CategoryID =12";
+    // alert(sql);
+    tx.executeSql(sql, [], getbuscatsfuncCoupon_success);
+}
+
+function getbuscatsfuncCoupon_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    if(menu.Count == 0){
+        if(document.getElementById("divindex")==null) {
+
+            window.plugins.toast.showLongCenter('You need to select Business Coupons you would like to view. Note: Selected Business Coupons will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
+                console.log('toast success: ' + a)
+            }, function (b) {
+                alert('toast error: ' + b)
+            });
+
+        }
+    }
+
 }
 
 function getregionsfunc(tx) {
@@ -580,29 +660,7 @@ function townchosenfunc(ID){
 }
 
 
-function getbuscatsfunc(tx) {
-    var sql = "select COUNT(ID) as Count from MobileApp_BusinessCategories where Follow = 1";
-   // alert(sql);
-    tx.executeSql(sql, [], getbuscatsfunc_success);
-}
 
-function getbuscatsfunc_success(tx, results) {
-    // $('#busy').hide();
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-    if(menu.Count == 0){
-        if(document.getElementById("divindex")==null) {
-
-            window.plugins.toast.showLongCenter('You need to select Categories you would like to view. Please go to the Setting page and Click on Select Categories', function (a) {
-                console.log('toast success: ' + a)
-            }, function (b) {
-                alert('toast error: ' + b)
-            });
-
-        }
-    }
-
-}
 
 function gettokenregion(tx) {
     var sql =  "select Datesecs,token from MobileApp_LastUpdatesec";

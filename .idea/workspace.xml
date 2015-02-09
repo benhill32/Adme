@@ -24,24 +24,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7021" max-vertical-offset="27863">
-              <caret line="453" column="0" selection-start-line="453" selection-start-column="0" selection-end-line="453" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27218935" vertical-offset="3680" max-vertical-offset="8670">
-              <caret line="408" column="9" selection-start-line="408" selection-start-column="9" selection-end-line="408" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.383812" vertical-offset="5979" max-vertical-offset="9979">
+              <caret line="528" column="42" selection-start-line="528" selection-start-column="42" selection-end-line="528" selection-end-column="42" />
               <folding>
                 <element signature="e#3640#3730#0" expanded="false" />
-                <element signature="e#4309#6325#0" expanded="false" />
                 <element signature="e#8381#9409#0" expanded="false" />
                 <element signature="e#9455#10542#0" expanded="false" />
                 <element signature="e#10600#12043#0" expanded="false" />
@@ -58,8 +47,8 @@
       <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="983" max-vertical-offset="1853">
-              <caret line="80" column="0" selection-start-line="79" selection-start-column="3" selection-end-line="80" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1853">
+              <caret line="64" column="30" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="30" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
                 <marker date="1423439360465" expanded="true" signature="2164:2175" placeholder="..." />
@@ -82,11 +71,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.2" vertical-offset="986" max-vertical-offset="1921">
+              <caret line="73" column="202" selection-start-line="73" selection-start-column="192" selection-end-line="73" selection-end-column="202" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="gas.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="2992">
-              <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="2992">
+              <caret line="78" column="31" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="31" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -97,8 +96,8 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.6" vertical-offset="51" max-vertical-offset="6426">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="30" />
+            <state vertical-scroll-proportion="-21.08" vertical-offset="51" max-vertical-offset="6426">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,8 +131,8 @@
       <file leaf-file-name="Catalogues.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1785">
-              <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1785">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="30" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
                 <marker date="1423439360450" expanded="true" signature="2157:2168" placeholder="..." />
@@ -199,10 +198,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1672" />
-    <option name="y" value="-8" />
+    <option name="x" value="-9" />
+    <option name="y" value="2" />
     <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="height" value="987" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -366,7 +365,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1696" height="1066" extended-state="7" />
+    <frame x="-9" y="2" width="1696" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -424,7 +423,7 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -489,7 +488,6 @@
           <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
           <folding>
             <element signature="e#3640#3730#0" expanded="false" />
-            <element signature="e#4309#6325#0" expanded="false" />
             <element signature="e#8381#9409#0" expanded="false" />
             <element signature="e#9455#10542#0" expanded="false" />
             <element signature="e#10600#12043#0" expanded="false" />
@@ -738,14 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="871" max-vertical-offset="1921">
-          <caret line="64" column="202" selection-start-line="64" selection-start-column="193" selection-end-line="64" selection-end-column="202" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/Catalogues.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1173">
@@ -823,31 +813,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.6" vertical-offset="51" max-vertical-offset="6426">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.72" vertical-offset="3523" max-vertical-offset="6953">
           <caret line="223" column="86" selection-start-line="223" selection-start-column="86" selection-end-line="223" selection-end-column="86" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="983" max-vertical-offset="1853">
-          <caret line="80" column="0" selection-start-line="79" selection-start-column="3" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <marker date="1423439360465" expanded="true" signature="2164:2175" placeholder="..." />
-            <marker date="1423439360465" expanded="true" signature="2225:2265" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,18 +834,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/gas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="2992">
-          <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="2992">
+          <caret line="78" column="31" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="31" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1853">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <marker date="1423439360465" expanded="true" signature="2164:2175" placeholder="..." />
+            <marker date="1423439360465" expanded="true" signature="2225:2265" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Catalogues.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1785">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="598" max-vertical-offset="1785">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="30" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
             <marker date="1423439360450" expanded="true" signature="2157:2168" placeholder="..." />
@@ -884,13 +866,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.08" vertical-offset="51" max-vertical-offset="6426">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.2" vertical-offset="986" max-vertical-offset="1921">
+          <caret line="73" column="202" selection-start-line="73" selection-start-column="192" selection-end-line="73" selection-end-column="202" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27218935" vertical-offset="3680" max-vertical-offset="8670">
-          <caret line="408" column="9" selection-start-line="408" selection-start-column="9" selection-end-line="408" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.383812" vertical-offset="5979" max-vertical-offset="9979">
+          <caret line="528" column="42" selection-start-line="528" selection-start-column="42" selection-end-line="528" selection-end-column="42" />
           <folding>
             <element signature="e#3640#3730#0" expanded="false" />
-            <element signature="e#4309#6325#0" expanded="false" />
             <element signature="e#8381#9409#0" expanded="false" />
             <element signature="e#9455#10542#0" expanded="false" />
             <element signature="e#10600#12043#0" expanded="false" />
