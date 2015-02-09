@@ -202,16 +202,16 @@ function nextbuttonclick(){
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
 
-    db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
-    });
-    if($('#logindiv').hide()){
 
-        passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
-
-    }else{
+    if(editnew == 1){
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdatesec set Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
+        });
         passscoretoserverlogin("name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
 
+    }else  if(editnew == 0){
+
+        passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
     }
 
 
