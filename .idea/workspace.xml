@@ -110,11 +110,9 @@
       <file leaf-file-name="editloginpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44827586" vertical-offset="612" max-vertical-offset="3417">
-              <caret line="78" column="49" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.4827586" vertical-offset="3094" max-vertical-offset="3638">
+              <caret line="212" column="32" selection-start-line="212" selection-start-column="32" selection-end-line="212" selection-end-column="32" />
               <folding>
-                <element signature="n#!!block;n#getregiontown#0" expanded="false" />
-                <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
                 <element signature="n#!!block;n#gettokenlogincheck#0" expanded="false" />
                 <element signature="n#!!block;n#gettokenlogincheck_success#0" expanded="false" />
               </folding>
@@ -934,11 +932,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44827586" vertical-offset="612" max-vertical-offset="3417">
-          <caret line="78" column="49" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.4827586" vertical-offset="3094" max-vertical-offset="3638">
+          <caret line="212" column="32" selection-start-line="212" selection-start-column="32" selection-end-line="212" selection-end-column="32" />
           <folding>
-            <element signature="n#!!block;n#getregiontown#0" expanded="false" />
-            <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
             <element signature="n#!!block;n#gettokenlogincheck#0" expanded="false" />
             <element signature="n#!!block;n#gettokenlogincheck_success#0" expanded="false" />
           </folding>
