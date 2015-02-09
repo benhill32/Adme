@@ -183,6 +183,8 @@ function nextbuttonclick(){
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
 
+
+    alert('Update MobileApp_LastUpdatesec set LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
     });
