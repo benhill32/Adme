@@ -93,14 +93,14 @@ function gettokenlogin1_success(tx, results) {
 
 function getregionsloginedit(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName from MobileApp_Region order by RegionName ";
-     alert(sql);
+   //  alert(sql);
     tx.executeSql(sql, [], getregionsloginedit_success);
 }
 
 function getregionsloginedit_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-    alert(len);
+ //   alert(len);
     $('#divregionnames').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
@@ -134,7 +134,7 @@ function loadtownslogin2(ID) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
 
     });
-    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+    db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
 
 
     db.transaction(gettownlogin2, errorCBfunc, successCBfunc);
@@ -205,7 +205,15 @@ function nextbuttonclick(){
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
     });
-    passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
+    if($('#logindiv').hide() == true){
+
+        passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
+
+    }else{
+        passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
+
+    }
+
 
 }
 
