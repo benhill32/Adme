@@ -21,7 +21,7 @@ function onDeviceReadylogin() {
         $('#logindiv').hide();
         $('#logindivregion').show()
         db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
-        loadtownslogin(townIDLogin);
+
     }
 
 
@@ -29,7 +29,7 @@ function onDeviceReadylogin() {
 
 function getregiontown(tx) {
     var sql = "select Region,Town from MobileApp_LastUpdatesec";
-       alert(sql);
+      // alert(sql);
     tx.executeSql(sql, [], getregiontown_success);
 }
 
@@ -53,7 +53,7 @@ function checkdataload(){
 
 function gettokenlogincheck(tx) {
     var sql = "select Name, DOB,email from MobileApp_LastUpdatesec";
-    //   alert(sql);
+       alert(sql);
     tx.executeSql(sql, [], gettokenlogincheck_success,errorCBfuncben);
 }
 
@@ -62,7 +62,7 @@ function gettokenlogincheck_success(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     var datetime = menu.DOB.split('-');
-
+    alert(len);
     $('#txtname').val(menu.Name);
     $('#drpday').val(datetime[0]);
     $('#drpmonth').val(datetime[1]);
@@ -108,7 +108,7 @@ function getregionsloginedit_success(tx, results) {
 
         if(regionIDlogin == menu.ID) {
 
-            $('#divregionnames').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5"  onclick="loadtownslogin(' + menu.ID + ')">' +
+            $('#divregionnames').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5"  onclick="loadtownslogin2(' + menu.ID + ')">' +
             '<div class="bold size13">' + menu.RegionName +
             '</div>' +
             '</Div>');
@@ -120,7 +120,7 @@ function getregionsloginedit_success(tx, results) {
 
         }
     }
-
+    loadtownslogin(regionIDlogin);
 
 }
 
