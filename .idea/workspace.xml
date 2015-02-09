@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6572008" vertical-offset="2889" max-vertical-offset="3502">
-              <caret line="189" column="7" selection-start-line="187" selection-start-column="3" selection-end-line="189" selection-end-column="7" />
+            <state vertical-scroll-proportion="-116.96" vertical-offset="204" max-vertical-offset="3502">
+              <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,14 +107,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editloginpage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editloginpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.16" vertical-offset="3060" max-vertical-offset="3553">
-              <caret line="205" column="54" selection-start-line="205" selection-start-column="54" selection-end-line="205" selection-end-column="54" />
+            <state vertical-scroll-proportion="-1.2880324" vertical-offset="2556" max-vertical-offset="3077">
+              <caret line="154" column="31" selection-start-line="154" selection-start-column="31" selection-end-line="154" selection-end-column="31" />
               <folding>
                 <element signature="n#!!block;n#getregiontown#0" expanded="false" />
                 <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
+                <element signature="n#!!block;n#gettokenlogincheck#0" expanded="false" />
+                <element signature="n#!!block;n#gettokenlogincheck_success#0" expanded="false" />
+                <element signature="n#!!block;n#gettokenlogin1#0" expanded="false" />
+                <element signature="n#!!block;n#gettokenlogin1_success#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -922,22 +926,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
+    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.16" vertical-offset="3060" max-vertical-offset="3553">
-          <caret line="205" column="54" selection-start-line="205" selection-start-column="54" selection-end-line="205" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!block;n#getregiontown#0" expanded="false" />
-            <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-116.96" vertical-offset="204" max-vertical-offset="3502">
+          <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
+    <entry file="file://$PROJECT_DIR$/www/js/editloginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6572008" vertical-offset="2889" max-vertical-offset="3502">
-          <caret line="189" column="7" selection-start-line="187" selection-start-column="3" selection-end-line="189" selection-end-column="7" />
-          <folding />
+        <state vertical-scroll-proportion="-1.2880324" vertical-offset="2556" max-vertical-offset="3077">
+          <caret line="154" column="31" selection-start-line="154" selection-start-column="31" selection-end-line="154" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#getregiontown#0" expanded="false" />
+            <element signature="n#!!block;n#getregiontown_success#0" expanded="false" />
+            <element signature="n#!!block;n#gettokenlogincheck#0" expanded="false" />
+            <element signature="n#!!block;n#gettokenlogincheck_success#0" expanded="false" />
+            <element signature="n#!!block;n#gettokenlogin1#0" expanded="false" />
+            <element signature="n#!!block;n#gettokenlogin1_success#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

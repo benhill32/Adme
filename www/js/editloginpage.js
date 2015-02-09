@@ -53,7 +53,7 @@ function checkdataload(){
 
 function gettokenlogincheck(tx) {
     var sql = "select Name, DOB,email from MobileApp_LastUpdatesec";
-       alert(sql);
+       //alert(sql);
     tx.executeSql(sql, [], gettokenlogincheck_success,errorCBfunc);
 }
 
@@ -62,7 +62,7 @@ function gettokenlogincheck_success(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     var datetime = menu.DOB.split('-');
-    alert(len);
+   // alert(len);
     $('#txtname').val(menu.Name);
     $('#drpday').val(datetime[0]);
     $('#drpmonth').val(datetime[1]);
@@ -93,14 +93,14 @@ function gettokenlogin1_success(tx, results) {
 
 function getregionsloginedit(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName from MobileApp_Region order by RegionName ";
-   //  alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getregionsloginedit_success);
 }
 
 function getregionsloginedit_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+    alert(len);
     $('#divregionnames').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
@@ -144,14 +144,14 @@ function loadtownslogin2(ID) {
 function gettownlogin2(tx) {
 
     var sql = "select ID,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,TownName,RegionID from MobileApp_Towns where RegionID = " + regionIDlogin;
-   // alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], gettownlogin2_success);
 }
 
 function gettownlogin2_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+alert(len);
     $('#divtownnames').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
