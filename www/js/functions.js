@@ -427,7 +427,7 @@ function passscoretoserver(testvar){
 
 }
 
-function passscoretoserverlogin(testvar){
+function passscoretoserverlogin(testvar,ID){
     checkonline();
 
     if(networkconnection!=0) {
@@ -445,7 +445,12 @@ function passscoretoserverlogin(testvar){
         }
         http.send();
         window.setTimeout(function(){
-            window.location.href='../pages/categorieslist.html';
+            if(ID == 0) {
+                window.location.href = '../pages/categorieslist.html';
+            }else if(ID == 1) {
+                window.location.href = '../pages/settings.html';
+            }
+
 
         }, 2000);
 
