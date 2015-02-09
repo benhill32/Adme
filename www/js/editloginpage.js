@@ -196,6 +196,10 @@ function setuptownlogin1(ID) {
 
 function nextbuttonclick(){
 
+
+    $('#indexloadingdata').modal('show');
+
+
     $("#nextbutton").prop("disabled", true);
     editnew = getUrlVarsfunc()["ID"];
     var Name = $('#txtname').val();

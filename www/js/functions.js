@@ -448,7 +448,9 @@ function passscoretoserverlogin(testvar,ID){
             if(ID == 0) {
                 window.location.href = '../pages/categorieslist.html';
             }else if(ID == 1) {
+                $('#indexloadingdata').modal('hide');
                 window.location.href = '../pages/settings.html';
+
             }
 
 
@@ -458,10 +460,6 @@ function passscoretoserverlogin(testvar,ID){
         window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }
-
-
-
-
 }
 
 function randomfunctions(){
