@@ -250,10 +250,9 @@ function sendcattoserver_data_success(tx, results) {
 
 function showregions(ID){
 
-    window.location.href='../pages/loginpage.html?ID=' + ID;
+    window.location.href='../pages/editloginpage.html?ID=' + ID;
 
-   // db.transaction(getregions, errorCBfunc, successCBfunc);
-   // $('#basicModalregion').modal('show');
+
 
 }
 

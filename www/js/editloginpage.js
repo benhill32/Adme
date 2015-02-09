@@ -9,16 +9,40 @@ var editnew = getUrlVarsfunc()["ID"];
 
 function onDeviceReadylogin() {
 
-    $("#nextbutton").prop("disabled", true);
-    refreshdata();
 
     deviceIDlogin = device.uuid;
+    db.transaction(getregiontown, errorCBfunc, successCBfunc);
+    if(editnew == 1){
+
+        checkdataload();
+    }else if (editnew == 0){
+
+
+        db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
+        loadtownslogin(townIDLogin);
+    }
+
 
 }
 
+function getregiontown(tx) {
+    var sql = "select Region,Town from MobileApp_LastUpdatesec";
+    //   alert(sql);
+    tx.executeSql(sql, [], getregiontown_success,errorCBfuncben);
+}
+
+function getregiontown_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    regionIDlogin = menu.Region;
+
+    townIDLogin = menu.Town;
+
+}
 
 function checkdataload(){
-
 
     db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
 
@@ -26,7 +50,7 @@ function checkdataload(){
 
 
 function gettokenlogincheck(tx) {
-    var sql = "select LoginDone from MobileApp_LastUpdatesec";
+    var sql = "select Name, DOB,email from MobileApp_LastUpdatesec";
     //   alert(sql);
     tx.executeSql(sql, [], gettokenlogincheck_success,errorCBfuncben);
 }
@@ -34,24 +58,23 @@ function gettokenlogincheck(tx) {
 function gettokenlogincheck_success(tx, results) {
 
     var len = results.rows.length;
-
     var menu = results.rows.item(0);
+    var datetime = menu.DOB.split('-');
 
-    if(menu.LoginDone == 1){
-
-        window.location.href='../pages/daily.html';
-    }
+    $('#txtname').val(menu.Name);
+    $('#drpday').val(datetime[0]);
+    $('#drpmonth').val(datetime[1]);
+    $('#drpyear').val(datetime[2]);
+    $('#txtEmail').val(menu.email);
 
 }
 
-function errorCBfuncben(err) {
-    refreshdata();
-}
+
 
 function gettokenlogin(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
   //   alert(sql);
-    tx.executeSql(sql, [], gettokenlogin_success,errorCBfuncben);
+    tx.executeSql(sql, [], gettokenlogin_success,errorCBfunc());
 }
 
 function gettokenlogin_success(tx, results) {
@@ -66,13 +89,13 @@ function gettokenlogin_success(tx, results) {
 
 
 
-function getregionslogin(tx) {
+function getregionsloginedit(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC ,RegionName from MobileApp_Region order by RegionName ";
    //  alert(sql);
-    tx.executeSql(sql, [], getregionslogin_success);
+    tx.executeSql(sql, [], getregionsloginedit_success);
 }
 
-function getregionslogin_success(tx, results) {
+function getregionsloginedit_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
@@ -184,7 +207,7 @@ function nextbuttonclick(){
         tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1');
     });
 
-    passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,0);
+    passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
 
 }
 
