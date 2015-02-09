@@ -210,11 +210,11 @@ function nextbuttonclick(){
         passscoretoserverlogin("name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
 
     }else  if(editnew == 0){
-
-        passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set Town=' + Town + ', Region=' + regionIDlogin);
         });
+        passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
+
 
     }
 
