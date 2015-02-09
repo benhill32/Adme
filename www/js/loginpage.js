@@ -5,6 +5,7 @@ var townIDLogin = 0;
 var deviceIDlogin =0;
 var apptokenlogin = 0;
 
+var editnew = getUrlVarsfunc()["ID"];
 
 function onDeviceReadylogin() {
 
@@ -14,6 +15,26 @@ function onDeviceReadylogin() {
     deviceIDlogin = device.uuid;
 
 }
+
+function neworedit(){
+
+
+    if(editnew == 1)
+    {
+
+        $("#logindiv").hide();
+        $("#logindivregion").show();
+    }
+    else if (editnew == 0)
+    {
+        $("#logindivregion").hide();
+        $("#logindiv").show();
+    }
+
+
+}
+
+
 
 
 function checkdataload(){

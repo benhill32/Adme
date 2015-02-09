@@ -248,10 +248,12 @@ function sendcattoserver_data_success(tx, results) {
 }
 
 
-function showregions(){
+function showregions(ID){
 
-    db.transaction(getregions, errorCBfunc, successCBfunc);
-    $('#basicModalregion').modal('show');
+    window.location.href='../pages/loginpage.html?ID=' + ID;
+
+   // db.transaction(getregions, errorCBfunc, successCBfunc);
+   // $('#basicModalregion').modal('show');
 
 }
 
