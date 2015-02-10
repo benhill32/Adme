@@ -526,7 +526,7 @@ function getbuscatsfuncGas_success(tx, results) {
     if(menu.Count == 0){
         if(document.getElementById("divindex")==null) {
 
-            window.plugins.toast.showLongCenter('You need to select Fuel Companies you would like to view. Note: Selected Fuel Companies will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
+            window.plugins.toast.showLongBottom('You need to select Fuel Companies you would like to view. Note: Selected Fuel Companies will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
                 console.log('toast success: ' + a)
             }, function (b) {
                 alert('toast error: ' + b)
@@ -549,7 +549,7 @@ function getbuscatsfuncCatalogues_success(tx, results) {
     if(menu.Count == 0){
         if(document.getElementById("divindex")==null) {
 
-            window.plugins.toast.showLongCenter('You need to select Business Catalogues you would like to view. Note: Selected Business Catalogues will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
+            window.plugins.toast.showLongBottom('You need to select Business Catalogues you would like to view. Note: Selected Business Catalogues will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
                 console.log('toast success: ' + a)
             }, function (b) {
                 alert('toast error: ' + b)
@@ -573,7 +573,7 @@ function getbuscatsfuncCoupon_success(tx, results) {
     if(menu.Count == 0){
         if(document.getElementById("divindex")==null) {
 
-            window.plugins.toast.showLongCenter('You need to select Business Coupons you would like to view. Note: Selected Business Coupons will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
+            window.plugins.toast.showLongBottom('You need to select Business Coupons you would like to view. Note: Selected Business Coupons will always be at the top of the list. Please click on the Adme logo and Click on Select Categories', function (a) {
                 console.log('toast success: ' + a)
             }, function (b) {
                 alert('toast error: ' + b)
