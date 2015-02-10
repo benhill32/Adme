@@ -199,10 +199,10 @@ function closemodel(){
     if(document.getElementById("dailydealsDiv")!=null) {
 
         var showname = getUrlVarsfunc()["showname"];
-    alert(showname);
+    //alert(showname);
         if(showname ==1){
             window.setTimeout(function(){
-                db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
+                db.transaction(getnamefordisplay, errorCBfunc, successCBfunc);
             }, 2000);
 
 
