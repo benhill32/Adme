@@ -127,9 +127,15 @@ function getregionsloginedit_success(tx, results) {
 
 
 function loadtownslogin2(ID) {
+
+if(regionIDlogin != ID){
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs =0');
+
+    });
+}
     regionIDlogin = ID;
-
-
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
 
