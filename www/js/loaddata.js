@@ -196,8 +196,50 @@ function closemodel(){
 
     }
 
+    if(document.getElementById("dailydealsDiv")!=null) {
+
+        var showname = getUrlVarsfunc()["showname"];
+
+        if(showname ==1){
+            window.setTimeout(function(){
+                db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
+            }, 2000);
+
+
+        }
+
+    }
+
+
    // randomfunctions();
 }
+
+
+
+
+
+
+
+
+function getnamefordisplay(tx) {
+    var sql = "select Name from MobileApp_LastUpdatesec";
+    //alert(sql);
+    tx.executeSql(sql, [], getnamefordisplay_success,errorCBfunc);
+}
+
+function getnamefordisplay_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    $('#txtname').val(menu.Name);
+    window.plugins.toast.showShortCenter('Welcome ' + menu.Name, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+
+}
+
+
+
 
 function closemodelRegion(){
 

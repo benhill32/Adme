@@ -51,5 +51,5 @@ function choosecatelist(ID){
 
 function goforward() {
 
-    window.location.href='../pages/daily.html';
+    window.location.href='../pages/daily.html?showname=1';
 }
