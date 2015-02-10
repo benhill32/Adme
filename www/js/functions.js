@@ -449,7 +449,7 @@ function passscoretoserverlogin(testvar,ID){
                 window.location.href = '../pages/categorieslist.html';
             }else if(ID == 1) {
                 $('#indexloadingdata').modal('hide');
-                window.location.href = '../pages/settings.html';
+                window.location.href = '../pages/settings.html?Sync=1';
 
             }
 

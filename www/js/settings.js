@@ -7,11 +7,21 @@ var catid= 0;
 var catbusID =0;
 document.addEventListener("deviceready", onDeviceReadysettings, false);
 var networkconnectionset = 0;
+var Sync = getUrlVarsfunc()["Sync"];
+
 
 function onDeviceReadysettings() {
 
     $("#deviceid").empty();
     $("#deviceid").append(device.uuid);
+
+    if(Sync == 1){
+        refreshdata();
+    }
+
+
+
+
     onOfflinesetting();
     gettownregion();
     getLsyncdate();
