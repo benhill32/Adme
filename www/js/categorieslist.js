@@ -22,9 +22,9 @@ function getcategorieslist(tx) {
 function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+//alert(len);indexloadingdata
     if(len==0){
-
+        $('#indexloadingdata').modal('show');
         refreshdata();
 
     }else {
