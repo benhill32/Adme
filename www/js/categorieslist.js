@@ -24,7 +24,7 @@ function getcategorieslist_success(tx, results) {
     var len = results.rows.length;
 //alert(len);indexloadingdata
     if(len==0){
-        $('#indexloadingdata').modal('show');
+
         refreshdata();
 
     }else {
