@@ -40,7 +40,7 @@ function getdata(tx) {
     var hours = ("0" + current_date.getHours()).slice(-2);
     var mins = ("0" + current_date.getMinutes()).slice(-2);
 
-    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC, MBC.Follow as Follow, MAD.RegionID as RegionID,MAD.TownID as TownID " +
+    var sql = "select MAD.ID as ID,MAD.BusinessID as BusinessID,MAD.BusinessLocationID as BusinessLocationID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC, MBC.Follow as Follow, MAD.RegionID as RegionID,MAD.TownID as TownID " +
         "from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "JOIN MobileApp_BusinessCategories as MBC on MAD.Categories = MBC.CategoryID AND MAD.BusinessID = MBC.BusniessID " +
         "WHERE MBC.Follow =1 and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' order by MAD.EndDate  ";
@@ -100,15 +100,15 @@ function getdata_success(tx, results) {
             if(menu.URL != ""){
 
             $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-            '<div align="center" class="floatleft3remix1 padding22 paddingtop25" onclick="URLredirect(\'' + menu.URL + '\')"  >' +
+            '<div align="center" class="floatleft3remix1 padding22 paddingtop25" onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' +
             '' +
             'Closes' +
             '<div id="timediv" align="center"><span id="' + name + '">' +
             '</span></div>' +
             '</div>' +
-            '<div align="center"  class="floatleft3remix2"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + imgg + '</div>' +
+            '<div align="center"  class="floatleft3remix2"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' + imgg + '</div>' +
             '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
-            '<div align="center" class="dailydivbottom"  onclick="URLredirect(\'' + menu.URL + '\')"  >' + menu.Price + " " + menu.ItemName +
+            '<div align="center" class="dailydivbottom"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' + menu.Price + " " + menu.ItemName +
             '</div>' +
             '</Div>');
             }else{
@@ -180,7 +180,7 @@ function loaddailydiv(ID) {
 
 function loaddailyinfo(tx) {
 
-    var sql = "select MAD.ID as ID,MAD.StartDate as StartDate,MAD.BusinessLocationID as BusinessLocationID,MAD.BusinessID  as BusinessID ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC,  MAD.RegionID as RegionID,MAD.TownID as TownID " +
+    var sql = "select MAD.ID as ID,MAD.BusinessID as BusinessID,MAD.BusinessLocationID as BusinessLocationID,MAD.StartDate as StartDate,MAD.BusinessLocationID as BusinessLocationID,MAD.BusinessID  as BusinessID ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC,  MAD.RegionID as RegionID,MAD.TownID as TownID " +
         "from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "WHERE MAD.ID = " + IDdaily;
      //alert(sql);
@@ -218,7 +218,7 @@ function loaddailyinfo_success(tx, results) {
 
     $('#divdaily1').append("<strong>Item:</strong><br>" + menu.Price + " " + menu.ItemName);
     $('#divdaily2').append("<strong>Details:</strong><br>" + menu.Details);
-    $('#divdaily3').append('<div onclick="URLredirect(\'' + menu.URL + '\')"><strong>Website Link</strong></div>');
+    $('#divdaily3').append('<div onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"><strong>Website Link</strong></div>');
     $('#divdaily4').append("<strong>Directions</strong>");
 
 

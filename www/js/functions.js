@@ -137,6 +137,17 @@ var checkintvalue = function (val){
 
 }
 
+function URLredirectdaily(ID,BusinessID,BusinessLocationID,dailydeal){
+
+
+    passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + BusinessID + "&BusinessLocationID=" + BusinessLocationID + "&dailydeal=" + dailydeal);
+
+
+    window.open(ID, '_system');
+}
+
+
+
 function URLredirect(ID){
 
 
