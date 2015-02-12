@@ -20,7 +20,7 @@ function getcategorieslist(tx) {
 function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);indexloadingdata
+alert(len);
     if(len==0){
         $('#indexloadingdata').modal('show');
         refreshdata();
