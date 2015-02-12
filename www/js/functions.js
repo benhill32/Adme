@@ -453,7 +453,7 @@ function passscoretoserverlogin(testvar,ID){
             }
 
 
-        }, 1500);
+        }, 2000);
 
     }else{
         window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
