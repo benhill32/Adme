@@ -23,6 +23,7 @@ function getcategorieslist_success(tx, results) {
 alert(len);
     if(len==0){
         $('#indexloadingdata').modal('show');
+        //$('#indexloadingdata').modal('hide');
         refreshdata();
 
     }else {
@@ -50,4 +51,9 @@ function choosecatelist(ID){
 function goforward() {
 
     window.location.href='../pages/daily.html?showname=1';
+}
+
+function openmodel(){
+    $('#indexloadingdata').modal('show');
+
 }
