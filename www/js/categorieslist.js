@@ -18,10 +18,14 @@ function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     if(len==0){
-        refreshdata();
+        window.setTimeout(function(){
+            refreshdata();
+        }, 1000);
+
+
 
     }else {
-        $('#indexloadingdata').modal('show');
+
         $('#catlistdiv2').empty();
         for (var i = 0; i < len; i++) {
             var menu = results.rows.item(i);
