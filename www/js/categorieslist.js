@@ -22,7 +22,7 @@ function getcategorieslist_success(tx, results) {
     var len = results.rows.length;
 alert(len);
     if(len==0){
-        $('#indexloadingdata').modal('show');
+        openmodel();
         //$('#indexloadingdata').modal('hide');
         refreshdata();
 
