@@ -450,11 +450,10 @@ function passscoretoserverlogin(testvar,ID){
             }else if(ID == 1) {
                 $('#indexloadingdata').modal('hide');
                 window.location.href = '../pages/settings.html?Sync=1';
-
             }
 
 
-        }, 2000);
+        }, 1500);
 
     }else{
         window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});

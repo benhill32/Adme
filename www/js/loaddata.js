@@ -60,6 +60,7 @@ function checkonline(){
 }
 
 function refreshdata(){
+    alert("show");
     $('#indexloadingdata').modal('show');
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 
