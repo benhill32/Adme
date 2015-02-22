@@ -1033,6 +1033,7 @@ width:90px;
 
 }
 #nobutton:hover {
+
     background-color: #8585C2;
 }
 #yesbutton:hover{
@@ -1679,7 +1680,7 @@ overflow-y: scroll !important;
 
 #settingdeleteall:hover
 {
-    background-color: #339900;
+    background-color: #8585C2;
     color: white;
     opacity:0.7;
 
