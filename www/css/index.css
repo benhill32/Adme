@@ -1032,6 +1032,13 @@ width:90px;
     clear: both;
 
 }
+#nobutton:hover {
+    background-color: #8585C2;
+}
+#yesbutton:hover{
+
+    background-color: #8585C2;
+}
 #closeregion:hover{
 
     background-color: #8585C2;

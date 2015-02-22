@@ -402,12 +402,19 @@ function cleardata(){
     onOfflinesetting();
 
     if(networkconnectionset!=0) {
-        $('#indexloadingdata').modal('show');
-        db.transaction(droptables, errorCBfunc, successCBfunc);
-        refreshdata();
+
+        db.transaction(droptables, errorCBfunc, createtables4Changeregaion);
+
     }
 
 
+}
+
+
+function createtables4Changeregaion(){
+
+
+    weblink('../pages/loginpage.html')
 }
 
 function showyesno(){
