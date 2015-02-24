@@ -366,12 +366,7 @@ function onNotification(e) {
             }
             else
             {
-                navigator.notification.alert(
-                    'New Notification',
-                    refreshdata,
-                'Thank You',
-                'Done'
-                );
+
 
                 // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
