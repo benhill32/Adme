@@ -357,15 +357,22 @@ function onNotification(e) {
 
                 //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
-                // on Android soundname is outside the payload.
+                // on Anroid soundname is outside the payload.
                 // On Amazon FireOS all custom attributes are contained within payload
-                var soundfile = e.soundname || e.payload.sound;
+                var soundfile = e.soundname || e.payload.sound;d
                 // if the notification contains a soundname, play it.
                 var my_media = new Media("/android_asset/www/"+ soundfile);
                 my_media.play();
             }
             else
             {
+                navigator.notification.alert(
+                    'New Notification',
+                    refreshdata,
+                'Thank You',
+                'Done'
+                );
+
                 // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
