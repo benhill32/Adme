@@ -57,40 +57,26 @@ public class GCMIntentService extends GCMBaseIntentService {
 
 	@Override
 	protected void onMessage(Context context, Intent intent) {
-	Log.d(TAG, "onMessage - context: " + context);
+		Log.d(TAG, "onMessage - context: " + context);
 
-	// Extract the payload from the message
-	Bundle extras = intent.getExtras();
-	if (extras != null)
-	{
-		boolean foreground = this.isInForeground();
+		// Extract the payload from the message
+		Bundle extras = intent.getExtras();
+		if (extras != null)
+		{
+			// if we are in the foreground, just surface the payload, else post it to the statusbar
+            if (PushPlugin.isInForeground()) {
+				extras.putBoolean("foreground", true);
+                PushPlugin.sendExtras(extras);
+			}
+			else {
+				extras.putBoolean("foreground", false);
 
-		extras.putBoolean("foreground", foreground);
-
-		if (foreground){
-			PushHandlerActivity.sendToApp(extras);
-		}else{
-			String message = extras.getString("message");
-			String title = extras.getString("title");
-			Notification notif = new Notification(android.R.drawable.btn_star_big_on, message, System.currentTimeMillis() );
-			notif.flags = Notification.FLAG_AUTO_CANCEL;
-			notif.defaults |= Notification.DEFAULT_SOUND;
-			notif.defaults |= Notification.DEFAULT_VIBRATE;
-
-			String url = "notify";
-
-			Intent notificationIntent = new Intent(context, MyPhoneGapActivity.class);
-			//here you pass the information
-			notificationIntent.putExtra ("url",url);
-			notificationIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-			PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
-
-			notif.setLatestEventInfo(context, title, message, contentIntent);
-			String ns = Context.NOTIFICATION_SERVICE;
-			NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(ns);
-			mNotificationManager.notify(1, notif);
-		}
-	}
+                // Send a notification if there is a message
+                if (extras.getString("message") != null && extras.getString("message").length() != 0) {
+                    createNotification(context, extras);
+                }
+            }
+        }
 	}
 
 	public void createNotification(Context context, Bundle extras)
@@ -101,7 +87,6 @@ public class GCMIntentService extends GCMBaseIntentService {
 		Intent notificationIntent = new Intent(this, PushHandlerActivity.class);
 		notificationIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		notificationIntent.putExtra("pushBundle", extras);
-
 
 		PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		

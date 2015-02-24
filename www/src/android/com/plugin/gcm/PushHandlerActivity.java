@@ -24,15 +24,13 @@ public class PushHandlerActivity extends Activity
 		super.onCreate(savedInstanceState);
 		Log.v(TAG, "onCreate");
 
-		super.setIntegerProperty("splashscreen", R.drawable.splash);
-		super.setIntegerProperty("loadUrlTimeoutValue", 60000);
+		boolean isPushPluginActive = PushPlugin.isActive();
+		processPushBundle(isPushPluginActive);
 
-		Bundle extras = getIntent().getExtras();
-		String message = extras.getString("url");
-		if(message == "notify"){
-			super.loadUrl("file:///android_asset/www/pages/daily.html", 10000);
-		}else{
-			super.loadUrl("file:///android_asset/www/pages/daily.html", 10000);
+		finish();
+
+		if (!isPushPluginActive) {
+			forceMainActivityReload();
 		}
 	}
 

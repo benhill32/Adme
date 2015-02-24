@@ -326,12 +326,12 @@ function syncmaintables(obj){
         if (obj.DeletedateUTC == null) {
 
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_GasPrices (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,Price91 ,Price96 ,PriceDiesel,PriceLPG,TownID,RegionID,Categories) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinesslocationID + ',"' + obj.Price91 + '","' + obj.Price96 + '","' + obj.PriceDiesel + '","' + obj.PriceLPG + '",' + obj.TownID + ',' + obj.RegionID + ',11)');
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_GasPrices (ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,Price91 ,Price96 ,PriceDiesel,PriceLPG,TownID,RegionID,Categories, StartDate ,EndDate) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinesslocationID + ',"' + obj.Price91 + '","' + obj.Price96 + '","' + obj.PriceDiesel + '","' + obj.PriceLPG + '",' + obj.TownID + ',' + obj.RegionID + ',11,' + obj.StartDate + ',' + obj.Enddate + ')');
                 //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_GasPrices  SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinesslocationID + ',Price91 = "' + obj.Price91 + '",Price96 = "' + obj.Price96 + '",PriceDiesel = "' + obj.PriceDiesel + '",PriceLPG = "' + obj.PriceLPG + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ' where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_GasPrices  SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinesslocationID + ',Price91 = "' + obj.Price91 + '",Price96 = "' + obj.Price96 + '",PriceDiesel = "' + obj.PriceDiesel + '",PriceLPG = "' + obj.PriceLPG + '",TownID = ' + obj.TownID + ',RegionID = ' + obj.RegionID + ',StartDate= ' + obj.StartDate + ',Enddate=' + obj.Enddate + ' where ID = ' + obj.ID;
                 tx.executeSql(sql)
             });
 
