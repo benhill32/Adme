@@ -78,10 +78,10 @@
       <file leaf-file-name="gas.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79879516" vertical-offset="391" max-vertical-offset="3179">
-              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.4506024" vertical-offset="391" max-vertical-offset="3179">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding>
-                <marker date="1424818620441" expanded="true" signature="2947:2990" placeholder="..." />
+                <marker date="1424818649202" expanded="true" signature="2935:2978" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -965,10 +965,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/gas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79879516" vertical-offset="391" max-vertical-offset="3179">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.4506024" vertical-offset="391" max-vertical-offset="3179">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding>
-            <marker date="1424818620441" expanded="true" signature="2947:2990" placeholder="..." />
+            <marker date="1424818649202" expanded="true" signature="2935:2978" placeholder="..." />
           </folding>
         </state>
       </provider>
