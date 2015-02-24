@@ -44,7 +44,7 @@ function getdata(tx) {
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
         " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')"  +
-        "  ORDER BY Follow DESC,MBN.EndDate";
+        "  ORDER BY Follow DESC,MGP.EndDate";
 
     alert(sql);
 
