@@ -24,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43850932" vertical-offset="3625" max-vertical-offset="10540">
+            <state vertical-scroll-proportion="-14.12" vertical-offset="3625" max-vertical-offset="10540">
               <caret line="333" column="546" selection-start-line="333" selection-start-column="546" selection-end-line="333" selection-end-column="546" />
               <folding>
                 <element signature="e#3640#3730#0" expanded="false" />
@@ -75,13 +75,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gas.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gas.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="3179">
-              <caret line="42" column="128" selection-start-line="42" selection-start-column="120" selection-end-line="42" selection-end-column="128" />
+            <state vertical-scroll-proportion="0.63493973" vertical-offset="255" max-vertical-offset="3196">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
               <folding>
-                <marker date="1424819224984" expanded="true" signature="2825:2868" placeholder="..." />
+                <marker date="1424819749652" expanded="true" signature="3175:3218" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -191,8 +191,8 @@
         <option value="$PROJECT_DIR$/www/src/android/com/plugin/gcm/PushHandlerActivity.java" />
         <option value="$PROJECT_DIR$/www/src/android/com/plugin/gcm/GCMIntentService.java" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
-        <option value="$PROJECT_DIR$/www/js/gas.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
+        <option value="$PROJECT_DIR$/www/js/gas.js" />
       </list>
     </option>
   </component>
@@ -946,19 +946,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/gas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="3179">
-          <caret line="42" column="128" selection-start-line="42" selection-start-column="120" selection-end-line="42" selection-end-column="128" />
-          <folding>
-            <marker date="1424819224984" expanded="true" signature="2825:2868" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43850932" vertical-offset="3625" max-vertical-offset="10540">
+        <state vertical-scroll-proportion="-14.12" vertical-offset="3625" max-vertical-offset="10540">
           <caret line="333" column="546" selection-start-line="333" selection-start-column="546" selection-end-line="333" selection-end-column="546" />
           <folding>
             <element signature="e#3640#3730#0" expanded="false" />
@@ -969,6 +959,16 @@
             <element signature="e#13564#15283#0" expanded="false" />
             <element signature="e#17078#18435#0" expanded="false" />
             <element signature="e#18487#19852#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/gas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63493973" vertical-offset="255" max-vertical-offset="3196">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <folding>
+            <marker date="1424819749652" expanded="true" signature="3175:3218" placeholder="..." />
           </folding>
         </state>
       </provider>
