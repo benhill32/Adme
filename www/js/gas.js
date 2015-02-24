@@ -40,7 +40,7 @@ function getdata(tx) {
     var hours = ("0" + current_date.getHours()).slice(-2);
     var mins = ("0" + current_date.getMinutes()).slice(-2);
 
-    var sql ="Select MGP.BusinessID,MBN.Icon as Icon,MBC.Follow as Follow ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate " +
+    var sql ="Select MGP.ID as ID,MGP.BusinessID,MBN.Icon as Icon,MBC.Follow as Follow ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate " +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
         " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')"  +
@@ -58,25 +58,21 @@ function getdata_success(tx, results) {
     var len = results.rows.length;
     alert(len);
 
-
+    var intervalArr = new Array();
     var count = 1;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
+        var res = (menu.EndDate).split("T");
+        var split = res[0].split("-");
+        var month2 = split[1];
+        var year2 = split[0];
+        var day2 = split[2];
+        var h = res[1].split(":");
+        var name = "countdown" + menu.ID;
 
 
 
-      //  if(menu.Follow ==1) {
-
-            if(count == 1){
-                $('#gasdealsdivheader').append('<Div align="center"  class="gasdealsdivheader"    >' +
-                '<div align="center"  class="gas4sMainheader"   >&nbsp;</div>' +
-                '<div align="center"  class="gas4sheader " >91</div>' +
-                '<div align="center" class="gas4sheader""  >96</div>' +
-                '<div align="center" class="gas4sheader""  >Diesel</div>' +
-                '<div align="center" class="gas4sheader""  >LPG</div>' +
-                '</Div>');
-            }
-
+        var target_date = new Date(year2,month2-1,day2,h[0],h[1],h[2]).getTime();
 
             var imgg = "";
             if (menu.Icon != "null") {
@@ -85,24 +81,72 @@ function getdata_success(tx, results) {
             } else {
                 imgg = "";
             }
+
+
 //data-toggle="modal" data-target="#basicmodaldaily"
             $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv" onclick="showgascompanies('+ menu.BusinessID + ')"    >' +
-            '<div align="center"  class="gas4sMain"   >' + imgg + '<br> <div style="position: absolute;bottom: 5px;width: 100%;">Read More</div></div>' +
-            '<div align="center"  class="gas4s " >' + menu.Price91 + '</div>' +
-            '<div align="center" class="gas4s""  >' + menu.Price96 + '</div>' +
-            '<div align="center" class="gas4s""  >' + menu.PriceDiesel + '</div>' +
-            '<div align="center" class="gas4s""  >' + menu.PriceLPG + '</div>' +
+            '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
+            ' <div  style="width:60%;float: left;"> <div>' +
+            ' <div align="center"  class="gas4sheader" >91</div> <div align="center" class="gas4sheader"  >96</div> <div align="center" class="gas4sheader"  >D</div> <div align="center" class="gas4sheader"  >LPG</div>' +
+            '</div>' +
+            '<div>' +
+            '<div align="center"  class="gas4s" >' + menu.Price91 + '</div>' +
+            '<div align="center" class="gas4s"  >' + menu.Price96 + '</div>' +
+            '<div align="center" class="gas4s"  >' + menu.PriceDiesel + '</div>' +
+            '<div align="center" class="gas4s"  >' + menu.PriceLPG + '</div>' +
+            '</div>' +
+            '<div> <div  class="gas4saddress">Address ' +
+            ' </div> </div> </div>' +
+            '<div align="center"  class="gas4sEnd2"   > <div>' +
+            '<div align="center"  class="gas4sheader2" >Time Remaining</div>' +
+            '</div><div >' +
+            '<div align="center"  class="gas4s22" ><span id="' + name + '">' +
+            '</span</div></div></div> ' +
+
             '</Div>');
             count = 0;
        //}
+
+        intervalArr.push(name + "|" + target_date);
+    }
+
+    setintervaldailygas(intervalArr);
+
+}
+
+function setintervaldailygas(detailarray){
+    //alert(detailarray);
+
+    var current_date = new Date().getTime();
+
+    for (var i in detailarray) {
+        var item = detailarray[i];
+        // alert(item);
+        var res = (item).split("|");
+
+        var seconds_left = (res[1] - current_date) / 1000;
+
+        // do some time calculations
+        //days = parseInt(seconds_left / 86400);
+        //seconds_left = seconds_left % 86400;
+
+        hours = parseInt(seconds_left / 3600);
+        seconds_left = seconds_left % 3600;
+
+        minutes = parseInt(seconds_left / 60);
+        seconds = parseInt(seconds_left % 60);
+
+        var countdown = document.getElementById(res[0]);
+        // format countdown string + set tag value
+        countdown.innerHTML = hours + "h, "
+        + minutes + "m";
 
     }
 
 
 
+
 }
-
-
 
 function showgascompanies(BID){
 
