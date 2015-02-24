@@ -46,8 +46,8 @@
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1091" max-vertical-offset="1921">
-              <caret line="88" column="71" selection-start-line="88" selection-start-column="69" selection-end-line="88" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1040" max-vertical-offset="1921">
+              <caret line="82" column="313" selection-start-line="82" selection-start-column="306" selection-end-line="82" selection-end-column="313" />
               <folding />
             </state>
           </provider>
@@ -78,11 +78,11 @@
       <file leaf-file-name="gas.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.106024094" vertical-offset="1108" max-vertical-offset="3485">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.79518074" vertical-offset="1006" max-vertical-offset="3485">
+              <caret line="98" column="62" selection-start-line="98" selection-start-column="62" selection-end-line="98" selection-end-column="62" />
               <folding>
                 <element signature="n#!!block;n#setintervaldailygas#0" expanded="false" />
-                <marker date="1424821961800" expanded="true" signature="3193:3215" placeholder="..." />
+                <marker date="1424822161568" expanded="true" signature="3154:3176" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -837,14 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6446" max-vertical-offset="7276">
-          <caret line="401" column="23" selection-start-line="401" selection-start-column="23" selection-end-line="401" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="21.542288" vertical-offset="2366" max-vertical-offset="20349">
@@ -927,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1091" max-vertical-offset="1921">
-          <caret line="88" column="71" selection-start-line="88" selection-start-column="69" selection-end-line="88" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/daily.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.0" vertical-offset="2299" max-vertical-offset="4964">
@@ -966,13 +950,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6446" max-vertical-offset="7276">
+          <caret line="401" column="23" selection-start-line="401" selection-start-column="23" selection-end-line="401" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1040" max-vertical-offset="1921">
+          <caret line="82" column="313" selection-start-line="82" selection-start-column="306" selection-end-line="82" selection-end-column="313" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/gas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.106024094" vertical-offset="1108" max-vertical-offset="3485">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.79518074" vertical-offset="1006" max-vertical-offset="3485">
+          <caret line="98" column="62" selection-start-line="98" selection-start-column="62" selection-end-line="98" selection-end-column="62" />
           <folding>
             <element signature="n#!!block;n#setintervaldailygas#0" expanded="false" />
-            <marker date="1424821961800" expanded="true" signature="3193:3215" placeholder="..." />
+            <marker date="1424822161568" expanded="true" signature="3154:3176" placeholder="..." />
           </folding>
         </state>
       </provider>
