@@ -40,13 +40,14 @@ function getdata(tx) {
     var hours = ("0" + current_date.getHours()).slice(-2);
     var mins = ("0" + current_date.getMinutes()).slice(-2);
 
-    var sql ="Select MGP.ID as ID,MGP.BusinessID,MBN.Icon as Icon,MBC.Follow as Follow ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate " +
+    var sql ="Select MGP.ID as ID,MBL.Address as Address,MGP.BusinessID,MBN.Icon as Icon,MBC.Follow as Follow ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate " +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
+        " JOIN MobileApp_BusinessLocations as MBL on MGP.BusinessLocationID = MBL.ID AND MGP.BusinessID = MBL.BusinessID " +
         " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')"  +
         "  ORDER BY Follow DESC,MGP.EndDate";
 
-    alert(sql);
+    //alert(sql);
 
 
    //alert(sql);
@@ -69,7 +70,7 @@ function getdata_success(tx, results) {
         var day2 = split[2];
         var h = res[1].split(":");
         var name = "countdown" + menu.ID;
-
+        var addressgas= "countdown" + menu.ID;
 
 
         var target_date = new Date(year2,month2-1,day2,h[0],h[1],h[2]).getTime();
@@ -95,7 +96,7 @@ function getdata_success(tx, results) {
             '<div align="center" class="gas4s"  >' + menu.PriceDiesel + '</div>' +
             '<div align="center" class="gas4s"  >' + menu.PriceLPG + '</div>' +
             '</div>' +
-            '<div> <div  class="gas4saddress">Address ' +
+            '<div> <div  class="gas4saddress">' + menu.Address +
             ' </div> </div> </div>' +
             '<div align="center"  class="gas4sEnd2"   > <div>' +
             '<div align="center"  class="gas4sheader2" >Time Remaining</div>' +
@@ -147,6 +148,10 @@ function setintervaldailygas(detailarray){
 
 
 }
+
+
+
+
 
 function showgascompanies(BID){
 
