@@ -386,13 +386,24 @@ color: #333399;
     width:100%;
     color: White;
 }
+.gas4s22{
+    float: left;
+    width: 80%;
+    border: 1px #333399 solid;
+    margin-left: 5px;
+    min-height: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
 .gas4s{
     float: left;
-    width:20%;
- border-right: 1px #333399 solid;
-    min-height: 105px;
-    padding-top: 40px;
+    width:24%;
+ border: 1px #333399 solid;
+    margin-left:2px;
+    min-height: 50px;
+    padding-top: 20px;
 }
+
 .gas4s2{
     float: left;
     width:20%;
@@ -507,14 +518,21 @@ color: #333399;
     color: #ffffff !important;
 }
 
-
+.gas4sEnd2{
+    float: left;
+    width:20%;
+//  border-right: 1px #333399 solid;
+    min-height: 105px;
+    padding-top: 05px;
+    position: relative;
+}
 
 
 
 .gas4sMain{
     float: left;
     width:20%;
-    border-right: 1px #333399 solid;
+  //  border-right: 1px #333399 solid;
     min-height: 105px;
     padding-top: 05px;
     position: relative;
@@ -530,10 +548,25 @@ color: #333399;
 }
 .gas4sheader{
     float: left;
-    width:20%;
-  //  border-right: 1px #333399 solid;
-    min-height: 40px;
-    padding-top: 20px;
+    width:24%;
+
+    margin-left:2px;
+  //  min-height: 50px;
+    padding-top: 5px;
+}
+.gas4sheader2{
+    float: left;
+    margin-left:5px;
+    padding-top: 5px;
+    width:80%;
+
+}
+.gas4saddress{
+float: left;
+   // clear: both;
+    width: 80%;
+   // min-height: 50px;
+    margin-top: 5px;
 }
 .gas4sMainheader{
     float: left;
