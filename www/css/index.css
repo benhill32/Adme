@@ -569,7 +569,7 @@ float: left;
    // min-height: 50px;
     margin-top: 5px;
     color:#000000;
-    font-size: 0.65rem;
+
 }
 .gas4sMainheader{
     float: left;
@@ -1220,6 +1220,10 @@ width:90px;
          * and the modal container having scroll bars which results in odd behavior */
         max-height: 2400px;
     }
+
+    .gas4saddress {
+        font-size: 0.65rem;
+    }
 }
 @media (max-width: 480px) {
     #divstandings{
@@ -1237,6 +1241,9 @@ width:90px;
     #gas4sMain2{
         font-size: 11px;
 
+    }
+    .gas4saddress {
+        font-size: 1rem;
     }
 }
 
