@@ -70,7 +70,7 @@ function getdata_success(tx, results) {
         var day2 = split[2];
         var h = res[1].split(":");
         var name = "countdown" + menu.ID;
-        var addressgas= "countdown" + menu.ID;
+        var address = (menu.Address).split(',');
 
 
         var target_date = new Date(year2,month2-1,day2,h[0],h[1],h[2]).getTime();
@@ -96,7 +96,7 @@ function getdata_success(tx, results) {
             '<div align="center" class="gas4s"  >' + menu.PriceDiesel + '</div>' +
             '<div align="center" class="gas4s"  >' + menu.PriceLPG + '</div>' +
             '</div>' +
-            '<div> <div  class="gas4saddress">' + menu.Address +
+            '<div> <div  class="gas4saddress">' + address[0] + "," + address[1] + "," + address[2] +
             ' </div> </div> </div>' +
             '<div align="center"  class="gas4sEnd2"   > <div>' +
             '<div align="center"  class="gas4sheader2" >Time Remaining</div>' +

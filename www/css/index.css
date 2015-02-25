@@ -397,7 +397,7 @@ color: #333399;
 }
 .gas4s{
     float: left;
-    width:24%;
+    width:22%;
  border: 1px #333399 solid;
     margin-left:2px;
     min-height: 35px;
@@ -549,7 +549,7 @@ color: #333399;
 }
 .gas4sheader{
     float: left;
-    width:24%;
+    width:22%;
     font-style: italic;
     margin-left:2px;
   //  min-height: 50px;
@@ -560,7 +560,7 @@ color: #333399;
     margin-left:5px;
     padding-top: 5px;
     width:80%;
-
+    font-size: 1.5vw;
 }
 .gas4saddress{
 float: left;
@@ -569,6 +569,7 @@ float: left;
    // min-height: 50px;
     margin-top: 5px;
     color:#000000;
+    font-size: 1.5vw;
 }
 .gas4sMainheader{
     float: left;
