@@ -353,7 +353,7 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-                navigator.notification.alert("foreground");
+                navigator.notification.alert('foreground');
 
                 //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
@@ -371,12 +371,12 @@ function onNotification(e) {
                 // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-                    navigator.notification.alert("coldstart1");
+                    navigator.notification.alert('coldstart1');
                     //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-                    navigator.notification.alert("coldstart2");
+                    navigator.notification.alert('coldstart2');
                     //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
