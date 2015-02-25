@@ -408,7 +408,7 @@ function cleardata(){
         window.setTimeout(function(){
             createtables4Changeregaion();
         }, 1500);
-        
+
 
     }
 
