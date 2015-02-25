@@ -188,29 +188,29 @@ function nextbuttonclick(){
 
 
     if (Name == null ||Name == "") {
-        alert("Name must be filled out");
+        navigator.notification.alert("Name must be filled out");
         $("#nextbutton").prop("disabled", false);
         return false;
     }
     if (DOB == null ||DOB == "--" || $('#drpday').val() == "" ||$('#drpmonth').val() == "" || $('#drpyear').val() == "") {
-        alert("Date of Birth must be filled out");
+        navigator.notification.alert("Date of Birth must be filled out");
         $("#nextbutton").prop("disabled", false);
         return false;
     }
 
     if (email == null ||email == "") {
-        alert("Email must be filled out");
+        navigator.notification.alert("Email must be filled out");
         $("#nextbutton").prop("disabled", false);
         return false;
     }
     if (regionIDlogin == 0) {
-        alert("Please Select a Region");
+        navigator.notification.alert("Please Select a Region");
         $("#nextbutton").prop("disabled", false);
         return false;
     }
 
     if (townIDLogin == 0) {
-        alert("Please Select a Town");
+        navigator.notification.alert("Please Select a Town");
         $("#nextbutton").prop("disabled", false);
         return false;
     }
