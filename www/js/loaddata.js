@@ -353,8 +353,8 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-                navigator.notification.alert('foreground');
-
+               // navigator.notification.alert('foreground');
+                weblink('../pages/daily.html');
                 //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
                 // on Anroid soundname is outside the payload.
@@ -371,12 +371,14 @@ function onNotification(e) {
                 // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-                    navigator.notification.alert('coldstart1');
+                  //  navigator.notification.alert('coldstart1');
+                    weblink('../pages/daily.html');
                     //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-                    navigator.notification.alert('coldstart2');
+                    weblink('../pages/daily.html');
+                 //   navigator.notification.alert('coldstart2');
                     //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
@@ -404,8 +406,8 @@ function onNotificationAPN(e) {
     if (e.alert) {
         // $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
 // showing an alert also requires the org.apache.cordova.dialogs plugin
-        navigator.notification.alert(e.alert);
-
+       // navigator.notification.alert(e.alert);
+        weblink('../pages/daily.html');
     }
     if (e.sound) {
 // playing a sound also requires the org.apache.cordova.media plugin
