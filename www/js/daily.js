@@ -102,7 +102,7 @@ function getdata_success(tx, results) {
             $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
             '<div align="center" class="floatleft3remix1 padding22 paddingtop25" onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' +
             '' +
-            'Closes' +
+            '<div id="timeremain">Time Remaining</div>' +
             '<div id="timediv" align="center"><span id="' + name + '">' +
             '</span></div>' +
             '</div>' +

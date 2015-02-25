@@ -1227,6 +1227,10 @@ width:90px;
 .gas4saddress{
     font-size: 0.65rem;
 }
+    #timeremain
+    {
+        font-size: 0.65rem;
+    }
 
 
 }
@@ -1251,6 +1255,10 @@ width:90px;
         font-size: 1rem;
     }
     .gas4saddress{
+        font-size: 1rem;
+    }
+    #timeremain
+    {
         font-size: 1rem;
     }
 }
