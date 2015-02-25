@@ -16,6 +16,10 @@ function droptables(){
         console.log("MobileApp_Categories table is Dropped");
     });
     db.transaction(function(tx) {
+        tx.executeSql('Drop TABLE MobileApp_BusinessCategories');
+        console.log("MobileApp_BusinessCategories table is Dropped");
+    })
+    db.transaction(function(tx) {
         tx.executeSql('Drop TABLE MobileApp_Region');
         console.log("MobileApp_Region table is Dropped");
     });
@@ -31,15 +35,6 @@ function droptables(){
         tx.executeSql('Drop TABLE MobilevwApp_dailydeal');
         console.log("MobilevwApp_dailydeal table is Dropped");
     });
-    db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE Mobilescreenimage');
-        console.log("Mobilescreenimage table is Dropped");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_BusinessCategories');
-        console.log("MobileApp_BusinessCategories table is Dropped");
-    })
-
     db.transaction(function(tx) {
         tx.executeSql('Drop TABLE MobilevwApp_GasPrices');
         console.log("MobilevwApp_GasPrices table is Dropped");
