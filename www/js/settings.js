@@ -403,7 +403,12 @@ function cleardata(){
 
     if(networkconnectionset!=0) {
 
-        db.transaction(droptables, errorCBfunc, createtables4Changeregaion);
+        db.transaction(droptables, errorCBfunc,successCBfunc);
+
+        window.setTimeout(function(){
+            createtables4Changeregaion();
+        }, 1500);
+        
 
     }
 
