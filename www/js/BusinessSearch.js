@@ -50,7 +50,7 @@ function getbusinesslist(tx) {
 function getbusinesslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-
+alert(len);
     $('#businesscatid2').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
