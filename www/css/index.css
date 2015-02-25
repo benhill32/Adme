@@ -560,7 +560,7 @@ color: #333399;
     margin-left:5px;
     padding-top: 5px;
     width:80%;
-    font-size: 0.65rem;
+
 }
 .gas4saddress{
 float: left;
@@ -1224,6 +1224,11 @@ width:90px;
     .gas4saddress {
         font-size: 0.65rem;
     }
+.gas4saddress{
+    font-size: 0.65rem;
+}
+
+
 }
 @media (max-width: 480px) {
     #divstandings{
@@ -1243,6 +1248,9 @@ width:90px;
 
     }
     .gas4saddress {
+        font-size: 1rem;
+    }
+    .gas4saddress{
         font-size: 1rem;
     }
 }
