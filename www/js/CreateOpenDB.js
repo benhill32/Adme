@@ -1,54 +1,52 @@
 var db;
 
 function droptables(){
-
-
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_LastUpdatesec');
+        tx.executeSql('Drop TABLE IF EXISTS MobileApp_LastUpdatesec');
         console.log("MobileApp_LastUpdatesec table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_BusinessNames');
+        tx.executeSql('Drop TABLE IF EXISTS MobileApp_BusinessNames');
         console.log("MobileApp_BusinessNames table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Categories');
+        tx.executeSql('Drop TABLE IF EXISTS MobileApp_Categories');
         console.log("MobileApp_Categories table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_BusinessCategories');
+        tx.executeSql('Drop TABLE IF EXISTS MobileApp_BusinessCategories');
         console.log("MobileApp_BusinessCategories table is Dropped");
-    })
+    });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Region');
+        tx.executeSql('Drop TABLE IF EXISTS MobileApp_Region');
         console.log("MobileApp_Region table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Towns');
+        tx.executeSql('Drop TABLE IF EXISTS MobileApp_Towns');
         console.log("MobileApp_Towns table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_BusinessLocations');
+        tx.executeSql('Drop TABLE IF EXISTS MobileApp_BusinessLocations');
         console.log("MobileApp_BusinessLocations table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobilevwApp_dailydeal');
+        tx.executeSql('Drop TABLE IF EXISTS MobilevwApp_dailydeal');
         console.log("MobilevwApp_dailydeal table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobilevwApp_GasPrices');
+        tx.executeSql('Drop TABLE IF EXISTS MobilevwApp_GasPrices');
         console.log("MobilevwApp_GasPrices table is Dropped");
-    })
+    });
 
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobilevwApp_Catalogues');
+        tx.executeSql('Drop TABLE IF EXISTS MobilevwApp_Catalogues');
         console.log("MobilevwApp_Catalogues table is Dropped");
-    })
+    });
 
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobilevwApp_Coupons');
+        tx.executeSql('Drop TABLE IF EXISTS MobilevwApp_Coupons');
         console.log("MobilevwApp_Coupons table is Dropped");
-    })
+    });
 }
 
 function createDB(tx) {
