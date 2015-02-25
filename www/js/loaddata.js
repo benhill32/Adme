@@ -353,7 +353,7 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-                //  alert(e.payload.msgcnt);
+                  alert("foreground");
 
                 //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
@@ -371,11 +371,12 @@ function onNotification(e) {
                 // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-
+                    alert("coldstart1");
                     //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
+                    alert("coldstart2");
                     //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }

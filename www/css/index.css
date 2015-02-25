@@ -1140,13 +1140,18 @@ width:90px;
    // position: absolute;
 
 }
-
-#splashscreen{
-
+#splashID{
+    top: 35%;
     height: 100%;
     position: absolute;
     width: 100%;
-    top: 25%;
+}
+#splashscreen{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+
 }
 
 #imgindex {
