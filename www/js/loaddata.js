@@ -24,7 +24,7 @@ function onDeviceReadyloaddata() {
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
-
+    pushnotifiy();
 
     document.addEventListener("offline", onOffline, false);
   //  alert("loaddata");
@@ -82,10 +82,10 @@ function populateDB1(tx,results) {
     if(row.Count ==0){
         if(networkconnection!=0) {
             $.when(blankLastUpdatesec()).done(function () {
-                $.when(pushnotifiy()).done(function () {
+               // $.when(pushnotifiy()).done(function () {
                    // db.transaction(populateDB, errorCBfunc, successCBfunc);
                     db.transaction(gettokenregion, errorCBfunc, successCBfunc);
-                });
+              //  });
             });
         }else{
             $('#indexloadingdata').modal('hide');
