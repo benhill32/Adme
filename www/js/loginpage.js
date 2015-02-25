@@ -9,7 +9,7 @@ var editnew = getUrlVarsfunc()["ID"];
 
 function onDeviceReadylogin() {
 
-    $("#nextbutton").prop("disabled", true);
+
     refreshdata();
 
     deviceIDlogin = device.uuid;
@@ -106,8 +106,7 @@ function getregionslogin_success(tx, results) {
 
 function loadtownslogin(ID) {
     regionIDlogin = ID;
-    $("#nextbutton").removeAttr('disabled');
-
+    townIDLogin = 0;
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
         closemodelRegion();
@@ -179,11 +178,42 @@ function nextbuttonclick(){
 
     $("#nextbutton").prop("disabled", true);
 
+   // alert($('#txtname').val());
+
+
     var Name = $('#txtname').val();
     var DOB = $('#drpday').val() + "-" + $('#drpmonth').val() + "-" + $('#drpyear').val();
     var email = $('#txtEmail').val();
 
 
+
+    if (Name == null ||Name == "") {
+        alert("Name must be filled out");
+        $("#nextbutton").prop("disabled", false);
+        return false;
+    }
+    if (DOB == null ||DOB == "--" || $('#drpday').val() == "" ||$('#drpmonth').val() == "" || $('#drpyear').val() == "") {
+        alert("Date of Birth must be filled out");
+        $("#nextbutton").prop("disabled", false);
+        return false;
+    }
+
+    if (email == null ||email == "") {
+        alert("Email must be filled out");
+        $("#nextbutton").prop("disabled", false);
+        return false;
+    }
+    if (regionIDlogin == 0) {
+        alert("Please Select a Region");
+        $("#nextbutton").prop("disabled", false);
+        return false;
+    }
+
+    if (townIDLogin == 0) {
+        alert("Please Select a Town");
+        $("#nextbutton").prop("disabled", false);
+        return false;
+    }
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
