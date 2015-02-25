@@ -47,7 +47,7 @@ function getdata(tx) {
         " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')"  +
         "  ORDER BY Follow DESC,MGP.EndDate";
 
-    alert(sql);
+  //  alert(sql);
 
 
    //alert(sql);
@@ -57,7 +57,7 @@ function getdata(tx) {
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-    alert(len);
+    //alert(len);
 
     var intervalArr = new Array();
     var count = 1;
