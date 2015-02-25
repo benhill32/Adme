@@ -8,17 +8,12 @@ var apptokenlogin = 0;
 var editnew = getUrlVarsfunc()["ID"];
 
 function onDeviceReadylogin() {
-
-
+    deviceIDlogin = device.uuid;
     refreshdata();
 
-    deviceIDlogin = device.uuid;
+
 
 }
-
-
-
-
 
 function checkdataload(){
 
