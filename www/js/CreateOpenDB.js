@@ -32,10 +32,6 @@ function droptables(){
         console.log("MobilevwApp_dailydeal table is Dropped");
     });
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobilevwApp_weeklydeal');
-        console.log("MobilevwApp_weeklydeal table is Dropped");
-    });
-    db.transaction(function(tx) {
         tx.executeSql('Drop TABLE Mobilescreenimage');
         console.log("Mobilescreenimage table is Dropped");
     });
@@ -87,7 +83,7 @@ function createDB(tx) {
     console.log("MobilevwApp_dailydeal table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_GasPrices (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,Price91 TEXT NOT NULL,Price96 TEXT NOT NULL,PriceDiesel TEXT NOT NULL,PriceLPG TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL,StartDate TEXT NOT NULL,EndDate TEXT NOT NULL)');
-    console.log("MobilevwApp_weeklydeal table is created");
+    console.log("MobilevwApp_GasPrices table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Catalogues (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessID INTEGER NOT NULL,BusinessLocationID INTEGER NOT NULL,FileName TEXT NOT NULL,TownID INTEGER NOT NULL,RegionID INTEGER NOT NULL,Categories INTEGER NOT NULL)');
     console.log("MobilevwApp_Catalogues table is created");
