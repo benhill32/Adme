@@ -405,11 +405,6 @@ function cleardata(){
 
         db.transaction(droptables, errorCBfunc,successCBfunc);
 
-        window.setTimeout(function(){
-        passscoretoserver("categories=" + ID + "&outcome=clear&deviceid=" + deviceIDfunc + "&token=" + apptoken);
-        }, 3000);
-
-
 
         window.setTimeout(function(){
             createtables4Changeregaion();
