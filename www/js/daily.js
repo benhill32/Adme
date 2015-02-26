@@ -100,27 +100,27 @@ function getdata_success(tx, results) {
             if(menu.URL != ""){
 
             $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-            '<div align="center" class="floatleft3remix1 padding22 paddingtop25" onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' +
+            '<div align="center" class="floatleft3remix1 padding22 " onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' +
             '' +
-            '<div id="timeremain">Time Remaining</div>' +
+            '<div id="timeremain">Time Ends</div>' +
             '<div id="timediv" align="center"><span id="' + name + '">' +
             '</span></div>' +
             '</div>' +
             '<div align="center"  class="floatleft3remix2"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' + imgg + '</div>' +
-            '<div align="center"  class="floatleft3remix1 padding22 paddingtop35"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
+            '<div align="center"  class="floatleft3remix1 padding22 paddingtop15"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
             '<div align="center" class="dailydivbottom"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' + menu.Price + " " + menu.ItemName +
             '</div>' +
             '</Div>');
             }else{
                 $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-                '<div align="center" class="floatleft3remix1 padding22 paddingtop25"  >' +
+                '<div align="center" class="floatleft3remix1 padding22 "  >' +
                 '' +
                 'Closes' +
                 '<div id="timediv" align="center"><span id="' + name + '">' +
                 '</span></div>' +
                 '</div>' +
                 '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
-                '<div align="center"  class="floatleft3remix1 padding22 paddingtop35" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >Read more</div>' +
+                '<div align="center"  class="floatleft3remix1 padding22 paddingtop15" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >Read more</div>' +
                 '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
                 '</div>' +
                 '</Div>');

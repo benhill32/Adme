@@ -99,7 +99,7 @@ function getdata_success(tx, results) {
             '<div> <div  class="gas4saddress">' + address[0] + "," + address[1] + "," + address[2] +
             ' </div> </div> </div>' +
             '<div align="center"  class="gas4sEnd2"   > <div>' +
-            '<div align="center"  class="gas4sheader2" >Time Remaining</div>' +
+            '<div align="center"  class="gas4sheader2" >Time Ends</div>' +
             '</div><div >' +
             '<div align="center"  class="gas4s22" ><span id="' + name + '">' +
             '</span</div></div></div> ' +
