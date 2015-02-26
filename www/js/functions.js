@@ -305,12 +305,12 @@ function syncmaintables(obj){
         if (obj.DeletedateUTC == null) {
 
             db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_dailydeal(ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,StartDate ,EndDate ,ItemName,Details ,Price ,URL,Categories,RegionID,TownID  ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.StartDate + '","' + obj.EndDate + '","' + obj.ItemName + '","' + obj.Details + '","' + obj.Price + '","' + obj.URL + '", ' + obj.Categories + ',' + obj.RegionID + ',' + obj.TownID + ')');
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_dailydeal(ID ,CreatedateUTC ,UpdatedateUTC ,DeletedateUTC ,BusinessID ,BusinessLocationID,StartDate ,EndDate ,ItemName,Details ,Price ,URL,Categories,RegionID,TownID  ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.BusinessID + ',' + obj.BusinessLocationID + ',"' + obj.StartDate + '","' + obj.EndDate + '","' + obj.ItemName + '","' + obj.Details + '","' + obj.Price + '","' + obj.URL + '", "' + obj.Categories + '",' + obj.RegionID + ',' + obj.TownID + ')');
                 //    console.log("INSERT INTO MobileApp_vwApp_Teams is created");
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobilevwApp_dailydeal  SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',StartDate = "' + obj.StartDate + '",EndDate = "' + obj.EndDate + '",ItemName = "' + obj.ItemName + '",Details = "' + obj.Details + '",Price = "' + obj.Price + '",URL = "' + obj.URL + '",Categories = ' + obj.Categories + ', RegionID = ' + obj.RegionID + ', TownID = ' + obj.TownID + ' where ID = ' + obj.ID;
+                var sql = 'UPDATE MobilevwApp_dailydeal  SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", BusinessID = ' + obj.BusinessID + ',BusinessLocationID = ' + obj.BusinessLocationID + ',StartDate = "' + obj.StartDate + '",EndDate = "' + obj.EndDate + '",ItemName = "' + obj.ItemName + '",Details = "' + obj.Details + '",Price = "' + obj.Price + '",URL = "' + obj.URL + '",Categories = "' + obj.Categories + '", RegionID = ' + obj.RegionID + ', TownID = ' + obj.TownID + ' where ID = ' + obj.ID;
                 tx.executeSql(sql);
             });
 

@@ -2,7 +2,7 @@ var db;
 var townID = "";
 document.addEventListener("deviceready", onDeviceReadydaily, false);
 var IDdaily = "";
-
+var followbusiness =  [];
 function onDeviceReadydaily() {
     refreshdata();
 
@@ -27,12 +27,32 @@ function gettownname_success(tx, results) {
     townID = menu.ID;
 
 
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+    db.transaction(getCategoriesselected, errorCBfunc, successCBfunc);
 }
 
 
+function getCategoriesselected(tx) {
+    var sql = "select ID from MobileApp_BusinessCategories where Follow=1";
+     alert(sql);
+    tx.executeSql(sql, [], getCategoriesselected_success);
+}
+
+
+function getCategoriesselected_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    alert(len);
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        followbusiness.push(i.ID);
+    }
+
+    db.transaction(getdata, errorCBfunc, successCBfunc);
+}
 
 function getdata(tx) {
+
+    alert(followbusiness);
     var current_date = new Date();
     var year = current_date.getFullYear();
     var month = ("0" + (current_date.getMonth()+1)).slice(-2);
@@ -40,10 +60,9 @@ function getdata(tx) {
     var hours = ("0" + current_date.getHours()).slice(-2);
     var mins = ("0" + current_date.getMinutes()).slice(-2);
 
-    var sql = "select MAD.ID as ID,MAD.BusinessID as BusinessID,MAD.BusinessLocationID as BusinessLocationID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC, MBC.Follow as Follow, MAD.RegionID as RegionID,MAD.TownID as TownID " +
+    var sql = "select MAD.ID as ID,MAD.Categories as Categories,MAD.BusinessID as BusinessID,MAD.BusinessLocationID as BusinessLocationID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC, MBC.Follow as Follow, MAD.RegionID as RegionID,MAD.TownID as TownID " +
         "from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
-        "JOIN MobileApp_BusinessCategories as MBC on MAD.Categories = MBC.CategoryID AND MAD.BusinessID = MBC.BusniessID " +
-        "WHERE MBC.Follow =1 and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' order by MAD.EndDate  ";
+        "WHERE datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' order by MAD.EndDate  ";
      //alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
