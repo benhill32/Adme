@@ -27,8 +27,8 @@
       <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56987953" vertical-offset="6531" max-vertical-offset="7463">
-              <caret line="412" column="0" selection-start-line="412" selection-start-column="0" selection-end-line="412" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.28313252" vertical-offset="6531" max-vertical-offset="7463">
+              <caret line="398" column="0" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="4331" max-vertical-offset="10540">
-              <caret line="405" column="1" selection-start-line="405" selection-start-column="1" selection-end-line="405" selection-end-column="1" />
+              <caret line="418" column="46" selection-start-line="418" selection-start-column="46" selection-end-line="418" selection-end-column="46" />
               <folding>
                 <element signature="e#3640#3730#0" expanded="false" />
                 <element signature="e#8647#9675#0" expanded="false" />
@@ -113,8 +113,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1708" />
-    <option name="y" value="9" />
+    <option name="x" value="-31" />
+    <option name="y" value="48" />
     <option name="width" value="1696" />
     <option name="height" value="1026" />
   </component>
@@ -299,7 +299,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1708" y="9" width="1696" height="1026" extended-state="0" />
+    <frame x="-31" y="48" width="1696" height="1026" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -746,7 +746,7 @@
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4331" max-vertical-offset="10540">
-          <caret line="405" column="1" selection-start-line="405" selection-start-column="1" selection-end-line="405" selection-end-column="1" />
+          <caret line="418" column="46" selection-start-line="418" selection-start-column="46" selection-end-line="418" selection-end-column="46" />
           <folding>
             <element signature="e#3640#3730#0" expanded="false" />
             <element signature="e#8647#9675#0" expanded="false" />
@@ -762,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56987953" vertical-offset="6531" max-vertical-offset="7463">
-          <caret line="412" column="0" selection-start-line="412" selection-start-column="0" selection-end-line="412" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.28313252" vertical-offset="6531" max-vertical-offset="7463">
+          <caret line="398" column="0" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
           <folding />
         </state>
       </provider>

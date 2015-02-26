@@ -407,7 +407,7 @@ function cleardata(){
 
         window.setTimeout(function(){
         passscoretoserver("categories=" + ID + "&outcome=clear&deviceid=" + deviceIDfunc + "&token=" + apptoken);
-        }, 1000);
+        }, 3000);
 
 
 
