@@ -92,13 +92,14 @@ function getdata_success(tx, results) {
 
     $('#dailydealsDiv').empty();
     var intervalArr = new Array();
+    var check = "0";
     for (var i=0; i<len; i++) {
 
         var menu = results.rows.item(i);
 
         var categ = menu.Categories.split(",");
 
-        var check = "0";
+        check = "0";
 
         for (i in categ) {
             for (j in followbusiness) {
@@ -111,7 +112,7 @@ function getdata_success(tx, results) {
         }
         alert(check);
         alert(menu.TownID  + "==" +  townID);
-        if (check == "1") {
+
             if (menu.TownID == "0" || menu.TownID == townID) {
 
                 alert(townID);
@@ -170,7 +171,7 @@ function getdata_success(tx, results) {
 
 
             }
-        }
+
     }
    setintervaldaily(intervalArr);
 }
