@@ -71,7 +71,7 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 
-    alert("Number of Deals" + len);
+    //alert("Number of Deals" + len);
    // alert(followbusiness);
 
 
