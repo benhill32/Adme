@@ -75,7 +75,7 @@ function getdata_success(tx, results) {
     alert(followbusiness);
 
 
-  
+
     var month = new Array();
     month[1] = "January";
     month[2] = "February";
@@ -98,6 +98,9 @@ function getdata_success(tx, results) {
 
         var categ = menu.Categories.split(",");
         alert(categ);
+
+        var common = new Set(categ).intersection(followbusiness).keys();
+        alert(common);
         if (menu.TownID == "0" || menu.TownID == townID) {
 
          //   alert(menu.EndDate);
