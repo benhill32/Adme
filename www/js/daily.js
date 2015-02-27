@@ -70,8 +70,12 @@ function getdata(tx) {
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
+
     alert(len);
     alert(followbusiness);
+
+
+    alert()
     var month = new Array();
     month[1] = "January";
     month[2] = "February";
@@ -89,9 +93,11 @@ function getdata_success(tx, results) {
     $('#dailydealsDiv').empty();
     var intervalArr = new Array();
     for (var i=0; i<len; i++) {
+
         var menu = results.rows.item(i);
 
-
+        var categ = menu.Categories.split(",");
+        alert(categ);
         if (menu.TownID == "0" || menu.TownID == townID) {
 
          //   alert(menu.EndDate);
