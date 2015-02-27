@@ -110,7 +110,7 @@ function getdata_success(tx, results) {
             }
         }
         alert(check);
-
+        alert(menu.TownID  + "==" +  townID);
         if (check == "1") {
             if (menu.TownID == "0" || menu.TownID == townID) {
 
