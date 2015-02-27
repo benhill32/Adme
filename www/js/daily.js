@@ -99,8 +99,16 @@ function getdata_success(tx, results) {
         var categ = menu.Categories.split(",");
         alert(categ);
 
-        var common = new Set(categ).intersection(followbusiness).keys();
-        alert(common);
+        for (i in categ) {
+            for (j in followbusiness) {
+                if (categ[i] == followbusiness[j]){
+                    alert("true");
+                }else{
+                    alert("False");
+                }
+            }
+        }
+
         if (menu.TownID == "0" || menu.TownID == townID) {
 
          //   alert(menu.EndDate);
