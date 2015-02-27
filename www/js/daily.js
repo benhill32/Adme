@@ -44,7 +44,7 @@ function getCategoriesselected_success(tx, results) {
     alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        followbusiness.push(i.ID);
+        followbusiness.push(menu.ID);
     }
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
@@ -52,7 +52,7 @@ function getCategoriesselected_success(tx, results) {
 
 function getdata(tx) {
 
-    alert(followbusiness);
+
     var current_date = new Date();
     var year = current_date.getFullYear();
     var month = ("0" + (current_date.getMonth()+1)).slice(-2);
@@ -70,7 +70,8 @@ function getdata(tx) {
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-
+    alert(len);
+    alert(followbusiness);
     var month = new Array();
     month[1] = "January";
     month[2] = "February";
