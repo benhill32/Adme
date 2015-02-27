@@ -110,12 +110,11 @@ function getdata_success(tx, results) {
             }
         }
         alert(check);
-        alert(townID);
+
         if (check == "1") {
             if (menu.TownID == "0" || menu.TownID == townID) {
 
-                //   alert(menu.EndDate);
-
+                alert(townID);
                 var res = (menu.EndDate).split("T");
                 var split = res[0].split("-");
                 var month2 = split[1];
