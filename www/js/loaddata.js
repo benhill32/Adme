@@ -165,7 +165,7 @@ function getchecksync(tx, results) {
         var json = xmlHttp.responseText;
 
         if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
-
+            alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region);
             errorclosemodel();
         } else {
 
