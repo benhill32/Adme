@@ -105,15 +105,13 @@ function getdata_success(tx, results) {
             for (j in followbusiness) {
                 if (categ[i] == followbusiness[j]) {
                     check = "1";
-                } else {
-
                 }
             }
         }
         alert(check);
         alert(menu.TownID  + "==" +  townID);
 
-            if (menu.TownID == townID) {
+            if (check== "1") {
 
 
                 var res = (menu.EndDate).split("T");
