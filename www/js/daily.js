@@ -72,7 +72,7 @@ function getdata_success(tx, results) {
     var len = results.rows.length;
 
   //  alert(len);
-    alert(followbusiness);
+   // alert(followbusiness);
 
 
 
@@ -97,80 +97,80 @@ function getdata_success(tx, results) {
         var menu = results.rows.item(i);
 
         var categ = menu.Categories.split(",");
-        alert(categ);
+
+        var check = 0;
 
         for (i in categ) {
             for (j in followbusiness) {
-                if (categ[i] == followbusiness[j]){
-                    alert("true");
-                }else{
-                    alert("False");
+                if (categ[i] == followbusiness[j]) {
+                    check = 1;
+                } else {
+
                 }
             }
         }
+        if (check == 1) {
+            if (menu.TownID == "0" || menu.TownID == townID) {
 
-        if (menu.TownID == "0" || menu.TownID == townID) {
+                //   alert(menu.EndDate);
 
-         //   alert(menu.EndDate);
-
-            var res = (menu.EndDate).split("T");
-            var split = res[0].split("-");
-            var month2 = split[1];
-            var year2 = split[0];
-            var day2 = split[2];
-            var h = res[1].split(":");
-            var name = "countdown" + menu.ID;
+                var res = (menu.EndDate).split("T");
+                var split = res[0].split("-");
+                var month2 = split[1];
+                var year2 = split[0];
+                var day2 = split[2];
+                var h = res[1].split(":");
+                var name = "countdown" + menu.ID;
 
 
+                var target_date = new Date(year2, month2 - 1, day2, h[0], h[1], h[2]).getTime();
 
-            var target_date = new Date(year2,month2-1,day2,h[0],h[1],h[2]).getTime();
+                var imgg = "";
+                if (menu.Icon != "null") {
+                    imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:100%;"  align="center"  >&nbsp;';
+                    //imgg = menu.BusinessName;
+                } else {
 
-            var imgg = "";
-            if (menu.Icon != "null") {
-                imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:100%;"  align="center"  >&nbsp;';
-                //imgg = menu.BusinessName;
-            } else {
+                    imgg = menu.BusinessName;
+                }
 
-                imgg = menu.BusinessName;
+                if (menu.URL != "") {
+
+                    $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
+                    '<div align="center" class="floatleft3remix1 padding22 " onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID + ',' + menu.BusinessLocationID + ',' + menu.ID + ')"  >' +
+                    '' +
+                    '<div id="timeremain">Time Ends</div>' +
+                    '<div id="timediv" align="center"><span id="' + name + '">' +
+                    '</span></div>' +
+                    '</div>' +
+                    '<div align="center"  class="floatleft3remix2"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID + ',' + menu.BusinessLocationID + ',' + menu.ID + ')"  >' + imgg + '</div>' +
+                    '<div align="center"  class="floatleft3remix1 padding22 paddingtop15"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
+                    '<div align="center" class="dailydivbottom"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID + ',' + menu.BusinessLocationID + ',' + menu.ID + ')"  >' + menu.Price + " " + menu.ItemName +
+                    '</div>' +
+                    '</Div>');
+                } else {
+                    $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
+                    '<div align="center" class="floatleft3remix1 padding22 "  >' +
+                    '' +
+                    'Closes' +
+                    '<div id="timediv" align="center"><span id="' + name + '">' +
+                    '</span></div>' +
+                    '</div>' +
+                    '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
+                    '<div align="center"  class="floatleft3remix1 padding22 paddingtop15" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >Read more</div>' +
+                    '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
+                    '</div>' +
+                    '</Div>');
+
+                }
+                var days, hours, minutes, seconds;
+
+                intervalArr.push(name + "|" + target_date);
+
+
             }
-
-            if(menu.URL != ""){
-
-            $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-            '<div align="center" class="floatleft3remix1 padding22 " onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' +
-            '' +
-            '<div id="timeremain">Time Ends</div>' +
-            '<div id="timediv" align="center"><span id="' + name + '">' +
-            '</span></div>' +
-            '</div>' +
-            '<div align="center"  class="floatleft3remix2"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' + imgg + '</div>' +
-            '<div align="center"  class="floatleft3remix1 padding22 paddingtop15"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
-            '<div align="center" class="dailydivbottom"  onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"  >' + menu.Price + " " + menu.ItemName +
-            '</div>' +
-            '</Div>');
-            }else{
-                $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-                '<div align="center" class="floatleft3remix1 padding22 "  >' +
-                '' +
-                'Closes' +
-                '<div id="timediv" align="center"><span id="' + name + '">' +
-                '</span></div>' +
-                '</div>' +
-                '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
-                '<div align="center"  class="floatleft3remix1 padding22 paddingtop15" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >Read more</div>' +
-                '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
-                '</div>' +
-                '</Div>');
-
-            }
-            var days, hours, minutes, seconds;
-
-            intervalArr.push(name + "|" + target_date);
-
-
         }
     }
-
    setintervaldaily(intervalArr);
 }
 
