@@ -98,12 +98,12 @@ function getdata_success(tx, results) {
 
         var categ = menu.Categories.split(",");
 
-        var check = 0;
+        var check = "0";
 
         for (i in categ) {
             for (j in followbusiness) {
                 if (categ[i] == followbusiness[j]) {
-                    check = 1;
+                    check = "1";
                 } else {
 
                 }
@@ -111,7 +111,7 @@ function getdata_success(tx, results) {
         }
         alert(check);
         alert(townID);
-        if (check == 1) {
+        if (check == "1") {
             if (menu.TownID == "0" || menu.TownID == townID) {
 
                 //   alert(menu.EndDate);
