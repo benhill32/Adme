@@ -63,7 +63,7 @@ function getdata(tx) {
     var sql = "select MAD.ID as ID,MAD.Categories as Categories,MAD.BusinessID as BusinessID,MAD.BusinessLocationID as BusinessLocationID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC, MAD.RegionID as RegionID,MAD.TownID as TownID,datetime(MAD.EndDate) as Ben1,datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') as Ben2 " +
         "from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
         "WHERE MAD.TownID = " + townID + "  and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') order by MAD.EndDate  ";
-     alert(sql);
+  //   alert(sql);
     //
     tx.executeSql(sql, [], getdata_success);
 }
@@ -72,7 +72,7 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 
-    alert("Number of Deals" + len);
+  //  alert("Number of Deals" + len);
    // alert(followbusiness);
 
 
@@ -97,14 +97,14 @@ function getdata_success(tx, results) {
     for (var i=0; i<len; i++) {
 
         var menu = results.rows.item(i);
-            alert((menu.Ben1 + " - " + menu.Ben2));
+     //       alert((menu.Ben1 + " - " + menu.Ben2));
         var categ = menu.Categories.split(",");
 
         check = "0";
 
         check = Checkviewing(categ);
 
-        alert(check);
+   //     alert(check);
       //  alert(menu.TownID  + "==" +  townID);
 
             if (check== "1") {
