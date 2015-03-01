@@ -71,7 +71,7 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 
-    //alert("Number of Deals" + len);
+    alert("Number of Deals" + len);
    // alert(followbusiness);
 
 
@@ -108,7 +108,7 @@ function getdata_success(tx, results) {
                 }
             }
         }
-       // alert(check);
+        alert(check);
       //  alert(menu.TownID  + "==" +  townID);
 
             if (check== "1") {
