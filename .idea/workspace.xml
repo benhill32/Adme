@@ -114,11 +114,11 @@
       <file leaf-file-name="gas.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/gas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37515527" vertical-offset="582" max-vertical-offset="3536">
-              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.33291924" vertical-offset="565" max-vertical-offset="3536">
+              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
               <folding>
                 <element signature="n#!!block;n#setintervaldailygas#0" expanded="false" />
-                <marker date="1425242228506" expanded="true" signature="3712:3734" placeholder="..." />
+                <marker date="1425242518365" expanded="true" signature="3632:3654" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -862,11 +862,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/gas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37515527" vertical-offset="582" max-vertical-offset="3536">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.33291924" vertical-offset="565" max-vertical-offset="3536">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
           <folding>
             <element signature="n#!!block;n#setintervaldailygas#0" expanded="false" />
-            <marker date="1425242228506" expanded="true" signature="3712:3734" placeholder="..." />
+            <marker date="1425242518365" expanded="true" signature="3632:3654" placeholder="..." />
           </folding>
         </state>
       </provider>

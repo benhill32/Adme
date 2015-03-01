@@ -47,8 +47,8 @@ function getdata(tx) {
   //      " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')"  +
  //       "  ORDER BY Follow DESC,MGP.EndDate";
 
-    var sql ="Select MGP.ID as ID,MGP.BusinessID,MBN.Icon as Icon ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate " +
-        " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
+    var sql ="Select MGP.ID as ID,MGP.BusinessID ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate " +
+        " from MobilevwApp_GasPrices as MGP " +
         " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')"  +
         "  ORDER BY MGP.EndDate";
 
