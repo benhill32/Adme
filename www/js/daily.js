@@ -102,13 +102,8 @@ function getdata_success(tx, results) {
 
         check = "0";
 
-        for (i in categ) {
-            for (j in followbusiness) {
-                if (categ[i] == followbusiness[j]) {
-                    check = "1";
-                }
-            }
-        }
+        check = Checkviewing(categ);
+
         alert(check);
       //  alert(menu.TownID  + "==" +  townID);
 
@@ -174,6 +169,19 @@ function getdata_success(tx, results) {
     }
    setintervaldaily(intervalArr);
 }
+
+function Checkviewing(categ){
+    for (i in categ) {
+        for (j in followbusiness) {
+            if (categ[i] == followbusiness[j]) {
+                return "1";
+            }
+        }
+    }
+
+}
+
+
 
 
 function setintervaldaily(detailarray){
