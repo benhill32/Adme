@@ -69,7 +69,7 @@ function getdata_success(tx, results) {
 
 
         var menu = results.rows.item(i);
-        alert((menu.EndDate));
+        alert(datetime(menu.EndDate));
         var res = (menu.EndDate).split("T");
         var split = res[0].split("-");
         var month2 = split[1];
