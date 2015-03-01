@@ -54,7 +54,7 @@ function getdata(tx) {
 
   //  alert(sql);
 
-    alert(datetime( + year + "-" + month + "-" + day + "T" + hours + ":" + mins + ":00"));
+
     tx.executeSql(sql, [], getdata_success);
 }
 
@@ -70,7 +70,7 @@ function getdata_success(tx, results) {
 
 
         var menu = results.rows.item(i);
-        alert(datetime(menu.EndDate));
+        alert((menu.EndDate));
         var res = (menu.EndDate).split("T");
         var split = res[0].split("-");
         var month2 = split[1];
