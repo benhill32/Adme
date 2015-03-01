@@ -88,7 +88,7 @@ function getdata_success(tx, results) {
 
 
 //data-toggle="modal" data-target="#basicmodaldaily"
-            $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv" onclick="showgascompanies('+ menu.BusinessID + ')"    >' +
+            $('#gasdealsdivbody').append('<Div align="center"  class="gasdealsdiv"    >' +
             '<div align="center"  class="gas4sMain"   >' + imgg + '</div>' +
             ' <div  style="width:60%;float: left;"> <div>' +
             ' <div align="center"  class="gas4sheader" >91</div> <div align="center" class="gas4sheader"  >96</div> <div align="center" class="gas4sheader"  >D</div> <div align="center" class="gas4sheader"  >LPG</div>' +
