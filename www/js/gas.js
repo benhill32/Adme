@@ -52,7 +52,7 @@ function getdata(tx) {
   //      " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')"  +
   //      "  ORDER BY MGP.EndDate";
 
-    alert(sql);
+  //  alert(sql);
 
     tx.executeSql(sql, [], getdata_success);
 }
@@ -62,10 +62,14 @@ function getdata_success(tx, results) {
     var len = results.rows.length;
     alert(len);
 
+
     var intervalArr = new Array();
     var count = 1;
     for (var i=0; i<len; i++) {
+
+
         var menu = results.rows.item(i);
+        alert(datetime(menu.EndDate));
         var res = (menu.EndDate).split("T");
         var split = res[0].split("-");
         var month2 = split[1];
