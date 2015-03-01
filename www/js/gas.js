@@ -44,15 +44,11 @@ function getdata(tx) {
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
         " JOIN MobileApp_BusinessLocations as MBL on MGP.BusinessLocationID = MBL.ID" +
-        " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and strftime('%m',EndDate) = " + month + " and  strftime('%d',EndDate) = " + day + " and  strftime('%Y',EndDate) = " + year + "" +
+        " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null'" +
        "  ORDER BY Follow DESC,MGP.EndDate";
 
-  //  var sql ="Select MGP.ID as ID,MGP.BusinessID ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate " +
-  //      " from MobilevwApp_GasPrices as MGP " +
-  //      " where MGP.TownID =" + townID + " and MGP.DeletedateUTC = 'null' and datetime(MGP.EndDate) >=  datetime('" + year + "-" + month + "-" + day + "T" + hours + ":" + mins + ":00')  +
-  //      "  ORDER BY MGP.EndDate";
 
-    alert(sql);
+   // alert(sql);
 
 
     tx.executeSql(sql, [], getdata_success);
@@ -62,7 +58,7 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     alert(len);
-
+    var current_date = new Date();
 
     var intervalArr = new Array();
     var count = 1;
@@ -70,7 +66,14 @@ function getdata_success(tx, results) {
 
 
         var menu = results.rows.item(i);
-        alert((menu.EndDate));
+        alert((menu.EndDate.getTime() + "-" + current_date.getTime()));
+
+
+
+
+
+
+
         var res = (menu.EndDate).split("T");
         var split = res[0].split("-");
         var month2 = split[1];
