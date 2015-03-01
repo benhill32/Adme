@@ -54,7 +54,7 @@ function getdata(tx) {
 
   //  alert(sql);
 
-    alert(datetime('" + year + "-" + month + "-" + day + "T" + hours + ":" + mins + ":00'));
+    alert(datetime( + year + "-" + month + "-" + day + "T" + hours + ":" + mins + ":00"));
     tx.executeSql(sql, [], getdata_success);
 }
 
