@@ -40,8 +40,6 @@ function getdata(tx) {
     var hours = ("0" + current_date.getHours()).slice(-2);
     var mins = ("0" + current_date.getMinutes()).slice(-2);
 
-    alert(('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00'))
-
     var sql ="Select MGP.ID as ID,MBL.Address as Address,MGP.BusinessID,MBN.Icon as Icon,MBC.Follow as Follow ,MGP.Price91 as Price91,MGP.Price96 as Price96 ,MGP.PriceDiesel as PriceDiesel ,MGP.PriceLPG as PriceLPG,MGP.StartDate as StartDate,MGP.EndDate as EndDate,datetime(MGP.EndDate) as Testben,datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') as testben2 " +
         " from MobilevwApp_GasPrices as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID " +
@@ -72,7 +70,7 @@ function getdata_success(tx, results) {
 
 
         var menu = results.rows.item(i);
-        alert((menu.Testben = " - " + menu.testben2));
+        alert((menu.Testben + " - " + menu.testben2));
         var res = (menu.EndDate).split("T");
         var split = res[0].split("-");
         var month2 = split[1];
