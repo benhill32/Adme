@@ -36,7 +36,7 @@ function getdata(tx) {
     var current_date = new Date();
     var year = current_date.getFullYear();
     var month = ("0" + (current_date.getMonth()+1)).slice(-2);
-    var day = current_date.getDate();
+    var day = ("0" + (current_date.getDate()));
     var hours = ("0" + current_date.getHours()).slice(-2);
     var mins = ("0" + current_date.getMinutes()).slice(-2);
 
