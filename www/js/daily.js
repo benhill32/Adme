@@ -62,8 +62,9 @@ function getdata(tx) {
 
     var sql = "select MAD.ID as ID,MAD.Categories as Categories,MAD.BusinessID as BusinessID,MAD.BusinessLocationID as BusinessLocationID,MAD.StartDate as StartDate ,MAD.EndDate as EndDate ,MAD.ItemName as ItemName,MAD.Details as Details ,MAD.Price as Price ,MAD.URL as URL, MBN.Icon as Icon,MAD.DeletedateUTC as DeletedateUTC, MAD.RegionID as RegionID,MAD.TownID as TownID,datetime(MAD.EndDate) as Ben1,datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') as Ben2 " +
         "from MobilevwApp_dailydeal as MAD JOIN MobileApp_BusinessNames as MBN on MAD.BusinessID = MBN.ID " +
-        "WHERE MAD.TownID = " + townID + " and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00') and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' order by MAD.EndDate  ";
+        "WHERE MAD.TownID = " + townID + "  and MAD.DeletedateUTC = 'null' and MBN.DeletedateUTC = 'null' order by MAD.EndDate  ";
    //  alert(sql);
+    // and datetime(MAD.EndDate) >=  datetime('" + year + "-" + month + "-" + day + " " + hours + ":" + mins + ":00')
     tx.executeSql(sql, [], getdata_success);
 }
 
