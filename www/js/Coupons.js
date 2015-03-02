@@ -86,12 +86,12 @@ function fileloadcoupon(IDstring){
         if(fileexten[1].substr(-4).toLowerCase() == ".pdf"){
 
            // url = "http://docs.google.com/viewer?url= "+ urlnow;
-            window.open(encodeURI(url), '_blank', 'location=no');
+            window.open(encodeURI(url), '_blank', 'location=yes');
         }else{
             url = urlnow;
         }
 
-        window.open(encodeURI(url), '_blank', 'location=no');
+        window.open(encodeURI(url), '_blank', 'location=yes');
 
     }else{
 
