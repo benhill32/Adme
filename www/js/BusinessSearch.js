@@ -34,7 +34,7 @@ function getbusinesslist(tx) {
 
     if(search == null) {
 
-        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
+        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " ORDER BY MBN.BusinessName";
      //   alert(sql);
         if(catid ==11){
          //   alert(sql);
@@ -44,7 +44,7 @@ function getbusinesslist(tx) {
     }else{
 
         $('#txtsearch').val(search);
-        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%'";
+        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%' ORDER BY MBN.BusinessName";
       //  alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
 
