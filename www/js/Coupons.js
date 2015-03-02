@@ -84,12 +84,12 @@ function fileloadcoupon(IDstring){
             url = urlnow;
         }
 
-        window.open(encodeURI(url), '_blank', 'location=no,toolbar=no,closebuttoncaption=Return');
+        window.open(encodeURI(url), '_blank', 'location=yes,toolbar=no,closebuttoncaption=Return');
 
     }else{
 
         url = urlnow;
-        window.open(encodeURI(url), '_blank', 'location=no','toolbarposition=top');
+        window.open(encodeURI(url), '_blank', 'location=yes','toolbarposition=top');
     }
 
     passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + fileexten[2] + "&BusinessLocationID=" + fileexten[0] + "&FileName=" + fileexten[1] + "&CouponID=" + fileexten[3]);
