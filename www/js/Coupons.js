@@ -72,13 +72,7 @@ function getdata_success(tx, results) {
 function fileloadcoupon(IDstring){
     var fileexten =IDstring.split('|||');
 
-
-
-
     var urlnow = 'http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileexten[1];
-
-
-
 
 
     if( device.platform == 'android' || device.platform == 'Android'){
@@ -90,7 +84,7 @@ function fileloadcoupon(IDstring){
             url = urlnow;
         }
 
-        window.open(encodeURI(url), '_blank', 'location=yes');
+        window.open(encodeURI(url), '_blank');
 
     }else{
 

@@ -36,6 +36,10 @@ function getbusinesslist(tx) {
 
         var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
      //   alert(sql);
+        if(catid ==11){
+            alert(sql);
+        }
+
         tx.executeSql(sql, [], getbusinesslist_success);
     }else{
 
@@ -50,6 +54,9 @@ function getbusinesslist(tx) {
 function getbusinesslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
+    if(catid ==11){
+        alert(len);
+    }
 //alert(len);
     $('#businesscatid2').empty();
     for (var i=0; i<len; i++) {
