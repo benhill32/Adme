@@ -201,7 +201,8 @@ color: #ffffff;
     width: 50%;
     background-color: inherit;
     color:#333399;
-    //overflow: auto;
+    overflow: scroll;
+    height: 100%;
 }
 #divregionlist{
 
@@ -209,7 +210,7 @@ color: #ffffff;
     width: 90%;
     height: 40%;
     position: absolute;
-    overflow: auto;
+  //  overflow: auto;
     color:#333399;
 }
 #logindivregion h4{
