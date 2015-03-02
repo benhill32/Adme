@@ -72,26 +72,19 @@ function getdata_success(tx, results) {
 function fileloadcoupon(IDstring){
     var fileexten =IDstring.split('|||');
 
-
-
-
     var urlnow = 'http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileexten[1];
-
-    passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + fileexten[2] + "&BusinessLocationID=" + fileexten[0] + "&FileName=" + fileexten[1] + "&CouponID=" + fileexten[3]);
-
-
 
 
     if( device.platform == 'android' || device.platform == 'Android'){
         if(fileexten[1].substr(-4).toLowerCase() == ".pdf"){
 
            // url = "http://docs.google.com/viewer?url= "+ urlnow;
-            window.open(encodeURI(url), '_blank', 'location=yes');
+            window.open(encodeURI(url), '_blank', 'location=no,toolbar=no,closebuttoncaption=Return');
         }else{
             url = urlnow;
         }
 
-        window.open(encodeURI(url), '_blank', 'location=yes');
+        window.open(encodeURI(url), '_blank', 'location=no,toolbar=no,closebuttoncaption=Return');
 
     }else{
 
@@ -99,6 +92,7 @@ function fileloadcoupon(IDstring){
         window.open(encodeURI(url), '_blank', 'location=no','toolbarposition=top');
     }
 
+    passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + fileexten[2] + "&BusinessLocationID=" + fileexten[0] + "&FileName=" + fileexten[1] + "&CouponID=" + fileexten[3]);
 
 
 
