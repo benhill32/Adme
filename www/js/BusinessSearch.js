@@ -67,21 +67,23 @@ function getbusinesslist_success(tx, results) {
     var selectid = "";
 
         if(menu.Follow == 1){
-            selectid= "<input type='checkbox' checked id='chk'" + menu.BCID + "' >";
+            selectid= "<input type='checkbox' checked  >";
             onclickoption = 'onclick="choosebuscatfalse('+ menu.BCID + ')"';
 
         }else{
-            selectid= "<input type='checkbox' id='chk'" + menu.BCID + "' >";
+            selectid= "<input type='checkbox'  >";
             onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
         }
-        if(catid ==11){
-            alert(menu.BusinessName);
-        }
 
-        $('#businesscatid2').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body" ' + onclickoption + '  >' +
+
+        $('#businesscatid2').append('<Div align="center"   class="modal-body" ' + onclickoption + '  >' +
         '<div align="left"  >' + selectid + " " +  menu.BusinessName +
         '</div>' +
         '</Div>');
+
+        if(catid ==11){
+            alert(menu.BusinessName);
+        }
     }
 
 }
