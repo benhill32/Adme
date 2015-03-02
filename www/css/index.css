@@ -164,7 +164,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     width:90%;
-overflow: scroll;
+
 }
 #businesscatid h4{
 
@@ -173,6 +173,7 @@ overflow: scroll;
 #businesscatid2{
     width:60%;
     color: #ffffff;
+    overflow: scroll;
 }
 #catlistdiv2{
     width:60%;

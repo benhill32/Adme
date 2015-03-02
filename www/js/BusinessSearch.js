@@ -55,7 +55,7 @@ function getbusinesslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     if(catid ==11){
-        alert(len);
+     //   alert(len);
     }
 //alert(len);
     $('#businesscatid2').empty();
@@ -82,7 +82,7 @@ function getbusinesslist_success(tx, results) {
         '</Div>');
 
         if(catid ==11){
-            alert(menu.BusinessName);
+           // alert(menu.BusinessName);
         }
     }
 
