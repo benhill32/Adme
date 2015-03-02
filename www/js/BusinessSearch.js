@@ -61,12 +61,11 @@ function getbusinesslist_success(tx, results) {
     $('#businesscatid2').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        if(catid ==11){
-            alert(menu.BusinessName);
-        }
+
 
         var onclickoption = "";
     var selectid = "";
+
         if(menu.Follow == 1){
             selectid= "<input type='checkbox' checked id='chk'" + menu.BCID + "' >";
             onclickoption = 'onclick="choosebuscatfalse('+ menu.BCID + ')"';
@@ -75,7 +74,9 @@ function getbusinesslist_success(tx, results) {
             selectid= "<input type='checkbox' id='chk'" + menu.BCID + "' >";
             onclickoption = 'onclick="choosebuscattrue('+ menu.BCID + ')"';
         }
-
+        if(catid ==11){
+            alert(menu.BusinessName);
+        }
 
         $('#businesscatid2').append('<Div align="center" id="divcatbus' + menu.BCID + '"  class="modal-body" ' + onclickoption + '  >' +
         '<div align="left"  >' + selectid + " " +  menu.BusinessName +
