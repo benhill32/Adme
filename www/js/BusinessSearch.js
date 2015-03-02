@@ -34,17 +34,17 @@ function getbusinesslist(tx) {
 
     if(search == null) {
 
-        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
+        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid;
      //   alert(sql);
         if(catid ==11){
-            alert(sql);
+         //   alert(sql);
         }
 
         tx.executeSql(sql, [], getbusinesslist_success);
     }else{
 
         $('#txtsearch').val(search);
-        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName, MBN.Icon as Icon,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%'";
+        var sql = "select MBN.ID as ID,MBC.ID as BCID, MBN.BusinessName as BusinessName,MBC.Follow as Follow from MobileApp_BusinessCategories as MBC JOIN MobileApp_BusinessNames as MBN on MBC.BusniessID = MBN.ID where MBC.CategoryID = " + catid + " and MBN.BusinessName LIKE '%" + search + "%'";
       //  alert(sql);
         tx.executeSql(sql, [], getbusinesslist_success);
 
@@ -61,8 +61,9 @@ function getbusinesslist_success(tx, results) {
     $('#businesscatid2').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-
-
+        if(catid ==11){
+            alert(menu.BusinessName);
+        }
 
         var onclickoption = "";
     var selectid = "";
