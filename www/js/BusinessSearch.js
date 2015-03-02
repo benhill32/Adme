@@ -76,7 +76,7 @@ function getbusinesslist_success(tx, results) {
         }
 
 
-        $('#businesscatid2').append('<Div align="center"   class="modal-body" ' + onclickoption + '  >' +
+        $('#businesscatid2').append('<Div align="center"   class="businessIDcat" ' + onclickoption + '  >' +
         '<div align="left"  >' + selectid + " " +  menu.BusinessName +
         '</div>' +
         '</Div>');
