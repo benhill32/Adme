@@ -27,7 +27,7 @@
 
 'use strict';
 
-var DEFAULT_URL = 'http://admin.adme.kiwi/CouponFiles/9/Colts%20Draw.pdf';
+var DEFAULT_URL = 'compressed.tracemonkey-pldi-09.pdf';
 var DEFAULT_SCALE_DELTA = 1.1;
 var MIN_SCALE = 0.25;
 var MAX_SCALE = 10.0;
