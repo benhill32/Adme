@@ -78,8 +78,8 @@ function fileloadcoupon(IDstring){
     if( device.platform == 'android' || device.platform == 'Android'){
         if(fileexten[1].substr(-4).toLowerCase() == ".pdf"){
 
-            url = "http://docs.google.com/viewer?url= "+ urlnow;
-           // window.open(encodeURI(url), '_blank', 'location=yes');
+           // url = "http://docs.google.com/viewer?url= "+ urlnow;
+            window.open(encodeURI(url), '_system', 'location=yes');
         }else{
             url = urlnow;
         }
