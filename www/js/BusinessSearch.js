@@ -45,7 +45,7 @@ function townregiondatabus_success(tx, results) {
 
 function getregionfrombuslocation(tx) {
     var sql = "select BusinessID from MobileApp_BusinessLocations where RegionID=" + regionIDbus;
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getregionfrombuslocation_success);
 }
 
@@ -57,7 +57,7 @@ function getregionfrombuslocation_success(tx, results) {
         followbusiness1.push(menu.BusinessID);
     }
 
-alert(followbusiness1);
+//alert(followbusiness1);
 
     db.transaction(getbusinesslist, errorCBfunc, successCBfunc);
 }
