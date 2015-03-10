@@ -27,7 +27,7 @@ function Checkviewingbusiness(categ){
 
 function townregiondatabus(tx) {
     var sql = "select ID,RegionID from MobileApp_Towns where Follow =1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], townregiondatabus_success);
 }
 
@@ -44,7 +44,7 @@ function townregiondatabus_success(tx, results) {
 
 
 function getregionfrombuslocation(tx) {
-    var sql = "select BusinessID from MobileApp_BusinessLocations where RegionID" + regionIDbus;
+    var sql = "select BusinessID from MobileApp_BusinessLocations where RegionID=" + regionIDbus;
     alert(sql);
     tx.executeSql(sql, [], getregionfrombuslocation_success);
 }
