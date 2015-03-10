@@ -164,7 +164,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     width:90%;
-    overflow: scroll;
+    overflow: hidden;
     max-height: 2400px;
 padding-bottom: 150px;
 }
