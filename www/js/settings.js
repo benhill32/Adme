@@ -15,10 +15,7 @@ function onDeviceReadysettings() {
     $("#deviceid").empty();
     $("#deviceid").append(device.uuid);
 
-    if(Sync == 1){
-        refreshdata();
-        getLsyncdate();
-    }
+
 
 
 
@@ -26,6 +23,11 @@ function onDeviceReadysettings() {
     onOfflinesetting();
     gettownregion();
     getLsyncdate();
+
+    if(Sync == 1){
+        refreshdata();
+
+    }
 }
 
 function onOfflinesetting(){
