@@ -57,14 +57,14 @@ function getregionfrombuslocation1_success(tx, results) {
 
 function getcategorieslist(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC,CategoryName from MobileApp_Categories order by CategoryName ";
-   // alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getcategorieslist_success);
 }
 
 function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-    //alert(len);
+    alert(len);
 
     if(len==0){
         window.setTimeout(function(){
