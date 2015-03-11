@@ -17,6 +17,7 @@ function onDeviceReadysettings() {
 
     if(Sync == 1){
         refreshdata();
+        getLsyncdate();
     }
 
 

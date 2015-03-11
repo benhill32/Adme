@@ -51,7 +51,7 @@ function getregionfrombuslocation1_success(tx, results) {
         var menu = results.rows.item(i);
         followbusiness2.push(menu.CategoryID);
     }
-    alert(followbusiness2);
+  //  alert(followbusiness2);
     db.transaction(getcategorieslist, errorCBfunc, successCBfunc);
 }
 
