@@ -197,6 +197,15 @@ function closemodel(){
 
     }
 
+
+    if(document.getElementById("settingdeleteall")!=null) {
+        onOfflinesetting();
+        gettownregion();
+        getLsyncdate();
+
+    }
+
+
     if(document.getElementById("dailydealsDiv")!=null) {
 
         var showname = getUrlVarsfunc()["showname"];
