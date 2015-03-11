@@ -31,16 +31,16 @@ function townregiondatabus1_success(tx, results) {
     var menu = results.rows.item(0);
     townIDcat = menu.ID;
     regionIDcat = menu.RegionID;
-    alert(townIDcat);
+   // alert(townIDcat);
     db.transaction(getregionfrombuslocation1, errorCBfunc, successCBfunc);
 }
 
 function getregionfrombuslocation1(tx) {
-    var sql = "select MBC.CategoryID " +
+    var sql = "select DISTINCT MBC.CategoryID " +
         " from MobileApp_BusinessLocations as MBL" +
         " JOIN MobileApp_BusinessCategories as MBC on MBL.BusinessID = MBC.BusniessID " +
         " where MBL.RegionID=" + regionIDcat;
-     alert(sql);
+     //alert(sql);
     tx.executeSql(sql, [], getregionfrombuslocation1_success);
 }
 
@@ -57,7 +57,7 @@ function getregionfrombuslocation1_success(tx, results) {
 
 function getcategorieslist(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC,CategoryName from MobileApp_Categories order by CategoryName ";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getcategorieslist_success);
 }
 
@@ -65,6 +65,7 @@ function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     //alert(len);
+    alert(len);
     if(len==0){
         window.setTimeout(function(){
             refreshdata();
