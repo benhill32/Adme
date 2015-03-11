@@ -57,7 +57,7 @@ function getregionfrombuslocation1_success(tx, results) {
 
 function getcategorieslist(tx) {
     var sql = "select ID ,CreatedateUTC,UpdatedateUTC,DeletedateUTC,CategoryName from MobileApp_Categories order by CategoryName ";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getcategorieslist_success);
 }
 
@@ -65,7 +65,7 @@ function getcategorieslist_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
     //alert(len);
-    alert(len);
+
     if(len==0){
         window.setTimeout(function(){
             refreshdata();
@@ -74,22 +74,23 @@ function getcategorieslist_success(tx, results) {
 
 
     }else {
-        var check = 0;
+        var check1 = 0;
         var menu = results.rows.item(i);
-        check = Checkviewingbusiness1(menu.ID);
 
-        if(check ==1) {
             $('#catlistdiv2').empty();
             for (var i = 0; i < len; i++) {
                 var menu = results.rows.item(i);
+                check1 = Checkviewingbusiness1(menu.ID);
 
-                $('#catlistdiv2').append('<Div class="modal-body" align="left" style="clear:both;"  onclick="choosecatelist(' + menu.ID + ')" >' +
-                '<div class="bold size13" style="float:left;border-bottom: 1px solid #66cc33;width:90%;"  >' + menu.CategoryName +
-                '<img src="../img/triend.png" style="float:right"; >' +
-                '</div>' +
-                '</Div>');
+                if(check1 == 1) {
+                    $('#catlistdiv2').append('<Div class="modal-body" align="left" style="clear:both;"  onclick="choosecatelist(' + menu.ID + ')" >' +
+                    '<div class="bold size13" style="float:left;border-bottom: 1px solid #66cc33;width:90%;"  >' + menu.CategoryName +
+                    '<img src="../img/triend.png" style="float:right"; >' +
+                    '</div>' +
+                    '</Div>');
+                }
             }
-        }
+
 
     }
 }
