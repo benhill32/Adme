@@ -20,7 +20,7 @@ function Checkviewingbusiness(categ){
 
 function townregiondatabus1(tx) {
     var sql = "select ID,RegionID from MobileApp_Towns where Follow =1";
-     alert(sql);
+  //   alert(sql);
     tx.executeSql(sql, [], townregiondatabus1_success);
 }
 
@@ -31,15 +31,15 @@ function townregiondatabus1_success(tx, results) {
     var menu = results.rows.item(0);
     townIDcat = menu.ID;
     regionIDcat = menu.RegionID;
-alert(townIDcat);
+    alert(townIDcat);
     db.transaction(getregionfrombuslocation1, errorCBfunc, successCBfunc);
 }
 
 function getregionfrombuslocation1(tx) {
     var sql = "select MBC.CategoryID " +
-        " from MobileApp_BusinessLocations  as MBL" +
+        " from MobileApp_BusinessLocations as MBL" +
         " JOIN MobileApp_BusinessCategories as MBC on MBL.BusinessID = MBC.BusniessID " +
-        " where MBL.RegionID=" + regionIDbus;
+        " where MBL.RegionID=" + regionIDcat;
      alert(sql);
     tx.executeSql(sql, [], getregionfrombuslocation1_success);
 }
