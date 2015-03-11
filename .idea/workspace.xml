@@ -104,11 +104,11 @@
       <file leaf-file-name="categorieslist.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/categorieslist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.609319" vertical-offset="0" max-vertical-offset="1938">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="613" max-vertical-offset="1938">
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
-                <marker date="1426031879486" expanded="true" signature="2514:2568" placeholder="..." />
-                <marker date="1426031879486" expanded="true" signature="2649:2660" placeholder="..." />
+                <marker date="1426032112358" expanded="true" signature="2533:2587" placeholder="..." />
+                <marker date="1426032112358" expanded="true" signature="2668:2679" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -859,11 +859,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/categorieslist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.609319" vertical-offset="0" max-vertical-offset="1938">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="613" max-vertical-offset="1938">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
-            <marker date="1426031879486" expanded="true" signature="2514:2568" placeholder="..." />
-            <marker date="1426031879486" expanded="true" signature="2649:2660" placeholder="..." />
+            <marker date="1426032112358" expanded="true" signature="2533:2587" placeholder="..." />
+            <marker date="1426032112358" expanded="true" signature="2668:2679" placeholder="..." />
           </folding>
         </state>
       </provider>
