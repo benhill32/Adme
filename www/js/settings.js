@@ -19,9 +19,7 @@ function onDeviceReadysettings() {
     gettownregion();
     getLsyncdate();
 
-    if(Sync == 1){
-        refreshdata();
-    }
+
 }
 
 function onOfflinesetting(){
@@ -368,7 +366,9 @@ function getregionname_success(tx, results) {
     $("#townnameid").empty();
     $("#townnameid").append(menu.RegionName + ' - ' + townname);
 
-
+    if(Sync == 1){
+        refreshdata();
+    }
 }
 
 function gettownregion() {
