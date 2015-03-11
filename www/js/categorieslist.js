@@ -49,7 +49,7 @@ function getregionfrombuslocation1_success(tx, results) {
     var len = results.rows.length;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        followbusiness2.push(menu.BusinessID);
+        followbusiness2.push(menu.CategoryID);
     }
     alert(followbusiness2);
     db.transaction(getcategorieslist, errorCBfunc, successCBfunc);
