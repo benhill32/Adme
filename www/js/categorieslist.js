@@ -9,7 +9,7 @@ function onDeviceReadylistcat() {
 }
 
 
-function Checkviewingbusiness(categ){
+function Checkviewingbusiness1(categ){
     for (j in followbusiness2) {
         if (categ == followbusiness2[j]) {
             return "1";
@@ -76,7 +76,7 @@ function getcategorieslist_success(tx, results) {
     }else {
         var check = 0;
         var menu = results.rows.item(i);
-        check = Checkviewingbusiness(menu.ID);
+        check = Checkviewingbusiness1(menu.ID);
 
         if(check ==1) {
             $('#catlistdiv2').empty();
