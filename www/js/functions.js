@@ -440,7 +440,7 @@ function passscoretoserver(testvar){
 
 function passscoretoserverlogin(testvar,ID){
     checkonline();
-
+    $('#indexloadingdata').modal('hide');
     if(networkconnection!=0) {
         var http = new XMLHttpRequest();
         var url = "http://admin.adme.kiwi/loaddatafromapp.aspx";

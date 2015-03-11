@@ -18,6 +18,7 @@ function onDeviceReadysettings() {
 
 
     if(Sync == 1){
+        $('#indexloadingdata').modal('show');
         refreshdata();
     }else{
         onOfflinesetting();
