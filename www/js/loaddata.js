@@ -193,7 +193,7 @@ function closemodel(){
     window.plugins.toast.showShortCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     if(document.getElementById("catlistdiv")!=null) {
-        db.transaction(getcategorieslist, errorCBfunc, successCBfunc);
+        db.transaction(townregiondatabus1, errorCBfunc, successCBfunc);
 
     }
 
