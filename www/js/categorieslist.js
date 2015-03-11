@@ -20,7 +20,7 @@ function Checkviewingbusiness1(categ){
 
 function townregiondatabus1(tx) {
     var sql = "select ID,RegionID from MobileApp_Towns where Follow =1";
-  //   alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], townregiondatabus1_success);
 }
 
@@ -75,7 +75,7 @@ function getcategorieslist_success(tx, results) {
 
     }else {
         var check1 = 0;
-        var menu = results.rows.item(i);
+
 
             $('#catlistdiv2').empty();
             for (var i = 0; i < len; i++) {
