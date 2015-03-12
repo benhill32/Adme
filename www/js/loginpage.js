@@ -181,23 +181,27 @@ function nextbuttonclick(){
     var email = $('#txtEmail').val();
 
 
+    if(device.platform == "Android") {
 
-    if (Name == null ||Name == "") {
-        navigator.notification.alert("Name must be filled out");
-        $("#nextbutton").prop("disabled", false);
-        return false;
-    }
-    if (DOB == null ||DOB == "--" || $('#drpday').val() == "" ||$('#drpmonth').val() == "" || $('#drpyear').val() == "") {
-        navigator.notification.alert("Date of Birth must be filled out");
-        $("#nextbutton").prop("disabled", false);
-        return false;
+        if (Name == null || Name == "") {
+            navigator.notification.alert("Name must be filled out");
+            $("#nextbutton").prop("disabled", false);
+            return false;
+        }
+        if (DOB == null || DOB == "--" || $('#drpday').val() == "" || $('#drpmonth').val() == "" || $('#drpyear').val() == "") {
+            navigator.notification.alert("Date of Birth must be filled out");
+            $("#nextbutton").prop("disabled", false);
+            return false;
+        }
+
+        if (email == null || email == "") {
+            navigator.notification.alert("Email must be filled out");
+            $("#nextbutton").prop("disabled", false);
+            return false;
+        }
+
     }
 
-    if (email == null ||email == "") {
-        navigator.notification.alert("Email must be filled out");
-        $("#nextbutton").prop("disabled", false);
-        return false;
-    }
     if (regionIDlogin == 0) {
         navigator.notification.alert("Please Select a Region");
         $("#nextbutton").prop("disabled", false);
@@ -215,7 +219,6 @@ function nextbuttonclick(){
     });
 
     passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,0);
-
 }
 
 
