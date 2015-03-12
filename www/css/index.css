@@ -211,7 +211,7 @@ color: #ffffff;
     width: 50%;
     background-color: inherit;
     color:#333399;
-    overflow: hidden;
+    overflow: auto;
     height: 100%;
 }
 #divregionlist{
