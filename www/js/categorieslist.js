@@ -39,7 +39,7 @@ function getregionfrombuslocation1(tx) {
     var sql = "select DISTINCT MBC.CategoryID " +
         " from MobileApp_BusinessLocations as MBL" +
         " JOIN MobileApp_BusinessCategories as MBC on MBL.BusinessID = MBC.BusniessID " +
-        " where MBL.RegionID=" + regionIDcat;
+        " where MBL.RegionID=" + regionIDcat + " and TownID = " + townIDcat;
      //alert(sql);
     tx.executeSql(sql, [], getregionfrombuslocation1_success);
 }
