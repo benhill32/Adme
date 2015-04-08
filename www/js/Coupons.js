@@ -81,7 +81,15 @@ function getdata_success(tx, results) {
 function fileloadcoupon(IDstring){
     var fileexten =IDstring.split('|||');
 
-    var urlnow = 'http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileexten[1];
+    var urlnow = "";
+
+    if(fileexten[0] != 0){
+        urlnow = 'http://admin.adme.kiwi/CouponFiles/' + fileexten[0] + '/' + fileexten[1];
+    }else{
+
+        urlnow = 'http://admin.adme.kiwi/CouponFiles/All/' + fileexten[2] + '/' + fileexten[1];
+    }
+
 
 
     if( device.platform == 'android' || device.platform == 'Android'){
