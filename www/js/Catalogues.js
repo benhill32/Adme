@@ -30,20 +30,27 @@ function gettownname_success(tx, results) {
 
 
 function getdata(tx) {
-    var sql ="Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon" +
+    var sql = "select * from (" +
+        "Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,MBC.Follow as Follow,MBN.BusinessName as BusinessName" +
         " from MobilevwApp_Catalogues as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
         " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID "+
-        " where MGP.TownID =" + townID +  " ORDER BY MBC.Follow DESC,MBN.BusinessName";
+        " where MGP.TownID =" + townID +
+        " Union" +
+        "Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,0 as Follow,MBN.BusinessName as BusinessName" +
+        " from MobilevwApp_Catalogues as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
+        " Where MGP.BusinessLocationID = 0" +
+        ") t" +
+        " ORDER BY t.Follow DESC,t.BusinessName";
 
 
-  //  alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-    // alert(len);
+     alert(len);
 
     $('#cataloguesdealsdiv').empty();
     var count = 1;
@@ -72,13 +79,22 @@ function getdata_success(tx, results) {
 
 function fileloadcatalogues(IDstring){
        var fileexten =IDstring.split('|||');
+    var urlnow ="";
+
+        passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + fileexten[2] + "&BusinessLocationID=" + fileexten[0] + "&FileName=" + fileexten[1] + "&CataloguesID=" + fileexten[3]);
 
 
-    passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + fileexten[2] + "&BusinessLocationID=" + fileexten[0] + "&FileName=" + fileexten[1] + "&CataloguesID=" + fileexten[3]);
+    if(fileexten[0] != 0){
+        urlnow = 'http://admin.adme.kiwi/CatalogFiles/' + fileexten[0] + '/' + fileexten[1];
+    }else{
+
+        urlnow = 'http://admin.adme.kiwi/CatalogFiles/All/' + fileexten[2] + '/' + fileexten[1];
+    }
 
 
 
-    var urlnow = 'http://admin.adme.kiwi/CatalogFiles/' + fileexten[0] + '/' + fileexten[1];
+
+
 
     if( device.platform == 'android' || device.platform == 'Android'){
         if(fileexten[1].substr(-4).toLowerCase() == ".pdf"){
