@@ -30,15 +30,17 @@ function gettownname_success(tx, results) {
 
 
 function getdata(tx) {
-    var sql ="Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,MBC.Follow as Follow" +
+    var sql = "select * from (" +
+        "Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,MBC.Follow as Follow,MBN.BusinessName as BusinessName" +
           " from MobilevwApp_Coupons as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
     " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID "+
     " where MGP.TownID =" + townID +
         " Union " +
-        "Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,0 as Follow" +
+        "Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,0 as Follow,MBN.BusinessName as BusinessName" +
         " from MobilevwApp_Coupons as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
-        " Where MGP.BusinessLocationID = 0"
-        " ORDER BY Follow DESC,MBN.BusinessName";
+        " Where MGP.BusinessLocationID = 0" +
+            ") t" +
+        " ORDER BY t.Follow DESC,t.BusinessName";
 
 
     alert(sql);
