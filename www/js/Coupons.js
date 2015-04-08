@@ -37,12 +37,8 @@ function getdata(tx) {
         " Union " +
         "Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,0 as Follow" +
         " from MobilevwApp_Coupons as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
-        " Where MGP.BusinessLocationID = 0";
-
-
-
-
-        //"ORDER BY MBC.Follow DESC,MBN.BusinessName";
+        " Where MGP.BusinessLocationID = 0"
+        " ORDER BY Follow DESC,MBN.BusinessName";
 
 
     alert(sql);
