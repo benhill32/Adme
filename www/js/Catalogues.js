@@ -43,14 +43,14 @@ function getdata(tx) {
         " ORDER BY t.Follow DESC,t.BusinessName";
 
 
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-     alert(len);
+     //alert(len);
 
     $('#cataloguesdealsdiv').empty();
     var count = 1;
