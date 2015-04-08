@@ -27,10 +27,9 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5695" max-vertical-offset="10234">
-              <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+            <state vertical-scroll-proportion="-68.69231" vertical-offset="4113" max-vertical-offset="10302">
+              <caret line="347" column="45" selection-start-line="347" selection-start-column="45" selection-end-line="347" selection-end-column="45" />
               <folding>
-                <element signature="n#!!block;n#getbuscatsfuncCoupon#0" expanded="false" />
                 <element signature="n#!!block;n#getbuscatsfuncCoupon_success#0" expanded="false" />
                 <element signature="n#!!block;n#getregionsfunc#0" expanded="false" />
                 <element signature="n#!!block;n#getregionsfunc_success#0" expanded="false" />
@@ -46,24 +45,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33876812" vertical-offset="0" max-vertical-offset="1343">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1343">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1836">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5655577" vertical-offset="629" max-vertical-offset="1989">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding>
-                <marker date="1427331597169" expanded="true" signature="2158:2169" placeholder="..." />
-                <marker date="1427331597169" expanded="true" signature="2219:2259" placeholder="..." />
+                <marker date="1428531388413" expanded="true" signature="2587:2598" placeholder="..." />
+                <marker date="1428531388413" expanded="true" signature="2648:2688" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -72,8 +71,8 @@
       <file leaf-file-name="categorieslist.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/categorieslist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1972">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1420" max-vertical-offset="1972">
+              <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
               <folding>
                 <marker date="1427767651205" expanded="true" signature="2575:2629" placeholder="..." />
                 <marker date="1427767651205" expanded="true" signature="2714:2725" placeholder="..." />
@@ -85,8 +84,8 @@
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.576923" vertical-offset="1036" max-vertical-offset="1734">
-              <caret line="71" column="251" selection-start-line="71" selection-start-column="245" selection-end-line="71" selection-end-column="251" />
+            <state vertical-scroll-proportion="-14.423077" vertical-offset="1036" max-vertical-offset="1734">
+              <caret line="83" column="65" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -192,9 +191,9 @@
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/js/loginpage.js" />
         <option value="$PROJECT_DIR$/www/pages/loginpage.html" />
-        <option value="$PROJECT_DIR$/www/js/Coupons.js" />
         <option value="$PROJECT_DIR$/www/js/categorieslist.js" />
         <option value="$PROJECT_DIR$/www/config.xml" />
+        <option value="$PROJECT_DIR$/www/js/Coupons.js" />
       </list>
     </option>
   </component>
@@ -230,6 +229,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,7 +318,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -420,7 +419,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2013261" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33486766" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33716917" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -766,26 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5695" max-vertical-offset="10234">
-          <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getbuscatsfuncCoupon#0" expanded="false" />
-            <element signature="n#!!block;n#getbuscatsfuncCoupon_success#0" expanded="false" />
-            <element signature="n#!!block;n#getregionsfunc#0" expanded="false" />
-            <element signature="n#!!block;n#getregionsfunc_success#0" expanded="false" />
-            <element signature="n#!!block;n#choosetownfunc#0" expanded="false" />
-            <element signature="n#!!block;n#gettownfunc#0" expanded="false" />
-            <element signature="n#!!block;n#gettownfunc_success#0" expanded="false" />
-            <element signature="n#!!block;n#townchosenfunc#0" expanded="false" />
-            <element signature="n#!!block;n#gettokenregion#0" expanded="false" />
-            <element signature="n#!!block;n#getregionsdata#0" expanded="false" />
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/editloginpage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4653" max-vertical-offset="5185">
@@ -831,18 +810,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.576923" vertical-offset="1036" max-vertical-offset="1734">
-          <caret line="71" column="251" selection-start-line="71" selection-start-column="245" selection-end-line="71" selection-end-column="251" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1343">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/categorieslist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1972">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1420" max-vertical-offset="1972">
+          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
           <folding>
             <marker date="1427767651205" expanded="true" signature="2575:2629" placeholder="..." />
             <marker date="1427767651205" expanded="true" signature="2714:2725" placeholder="..." />
@@ -850,22 +829,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1836">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="-68.69231" vertical-offset="4113" max-vertical-offset="10302">
+          <caret line="347" column="45" selection-start-line="347" selection-start-column="45" selection-end-line="347" selection-end-column="45" />
           <folding>
-            <marker date="1427331597169" expanded="true" signature="2158:2169" placeholder="..." />
-            <marker date="1427331597169" expanded="true" signature="2219:2259" placeholder="..." />
+            <element signature="n#!!block;n#getbuscatsfuncCoupon_success#0" expanded="false" />
+            <element signature="n#!!block;n#getregionsfunc#0" expanded="false" />
+            <element signature="n#!!block;n#getregionsfunc_success#0" expanded="false" />
+            <element signature="n#!!block;n#choosetownfunc#0" expanded="false" />
+            <element signature="n#!!block;n#gettownfunc#0" expanded="false" />
+            <element signature="n#!!block;n#gettownfunc_success#0" expanded="false" />
+            <element signature="n#!!block;n#townchosenfunc#0" expanded="false" />
+            <element signature="n#!!block;n#gettokenregion#0" expanded="false" />
+            <element signature="n#!!block;n#getregionsdata#0" expanded="false" />
+            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33876812" vertical-offset="0" max-vertical-offset="1343">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        <state vertical-scroll-proportion="-14.423077" vertical-offset="1036" max-vertical-offset="1734">
+          <caret line="83" column="65" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5655577" vertical-offset="629" max-vertical-offset="1989">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+          <folding>
+            <marker date="1428531388413" expanded="true" signature="2587:2598" placeholder="..." />
+            <marker date="1428531388413" expanded="true" signature="2648:2688" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

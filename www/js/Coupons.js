@@ -30,20 +30,29 @@ function gettownname_success(tx, results) {
 
 
 function getdata(tx) {
-    var sql ="Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon" +
+    var sql ="Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,MBC.Follow as Follow" +
           " from MobilevwApp_Coupons as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
     " JOIN MobileApp_BusinessCategories as MBC on MGP.Categories = MBC.CategoryID AND MGP.BusinessID = MBC.BusniessID "+
-    " where MGP.TownID =" + townID +  " ORDER BY MBC.Follow DESC,MBN.BusinessName";
+    " where MGP.TownID =" + townID +  ";" +
+        " Union " +
+        "Select MGP.ID as ID ,MGP.CreatedateUTC ,MGP.UpdatedateUTC ,MGP.DeletedateUTC ,MGP.BusinessID as BusinessID ,MGP.BusinessLocationID as BusinessLocationID,MGP.FileName as FileName,MBN.Icon as Icon,0 as Follow" +
+        " from MobilevwApp_Coupons as MGP JOIN MobileApp_BusinessNames as MBN on MGP.BusinessID = MBN.ID " +
+        " Where MGP.BusinessLocationID = 0";
 
 
-    //alert(sql);
+
+
+        //"ORDER BY MBC.Follow DESC,MBN.BusinessName";
+
+
+    alert(sql);
     tx.executeSql(sql, [], getdata_success);
 }
 
 function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-    // alert(len);
+     alert(len);
 
     $('#coupondealsdiv').empty();
     var count = 1;
