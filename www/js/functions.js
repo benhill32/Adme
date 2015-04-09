@@ -429,7 +429,9 @@ function checkversionofapp_success(tx, results) {
     var len = results.rows.length;
     //  alert(len);
     var menu = results.rows.item(0);
-
+    $('#indexloadingdata').modal('hide');
+    alert(appversionlocal);
+    alert(menu.Versionappthen);
 
     if (appversionlocal == menu.Versionappthen) {
             if(document.getElementById("catlistdiv")!=null) {
@@ -440,6 +442,7 @@ function checkversionofapp_success(tx, results) {
                     $('#indexloadingdata').modal('hide');
                     alert(appversionlocal);
                     alert(menu.Versionappthen);
+
 
                 } else {
                     closemodel();
