@@ -78,7 +78,7 @@ alert(len);
     townIDLogin = menu.Town;
 
 
-
+    db.transaction(getregiontownlogin, errorCBfunc, successCBfunc);
     alert(townIDLogin);
 }
 
@@ -113,7 +113,7 @@ function getregionslogin_success(tx, results) {
         }
     }
 
-    db.transaction(getregiontownlogin, errorCBfunc, successCBfunc);
+
 }
 
 
