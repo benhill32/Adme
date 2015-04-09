@@ -258,9 +258,9 @@ function closemodelRegion(){
    // $('#basicDetails').modal('show');
 
     db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
-    db.transaction(getregiontownlogin, errorCBfunc, successCBfunc);
+  //  db.transaction(getregiontownlogin, errorCBfunc, successCBfunc);
     db.transaction(checklogindetails, errorCBfunc, successCBfunc);
-
+    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 
    // randomfunctions();
 

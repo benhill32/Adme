@@ -78,7 +78,7 @@ alert(len);
     townIDLogin = menu.Town;
 
 
-    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+
     alert(townIDLogin);
 }
 
