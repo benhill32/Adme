@@ -447,10 +447,15 @@ function checkversionofapp_success(tx, results) {
 
                     xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal,false);
                     xmlHttp.send();
+                    alert('http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal);
                     db.transaction(droptables, errorCBfunc,successCBfunc);
 
                     window.setTimeout(function(){
-                        db.transaction(createDB, errorCBfunc, checkloginupdate);
+                        db.transaction(createDB, errorCBfunc, successCBfunc);
+                    }, 1500);
+
+                    window.setTimeout(function(){
+                        db.transaction(checkloginupdate, errorCBfunc, successCBfunc);
                     }, 1500);
 
                     window.setTimeout(function(){
@@ -505,8 +510,11 @@ function checkloginupdate_success(tx, results) {
     var DOB = menu.DOB
     var email = menu.email;
 
-
-
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_Towns set Follow = 1 where ID = ' + menu.Town);
+        console.log("Update MobileApp_Towns");
+    });
+alert(menu.Town);
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs=0,token = "' + menu.token +  '",Region = ' + menu.Region + ',Versionappnow = "' + appversionlocal + '", Town = ' + menu.Town + ',LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
     });
