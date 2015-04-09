@@ -438,8 +438,15 @@ function checkversionofapp_success(tx, results) {
             }else {
                 if (menu.Database == 1)
                 {
+                    if (devicePlatformfunc == "Android")
+                    {
+                        $('#modelnewdatabase').modal('show');
+                    }
+                    else if (devicePlatformfunc == "iOS")
+                    {
 
-
+                        $('#modelnewdatabaseapple').modal('show');
+                    }
                 } else {
                     closemodel();
                 }
@@ -449,16 +456,6 @@ function checkversionofapp_success(tx, results) {
         {
             if(document.getElementById("catlistdiv")!=null) {
                 closemodel();
-
-                if (devicePlatformfunc == "Android")
-                {
-                    $('#modelnewdatabase').modal('show');
-                }
-                else if (devicePlatformfunc == "iOS")
-                {
-
-                    $('#modelnewdatabaseapple').modal('show');
-                }
             }
             else
             {

@@ -113,7 +113,7 @@ function getregionslogin_success(tx, results) {
         }
     }
 
-
+    db.transaction(getregiontownlogin, errorCBfunc, successCBfunc);
 }
 
 
