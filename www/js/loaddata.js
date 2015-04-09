@@ -261,7 +261,7 @@ function closemodelRegion(){
   //
 
     db.transaction(getregiontownlogin, errorCBfunc, successCBfunc);
-
+    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
    // randomfunctions();
 
 }

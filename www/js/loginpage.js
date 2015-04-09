@@ -10,13 +10,9 @@ var editnew = getUrlVarsfunc()["ID"];
 function onDeviceReadylogin() {
     deviceIDlogin = device.uuid;
     refreshdata();
-
-
-
 }
 
 function checkdataload(){
-
 
     db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
 
@@ -77,10 +73,6 @@ function getregiontownlogin_success(tx, results) {
 
     townIDLogin = menu.Town;
     alert(menu.Town);
-    if(menu.Town != 0){
-        loadtownslogin(menu.Town);
-    }
-
 
     var datetime = menu.DOB.split('-');
     // alert(len);
@@ -89,9 +81,6 @@ function getregiontownlogin_success(tx, results) {
     $('#drpmonth').val(datetime[1]);
     $('#drpyear').val(datetime[2]);
     $('#txtEmail').val(menu.email);
-
-
-    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 
 }
 
