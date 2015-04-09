@@ -1102,7 +1102,7 @@ width:90px;
     padding:10px;
 
 }
-#opennewversion:hover{
+#opennewversion:hover,#opennewversion1:hover{
 
     background-color: #8585C2;
 }

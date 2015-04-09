@@ -420,16 +420,36 @@ function checkversionofapp_success(tx, results) {
     //  alert(len);
     var menu = results.rows.item(0);
 
-    if(document.getElementById("catlistdiv")!=null) {
-        closemodel();
-    }else {
+
         if (menu.Versionappthen == menu.Versionappnow) {
             closemodel();
-        } else {
-            $('#indexloadingdata').modal('hide');
-            $('#modelnewversion').modal('show');
         }
-    }
+        else
+        {
+
+            if(document.getElementById("catlistdiv")!=null) {
+                closemodel();
+            }
+            else
+            {
+                $('#indexloadingdata').modal('hide');
+
+                if (devicePlatformfunc == "Android")
+                {
+                    $('#modelnewversion').modal('show');
+                }
+                else if (devicePlatformfunc == "iOS")
+                {
+
+                    $('#modelnewversionapple').modal('show');
+                }
+
+
+
+
+            }
+        }
+
 
 }
 
