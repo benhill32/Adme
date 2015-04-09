@@ -439,10 +439,11 @@ alert(appversionlocal);
             }else {
                 if (database == 1) {
 
-                    db.transaction(droptables, errorCBfunc, successCBfunc);
-                    window.setTimeout(function () {
-                        refreshdata();
-                    }, 1500);
+                   // db.transaction(droptables, errorCBfunc, successCBfunc);
+                   // window.setTimeout(function () {
+                      //  refreshdata();
+                  //  }, 1500);
+
 
 
                 } else {

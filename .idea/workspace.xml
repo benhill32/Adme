@@ -27,8 +27,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22134387" vertical-offset="7130" max-vertical-offset="12393">
-              <caret line="426" column="49" selection-start-line="426" selection-start-column="49" selection-end-line="426" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.59090906" vertical-offset="7283" max-vertical-offset="12410">
+              <caret line="446" column="0" selection-start-line="446" selection-start-column="0" selection-end-line="446" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#checktownfollowfunc#0" expanded="false" />
                 <element signature="n#!!block;n#getbuscatsfuncGas#0" expanded="false" />
@@ -859,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22134387" vertical-offset="7130" max-vertical-offset="12393">
-          <caret line="426" column="49" selection-start-line="426" selection-start-column="49" selection-end-line="426" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.59090906" vertical-offset="7283" max-vertical-offset="12410">
+          <caret line="446" column="0" selection-start-line="446" selection-start-column="0" selection-end-line="446" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#checktownfollowfunc#0" expanded="false" />
             <element signature="n#!!block;n#getbuscatsfuncGas#0" expanded="false" />
