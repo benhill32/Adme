@@ -62,6 +62,25 @@ function gettokenlogin_success(tx, results) {
 
 }
 
+function getregiontownlogin(tx) {
+    var sql = "select Region,Town from MobileApp_BusinessCategoriesBackup";
+    // alert(sql);
+    tx.executeSql(sql, [], getregiontownlogin_success);
+}
+
+function getregiontownlogin_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    regionIDlogin = menu.Region;
+
+    townIDLogin = menu.Town;
+
+
+    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+    alert(townIDLogin);
+}
 
 
 function getregionslogin(tx) {
@@ -237,7 +256,7 @@ function nextbuttonclick(){
 
 
 function checklogindetails(tx) {
-    var sql = "select Name, DOB,email from MobileApp_LastUpdateBackup";
+    var sql = "select Name, DOB,email, from MobileApp_LastUpdateBackup";
     //alert(sql);
     tx.executeSql(sql, [], checklogindetails_success,errorCBfunc);
 }
