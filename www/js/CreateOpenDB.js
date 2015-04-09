@@ -51,10 +51,13 @@ function droptables(){
 
 function createDB(tx) {
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdateBackup (Datesecs TEXT NULL,token TEXT NOT NULL,Name TEXT NULL,DOB TEXT NULL,email TEXT NULL,Region INTEGER NULL,Town INTEGER NULL,LoginDone INTEGER NULL,Versionappnow TEXT NULL,Versionappthen TEXT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessCategoriesBackup (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,CategoryID INTEGER NOT NULL,BusniessID INTEGER NOT NULL,Follow INTEGER NULL)');
+    console.log("MobileApp_BusinessCategoriesBackup table is created");
+
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdateBackup (Datesecs TEXT NULL,token TEXT NOT NULL,Name TEXT NULL,DOB TEXT NULL,email TEXT NULL,Region INTEGER NULL,Town INTEGER NULL,LoginDone INTEGER NULL,Versionappnow TEXT NULL,Versionappthen TEXT NULL,Database INTEGER NULL)');
     console.log("MobileApp_LastUpdateBackup table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL,token TEXT NOT NULL,Name TEXT NULL,DOB TEXT NULL,email TEXT NULL,Region INTEGER NULL,Town INTEGER NULL,LoginDone INTEGER NULL,Versionappnow TEXT NULL,Versionappthen TEXT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL,token TEXT NOT NULL,Name TEXT NULL,DOB TEXT NULL,email TEXT NULL,Region INTEGER NULL,Town INTEGER NULL,LoginDone INTEGER NULL,Versionappnow TEXT NULL,Versionappthen TEXT NULL,Database INTEGER NULL)');
     console.log("MobileApp_LastUpdatesec table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_BusinessNames (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL,BusinessName TEXT NOT NULL,Icon TEXT NOT NULL,Follow INTEGER NULL)');

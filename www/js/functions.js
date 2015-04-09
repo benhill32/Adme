@@ -9,6 +9,8 @@ var databaseversion;
 var appversion = -1;
 var apptoken = 0;
 var networkconnectionfun= 0;
+var appversionlocal = '1.2.9';
+
 
 function onDeviceReadyFunc() {
 
@@ -105,11 +107,11 @@ function blankLastUpdatesec(){
 
 
     var xmlHttp = null;
-    var appversionlocal = '1.2.9';
+
     xmlHttp = new XMLHttpRequest();
 
     // $('#busy').show();
-    xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversionlocal,false);
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal,false);
     xmlHttp.send();
      // alert('http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
@@ -404,11 +406,11 @@ function syncmaintables(obj){
     $.each(obj.Isadmin, function (idx, obj) {
 
         db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdateBackup set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '"');
+            tx.executeSql('Update MobileApp_LastUpdateBackup set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + '');
         });
 
             db.transaction(function(tx) {
-                tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '"');
+                tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + '');
                 db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
             });
     });
@@ -416,7 +418,7 @@ function syncmaintables(obj){
 
 
 function checkversionofapp(tx) {
-    var sql = "select Versionappthen,Versionappnow from MobileApp_LastUpdatesec ";
+    var sql = "select Versionappthen,Versionappnow,Database from MobileApp_LastUpdatesec ";
     // alert(sql);
     tx.executeSql(sql, [], checkversionofapp_success);
 }
@@ -429,8 +431,22 @@ function checkversionofapp_success(tx, results) {
     var menu = results.rows.item(0);
 
 
-        if (menu.Versionappthen == menu.Versionappnow) {
-            closemodel();
+        if (appversionlocal == menu.Versionappthen) {
+            if(document.getElementById("catlistdiv")!=null) {
+                closemodel();
+            }else {
+                if (database == 1) {
+
+                    db.transaction(droptables, errorCBfunc, successCBfunc);
+                    window.setTimeout(function () {
+                        refreshdata();
+                    }, 1500);
+
+
+                } else {
+                    closemodel();
+                }
+            }
         }
         else
         {
@@ -440,6 +456,9 @@ function checkversionofapp_success(tx, results) {
             }
             else
             {
+
+
+
                 $('#indexloadingdata').modal('hide');
 
                 if (devicePlatformfunc == "Android")

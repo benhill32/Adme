@@ -97,7 +97,6 @@ function populateDB1(tx,results) {
         var sql = "select Datesecs,token,Region from MobileApp_LastUpdatesec";
 
         if(networkconnection!=0){
-
             tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
             $('#indexloadingdata').modal('hide');
@@ -183,7 +182,7 @@ function getchecksync(tx, results) {
 function errorclosemodel(){
 
     $('#indexloadingdata').modal('hide');
-    window.plugins.toast.showLongCenter('Something went wrong! Please sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+    window.plugins.toast.showLongCenter('Something went wrong! Please check if you have the latest version! and delete all and sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
 
@@ -260,6 +259,9 @@ function closemodelRegion(){
 
     db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+    db.transaction(checklogindetails, errorCBfunc, successCBfunc);
+
+
    // randomfunctions();
 
 }

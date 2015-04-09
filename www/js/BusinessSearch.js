@@ -147,16 +147,14 @@ function getbusinesslist_success(tx, results) {
 
 }
 
-function goback() {
-
+function goback()
+{
     window.location.href='../pages/categorieslist.html';
 }
 
-function reloadpage(){
-
-
+function reloadpage()
+{
     var search1 = $('#txtsearch').val();
-
     window.location.href='../pages/BusinessSearch.html?CatID=' + catid + "&search=" + search1;
 }
 
@@ -171,14 +169,15 @@ function choosebuscattrue(ID){
         tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_BusinessCategories");
     });
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_BusinessCategoriesBackup set Follow = 1 where ID = ' + ID);
+        console.log("Update MobileApp_BusinessCategoriesBackup");
+    });
     catbusID = ID;
     // sendcattoserver();
 
     passscoretoserver("categories=" + ID + "&outcome=1&deviceid=" + deviceIDfunc + "&token=" + apptoken);
     db.transaction(getbusinesslist, errorCBfunc, successCBfunc);
-
-
-
 }
 
 
@@ -191,6 +190,11 @@ function choosebuscatfalse(ID){
         tx.executeSql('Update MobileApp_BusinessCategories set Follow = 0 where ID = ' + ID);
         console.log("Update MobileApp_BusinessCategories");
     });
+    db.transaction(function(tx) {
+        tx.executeSql('Update  MobileApp_BusinessCategoriesBackup set Follow = 0 where ID = ' + ID);
+        console.log("Update  MobileApp_BusinessCategoriesBackup");
+    });
+
     // sendcattoserver();
     passscoretoserver("categories=" + ID + "&outcome=0&deviceid=" + deviceIDfunc + "&token=" + apptoken);
     db.transaction(getbusinesslist, errorCBfunc, successCBfunc);

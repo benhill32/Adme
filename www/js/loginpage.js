@@ -236,6 +236,27 @@ function nextbuttonclick(){
 }
 
 
+function checklogindetails(tx) {
+    var sql = "select Name, DOB,email from MobileApp_LastUpdateBackup";
+    //alert(sql);
+    tx.executeSql(sql, [], checklogindetails_success,errorCBfunc);
+}
+
+function checklogindetails_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    var datetime = menu.DOB.split('-');
+    // alert(len);
+    $('#txtname').val(menu.Name);
+    $('#drpday').val(datetime[0]);
+    $('#drpmonth').val(datetime[1]);
+    $('#drpyear').val(datetime[2]);
+    $('#txtEmail').val(menu.email);
+
+}
+
+
 
 
 
