@@ -423,6 +423,7 @@ function checkversionofapp_success(tx, results) {
     if(menu.Versionappthen == menu.Versionappnow){
         closemodel();
     }else{
+        $('#indexloadingdata').modal('hide');
         alert("current =" + menu.Versionappnow + " latest = " + Versionappthen);
     }
 
@@ -765,7 +766,7 @@ function syncmaintablesregions(obj){
     $.each(obj.Isadmin, function (idx, obj) {
 
         db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "0",LoginDone=0');
+            tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "0",LoginDone=0,Versionappthen ="' + obj.Appversionlatest + '"');
             closemodelRegion();
 
         });
