@@ -432,12 +432,13 @@ function checkversionofapp_success(tx, results) {
     $('#indexloadingdata').modal('hide');
     alert(appversionlocal);
     alert(menu.Versionappthen);
+    alert(menu.Database);
 
     if (appversionlocal == menu.Versionappthen) {
             if(document.getElementById("catlistdiv")!=null) {
                 closemodel();
             }else {
-                if (menu.database == 1)
+                if (menu.Database == 1)
                 {
                     $('#indexloadingdata').modal('hide');
                     alert(appversionlocal);
