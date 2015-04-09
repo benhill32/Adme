@@ -63,7 +63,7 @@ function gettokenlogin_success(tx, results) {
 }
 
 function getregiontownlogin(tx) {
-    var sql = "select Region,Town from MobileApp_LastUpdateBackup";
+    var sql = "select Region,Town,Name, DOB,email  from MobileApp_LastUpdateBackup";
    //  alert(sql);
     tx.executeSql(sql, [], getregiontownlogin_success);
 }
@@ -76,9 +76,20 @@ function getregiontownlogin_success(tx, results) {
     regionIDlogin = menu.Region;
 
     townIDLogin = menu.Town;
+    alert(menu.Town);
     if(menu.Town != 0){
         loadtownslogin(menu.Town);
     }
+
+
+    var datetime = menu.DOB.split('-');
+    // alert(len);
+    $('#txtname').val(menu.Name);
+    $('#drpday').val(datetime[0]);
+    $('#drpmonth').val(datetime[1]);
+    $('#drpyear').val(datetime[2]);
+    $('#txtEmail').val(menu.email);
+
 
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 
@@ -257,25 +268,7 @@ function nextbuttonclick(){
 }
 
 
-function checklogindetails(tx) {
-    var sql = "select Name, DOB,email from MobileApp_LastUpdateBackup";
-    //alert(sql);
-    tx.executeSql(sql, [], checklogindetails_success,errorCBfunc);
-}
 
-function checklogindetails_success(tx, results) {
-
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-    var datetime = menu.DOB.split('-');
-    // alert(len);
-    $('#txtname').val(menu.Name);
-    $('#drpday').val(datetime[0]);
-    $('#drpmonth').val(datetime[1]);
-    $('#drpyear').val(datetime[2]);
-    $('#txtEmail').val(menu.email);
-
-}
 
 
 

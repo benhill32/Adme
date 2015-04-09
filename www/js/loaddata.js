@@ -259,7 +259,7 @@ function closemodelRegion(){
 
     db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
   //
-    db.transaction(checklogindetails, errorCBfunc, successCBfunc);
+
     db.transaction(getregiontownlogin, errorCBfunc, successCBfunc);
 
    // randomfunctions();
