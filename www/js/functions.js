@@ -420,18 +420,15 @@ function checkversionofapp_success(tx, results) {
     //  alert(len);
     var menu = results.rows.item(0);
 
-    if(menu.Versionappthen == menu.Versionappnow){
+    if(document.getElementById("catlistdiv")!=null) {
         closemodel();
     }else {
-
-        $('#indexloadingdata').modal('hide');
-
-
-
-
-
-        $('#modelnewversion').modal('show');
-
+        if (menu.Versionappthen == menu.Versionappnow) {
+            closemodel();
+        } else {
+            $('#indexloadingdata').modal('hide');
+            $('#modelnewversion').modal('show');
+        }
     }
 
 }
@@ -441,12 +438,10 @@ function loadnewapp(){
     if (devicePlatformfunc == "Android")
     {
         window.open(encodeURI("https://play.google.com/store/apps/details?id=neocom.adme"), '_system');
-
     }
     else if (devicePlatformfunc == "iOS")
     {
         window.open(encodeURI("https://itunes.apple.com/us/app/adme/id962482996?ls=1&mt=8"), '_system');
-
     }
 }
 
