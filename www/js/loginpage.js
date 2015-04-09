@@ -76,7 +76,9 @@ function getregiontownlogin_success(tx, results) {
     regionIDlogin = menu.Region;
 
     townIDLogin = menu.Town;
-alert(townIDLogin);
+    if(menu.Town != 0){
+        loadtownslogin(menu.Town);
+    }
 
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 
