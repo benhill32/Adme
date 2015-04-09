@@ -102,10 +102,14 @@ function getregionslogin_success(tx, results) {
 function loadtownslogin(ID) {
     regionIDlogin = ID;
     townIDLogin = 0;
+
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
-        closemodelRegion();
+    });
 
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdateBackup set Region =' + ID);
+        closemodelRegion();
     });
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 
@@ -147,12 +151,16 @@ function gettownlogin2_success(tx, results) {
 
 function setuptownlogin(ID) {
     townIDLogin = ID;
-
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdateBackup set Town =' + ID);
+    });
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Town =' + ID);
         closemodelRegion();
 
     });
+
+
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_Towns set Follow = 0');
@@ -217,6 +225,12 @@ function nextbuttonclick(){
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
     });
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdateBackup set LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
+    });
+
+
 
     passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,0);
 }

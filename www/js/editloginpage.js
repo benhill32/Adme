@@ -134,10 +134,15 @@ if(regionIDlogin != ID){
         tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs =0');
 
     });
+
 }
     regionIDlogin = ID;
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Region =' + ID);
+
+    });
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdateBackup set Region =' + ID);
 
     });
     db.transaction(getregionsloginedit, errorCBfunc, successCBfunc);
@@ -184,7 +189,9 @@ function setuptownlogin1(ID) {
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Town =' + ID);
     });
-
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdateBackup set Town =' + ID);
+    });
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_Towns set Follow = 0');
         console.log("Update MobileApp_Towns");
@@ -217,11 +224,19 @@ function nextbuttonclick(){
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
         });
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdateBackup set Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
+        });
+
         passscoretoserverlogin("name=" + Name + "&dob=" + DOB + "&email=" + email + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);
 
     }else  if(editnew == 0){
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set Town=' + townIDLogin + ',Region=' + regionIDlogin);
+        });
+
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdateBackup set Town=' + townIDLogin + ',Region=' + regionIDlogin);
         });
        // alert('Update MobileApp_LastUpdatesec set Town=' + townIDLogin + ',Region=' + regionIDlogin);
         passscoretoserverlogin("regionid=" + regionIDlogin + "&townid=" + townIDLogin + "&deviceid=" + deviceIDlogin + "&token=" + apptokenlogin,1);

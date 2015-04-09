@@ -121,7 +121,11 @@ function blankLastUpdatesec(){
         //   alert('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON) VALUES ("0", "0",0,0,"' + json + '",0,0)');
     });
 
-
+    db.transaction(function(tx) {
+        tx.executeSql('INSERT INTO MobileApp_LastUpdateBackup (Datesecs,token,Name,DOB,email,Region,Town,Versionappnow) VALUES ("0","' + json + '","","","",0,0,"' + appversionlocal + '")');
+        console.log("INSERT INTO MobileApp_LastUpdateBackup");
+        //   alert('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON) VALUES ("0", "0",0,0,"' + json + '",0,0)');
+    });
 
 }
 
@@ -396,11 +400,15 @@ function syncmaintables(obj){
     var datenow1 = new Date();
     var timenow = datenow1.getTime();
 
+
     $.each(obj.Isadmin, function (idx, obj) {
+
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdateBackup set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '"');
+        });
 
             db.transaction(function(tx) {
                 tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '"');
-
                 db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
             });
     });
@@ -723,7 +731,10 @@ function townchosenfunc(ID){
         console.log("Update MobileApp_LastUpdatesec");
     });
 
-
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdateBackup set  Region= ' + regionID + ', Town = ' + ID);
+        console.log("Update MobileApp_LastUpdateBackup");
+    });
     passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
 
    // db.transaction(getbuscatsfunc, errorCBfunc, successCBfunc);
@@ -799,7 +810,13 @@ function syncmaintablesregions(obj){
         }
     });
 
+
+
     $.each(obj.Isadmin, function (idx, obj) {
+
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdateBackup set Datesecs = "0",LoginDone=0,Versionappthen ="' + obj.Appversionlatest + '"');
+        });
 
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "0",LoginDone=0,Versionappthen ="' + obj.Appversionlatest + '"');
