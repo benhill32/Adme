@@ -437,7 +437,7 @@ function checkversionofapp_success(tx, results) {
             if(document.getElementById("catlistdiv")!=null) {
                 closemodel();
             }else {
-                if (database == 1)
+                if (menu.database == 1)
                 {
                     $('#indexloadingdata').modal('hide');
                     alert(appversionlocal);
