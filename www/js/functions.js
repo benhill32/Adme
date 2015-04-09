@@ -429,10 +429,8 @@ function checkversionofapp_success(tx, results) {
     var len = results.rows.length;
     //  alert(len);
     var menu = results.rows.item(0);
-    $('#indexloadingdata').modal('hide');
-    alert(appversionlocal);
-    alert(menu.Versionappthen);
-    alert(menu.Database);
+
+
 
     if (appversionlocal == menu.Versionappthen) {
             if(document.getElementById("catlistdiv")!=null) {
@@ -441,8 +439,27 @@ function checkversionofapp_success(tx, results) {
                 if (menu.Database == 1)
                 {
                     $('#indexloadingdata').modal('hide');
-                    alert(appversionlocal);
-                    alert(menu.Versionappthen);
+
+                    var xmlHttp = null;
+
+                    xmlHttp = new XMLHttpRequest();
+
+
+                    xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal,false);
+                    xmlHttp.send();
+                    db.transaction(droptables, errorCBfunc,successCBfunc);
+
+                    window.setTimeout(function(){
+                        db.transaction(createDB, errorCBfunc, checkloginupdate);
+                    }, 1500);
+
+                    window.setTimeout(function(){
+                        refreshdata();
+                    }, 1500);
+
+
+
+
 
 
                 } else {
@@ -470,9 +487,31 @@ function checkversionofapp_success(tx, results) {
                 }
             }
         }
-
-
 }
+
+function checkloginupdate(tx) {
+    var sql = "select Datesecs,token,Name,DOB,email,Region,Town,Versionappnow from MobileApp_LastUpdateBackup";
+    //alert(sql);
+    tx.executeSql(sql, [], checkloginupdate_success,errorCBfunc);
+}
+
+function checkloginupdate_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    var datetime = menu.DOB.split('-');
+    // alert(len);
+    var Name = menu.Name;
+    var DOB = menu.DOB
+    var email = menu.email;
+
+
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs=0,token = "' + menu.token +  '",Region = ' + menu.Region + ',Versionappnow = "' + appversionlocal + '", Town = ' + menu.Town + ',LoginDone =1,Name="' + Name + '", DOB="' + DOB + '",email="' +email + '"');
+    });
+}
+
 
 function loadnewapp(){
 

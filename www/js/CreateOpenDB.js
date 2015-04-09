@@ -1,6 +1,7 @@
 var db;
 
 function droptables(){
+
     db.transaction(function(tx) {
         tx.executeSql('Drop TABLE IF EXISTS MobileApp_LastUpdatesec');
         console.log("MobileApp_LastUpdatesec table is Dropped");
