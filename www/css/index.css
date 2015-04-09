@@ -1098,7 +1098,10 @@ width:90px;
 
     background-color: #8585C2;
 }
+#opennewversion,#closenewversion{
+    padding:10px;
 
+}
 #opennewversion:hover{
 
     background-color: #8585C2;

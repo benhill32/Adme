@@ -37,7 +37,7 @@
 <body>
 <div class="divmainmenu">
     <div class="floatleft3" ID="headermain" align="center">
-        <div style="border-right: 1px solid grey;">
+        <div style="border-right: 1px solid grey;" data-toggle="modal" data-target="#modelnewversion">
             DAILY
         </div>
 
@@ -67,16 +67,16 @@
                         There is a New Version of this App!
                     </div>
                     <div class="modal-body">
-                        <div class="modal-footer" id="opennewversion" data-dismiss="modal" align="center">
-                            Get Now
+                        <div  id="opennewversion" data-dismiss="modal" align="center" onclick="loadnewapp()">
+                            Download Now
 
 
                         </div>
-                        <div class="modal-footer" id="closenewversion" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
-                            Close
 
+                    </div>
+                    <div class="modal-footer" id="closenewversion" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
+                        Exit App
 
-                        </div>
 
                     </div>
                 </div>
