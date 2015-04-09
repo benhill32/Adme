@@ -423,8 +423,10 @@ function checkversionofapp_success(tx, results) {
     if(menu.Versionappthen == menu.Versionappnow){
         closemodel();
     }else{
+
         $('#indexloadingdata').modal('hide');
-        alert("current =" + menu.Versionappnow + " latest = " + menu.Versionappthen);
+        $('#modelnewversion').modal('show');
+
     }
 
 }
