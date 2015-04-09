@@ -399,7 +399,7 @@ function syncmaintables(obj){
     $.each(obj.Isadmin, function (idx, obj) {
 
             db.transaction(function(tx) {
-                tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversion + '"');
+                tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '"');
                 closemodel();
 
             });
