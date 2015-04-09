@@ -258,7 +258,7 @@ function nextbuttonclick(){
 
 
 function checklogindetails(tx) {
-    var sql = "select Name, DOB,email, from MobileApp_LastUpdateBackup";
+    var sql = "select Name, DOB,email from MobileApp_LastUpdateBackup";
     //alert(sql);
     tx.executeSql(sql, [], checklogindetails_success,errorCBfunc);
 }
