@@ -64,7 +64,7 @@ function gettokenlogin_success(tx, results) {
 
 function getregiontownlogin(tx) {
     var sql = "select Region,Town from MobileApp_LastUpdateBackup";
-     alert(sql);
+   //  alert(sql);
     tx.executeSql(sql, [], getregiontownlogin_success);
 }
 
@@ -72,7 +72,7 @@ function getregiontownlogin_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
-    alert(len);
+ //   alert(len);
     regionIDlogin = menu.Region;
 
     townIDLogin = menu.Town;
