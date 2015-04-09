@@ -424,7 +424,7 @@ function checkversionofapp_success(tx, results) {
         closemodel();
     }else{
         $('#indexloadingdata').modal('hide');
-        alert("current =" + menu.Versionappnow + " latest = " + Versionappthen);
+        alert("current =" + menu.Versionappnow + " latest = " + menu.Versionappthen);
     }
 
 }
