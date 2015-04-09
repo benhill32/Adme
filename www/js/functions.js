@@ -400,13 +400,33 @@ function syncmaintables(obj){
 
             db.transaction(function(tx) {
                 tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '"');
-                closemodel();
 
+                db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
             });
     });
 }
 
 
+function checkversionofapp(tx) {
+    var sql = "select Versionappthen,Versionappnow from MobileApp_LastUpdatesec ";
+    // alert(sql);
+    tx.executeSql(sql, [], checkversionofapp_success);
+}
+
+
+function checkversionofapp_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    //  alert(len);
+    var menu = results.rows.item(0);
+
+    if(menu.Versionappthen == menu.Versionappnow){
+        closemodel();
+    }else{
+        alert("current =" + menu.Versionappnow + " latest = " + Versionappthen);
+    }
+
+}
 
 
 function passscoretoserver(testvar){

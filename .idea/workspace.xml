@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="6664" max-vertical-offset="11917">
-              <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.40117416" vertical-offset="6901" max-vertical-offset="12257">
+              <caret line="418" column="34" selection-start-line="418" selection-start-column="34" selection-end-line="418" selection-end-column="34" />
               <folding>
                 <element signature="n#!!block;n#getregionsfunc#0" expanded="false" />
                 <element signature="n#!!block;n#getregionsfunc_success#0" expanded="false" />
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.030909091" vertical-offset="0" max-vertical-offset="1343">
-              <caret line="1" column="39" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="Coupons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615" vertical-offset="34" max-vertical-offset="2091">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="187" max-vertical-offset="2091">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
               <folding>
                 <marker date="1428533733148" expanded="true" signature="2691:2702" placeholder="..." />
                 <marker date="1428533733148" expanded="true" signature="2752:2792" placeholder="..." />
@@ -103,8 +103,8 @@
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.576923" vertical-offset="730" max-vertical-offset="1734">
-              <caret line="53" column="254" selection-start-line="53" selection-start-column="240" selection-end-line="53" selection-end-column="254" />
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="731" max-vertical-offset="1734">
+              <caret line="53" column="229" selection-start-line="53" selection-start-column="216" selection-end-line="53" selection-end-column="229" />
               <folding />
             </state>
           </provider>
@@ -128,8 +128,8 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-102.65385" vertical-offset="34" max-vertical-offset="7378">
-              <caret line="159" column="69" selection-start-line="159" selection-start-column="52" selection-end-line="159" selection-end-column="69" />
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="3043" max-vertical-offset="7378">
+              <caret line="189" column="9" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -789,37 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="34" max-vertical-offset="2091">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <marker date="1428533733148" expanded="true" signature="2691:2702" placeholder="..." />
-            <marker date="1428533733148" expanded="true" signature="2752:2792" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.576923" vertical-offset="730" max-vertical-offset="1734">
-          <caret line="53" column="254" selection-start-line="53" selection-start-column="240" selection-end-line="53" selection-end-column="254" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3377863" vertical-offset="353" max-vertical-offset="1598">
           <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-102.65385" vertical-offset="34" max-vertical-offset="7378">
-          <caret line="159" column="69" selection-start-line="159" selection-start-column="52" selection-end-line="159" selection-end-column="69" />
           <folding />
         </state>
       </provider>
@@ -835,10 +808,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="3043" max-vertical-offset="7378">
+          <caret line="189" column="9" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Coupons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="187" max-vertical-offset="2091">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <marker date="1428533733148" expanded="true" signature="2691:2702" placeholder="..." />
+            <marker date="1428533733148" expanded="true" signature="2752:2792" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="731" max-vertical-offset="1734">
+          <caret line="53" column="229" selection-start-line="53" selection-start-column="216" selection-end-line="53" selection-end-column="229" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="6664" max-vertical-offset="11917">
-          <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.40117416" vertical-offset="6901" max-vertical-offset="12257">
+          <caret line="418" column="34" selection-start-line="418" selection-start-column="34" selection-end-line="418" selection-end-column="34" />
           <folding>
             <element signature="n#!!block;n#getregionsfunc#0" expanded="false" />
             <element signature="n#!!block;n#getregionsfunc_success#0" expanded="false" />
@@ -847,14 +855,6 @@
             <element signature="n#!!block;n#gettownfunc_success#0" expanded="false" />
             <element signature="n#!!block;n#getregionsdata#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030909091" vertical-offset="0" max-vertical-offset="1343">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
