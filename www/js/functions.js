@@ -105,17 +105,18 @@ function blankLastUpdatesec(){
 
 
     var xmlHttp = null;
+    var appversionlocal = '1.2.9';
     xmlHttp = new XMLHttpRequest();
 
     // $('#busy').show();
-    xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversionlocal,false);
     xmlHttp.send();
      // alert('http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
 
 
     db.transaction(function(tx) {
-        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,token,Name,DOB,email,Region,Town) VALUES ("0","' + json + '","","","",0,0)');
+        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,token,Name,DOB,email,Region,Town,Versionappnow) VALUES ("0","' + json + '","","","",0,0,"' + appversionlocal + '")');
         console.log("INSERT INTO MobileApp_LastUpdatesec");
         //   alert('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON) VALUES ("0", "0",0,0,"' + json + '",0,0)');
     });
@@ -398,7 +399,7 @@ function syncmaintables(obj){
     $.each(obj.Isadmin, function (idx, obj) {
 
             db.transaction(function(tx) {
-                tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '"');
+                tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversion + '"');
                 closemodel();
 
             });
