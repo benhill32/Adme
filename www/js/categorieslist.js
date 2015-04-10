@@ -25,15 +25,18 @@ alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + menu.ID);
-            console.log("Update MobileApp_BusinessCategories");
-        });
+        updatedbcat(menu.ID);
     }
 
 }
 
+function updatedbcat(ID){
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
+        console.log("Update MobileApp_BusinessCategories");
+    });
 
+}
 
 
 function Checkviewingbusiness1(categ){
