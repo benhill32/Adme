@@ -58,21 +58,24 @@ function gettokenlogin_success(tx, results) {
 
 }
 
-function getregiontownlogin(tx) {
+function getregiontownlogin1(tx) {
     var sql = "select Region,Town,Name, DOB,email  from MobileApp_LastUpdateBackup";
    //  alert(sql);
-    tx.executeSql(sql, [], getregiontownlogin_success);
+    tx.executeSql(sql, [], getregiontownlogin1_success);
 }
 
-function getregiontownlogin_success(tx, results) {
+function getregiontownlogin1_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
  //   alert(len);
     regionIDlogin = menu.Region;
-
+    if(menu.Region != 0){
+        loadtownslogin(regionIDlogin)
+    }
     townIDLogin = menu.Town;
-    alert(menu.Town);
+
+
 
     var datetime = menu.DOB.split('-');
     // alert(len);
