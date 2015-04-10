@@ -438,6 +438,7 @@ function checkversionofapp_success(tx, results) {
             }else {
                 if (menu.Database == 1)
                 {
+                    $('#indexloadingdata').modal('hide');
                     if (devicePlatformfunc == "Android")
                     {
                         $('#modelnewdatabase').modal('show');
@@ -484,7 +485,7 @@ function loadnewadatabase(){
     xmlHttp.send();
 
 
- db.transaction(droptables, errorCBfunc,successCBfunc);
+   db.transaction(droptables, errorCBfunc,successCBfunc);
 
 
     window.setTimeout(function(){
