@@ -133,7 +133,7 @@ function loadtownslogin(ID) {
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdateBackup set Region =' + ID);
-        closemodelRegion();
+       // closemodelRegion();
     });
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 
@@ -180,7 +180,7 @@ function setuptownlogin(ID) {
     });
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set Town =' + ID);
-        closemodelRegion();
+        //closemodelRegion();
 
     });
 
