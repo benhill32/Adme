@@ -295,14 +295,27 @@ function syncmaintables(obj){
             tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessCategories(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,CategoryID,BusniessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.CategoryID + ',' + obj.BusniessID + ')');
             //    console.log("INSERT INTO MobileApp_clubsimages is created");
         });
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessCategoriesBackup(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,CategoryID,BusniessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.CategoryID + ',' + obj.BusniessID + ')');
+                //    console.log("INSERT INTO MobileApp_clubsimages is created");
+            });
         db.transaction(function (tx) {
             var sql = 'UPDATE MobileApp_BusinessCategories SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", CategoryID =' + obj.CategoryID + ', BusniessID = "' + obj.BusniessID + '" where ID = ' + obj.ID;
             tx.executeSql(sql);
             // console.log(sql);
         });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileApp_BusinessCategoriesBackup SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", CategoryID =' + obj.CategoryID + ', BusniessID = "' + obj.BusniessID + '" where ID = ' + obj.ID;
+                tx.executeSql(sql);
+                // console.log(sql);
+            });
         }else{
             db.transaction(function (tx) {
                 tx.executeSql('Delete from MobileApp_BusinessCategories where ID =' + obj.ID);
+                //   console.log('Delete MobileApp_Schedule where ID');
+            });
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_BusinessCategoriesBackup where ID =' + obj.ID);
                 //   console.log('Delete MobileApp_Schedule where ID');
             });
         }

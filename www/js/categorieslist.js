@@ -6,7 +6,34 @@ document.addEventListener("deviceready", onDeviceReadylistcat, false);
 var catid =0;
 function onDeviceReadylistcat() {
     db.transaction(townregiondatabus1, errorCBfunc, successCBfunc);
+    db.transaction(updatebuscategories, errorCBfunc, successCBfunc);
+
 }
+
+function updatebuscategories(tx) {
+    var sql = "select ID from MobileApp_BusinessCategoriesBackup where Follow =1";
+    //   alert(sql);
+    tx.executeSql(sql, [], updatebuscategories_success);
+}
+
+
+
+function updatebuscategories_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + menu.ID);
+            console.log("Update MobileApp_BusinessCategories");
+        });
+    }
+
+}
+
+
 
 
 function Checkviewingbusiness1(categ){

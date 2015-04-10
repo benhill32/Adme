@@ -1429,7 +1429,7 @@ width:90px;
     padding:5px;
 
 }
-#indexloadingdata{
+#indexloadingdata,#modelnewversion,#modelnewdatabase,#modelnewdatabaseapple,#modelnewversionapple{
 
     top: 40%;
 }

@@ -24,11 +24,9 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-272.65384" vertical-offset="0" max-vertical-offset="12512">
-              <caret line="417" column="0" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#checktownfollowfunc#0" expanded="false" />
                 <element signature="n#!!block;n#getbuscatsfuncGas#0" expanded="false" />
@@ -69,8 +67,8 @@
       <file leaf-file-name="daily.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/daily.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.884615" vertical-offset="1534" max-vertical-offset="4199">
-              <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
+            <state vertical-scroll-proportion="-1.7692307" vertical-offset="1472" max-vertical-offset="4199">
+              <caret line="92" column="103" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="112" />
               <folding>
                 <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -88,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.6916995" vertical-offset="988" max-vertical-offset="4709">
-              <caret line="168" column="99" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="99" />
+            <state vertical-scroll-proportion="1.3846154" vertical-offset="1889" max-vertical-offset="4709">
+              <caret line="109" column="143" selection-start-line="109" selection-start-column="129" selection-end-line="109" selection-end-column="143" />
               <folding />
             </state>
           </provider>
@@ -121,8 +119,8 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4615383" vertical-offset="4116" max-vertical-offset="7412">
-              <caret line="252" column="9" selection-start-line="252" selection-start-column="9" selection-end-line="252" selection-end-column="9" />
+            <state vertical-scroll-proportion="-7.769231" vertical-offset="3028" max-vertical-offset="7412">
+              <caret line="190" column="1" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -776,48 +774,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/daily.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.884615" vertical-offset="1534" max-vertical-offset="4199">
-          <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
-          <folding>
-            <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18594" max-vertical-offset="32198">
           <caret line="1104" column="119" selection-start-line="1104" selection-start-column="119" selection-end-line="1104" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-272.65384" vertical-offset="0" max-vertical-offset="12512">
-          <caret line="417" column="0" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#checktownfollowfunc#0" expanded="false" />
-            <element signature="n#!!block;n#getbuscatsfuncGas#0" expanded="false" />
-            <element signature="n#!!block;n#getbuscatsfuncGas_success#0" expanded="false" />
-            <element signature="n#!!block;n#getbuscatsfuncCatalogues_success#0" expanded="false" />
-            <element signature="n#!!block;n#getbuscatsfuncCoupon_success#0" expanded="false" />
-            <element signature="n#!!block;n#getregionsfunc#0" expanded="false" />
-            <element signature="n#!!block;n#getregionsfunc_success#0" expanded="false" />
-            <element signature="n#!!block;n#choosetownfunc#0" expanded="false" />
-            <element signature="n#!!block;n#gettownfunc#0" expanded="false" />
-            <element signature="n#!!block;n#gettownfunc_success#0" expanded="false" />
-            <element signature="n#!!block;n#townchosenfunc#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/BusinessSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="3553">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -846,19 +806,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4615383" vertical-offset="4116" max-vertical-offset="7412">
-          <caret line="252" column="9" selection-start-line="252" selection-start-column="9" selection-end-line="252" selection-end-column="9" />
+        <state vertical-scroll-proportion="1.3846154" vertical-offset="1889" max-vertical-offset="4709">
+          <caret line="109" column="143" selection-start-line="109" selection-start-column="129" selection-end-line="109" selection-end-column="143" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
+    <entry file="file://$PROJECT_DIR$/www/pages/daily.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.6916995" vertical-offset="988" max-vertical-offset="4709">
-          <caret line="168" column="99" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="99" />
+        <state vertical-scroll-proportion="-1.7692307" vertical-offset="1472" max-vertical-offset="4199">
+          <caret line="92" column="103" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="112" />
+          <folding>
+            <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/BusinessSearch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="3553">
+          <caret line="41" column="43" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.769231" vertical-offset="3028" max-vertical-offset="7412">
+          <caret line="190" column="1" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+          <folding>
+            <element signature="n#!!block;n#checktownfollowfunc#0" expanded="false" />
+            <element signature="n#!!block;n#getbuscatsfuncGas#0" expanded="false" />
+            <element signature="n#!!block;n#getbuscatsfuncGas_success#0" expanded="false" />
+            <element signature="n#!!block;n#getbuscatsfuncCatalogues_success#0" expanded="false" />
+            <element signature="n#!!block;n#getbuscatsfuncCoupon_success#0" expanded="false" />
+            <element signature="n#!!block;n#getregionsfunc#0" expanded="false" />
+            <element signature="n#!!block;n#getregionsfunc_success#0" expanded="false" />
+            <element signature="n#!!block;n#choosetownfunc#0" expanded="false" />
+            <element signature="n#!!block;n#gettownfunc#0" expanded="false" />
+            <element signature="n#!!block;n#gettownfunc_success#0" expanded="false" />
+            <element signature="n#!!block;n#townchosenfunc#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
