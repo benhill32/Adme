@@ -74,7 +74,9 @@ function getregiontownlogin1_success(tx, results) {
         loadtownslogin(regionIDlogin)
     }
     townIDLogin = menu.Town;
-
+    if(menu.Town!= 0){
+        setuptownlogin(menu.Town);
+    }
 
 
     var datetime = menu.DOB.split('-');

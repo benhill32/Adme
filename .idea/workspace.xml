@@ -91,8 +91,8 @@
       <file leaf-file-name="loginpage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3320158" vertical-offset="2926" max-vertical-offset="4675">
-              <caret line="182" column="26" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="26" />
+            <state vertical-scroll-proportion="3.6916995" vertical-offset="988" max-vertical-offset="4709">
+              <caret line="168" column="99" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -856,8 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loginpage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3320158" vertical-offset="2926" max-vertical-offset="4675">
-          <caret line="182" column="26" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="26" />
+        <state vertical-scroll-proportion="3.6916995" vertical-offset="988" max-vertical-offset="4709">
+          <caret line="168" column="99" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="99" />
           <folding />
         </state>
       </provider>
