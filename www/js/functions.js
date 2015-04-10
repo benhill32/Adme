@@ -475,6 +475,15 @@ function checkversionofapp_success(tx, results) {
 }
 function loadnewadatabase(){
 
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+
+    // $('#busy').show();
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal,false);
+    xmlHttp.send();
+
+
  db.transaction(droptables, errorCBfunc,successCBfunc);
 
 
