@@ -6,7 +6,7 @@ document.addEventListener("deviceready", onDeviceReadylistcat, false);
 var catid =0;
 function onDeviceReadylistcat() {
     db.transaction(townregiondatabus1, errorCBfunc, successCBfunc);
-    db.transaction(updatebuscategories, errorCBfunc, successCBfunc);
+
 
 }
 

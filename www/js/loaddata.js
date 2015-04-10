@@ -193,6 +193,7 @@ function closemodel(){
 
     if(document.getElementById("catlistdiv")!=null) {
         db.transaction(townregiondatabus1, errorCBfunc, successCBfunc);
+        db.transaction(updatebuscategories, errorCBfunc, successCBfunc);
 
     }
 

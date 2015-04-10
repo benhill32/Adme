@@ -13,6 +13,10 @@ function onDeviceReadyseacrh() {
     db.transaction(townregiondatabus, errorCBfunc, successCBfunc);
 
     db.transaction(getcatnamelist, errorCBfunc, successCBfunc);
+
+
+
+
 }
 
 function Checkviewingbusiness(categ){
