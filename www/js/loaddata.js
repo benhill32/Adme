@@ -19,8 +19,7 @@ var chkrefreshdata = 0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 var tokenldata ="";
 function onDeviceReadyloaddata() {
-   // db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
-    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
@@ -36,20 +35,6 @@ function onOffline()
 
 }
 
-function gettokenloaddata(tx) {
-    var sql = "select token from MobileApp_LastUpdatesec";
-    //  alert(sql);
-    tx.executeSql(sql, [], gettokenloaddata_success);
-}
-
-function gettokenloaddata_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-
-    tokenldata = menu.token;
-    alert(tokenldata);
-}
 
 
 function getnetworkdetails(){
@@ -76,7 +61,7 @@ function checkonline(){
 }
 
 function refreshdata(){
-    //db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+
     checkonline();
 
  //   $('#indexloadingdata').modal('show');
@@ -90,9 +75,9 @@ function checkdatabaseloaddata(){
     xmlHttp = new XMLHttpRequest();
     var json = 0;
     if(networkconnection!=0) {
-        xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata, false);
+        xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc, false);
         xmlHttp.send();
-          alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata);
+          alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc);
         json = xmlHttp.responseText;
     }
 
