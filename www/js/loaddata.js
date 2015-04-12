@@ -81,9 +81,9 @@ function checkdatabaseloaddata(){
         json = xmlHttp.responseText;
     }
 
-
+    alert(json);
     if(json == 0){
-       // alert(json);
+
         db.transaction(populateDB, errorCBfunc, successCBfunc);
     }else{
         alert(json);
