@@ -76,7 +76,7 @@ function checkonline(){
 }
 
 function refreshdata(){
-    getnetworkdetails();
+    checkonline();
   //  db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
    // $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
@@ -96,13 +96,13 @@ alert(networkconnection);
           alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata);
         json = xmlHttp.responseText;
     }
-alert(json);
+
 
     if(json == 0){
-
+        alert(json);
         db.transaction(populateDB, errorCBfunc, successCBfunc);
     }else{
-
+        alert(json);
         if(document.getElementById("catlistdiv")!=null) {
             closemodel();
         }else {
