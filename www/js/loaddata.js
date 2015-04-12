@@ -89,14 +89,14 @@ function checkdatabaseloaddata(){
     xmlHttp = new XMLHttpRequest();
     var json = 0;
     // $('#busy').show();
-alert("check");
+alert(networkconnection);
     if(networkconnection!=0) {
         xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata, false);
         xmlHttp.send();
           alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata);
         json = xmlHttp.responseText;
     }
-
+alert(json);
 
     if(json == 0){
 
