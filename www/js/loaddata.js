@@ -79,7 +79,7 @@ function refreshdata(){
     getnetworkdetails();
     db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     $('#indexloadingdata').modal('show');
-
+    checkdatabaseloaddata();
 
 }
 
