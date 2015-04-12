@@ -76,7 +76,7 @@ function checkonline(){
 }
 
 function refreshdata(){
-    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+    //db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     checkonline();
 
  //   $('#indexloadingdata').modal('show');
