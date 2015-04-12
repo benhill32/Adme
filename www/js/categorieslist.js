@@ -35,9 +35,7 @@ function updatedbcat(ID){
         tx.executeSql('Update MobileApp_BusinessCategories set Follow = 1 where ID = ' + ID);
         console.log("Update MobileApp_BusinessCategories");
     });
-
 }
-
 
 function Checkviewingbusiness1(categ){
     for (j in followbusiness2) {
@@ -100,9 +98,6 @@ function getcategorieslist_success(tx, results) {
         window.setTimeout(function(){
             refreshdata();
         }, 1000);
-
-
-
     }else {
         var check1 = 0;
 

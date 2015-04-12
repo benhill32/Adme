@@ -17,9 +17,9 @@ var deviceIDfunc;
 var devicePlatformfunc;
 var chkrefreshdata = 0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
-
+var tokenldata ="";
 function onDeviceReadyloaddata() {
-
+    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
 
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
@@ -35,6 +35,22 @@ function onOffline()
 
 
 }
+
+function gettokenloaddata(tx) {
+    var sql = "select token from MobileApp_LastUpdatesec";
+    //  alert(sql);
+    tx.executeSql(sql, [], gettokenloaddata_success);
+}
+
+function gettokenloaddata_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    tokenldata = menu.token;
+    //alert(apptoken);
+}
+
 
 function getnetworkdetails(){
 
@@ -60,11 +76,54 @@ function checkonline(){
 }
 
 function refreshdata(){
-
+    getnetworkdetails();
+    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     $('#indexloadingdata').modal('show');
-    db.transaction(populateDB, errorCBfunc, successCBfunc);
+
 
 }
+
+function checkdatabaseloaddata(){
+
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    var json = 0;
+    // $('#busy').show();
+
+    if(networkconnection!=0) {
+        xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata, false);
+        xmlHttp.send();
+        //  alert('http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
+        json = xmlHttp.responseText;
+    }
+
+
+    if(json == 0){
+
+        db.transaction(populateDB, errorCBfunc, successCBfunc);
+    }else{
+
+        if(document.getElementById("catlistdiv")!=null) {
+            closemodel();
+        }else {
+                $('#indexloadingdata').modal('hide');
+                if (devicePlatformfunc == "Android")
+                {
+                    $('#modelnewdatabase').modal('show');
+                }
+                else if (devicePlatformfunc == "iOS")
+                {
+
+                    $('#modelnewdatabaseapple').modal('show');
+                }
+        }
+
+    }
+
+}
+
+
+
 
 function populateDB(tx){
     // $('#busy').show();
