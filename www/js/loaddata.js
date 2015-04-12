@@ -48,7 +48,7 @@ function gettokenloaddata_success(tx, results) {
     var menu = results.rows.item(0);
 
     tokenldata = menu.token;
-    //alert(apptoken);
+    alert(tokenldata);
 }
 
 
@@ -76,6 +76,7 @@ function checkonline(){
 }
 
 function refreshdata(){
+    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     checkonline();
     db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
  //   $('#indexloadingdata').modal('show');
@@ -88,8 +89,6 @@ function checkdatabaseloaddata(){
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     var json = 0;
-    // $('#busy').show();
-
     if(networkconnection!=0) {
         xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata, false);
         xmlHttp.send();
