@@ -93,7 +93,7 @@ function checkdatabaseloaddata(){
     if(networkconnection!=0) {
         xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata, false);
         xmlHttp.send();
-        //  alert('http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
+          alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata);
         json = xmlHttp.responseText;
     }
 
