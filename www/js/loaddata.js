@@ -77,8 +77,8 @@ function checkonline(){
 
 function refreshdata(){
     checkonline();
-  //  db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
-   // $('#indexloadingdata').modal('show');
+    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+    $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
 
 }
@@ -89,20 +89,20 @@ function checkdatabaseloaddata(){
     xmlHttp = new XMLHttpRequest();
     var json = 0;
     // $('#busy').show();
-alert(networkconnection);
+
     if(networkconnection!=0) {
         xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata, false);
         xmlHttp.send();
-          alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata);
+         // alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc + '&token=' + tokenldata);
         json = xmlHttp.responseText;
     }
 
 
     if(json == 0){
-        alert(json);
+       // alert(json);
         db.transaction(populateDB, errorCBfunc, successCBfunc);
     }else{
-        alert(json);
+       // alert(json);
         if(document.getElementById("catlistdiv")!=null) {
             closemodel();
         }else {
