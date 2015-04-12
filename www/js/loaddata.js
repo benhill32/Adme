@@ -19,7 +19,7 @@ var chkrefreshdata = 0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 var tokenldata ="";
 function onDeviceReadyloaddata() {
-    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+   // db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
 
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
@@ -77,7 +77,7 @@ function checkonline(){
 
 function refreshdata(){
     getnetworkdetails();
-    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+  //  db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
 
