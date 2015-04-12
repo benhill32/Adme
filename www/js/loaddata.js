@@ -73,7 +73,7 @@ function checkdatabaseloaddata(){
 
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    var json = 0;
+    var json = "0";
     if(networkconnection!=0) {
         xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc, false);
         xmlHttp.send();
@@ -82,10 +82,10 @@ function checkdatabaseloaddata(){
     }
 
     alert(json);
-    if(json == 0){
+    if(json == "0"){
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
-    }else{
+    }else  if(json == "1"){
         alert(json);
         if(document.getElementById("catlistdiv")!=null) {
             closemodel();
@@ -102,6 +102,8 @@ function checkdatabaseloaddata(){
                 }
         }
 
+    }else{
+        db.transaction(populateDB, errorCBfunc, successCBfunc);
     }
 
 }
