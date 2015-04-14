@@ -20,7 +20,7 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 var tokenldata ="";
 
 
-var appversionlocalf = '1.3.3';
+var appversionlocalf = '1.3.4';
 
 function onDeviceReadyloaddata() {
 

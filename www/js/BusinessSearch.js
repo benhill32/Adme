@@ -48,7 +48,7 @@ function townregiondatabus_success(tx, results) {
 
 
 function getregionfrombuslocation(tx) {
-    var sql = "select BusinessID from MobileApp_BusinessLocations where RegionID=" + regionIDbus;
+    var sql = "select BusinessID from MobileApp_BusinessLocations where RegionID=" + regionIDbus + " and TownID = " + townIDbus;
    // alert(sql);
     tx.executeSql(sql, [], getregionfrombuslocation_success);
 }
