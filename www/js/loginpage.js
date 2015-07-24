@@ -39,7 +39,7 @@ function gettokenlogincheck_success(tx, results) {
 }
 
 function errorCBfuncben(err) {
-    refreshdata();
+   // refreshdata();
 }
 
 function gettokenlogin(tx) {
