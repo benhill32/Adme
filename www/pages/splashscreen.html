@@ -39,6 +39,9 @@
 
 
         function errorCBfuncben(err) {
+            alert("error");
+
+
             window.setTimeout(function(){
                 window.location.href='../pages/loginpage.html';
             }, time);
@@ -54,7 +57,7 @@
         }
 
         function gettokenlogincheck_success(tx, results) {
-
+            alert("success");
             var len = results.rows.length;
 
             var menu = results.rows.item(0);
