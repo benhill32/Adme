@@ -61,7 +61,7 @@ function gettokenlogin_success(tx, results) {
 
 function getregiontownlogin1(tx) {
     var sql = "select Region,Town,Name, DOB,email  from MobileApp_LastUpdateBackup";
-   //  alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getregiontownlogin1_success);
 }
 
