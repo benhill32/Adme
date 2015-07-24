@@ -15,7 +15,8 @@ function onDeviceReadylogin() {
 function checkdataload(){
 
     db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
-
+    db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
+    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 }
 
 
