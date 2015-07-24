@@ -9,7 +9,7 @@ var databaseversion;
 var appversion = -1;
 var apptoken = 0;
 var networkconnectionfun= 0;
-var appversionlocal = '1.3.4';
+var appversionlocal = '1.3.5';
 
 
 function onDeviceReadyFunc() {
