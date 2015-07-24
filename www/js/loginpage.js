@@ -10,13 +10,14 @@ var editnew = getUrlVarsfunc()["ID"];
 function onDeviceReadylogin() {
     deviceIDlogin = device.uuid;
     refreshdata();
+    db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
+    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
 }
 
 function checkdataload(){
 
     db.transaction(gettokenlogincheck, errorCBfunc, successCBfunc);
-    db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
-    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+
 }
 
 
@@ -61,7 +62,7 @@ function gettokenlogin_success(tx, results) {
 
 function getregiontownlogin1(tx) {
     var sql = "select Region,Town,Name, DOB,email  from MobileApp_LastUpdateBackup";
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], getregiontownlogin1_success);
 }
 
