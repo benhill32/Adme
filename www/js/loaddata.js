@@ -307,11 +307,11 @@ function closemodelRegion(){
 
    // $('#basicDetails').modal('show');
 
-    db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
+  //  db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
   //
 
-    db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
-    db.transaction(getregionslogin, errorCBfunc, successCBfunc);
+ //   db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
+ //   db.transaction(getregionslogin, errorCBfunc, successCBfunc);
    // randomfunctions();
 
 }
