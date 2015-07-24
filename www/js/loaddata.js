@@ -307,10 +307,10 @@ function closemodelRegion(){
 
    // $('#basicDetails').modal('show');
 
-  //  db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
+   // db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
   //
 
-   // db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
+  //  db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
    // randomfunctions();
 
@@ -415,7 +415,7 @@ function onNotification(e) {
             if ( e.foreground )
             {
                // navigator.notification.alert('foreground');
-                weblink('../pages/daily.html');
+            //    weblink('../pages/daily.html');
                 //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
                 // on Anroid soundname is outside the payload.
