@@ -750,6 +750,7 @@ float: left;
  //   clear: both;
  //   vertical-align: middle;
  //   min-height: 90px;
+    margin-bottom: 2px;
 
 }
 
@@ -1649,6 +1650,12 @@ overflow-y: scroll !important;
     padding:2px;
 
 }
+.paddingdaily{
+
+    padding-top:4%;
+    padding-bottom: 1%;
+}
+
 .padding10 {
 
 padding-top:10px;

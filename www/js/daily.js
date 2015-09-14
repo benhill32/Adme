@@ -133,7 +133,7 @@ function getdata_success(tx, results) {
 
 
                     $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv col-xs-12 paddingright0 paddingleft0" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >'     +
-                    '<div align="center" class="col-xs-3 padding10  paddingright0 paddingleft0 "  >' +
+                    '<div align="center" class="col-xs-3 paddingdaily  paddingright0 paddingleft0 "  >' +
                     '' +
                     '<div id="timeremain">Time Ends</div>' +
                     '<div id="timediv" align="center"><span id="' + name + '"></span></div>' +
