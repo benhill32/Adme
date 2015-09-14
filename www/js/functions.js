@@ -797,7 +797,7 @@ function townchosenfunc(ID){
 
 function gettokenregion(tx) {
     var sql =  "select Datesecs,token from MobileApp_LastUpdatesec";
-   // alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getregionsdata,errorCBfunc);
 }
 

@@ -66,11 +66,11 @@ function checkonline(){
 
 function refreshdata(){
 
+    alert("refresh");
     checkonline();
 
     $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
-alert("refresh");
 }
 
 function checkdatabaseloaddata(){

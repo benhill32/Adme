@@ -4,6 +4,8 @@ document.addEventListener("deviceready", onDeviceReadydaily, false);
 var IDdaily = "";
 var followbusiness =  [];
 function onDeviceReadydaily() {
+
+    alert("before refresh");
     refreshdata();
 
  db.transaction(gettownname, errorCBfunc, successCBfunc);
