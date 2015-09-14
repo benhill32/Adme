@@ -70,7 +70,7 @@ function refreshdata(){
 
     $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
-
+alert("refresh");
 }
 
 function checkdatabaseloaddata(){
