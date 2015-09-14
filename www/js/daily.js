@@ -72,7 +72,7 @@ function getdata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 
-  //  alert("Number of Deals" + len);
+    alert("Number of Deals" + len);
    // alert(followbusiness);
 
 
@@ -139,7 +139,7 @@ function getdata_success(tx, results) {
                     '</span></div>' +
                     '</div>' +
                     '<div align="center"  class="font12 col-xs-6"  onclick="loaddailydiv(' + menu.ID + ')"  >' + imgg + '</div>' +
-                    '<div align="center"  class="col-xs-3 paddingright0 paddingleft0"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
+                    '<div align="center"  id="readmore"   class="col-xs-3 paddingright0 paddingleft0"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
                     '</div>' +
                     '</Div>');
                 } else {
@@ -150,7 +150,7 @@ function getdata_success(tx, results) {
                     '</span></div>' +
                     '</div>' +
                     '<div align="center"  class="font12 col-xs-6"  >' + imgg + '</div>' +
-                    '<div align="center"  class="col-xs-3 paddingright0 paddingleft0" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >Read more</div>' +
+                    '<div align="center"  id="readmore"  class="col-xs-3 paddingright0 paddingleft0" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >Read more</div>' +
 
                     '</div>' +
                     '</Div>');
