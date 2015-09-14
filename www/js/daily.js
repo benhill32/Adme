@@ -138,7 +138,7 @@ function getdata_success(tx, results) {
                     '<div id="timeremain">Time Ends</div>' +
                     '<div id="timediv" align="center"><span id="' + name + '"></span></div>' +
                     '</div>' +
-                    '<div align="center"  class="font12 col-xs-6 padding10"  >' + imgg + '</div>' +
+                    '<div align="center"  class="font12 col-xs-6 padding10 paddingright0 paddingleft0"  >' + imgg + '</div>' +
                     '<div align="center" id="readmoredaily"  class="col-xs-3 padding10 paddingright0 paddingleft0"    >Read more</div>' +
                     '</Div>');
 
