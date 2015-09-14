@@ -766,7 +766,7 @@ float: left;
     border: 1px solid #ffffff;
     border-radius: 10px;
     width: 80%;
-    padding: 2px 0px;
+    padding: 10px 0px;
 }
 #headermain2nd{
     min-height: 54px;
@@ -855,24 +855,6 @@ width:90px;
 
 }
 
-.font12{
-    font-size: 12px;
-
-}
-.paddingright0{
-
-    padding-right:0px !important;
-}
-.paddingleft0{
-
-    padding-left:0px !important;
-}
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
-
 .floatleft3remix2{
 
     float:left;
@@ -881,8 +863,8 @@ width:90px;
     font-size: 12px;
  //   min-height: 70px;
     overflow:hidden;
-    padding-top:10px;
-    height: 90px;
+    padding-top:3px;
+    height: 60px;
 }
 #backimg{
 
@@ -1283,7 +1265,7 @@ width:90px;
 .gas4saddress{
     font-size: 0.65rem;
 }
-    #timeremain,#timediv
+    #timeremain
     {
         font-size: 0.65rem;
     }
@@ -1295,11 +1277,7 @@ width:90px;
         font-size: 0.65rem;
     }
 
-    #readmore
-    {
-        font-style: italic;
-        font-size: 0.65rem;
-    }
+
 }
 @media (max-width: 480px) {
     #divstandings{
@@ -1324,13 +1302,8 @@ width:90px;
     .gas4saddress{
         font-size: 1rem;
     }
-    #timeremain,#timediv
+    #timeremain
     {
-        font-size: 1rem;
-    }
-    #readmore
-    {
-        font-style: italic;
         font-size: 1rem;
     }
     .gas4sheader2{
@@ -1342,18 +1315,7 @@ width:90px;
     }
 }
 
-@media (width: 1024px) {
-    #timeremain,#timediv
-    {
-        font-size: 3rem;
-    }
-    #readmore
-    {
-        font-style: italic;
-        font-size: 3rem;
-    }
 
-}
 
 /* Now adjust the height so it handles various screen sizes & orientations */
 /* You could make this as granular as you like, or have it more granular at common screen sizes
