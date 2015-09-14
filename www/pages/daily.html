@@ -14,17 +14,18 @@
     <title>AdMe</title>
     <script type="text/javascript" src="../js/dbconnection.js"></script>
 
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+
     <script type="text/javascript" src="../../plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
+
     <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
     <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
     <script type="text/javascript" src="../js/daily.js"></script>
     <script type="text/javascript" src="../js/loaddata.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript"  charset="utf-8">
-
 
 
 
@@ -33,6 +34,29 @@
 
         }
     </script>
+    <style>
+        .dailydealsdiv{
+           // background-color: #3954a5;
+            -moz-box-shadow: inset 0 0 2px 2px#f3f3f3;
+            -webkit-box-shadow: inset 0 0 2px 2px #f3f3f3;
+            box-shadow: inset 0 0 2px 2px #f3f3f3;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3853a4+0,727cbb+25,cdcfe8+50,727cbb+75,3853a4+100 */
+            background: #3853a4; /* Old browsers */
+            background: -moz-linear-gradient(left,  #3853a4 0%, #727cbb 25%, #cdcfe8 50%, #727cbb 75%, #3853a4 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3853a4), color-stop(25%,#727cbb), color-stop(50%,#cdcfe8), color-stop(75%,#727cbb), color-stop(100%,#3853a4)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(left,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(left,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* IE10+ */
+            background: linear-gradient(to right,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3853a4', endColorstr='#3853a4',GradientType=1 ); /* IE6-9 */
+
+
+        }
+
+
+    </style>
+
 </head>
 <body>
 <div class="divmainmenu">
@@ -247,19 +271,29 @@
         </div>
         <div id="dailydealsDiv">
 
-       <!-- <Div align="center"  class=" dailydealsdiv"    >
-            <div align="center" class="floatleft3remix1 padding22"  >
+      <Div align="center"  class=" dailydealsdiv col-xs-12" style="margin-top:50px;"    >
+            <div align="center" class=" col-xs-3   paddingright0 paddingleft0"  >
 
                 <div id="timeremain">Time Ends</div>
                 <div id="timediv" align="center"><span >43424
             </span></div>
                 </div>
-            <div align="center"  class="floatleft3remix2"    ><img src="data:image/png;base64,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" style="width:80%;"  align="center"  ></div>
-            <div align="center"  class="floatleft3remix1 padding22 paddingtop15"  data-toggle="modal" data-target="#basicmodaldaily"  >Read more</div>
-            <div align="center" class="dailydivbottom"    >$2.5 Socks
-                </div>
+            <div align="center"  class="font12 col-xs-6" style="padding-top:10px;padding-bottom: 10px;"    >
+                <img class="img-responsive" src="data:image/png;base64,   align="center"  >
+            </div>
+            <div align="center" id="readmore"  class="col-xs-3 paddingright0 paddingleft0"  data-toggle="modal" data-target="#basicmodaldaily"  >
+
+                    Read more
+
+
+
+            </div>
+
             </Div>
-        </div>-->
+
+
+        </div>
+
     </div>
 </body>
 </html>
