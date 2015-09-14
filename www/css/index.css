@@ -1216,6 +1216,11 @@ width:90px;
 #readmoredaily{
 
     font-style: italic;
+    height: 100%;
+    position: absolute;
+    right: 3%;
+    padding-top: 0px;
+    top: 30%;
 }
 #imgindex {
     display:block;
