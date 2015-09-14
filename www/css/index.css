@@ -733,15 +733,23 @@ float: left;
     min-height: 45px;
     border-bottom: 1px solid #333399;
 }
+.paddingright0{
+
+    padding-right: 0px !important;
+}
+.paddingleft0{
+
+    padding-left: 0px !important;
+}
 
 .dailydealsdiv,.weeklydealsDiv{
-    border: 1px solid #ffffff;
-    margin-bottom: 3px;
-    width:100%;
-    border-radius: 10px;
-    clear: both;
-    vertical-align: middle;
-    min-height: 90px;
+   // border: 1px solid #ffffff;
+ //   margin-bottom: 3px;
+ //   width:100%;
+   border-radius: 10px;
+ //   clear: both;
+ //   vertical-align: middle;
+ //   min-height: 90px;
 
 }
 
@@ -1205,7 +1213,10 @@ width:90px;
 
 
 }
+#readmoredaily{
 
+    font-style: italic;
+}
 #imgindex {
     display:block;
     margin:auto;
@@ -1285,7 +1296,7 @@ width:90px;
 .gas4saddress{
     font-size: 0.65rem;
 }
-    #timeremain
+    #timeremain,#readmoredaily
     {
         font-size: 0.65rem;
     }
@@ -1322,7 +1333,7 @@ width:90px;
     .gas4saddress{
         font-size: 1rem;
     }
-    #timeremain
+    #timeremain,#readmoredaily
     {
         font-size: 1rem;
     }
@@ -1633,7 +1644,11 @@ overflow-y: scroll !important;
     padding:2px;
 
 }
+.padding10 {
 
+padding-top:10px;
+    padding-bottom: 10px;
+}
 .bold{
     font-weight: bold;
 
@@ -1816,7 +1831,10 @@ overflow-y: scroll !important;
     opacity:0.7;
 
 }
+.font12{
+    font-size: 12px;
 
+}
 
 #idhelp:hover
 {

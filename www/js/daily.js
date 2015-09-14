@@ -123,7 +123,7 @@ function getdata_success(tx, results) {
 
                 var imgg = "";
                 if (menu.Icon != "null") {
-                    imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" style="width:80%;"  align="center"  >&nbsp;';
+                    imgg = '&nbsp;<img src="data:image/png;base64,' + menu.Icon + '" class="img-responsive"  align="center"  >&nbsp;';
                     //imgg = menu.BusinessName;
                 } else {
 
@@ -132,14 +132,14 @@ function getdata_success(tx, results) {
 
 
 
-                    $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv col-xs-12" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >'     +
-                    '<div align="center" class="col-xs-3  paddingright0 paddingleft0 "  >' +
+                    $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv col-xs-12 paddingright0 paddingleft0" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >'     +
+                    '<div align="center" class="col-xs-3 padding10  paddingright0 paddingleft0 "  >' +
                     '' +
                     '<div id="timeremain">Time Ends</div>' +
                     '<div id="timediv" align="center"><span id="' + name + '"></span></div>' +
                     '</div>' +
-                    '<div align="center"  class="font12 col-xs-6"  >' + imgg + '</div>' +
-                    '<div align="center"  class="col-xs-3 paddingright0 paddingleft0"    >Read more</div>' +
+                    '<div align="center"  class="font12 col-xs-6 padding10"  >' + imgg + '</div>' +
+                    '<div align="center" id="readmoredaily"  class="col-xs-3 padding10 paddingright0 paddingleft0"    >Read more</div>' +
                     '</Div>');
 
                 var days, hours, minutes, seconds;
