@@ -745,6 +745,26 @@ float: left;
 
 }
 
+.dailydealsdiv{
+// background-color: #3954a5;
+    -moz-box-shadow: inset 0 0 2px 2px#f3f3f3;
+    -webkit-box-shadow: inset 0 0 2px 2px #f3f3f3;
+    box-shadow: inset 0 0 2px 2px #f3f3f3;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3853a4+0,727cbb+25,cdcfe8+50,727cbb+75,3853a4+100 */
+    background: #3853a4; /* Old browsers */
+    background: -moz-linear-gradient(left,  #3853a4 0%, #727cbb 25%, #cdcfe8 50%, #727cbb 75%, #3853a4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3853a4), color-stop(25%,#727cbb), color-stop(50%,#cdcfe8), color-stop(75%,#727cbb), color-stop(100%,#3853a4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* IE10+ */
+    background: linear-gradient(to right,  #3853a4 0%,#727cbb 25%,#cdcfe8 50%,#727cbb 75%,#3853a4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3853a4', endColorstr='#3853a4',GradientType=1 ); /* IE6-9 */
+
+
+}
+
+
 .weeklydealsDiv:hover{
 
     border: 1px solid #71BF44;
