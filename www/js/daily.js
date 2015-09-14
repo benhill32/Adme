@@ -130,35 +130,18 @@ function getdata_success(tx, results) {
                     imgg = menu.BusinessName;
                 }
 
-                if (menu.URL != "") {
 
-                    $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-                    '<div align="center" class="floatleft3remix1 padding22 " onclick="loaddailydiv(' + menu.ID + ')"  >' +
+
+                    $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv col-xs-12" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >'     +
+                    '<div align="center" class="col-xs-3  paddingright0 paddingleft0 "  >' +
                     '' +
                     '<div id="timeremain">Time Ends</div>' +
-                    '<div id="timediv" align="center"><span id="' + name + '">' +
-                    '</span></div>' +
+                    '<div id="timediv" align="center"><span id="' + name + '"></span></div>' +
                     '</div>' +
-                    '<div align="center"  class="floatleft3remix2"  onclick="loaddailydiv(' + menu.ID + ')"  >' + imgg + '</div>' +
-                    '<div align="center"  class="floatleft3remix1 padding22 paddingtop15"  data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')" >Read more</div>' +
-                    '<div align="center" class="dailydivbottom"  onclick="loaddailydiv(' + menu.ID + ')"  >' + menu.Price + " " + menu.ItemName +
-                    '</div>' +
-                    '</Div>');
-                } else {
-                    $('#dailydealsDiv').append('<Div align="center"  class=" dailydealsdiv"    >' +
-                    '<div align="center" class="floatleft3remix1 padding22 "  >' +
-                    '' +
-                    'Closes' +
-                    '<div id="timediv" align="center"><span id="' + name + '">' +
-                    '</span></div>' +
-                    '</div>' +
-                    '<div align="center"  class="floatleft3remix2"  >' + imgg + '</div>' +
-                    '<div align="center"  class="floatleft3remix1 padding22 paddingtop15" data-toggle="modal" data-target="#basicmodaldaily" onclick="loaddailydiv(' + menu.ID + ')"  >Read more</div>' +
-                    '<div align="center" class="dailydivbottom"  >' + menu.Price + " " + menu.ItemName +
-                    '</div>' +
+                    '<div align="center"  class="font12 col-xs-6"  >' + imgg + '</div>' +
+                    '<div align="center"  class="col-xs-3 paddingright0 paddingleft0"    >Read more</div>' +
                     '</Div>');
 
-                }
                 var days, hours, minutes, seconds;
 
                 intervalArr.push(name + "|" + target_date);
