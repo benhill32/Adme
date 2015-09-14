@@ -30,7 +30,7 @@ function onDeviceReadyloaddata() {
     pushnotifiy();
 
     document.addEventListener("offline", onOffline, false);
-  //  alert("loaddata");
+    //  alert("loaddata");
 }
 
 function onOffline()
@@ -60,17 +60,17 @@ function checkonline(){
     states[Connection.NONE]     = '0';
 
     networkconnection = states[networkState];
-        //alert(states[networkState]);
+    //alert(states[networkState]);
 
 }
 
 function refreshdata(){
 
-    alert("refresh");
     checkonline();
 
     $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
+
 }
 
 function checkdatabaseloaddata(){
@@ -81,29 +81,29 @@ function checkdatabaseloaddata(){
     if(networkconnection!=0) {
         xmlHttp.open("GET", 'http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc, false);
         xmlHttp.send();
-         // alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc);
+        // alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc);
         json = xmlHttp.responseText;
     }
 
-   // alert(json);
+    // alert(json);
     if(json == "0"){
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
     }else  if(json == "1"){
-       // alert(json);
+        // alert(json);
         if(document.getElementById("catlistdiv")!=null) {
             closemodel();
         }else {
-                $('#indexloadingdata').modal('hide');
-                if (devicePlatformfunc == "Android")
-                {
-                    $('#modelnewdatabase').modal('show');
-                }
-                else if (devicePlatformfunc == "iOS")
-                {
+            $('#indexloadingdata').modal('hide');
+            if (devicePlatformfunc == "Android")
+            {
+                $('#modelnewdatabase').modal('show');
+            }
+            else if (devicePlatformfunc == "iOS")
+            {
 
-                    $('#modelnewdatabaseapple').modal('show');
-                }
+                $('#modelnewdatabaseapple').modal('show');
+            }
         }
 
     }else{
@@ -118,7 +118,7 @@ function checkdatabaseloaddata(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,Datesecs from MobileApp_LastUpdatesec";
-     // alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], populateDB1,errorCreatetable);
 
 }
@@ -127,14 +127,14 @@ function populateDB1(tx,results) {
     checkonline();
     var row = results.rows.item(0);
     //   alert(row);
-   //  alert(row.Count);
+    //  alert(row.Count);
     if(row.Count ==0){
         if(networkconnection!=0) {
             $.when(blankLastUpdatesec()).done(function () {
-               // $.when(pushnotifiy()).done(function () {
-                   // db.transaction(populateDB, errorCBfunc, successCBfunc);
-                    db.transaction(gettokenregion, errorCBfunc, successCBfunc);
-              //  });
+                // $.when(pushnotifiy()).done(function () {
+                // db.transaction(populateDB, errorCBfunc, successCBfunc);
+                db.transaction(gettokenregion, errorCBfunc, successCBfunc);
+                //  });
             });
         }else{
             $('#indexloadingdata').modal('hide');
@@ -203,26 +203,26 @@ function getchecksync(tx, results) {
 
 
 
-        var xmlHttp = null;
-        xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region, false);
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region, false);
 //alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region)
 
     xmlHttp.send();
 
-        var json = xmlHttp.responseText;
+    var json = xmlHttp.responseText;
 
-        if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
+    if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
         //    alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&start=0&region=' + region);
-            errorclosemodel();
-        } else {
+        errorclosemodel();
+    } else {
 
-            var obj = JSON.parse(json);
+        var obj = JSON.parse(json);
 
 
 
-            syncmaintables(obj);
-        }
+        syncmaintables(obj);
+    }
 
 
 }
@@ -258,7 +258,7 @@ function closemodel(){
     if(document.getElementById("dailydealsDiv")!=null) {
 
         var showname = getUrlVarsfunc()["showname"];
-    //alert(showname);
+        //alert(showname);
         if(showname ==1){
             window.setTimeout(function(){
                 db.transaction(getnamefordisplay, errorCBfunc, successCBfunc);
@@ -270,7 +270,7 @@ function closemodel(){
     }
 
 
-   // randomfunctions();
+    // randomfunctions();
 }
 
 
@@ -305,14 +305,14 @@ function closemodelRegion(){
     $('#indexloadingdata').modal('hide');
     //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
-   // $('#basicDetails').modal('show');
+    // $('#basicDetails').modal('show');
 
     db.transaction(gettokenlogin, errorCBfunc, successCBfunc);
-  //
+    //
 
-   db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
+    db.transaction(getregiontownlogin1, errorCBfunc, successCBfunc);
     db.transaction(getregionslogin, errorCBfunc, successCBfunc);
-   // randomfunctions();
+    // randomfunctions();
 
 }
 
@@ -414,8 +414,8 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-               // navigator.notification.alert('foreground');
-            //    weblink('../pages/daily.html');
+                // navigator.notification.alert('foreground');
+                //    weblink('../pages/daily.html');
                 //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
                 // on Anroid soundname is outside the payload.
@@ -432,14 +432,14 @@ function onNotification(e) {
                 // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-                  //  navigator.notification.alert('coldstart1');
+                    //  navigator.notification.alert('coldstart1');
                     weblink('../pages/daily.html');
                     //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
                     weblink('../pages/daily.html');
-                 //   navigator.notification.alert('coldstart2');
+                    //   navigator.notification.alert('coldstart2');
                     //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
@@ -467,7 +467,7 @@ function onNotificationAPN(e) {
     if (e.alert) {
         // $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
 // showing an alert also requires the org.apache.cordova.dialogs plugin
-       // navigator.notification.alert(e.alert);
+        // navigator.notification.alert(e.alert);
         weblink('../pages/daily.html');
     }
     if (e.sound) {
