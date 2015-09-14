@@ -78,7 +78,7 @@ function errorCBfuncweekly(err) {
 
 function errorCBfunc(err) {
     console.log("Error processing SQL: "+err.code);
-    //   alert("Error processing SQL loaddata: "+err.code);
+ //   alert("Error processing SQL loaddata: "+err.code);
 }
 
 function errorCBfuncsql(transaction, error) {
@@ -113,7 +113,7 @@ function blankLastUpdatesec(){
     // $('#busy').show();
     xmlHttp.open("GET", 'http://admin.adme.kiwi/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal,false);
     xmlHttp.send();
-    // alert('http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
+     // alert('http://adme.neocom.co.nz/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
 
 
@@ -291,19 +291,19 @@ function syncmaintables(obj){
 
     $.each(obj.BusinessCategories, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
-            db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessCategories(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,CategoryID,BusniessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.CategoryID + ',' + obj.BusniessID + ')');
-                //    console.log("INSERT INTO MobileApp_clubsimages is created");
-            });
+        db.transaction(function (tx) {
+            tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessCategories(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,CategoryID,BusniessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.CategoryID + ',' + obj.BusniessID + ')');
+            //    console.log("INSERT INTO MobileApp_clubsimages is created");
+        });
             db.transaction(function (tx) {
                 tx.executeSql('INSERT OR IGNORE INTO MobileApp_BusinessCategoriesBackup(ID,CreatedateUTC,UpdatedateUTC ,DeletedateUTC,CategoryID,BusniessID ) VALUES (' + obj.ID + ',"' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.CategoryID + ',' + obj.BusniessID + ')');
                 //    console.log("INSERT INTO MobileApp_clubsimages is created");
             });
-            db.transaction(function (tx) {
-                var sql = 'UPDATE MobileApp_BusinessCategories SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", CategoryID =' + obj.CategoryID + ', BusniessID = "' + obj.BusniessID + '" where ID = ' + obj.ID;
-                tx.executeSql(sql);
-                // console.log(sql);
-            });
+        db.transaction(function (tx) {
+            var sql = 'UPDATE MobileApp_BusinessCategories SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", CategoryID =' + obj.CategoryID + ', BusniessID = "' + obj.BusniessID + '" where ID = ' + obj.ID;
+            tx.executeSql(sql);
+            // console.log(sql);
+        });
             db.transaction(function (tx) {
                 var sql = 'UPDATE MobileApp_BusinessCategoriesBackup SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", CategoryID =' + obj.CategoryID + ', BusniessID = "' + obj.BusniessID + '" where ID = ' + obj.ID;
                 tx.executeSql(sql);
@@ -422,10 +422,10 @@ function syncmaintables(obj){
             tx.executeSql('Update MobileApp_LastUpdateBackup set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + '');
         });
 
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + '');
-            db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
-        });
+            db.transaction(function(tx) {
+                tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = "' + Math.round((timenow/1000)) + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + '');
+                db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
+            });
     });
 }
 
@@ -446,46 +446,46 @@ function checkversionofapp_success(tx, results) {
 
 
     if (appversionlocal == menu.Versionappthen) {
-        if(document.getElementById("catlistdiv")!=null) {
-            closemodel();
-        }else {
-            if (menu.Database == 1)
+            if(document.getElementById("catlistdiv")!=null) {
+                closemodel();
+            }else {
+                if (menu.Database == 1)
+                {
+                    $('#indexloadingdata').modal('hide');
+                    if (devicePlatformfunc == "Android")
+                    {
+                        $('#modelnewdatabase').modal('show');
+                    }
+                    else if (devicePlatformfunc == "iOS")
+                    {
+
+                        $('#modelnewdatabaseapple').modal('show');
+                    }
+                } else {
+                    closemodel();
+                }
+            }
+        }
+        else
+        {
+            if(document.getElementById("catlistdiv")!=null) {
+                closemodel();
+            }
+            else
             {
                 $('#indexloadingdata').modal('hide');
+
                 if (devicePlatformfunc == "Android")
                 {
-                    $('#modelnewdatabase').modal('show');
+                    $('#modelnewversion').modal('show');
                 }
                 else if (devicePlatformfunc == "iOS")
                 {
 
-                    $('#modelnewdatabaseapple').modal('show');
+                    $('#modelnewversionapple').modal('show');
                 }
-            } else {
-                closemodel();
             }
         }
-    }
-    else
-    {
-        if(document.getElementById("catlistdiv")!=null) {
-            closemodel();
-        }
-        else
-        {
-            $('#indexloadingdata').modal('hide');
-
-            if (devicePlatformfunc == "Android")
-            {
-                $('#modelnewversion').modal('show');
-            }
-            else if (devicePlatformfunc == "iOS")
-            {
-
-                $('#modelnewversionapple').modal('show');
-            }
-        }
-    }
 }
 function loadnewadatabase(){
 
@@ -498,7 +498,7 @@ function loadnewadatabase(){
     xmlHttp.send();
 
 
-    db.transaction(droptables, errorCBfunc,successCBfunc);
+   db.transaction(droptables, errorCBfunc,successCBfunc);
 
 
     window.setTimeout(function(){
@@ -534,7 +534,7 @@ function passscoretoserver(testvar){
         var params = "?" + testvar;
 
         http.open("POST", url + params, true);
-        // alert(url + params);
+       // alert(url + params);
 
         http.onreadystatechange = function () {//Call a function when the state changes.
             if (http.readyState == 4 && http.status == 200) {
@@ -565,7 +565,7 @@ function passscoretoserverlogin(testvar,ID){
 
         http.open("POST", url + params, true);
         // console.log(url + params);
-        //  alert(url + params);
+      //  alert(url + params);
         http.onreadystatechange = function () {//Call a function when the state changes.
             if (http.readyState == 4 && http.status == 200) {
                 //alert(http.responseText);
@@ -728,9 +728,9 @@ function getregionsfunc_success(tx, results) {
 
 
         $('#regionid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="choosetownfunc('+ menu.ID + ')"  >' +
-            '<div class="bold size13"    >' + menu.RegionName  +
-            '</div>' +
-            '</Div>');
+        '<div class="bold size13"    >' + menu.RegionName  +
+        '</div>' +
+        '</Div>');
     }
 
 }
@@ -758,9 +758,9 @@ function gettownfunc_success(tx, results) {
 
 
         $('#townid').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="townchosenfunc('+ menu.ID + ')"  >' +
-            '<div class="bold size13"   >' + menu.TownName  +
-            '</div>' +
-            '</Div>');
+        '<div class="bold size13"   >' + menu.TownName  +
+        '</div>' +
+        '</Div>');
     }
 
 }
@@ -788,7 +788,7 @@ function townchosenfunc(ID){
     });
     passscoretoserver("regionid=" + regionID + "&townid=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken);
 
-    // db.transaction(getbuscatsfunc, errorCBfunc, successCBfunc);
+   // db.transaction(getbuscatsfunc, errorCBfunc, successCBfunc);
 
 }
 
@@ -797,7 +797,7 @@ function townchosenfunc(ID){
 
 function gettokenregion(tx) {
     var sql =  "select Datesecs,token from MobileApp_LastUpdatesec";
-    // alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getregionsdata,errorCBfunc);
 }
 
@@ -808,7 +808,7 @@ function getregionsdata(tx, results) {
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=1', false);
-    //  alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=1');
+   //  alert('http://admin.adme.kiwi/admedataformobile.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=1');
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
