@@ -355,7 +355,7 @@ color:#333399;
     padding-bottom: 10px;
 padding-top: 22px;
 }
-#headermainindex:hover {
+#headermainindex:active {
     color:white;
 
 }
@@ -466,7 +466,7 @@ color: #333399;
     color:#333399;
 }
 
-.menu li:hover > a, .menu .current-item > a {
+.menu li:active > a, .menu .current-item > a {
     text-decoration:none;
     color:#DEDEDD;
 }
@@ -490,12 +490,12 @@ color: #333399;
     text-shadow:0px 1px 0px rgba(0,0,0,0.4);
 }
 
-.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+.menu > ul > li:active > a, .menu > ul > .current-item > a {
     background:#DEDEDD;
 }
 
 /*----- Bottom Level -----*/
-.menu li:hover .sub-menu {
+.menu li:active .sub-menu {
     z-index:1;
     opacity:1;
 }
@@ -524,7 +524,7 @@ color: #333399;
     float: left;
 }
 
-.sub-menu li a:hover, .sub-menu .current-item a {
+.sub-menu li a:active, .sub-menu .current-item a {
     background:#333399;
     width: 100%;
     color: #ffffff !important;
@@ -774,12 +774,12 @@ float: left;
 }
 
 
-.weeklydealsDiv:hover{
+.weeklydealsDiv:active{
 
     border: 1px solid #71BF44;
 }
 
-.dailydealsdiv:hover{
+.dailydealsdiv:active{
 
     border: 1px solid #71BF44;
 }
@@ -813,7 +813,7 @@ float: left;
     margin-left: 10px;
 
 }
-#headermain2nd2nd:hover{
+#headermain2nd2nd:active{
     color:white;
 
 }
@@ -825,7 +825,7 @@ float: left;
     padding-bottom: 4px;
     padding-top: 10px;
 }
-#headermain2nd1st:hover{
+#headermain2nd1st:active{
     color:white;
 }
 #headermain3rd2nd{
@@ -846,7 +846,7 @@ width:90px;
     margin-top: 10px;
     padding-bottom: 4px;
 }
-#headermain3rd1st:hover{
+#headermain3rd1st:active{
 
     color:white;
 }
@@ -1115,15 +1115,15 @@ width:90px;
     clear: both;
 
 }
-#nobutton:hover {
+#nobutton:active {
 
     background-color: #8585C2;
 }
-#yesbutton:hover{
+#yesbutton:active{
 
     background-color: #8585C2;
 }
-#closeregion:hover{
+#closeregion:active{
 
     background-color: #8585C2;
 }
@@ -1131,66 +1131,66 @@ width:90px;
     padding:10px;
 
 }
-#opennewversion:hover,#opennewversion1:hover,#opennewdatabase:hover,#closenewdatabase:hover,#opennewdatabaseapple:hover{
+#opennewversion:active,#opennewversion1:active,#opennewdatabase:active,#closenewdatabase:active,#opennewdatabaseapple:active{
 
     background-color: #8585C2;
 }
 
-#closenewversion:hover{
-
-    background-color: #8585C2;
-}
-
-
-#closegas:hover{
-
-    background-color: #8585C2;
-}
-#closeregion2:hover{
-
-    background-color: #8585C2;
-}
-#closecat:hover{
-
-    background-color: #8585C2;
-}
-
-#closecatbus:hover{
-
-    background-color: #8585C2;
-}
-#Backcatbus:hover{
-
-    background-color: #8585C2;
-}
-#Categoriesid .modal-body:hover{
-
-    background-color: #8585C2;
-}
-
-#Categoriesbus .modal-body:hover{
+#closenewversion:active{
 
     background-color: #8585C2;
 }
 
 
-#regionid .modal-body:hover{
+#closegas:active{
 
     background-color: #8585C2;
 }
-#townid .modal-body:hover{
+#closeregion2:active{
+
     background-color: #8585C2;
 }
-#divdaily3:hover{
+#closecat:active{
+
     background-color: #8585C2;
 }
-#divdaily4:hover{
+
+#closecatbus:active{
+
     background-color: #8585C2;
 }
-#divweekly4:hover{
+#Backcatbus:active{
+
     background-color: #8585C2;
 }
-#divweekly3:hover{
+#Categoriesid .modal-body:active{
+
+    background-color: #8585C2;
+}
+
+#Categoriesbus .modal-body:active{
+
+    background-color: #8585C2;
+}
+
+
+#regionid .modal-body:active{
+
+    background-color: #8585C2;
+}
+#townid .modal-body:active{
+    background-color: #8585C2;
+}
+#divdaily3:active{
+    background-color: #8585C2;
+}
+#divdaily4:active{
+    background-color: #8585C2;
+}
+#divweekly4:active{
+    background-color: #8585C2;
+}
+#divweekly3:active{
     background-color: #8585C2;
 }
 
@@ -1232,12 +1232,12 @@ width:90px;
 
     font-size: 16px;
 }
-#sregion:hover{
+#sregion:active{
 
     background-color: #8585C2;
 }
 
-#scategories:hover{
+#scategories:active{
 
     background-color: #8585C2;
 }
@@ -1374,14 +1374,14 @@ width:90px;
 @media (max-width: 480px) and (max-height: 200px){.modal{ height: 150px}}
 
 
-#newsmain,a:hover, a:focus{
+#newsmain,a:active, a:focus{
     padding-top: 60px;
     color: #333 !important;
     text-decoration: none !important;
     padding-bottom: 200px;
 }
 
-#addnewfeed,a:hover, a:focus{
+#addnewfeed,a:active, a:focus{
     padding-top: 80px;
     color: #333 !important;
     text-decoration: none !important;
@@ -1533,7 +1533,7 @@ overflow-y: scroll !important;
     padding:0;
 
 }
-#modelfooter:hover{
+#modelfooter:active{
 
     background-color: #339900;
     color: white;
@@ -1541,13 +1541,13 @@ overflow-y: scroll !important;
 }
 
 
-#basicModal .modal-footer:hover{
+#basicModal .modal-footer:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
 
 }
-#basicModalContact .modal-footer:hover{
+#basicModalContact .modal-footer:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -1555,7 +1555,7 @@ overflow-y: scroll !important;
 }
 
 
-.modelfloat50:hover{
+.modelfloat50:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -1578,13 +1578,13 @@ overflow-y: scroll !important;
     padding-left:15px
 
 }
-#Directions:hover,#score:hover,#remind:hover {
+#Directions:active,#score:active,#remind:active {
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
 
-#clubfav .modal-body:hover{
+#clubfav .modal-body:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -1749,7 +1749,7 @@ padding-top:5px;
     text-align: center !important;
 }
 
-.divmain:hover{
+.divmain:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -1764,20 +1764,20 @@ padding-top:5px;
 
     margin :8px;
 }
-#cancelyes:hover{
+#cancelyes:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
 
 }
-#cancelno:hover{
+#cancelno:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
 
 }
 
-#settingsync:hover
+#settingsync:active
 {
     background-color: #339900;
     color: white;
@@ -1829,14 +1829,14 @@ padding-top:5px;
     text-align:left !important
 }
 
-#basicModaltime .modal-footer:hover{
+#basicModaltime .modal-footer:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
 
-#dontshow:hover,#notnow:hover,#indexyes:hover{
+#dontshow:active,#notnow:active,#indexyes:active{
 
     background-color: #339900;
     color: white;
@@ -1844,7 +1844,7 @@ padding-top:5px;
 }
 
 
-#settingdeleteall:hover
+#settingdeleteall:active
 {
     background-color: #8585C2;
     color: white;
@@ -1856,7 +1856,7 @@ padding-top:5px;
 
 }
 
-#idhelp:hover
+#idhelp:active
 {
     background-color: #339900;
     color: white;
