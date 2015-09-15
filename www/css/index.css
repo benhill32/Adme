@@ -1219,7 +1219,7 @@ width:90px;
     font-style: italic;
     height: 100%;
     position: absolute;
-    right: 3%;
+    right: 2%;
     padding-top: 0px;
     top: 30%;
 }
@@ -1302,9 +1302,13 @@ width:90px;
 .gas4saddress{
     font-size: 0.65rem;
 }
-    #timeremain,#readmoredaily
+    #timeremain
     {
         font-size: 0.65rem;
+    }
+    #readmoredaily{
+
+        font-size: 0.75rem;
     }
     .gas4sheader2{
 
@@ -1339,9 +1343,13 @@ width:90px;
     .gas4saddress{
         font-size: 1rem;
     }
-    #timeremain,#readmoredaily
+    #timeremain
     {
         font-size: 1rem;
+    }
+    #readmoredaily{
+
+        font-size: 1.1rem;
     }
     .gas4sheader2{
 
