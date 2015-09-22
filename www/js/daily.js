@@ -244,7 +244,7 @@ function loaddailyinfo_success(tx, results) {
     if(menu.Icon != "null"){
         $('#imgicon').attr("src","data:image/png;base64," + menu.Icon);
     }
-
+alert(menu.URL);
     $('#divdaily1').append("<strong>Item:</strong><br>" + menu.Price + " " + menu.ItemName);
     $('#divdaily2').append("<strong>Details:</strong><br>" + menu.Details);
     $('#divdaily3').append('<div onclick="URLredirectdaily(\'' + menu.URL + '\',' + menu.BusinessID  + ',' + menu.BusinessLocationID  + ',' + menu.ID + ')"><strong>Website Link</strong></div>');

@@ -147,6 +147,7 @@ var checkintvalue = function (val){
 function URLredirectdaily(ID,BusinessID,BusinessLocationID,dailydeal){
 
 
+
     passscoretoserver("deviceid=" + device.uuid + "&BusinessID=" + BusinessID + "&BusinessLocationID=" + BusinessLocationID + "&dailydeal=" + dailydeal);
 
 
@@ -534,7 +535,7 @@ function passscoretoserver(testvar){
         var params = "?" + testvar;
 
         http.open("POST", url + params, true);
-       // alert(url + params);
+        alert(url + params);
 
         http.onreadystatechange = function () {//Call a function when the state changes.
             if (http.readyState == 4 && http.status == 200) {
